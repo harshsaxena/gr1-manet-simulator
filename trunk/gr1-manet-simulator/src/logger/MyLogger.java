@@ -7,9 +7,9 @@
  * ----------------------------------------------------------
  *
  * History:
- * @version: $Revision
- * @date: $Date
- * @author: $Author
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
  */
 
 package logger;
