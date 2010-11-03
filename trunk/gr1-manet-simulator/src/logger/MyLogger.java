@@ -20,6 +20,11 @@ import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.SimpleLayout;
 import org.apache.log4j.Level;
 
+/**
+ * 
+ * @author MSRoberts1
+ *
+ */
 public class MyLogger {
      public static Logger logger = Logger.getLogger(Logger.class);
     static {
