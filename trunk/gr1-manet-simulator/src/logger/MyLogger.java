@@ -2,8 +2,9 @@
  * MyLogger.java
  * 
  * Last Updated By: $LastChangedBy
- * Last Updated Date: $Date
- * Last Revision: $Revision
+ * Last Updated Date: $LastChangedDate
+ * Last Revision: $LastChangedRevision 
+ * $Id
  * 
  * History:
  * $Log: MyLogger.java,v $
