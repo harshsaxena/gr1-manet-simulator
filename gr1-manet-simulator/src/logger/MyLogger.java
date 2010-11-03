@@ -5,18 +5,10 @@
  * $
  * 
  * File name: $HeadURL$  
- * Revision: $Revison$  
+ * Revision: $Revision$  
  * Last modified: $Date$  
  * Last modified by: $Author$  
- * 
- * History:
- * $Log: MyLogger.java,v $
- * 
- * Created by IntelliJ IDEA
- * Date: August 7, 2006
- * 
- * Modified by Matt Roberts, Hood College, Group 1
- * Date: November 3, 2010
+ * $Id$
  */
 
 package logger;
