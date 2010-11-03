@@ -1,8 +1,5 @@
 /**
  * 
- * $ svn propset svn:keywords "Id" MyLogger.java
- * property 'svn:keywords' set on 'MyLogger.java'
- * $
  * 
  * File name: $HeadURL$  
  * Revision: $Revision$  
