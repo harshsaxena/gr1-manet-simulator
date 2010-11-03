@@ -1,11 +1,15 @@
-/**
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
  * 
- * 
- * File name: $HeadURL$  
- * Revision: $Revision$  
- * Last modified: $Date$  
- * Last modified by: $Author$  
- * $Id$
+ * History:
+ * @version: $Revision$  
+ * @date: $Date$  
+ * @author: $Author$  
  */
 
 package logger;

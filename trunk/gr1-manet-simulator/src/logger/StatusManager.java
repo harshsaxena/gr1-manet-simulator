@@ -1,9 +1,15 @@
-/**
- * File name: $HeadURL$  
- * Revision: $Revision$  
- * Last modified: $Date$  
- * Last modified by: $Author$  
- * $Id$
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ * 
+ * History:
+ * @version: $Revision$  
+ * @date: $Date$  
+ * @author: $Author$  
  */
 
 package logger;
@@ -13,13 +19,6 @@ import simulator.Data;
 import UI.Myform;
 import UI.myobjects.GraphicalNode;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 14, 2006
- * Time: 4:19:31 PM
- * To change this template use File | Settings | File Templates.
- */
 public class StatusManager {
     Myform myform;
     boolean test = false;
