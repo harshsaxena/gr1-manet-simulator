@@ -2,6 +2,8 @@
  * MyLogger.java
  * 
  * Last Updated By: $Author
+ * Last Updated Date: $Date
+ * Last Revision: $Revision
  * 
  * History:
  * $Log: MyLogger.java,v $
