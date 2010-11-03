@@ -1,7 +1,7 @@
 /**
  * MyLogger.java
  * 
- * Last Update $Id: MyLogger.java,v Exp $
+ * Last Updated By: $Author
  * 
  * History:
  * $Log: MyLogger.java,v $
@@ -21,6 +21,12 @@ import org.apache.log4j.SimpleLayout;
 import org.apache.log4j.Level;
 
 /**
+ * The MyLogger class is used to provide detailed logging about the state of each node, the overall
+ * network environment, information about messages (i.e. size) being transferred at each
+ * increment of execution.
+ * 
+ * As well as provide text file logging capability so users can retrieve the results
+ * of their execution.
  * 
  * @author MSRoberts1
  *
