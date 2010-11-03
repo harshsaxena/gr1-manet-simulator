@@ -1,6 +1,3 @@
-
-
-
 /**  
  * ----------------------------------------------------------
  * This software is for educational purposes only.
@@ -10,9 +7,9 @@
  * ----------------------------------------------------------
  *
  * History:
- * @version: svn_revision
- * @date: svn_date
- * @author: svn_author
+ * @version: $Revision
+ * @date: $Date
+ * @author: $Author
  */
 
 package logger;
