@@ -27,5 +27,5 @@ public class MyLogger {
     logger.addAppender(appender);
     logger.setLevel(Level.INFO);}
     //PropertyConfigurator.configure("plainlog4jconfig.properties");
-    //DOMConfigurator.configure("xmllog4jconfig.xml");
+    //DOMConfigurator.configure("xmllog4jconfig.xml")
 }
