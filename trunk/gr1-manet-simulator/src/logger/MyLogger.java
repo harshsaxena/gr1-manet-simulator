@@ -1,5 +1,5 @@
 /**
- * $ svn propset svn:keywords "Date Author" MyLogger.java
+ * $ svn propset svn:keywords "LastChangedBy" MyLogger.java
  * property 'svn:keywords' set on 'MyLogger.java'
  * $
  * 
