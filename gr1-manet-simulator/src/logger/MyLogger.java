@@ -1,7 +1,7 @@
 /**
  * MyLogger.java
  * 
- * Last Updated By: $Author
+ * Last Updated By: $LastChangedBy
  * Last Updated Date: $Date
  * Last Revision: $Revision
  * 
