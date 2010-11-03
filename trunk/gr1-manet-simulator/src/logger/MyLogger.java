@@ -20,4 +20,5 @@ public class MyLogger {
     logger.setLevel(Level.INFO);}
     //PropertyConfigurator.configure("plainlog4jconfig.properties");
     //DOMConfigurator.configure("xmllog4jconfig.xml");
+    // SVN Test
 }
