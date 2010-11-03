@@ -1,3 +1,11 @@
+/**
+ * File name: $HeadURL$  
+ * Revision: $Revision$  
+ * Last modified: $Date$  
+ * Last modified by: $Author$  
+ * $Id$
+ */
+
 package logger;
 
 import simulator.Node;
