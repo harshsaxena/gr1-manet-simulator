@@ -1,3 +1,6 @@
+
+
+
 /**  
  * ----------------------------------------------------------
  * This software is for educational purposes only.
@@ -5,11 +8,11 @@
  * Additions to the base have been made by the Hood College
  * Computer Science Department, Graduate Group 1.
  * ----------------------------------------------------------
- * 
+ *
  * History:
- * @version: $Revision$  
- * @date: $Date$  
- * @author: $Author$  
+ * @version: svn_revision
+ * @date: svn_date
+ * @author: svn_author
  */
 
 package logger;
