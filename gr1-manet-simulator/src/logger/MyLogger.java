@@ -1,11 +1,11 @@
 /**
- * $ svn propset svn:keywords "LastChangedDate" MyLogger.java
+ * $ svn propset svn:keywords "Date Author" MyLogger.java
  * property 'svn:keywords' set on 'MyLogger.java'
  * $
  * 
- * Last Updated By: $LastChangedBy$
- * Last Updated Date: $LastChangedDate$
- * Last Revision: $LastChangedRevision$
+ * $LastChangedBy$
+ * $LastChangedDate$
+ * $LastChangedRevision$
  * $Id$
  * 
  * History:
