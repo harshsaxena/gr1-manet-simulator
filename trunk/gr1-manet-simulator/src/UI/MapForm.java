@@ -1,20 +1,32 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI;
 
-import UI.actions.NumberKeyListener;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.beans.PropertyChangeListener;
+import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 14, 2006
- * Time: 6:08:03 PM
- * To change this template use File | Settings | File Templates.
- */
 public class MapForm extends JDialog
         implements ActionListener,PropertyChangeListener
 {

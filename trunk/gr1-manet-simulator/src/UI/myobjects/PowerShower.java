@@ -1,17 +1,28 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI.myobjects;
+
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JComponent;
 
 import UI.Myform;
 
-import javax.swing.*;
-import java.awt.*;
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 20, 2006
- * Time: 5:26:34 PM
- * To change this template use File | Settings | File Templates.
- */
 public class PowerShower extends JComponent {
     Myform myform;
     int x,y,rX,rY;

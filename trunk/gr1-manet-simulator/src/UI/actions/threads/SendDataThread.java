@@ -1,15 +1,22 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI.actions.threads;
 
-import simulator.Node;
 import simulator.Data;
+import simulator.Node;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 14, 2006
- * Time: 10:31:01 AM
- * To change this template use File | Settings | File Templates.
- */
 public class SendDataThread extends Thread {
     Node source,dest;
     Data data;

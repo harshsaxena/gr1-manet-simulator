@@ -1,14 +1,20 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 19, 2006
- * Time: 2:34:22 PM
- * To change this template use File | Settings | File Templates.
- */
 public class MyMap extends JPanel {
 }

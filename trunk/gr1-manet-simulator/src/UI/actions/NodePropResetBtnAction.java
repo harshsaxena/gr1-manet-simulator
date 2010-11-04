@@ -1,19 +1,23 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI.actions;
 
-import UI.Myform;
-import UI.myobjects.GraphicalNode;
-
-import javax.swing.*;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import UI.Myform;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 11, 2006
- * Time: 11:17:45 PM
- * To change this template use File | Settings | File Templates.
- */
 public class NodePropResetBtnAction implements ActionListener {
     Myform myForm;
 

@@ -1,15 +1,22 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package utility;
 
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Created by IntelliJ IDEA
- * Date: August 7, 2006
- * 
- * Modified by Matt Roberts, Hood College, Group 1
- * Date: November 3, 2010
- **/
 /**
  * Used to load the properties file and read properties from the file.
  */

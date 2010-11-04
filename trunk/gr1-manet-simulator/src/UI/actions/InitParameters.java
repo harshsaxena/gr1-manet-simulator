@@ -1,26 +1,32 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI.actions;
 
-import UI.Myform;
-import UI.utility.NthMinimum;
-import UI.utility.GNodeWrapper;
-import UI.myobjects.GraphicalNode;
-
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.*;
-
-import simulator.noderelated.IPAddress;
+import java.awt.event.ActionListener;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import javax.swing.JOptionPane;
 import simulator.Map_Manager;
+import simulator.noderelated.IPAddress;
+import UI.Myform;
+import UI.myobjects.GraphicalNode;
+import UI.utility.GNodeWrapper;
+import UI.utility.NthMinimum;
 
-import javax.swing.*;
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 20, 2006
- * Time: 3:07:51 PM
- * To change this template use File | Settings | File Templates.
- */
 public class InitParameters implements ActionListener {
     Myform  myForm;
     public InitParameters(Myform myForm) {

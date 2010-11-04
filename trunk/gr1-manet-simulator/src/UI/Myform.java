@@ -1,26 +1,48 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI;
 
-import UI.myobjects.NodeButton;
-import UI.myobjects.draganddrop.DropTargetImp;
-import UI.myobjects.GraphicalNode;
-import UI.myobjects.PowerShower;
-import UI.actions.*;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
-
-import simulator.Node;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import javax.swing.JSplitPane;
+import javax.swing.JTextField;
+import javax.swing.JToolBar;
+import javax.swing.SwingConstants;
 import logger.StatusManager;
+import simulator.Node;
+import UI.actions.DeleteBtnAction;
+import UI.actions.InitParameters;
+import UI.actions.NumberKeyListener;
+import UI.actions.PanelAction;
+import UI.actions.SearchGNodeAction;
+import UI.myobjects.GraphicalNode;
+import UI.myobjects.NodeButton;
+import UI.myobjects.PowerShower;
+import UI.myobjects.draganddrop.DropTargetImp;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 5, 2006
- * Time: 11:28:29 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Myform extends JFrame {
     public final NumberKeyListener nkl = new NumberKeyListener();
     JPanel content;

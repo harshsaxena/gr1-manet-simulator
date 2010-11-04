@@ -1,21 +1,25 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI.myobjects;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import javax.swing.ImageIcon;
+import logger.MyLogger;
 import UI.Myform;
 
-import java.util.TimerTask;
-import java.util.Timer;
-
-import logger.MyLogger;
-
-import javax.swing.*;
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 18, 2006
- * Time: 7:10:06 PM
- * To change this template use File | Settings | File Templates.
- */
 public class IconAnimator extends TimerTask {
     Myform myFrom;
     GraphicalNode myNode;

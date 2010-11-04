@@ -1,23 +1,27 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI.actions;
 
-import UI.Myform;
-import UI.myobjects.GraphicalNode;
-import UI.actions.threads.SendDataThread;
-
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import simulator.Data;
+import UI.Myform;
+import UI.actions.threads.SendDataThread;
+import UI.myobjects.GraphicalNode;
 
-import javax.swing.*;
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 14, 2006
- * Time: 10:06:43 AM
- * To change this template use File | Settings | File Templates.
- */
 public class NodePropSendtoBtnAction implements ActionListener {
     Myform myForm;
 

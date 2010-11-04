@@ -1,23 +1,36 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package UI;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JColorChooser;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import UI.actions.NodePropOKBtnAction;
 import UI.actions.NodePropResetBtnAction;
 import UI.actions.NodePropSendtoBtnAction;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 5, 2006
- * Time: 11:30:45 PM
- * To change this template use File | Settings | File Templates.
- * this is a class that implements right panel which shows node properties and have a method
- * for colorChooser action
- */
 public class Node_Properties extends JPanel implements ActionListener {
     JButton resetBtn,OkBtn,SendBtn;
     public JTextField IPText,nameText,xText,yText,powerText,sendToText;
