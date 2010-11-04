@@ -62,7 +62,7 @@ public class StatusManager {
 
 	/**
 	 * Creates a Graphical Node and adds sender and received data to the
-	 * Graphical Node.
+	 * Graphical Node...
 	 * 
 	 * @param receiver
 	 * @param sender
