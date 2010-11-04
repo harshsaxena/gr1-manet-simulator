@@ -38,7 +38,7 @@ public abstract class Packet {
 		return packet;
 	}
 
-	public abstract void recieve(Node reciever, Node prev_hop);
+	public abstract void receive(Node receiver, Node prev_hop);
 
 	public String toString() {
 		return "seq_no=" + seq_no;

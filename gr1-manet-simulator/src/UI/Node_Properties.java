@@ -34,13 +34,13 @@ import UI.actions.NodePropSendtoBtnAction;
 public class Node_Properties extends JPanel implements ActionListener {
     JButton resetBtn,OkBtn,SendBtn;
     public JTextField IPText,nameText,xText,yText,powerText,sendToText;
-    public JTextArea dataText,recievedDataText,statusText;
+    public JTextArea dataText,receivedDataText,statusText;
     public JButton colorBtn;
     private Myform myForm;
 
     public Node_Properties(Myform myForm) {
         this.myForm = myForm;
-        JLabel IPLbl,nameLbl,xLbl,yLbl,powerLbl,colorLbl,sendToLbl,dataLbl,recievedDataLbl,statusLbl;
+        JLabel IPLbl,nameLbl,xLbl,yLbl,powerLbl,colorLbl,sendToLbl,dataLbl,receivedDataLbl,statusLbl;
         //create main layout
         Box v1 = Box.createVerticalBox();
         this.add(v1);
@@ -156,12 +156,12 @@ public class Node_Properties extends JPanel implements ActionListener {
         v21.add(h23);
 
         //create third box labels
-        recievedDataLbl = new JLabel("RData: ");
+        receivedDataLbl = new JLabel("RData: ");
         statusLbl = new JLabel("Status: ");
         //create third box text fields
-        recievedDataText = new JTextArea(5,20);
-        recievedDataText.setEditable(false);
-        JScrollPane rdataSP= new JScrollPane(recievedDataText);
+        receivedDataText = new JTextArea(5,20);
+        receivedDataText.setEditable(false);
+        JScrollPane rdataSP= new JScrollPane(receivedDataText);
         statusText = new JTextArea(5,20);
         statusText.setEditable(false);
         JScrollPane statusSP = new JScrollPane(statusText);
@@ -176,7 +176,7 @@ public class Node_Properties extends JPanel implements ActionListener {
         thirdBox.add(v31);
         Box h31 = Box.createHorizontalBox();
         Box v311 = Box.createVerticalBox();
-        v311.add(recievedDataLbl);
+        v311.add(receivedDataLbl);
         v311.add(Box.createVerticalGlue());
         h31.add(v311);
         h31.add(rdataSP);
@@ -219,7 +219,7 @@ public class Node_Properties extends JPanel implements ActionListener {
         resetNodePropertiest();
         this.sendToText.setText("");
         this.dataText.setText("");
-        this.recievedDataText.setText("");
+        this.receivedDataText.setText("");
         this.statusText.setText("");
     }
 }

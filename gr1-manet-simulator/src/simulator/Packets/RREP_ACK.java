@@ -21,7 +21,7 @@ public class RREP_ACK extends Packet {
 		this.type = 4;
 	}
 
-	public void recieve(Node reciever, Node prev_hop) {
+	public void receive(Node receiver, Node prev_hop) {
 
 	}
 }

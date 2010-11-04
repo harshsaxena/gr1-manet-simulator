@@ -23,23 +23,23 @@ import simulator.Packets.DataPacket;
 import simulator.noderelated.Route;
 import test.AODV_Test;
 
-public class Data_Recieved extends Thread{
+public class Data_Received extends Thread{
     Node mynode;
     private DataPacket packet;
-    private Node recievedFrom;
+    private Node receivedFrom;
 
-    public Data_Recieved(String name, Node mynode, DataPacket packet, Node recievedFrom) {
+    public Data_Received(String name, Node mynode, DataPacket packet, Node receivedFrom) {
         super(name);
         this.mynode = mynode;
         this.packet = packet;
-        this.recievedFrom = recievedFrom;
+        this.receivedFrom = receivedFrom;
         start();
     }
 
     public void run() {
         if (packet.dest.equals(mynode)){
-            MyLogger.logger.info("Node"+ mynode+":recieved DataPacket from "+
-                    packet.source+" which handded from "+recievedFrom
+            MyLogger.logger.info("Node"+ mynode+":received DataPacket from "+
+                    packet.source+" which handded from "+receivedFrom
                     +":I'm the destination");
 
             //only for test
@@ -48,13 +48,13 @@ public class Data_Recieved extends Thread{
                 AODV_Test.waiting.notify();
             }
             //
-            //call UI recieved data
-            StatusManager.get_instance().showRecievedData(mynode,packet.source,packet.getData());
+            //call UI received data
+            StatusManager.get_instance().showReceivedData(mynode,packet.source,packet.getData());
         }else{
             Route route = mynode.search(packet.dest);
             if (!Route.isBad(route)){
                 MyLogger.logger.info("Node"+ mynode+":passing DataPacket from "+
-                        packet.source+" which handded from "+recievedFrom
+                        packet.source+" which handded from "+receivedFrom
                         +" to "+ route.getNext_hop());
                 route.setLifeTime(new Date().getTime()+Node.ACTIVE_ROUTE_TIMEOUT);
                 Route route2 = mynode.search(packet.source);
@@ -73,7 +73,7 @@ public class Data_Recieved extends Thread{
             }else{
                 int lostNodeseq_no = -1;
                 MyLogger.logger.debug("Node"+ mynode+":receiving DataPacket from "+
-                        packet.source+" which handded from "+recievedFrom
+                        packet.source+" which handded from "+receivedFrom
                         +"but have no route!");
                 if (route!=null){
                     route.setInvalid(true);

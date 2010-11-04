@@ -16,7 +16,7 @@ package simulator.Packets;
 
 import logger.MyLogger;
 import simulator.Node;
-import simulator.noderelated.tasks.RREQ_Recieved;
+import simulator.noderelated.tasks.RREQ_Received;
 
 public class RREQPacket extends Packet {
     int SourceSeq_no;
@@ -56,14 +56,14 @@ public class RREQPacket extends Packet {
         return copy_of;
     }
 
-    public void recieve(Node reciever, Node prev_hop) {
+    public void receive(Node receiver, Node prev_hop) {
 
-        reciever.add_Route(reciever.generateRouteFromRREQtoprevHop(this,prev_hop));
-        if (reciever.checkAndUpdateBroadCastTable(this.source, this)){
+        receiver.add_Route(receiver.generateRouteFromRREQtoprevHop(this,prev_hop));
+        if (receiver.checkAndUpdateBroadCastTable(this.source, this)){
                 // checks if this packet has not broadcasted and the source node is not this
-                new RREQ_Recieved("RREQ_Recieved"+reciever.getIP().toString(),reciever,
+                new RREQ_Received("RREQ_Received"+receiver.getIP().toString(),receiver,
                         this,prev_hop );
-                MyLogger.logger.info("Node"+ reciever.getIP().toString()+": RREQ_Recieved from "+this.source+" through "+prev_hop);
+                MyLogger.logger.info("Node"+ receiver.getIP().toString()+": RREQ_Received from "+this.source+" through "+prev_hop);
             }
     }
 
