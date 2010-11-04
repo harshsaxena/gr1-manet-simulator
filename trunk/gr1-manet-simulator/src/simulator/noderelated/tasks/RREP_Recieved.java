@@ -1,20 +1,27 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package simulator.noderelated.tasks;
+
+import java.util.Date;
+import java.util.HashSet;
+import logger.MyLogger;
 import simulator.Node;
 import simulator.Packets.RREPPacket;
 import simulator.noderelated.RREPPacketWrapper;
 import simulator.noderelated.Route;
-import logger.MyLogger;
 
-import java.util.HashSet;
-import java.util.Date;
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 1, 2006
- * Time: 5:48:31 PM
- * To change this template use File | Settings | File Templates.
- */
 public class RREP_Recieved extends Thread{
     Node mynode;
     private RREPPacketWrapper packetWrapper;

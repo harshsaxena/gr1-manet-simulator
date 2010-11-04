@@ -1,17 +1,24 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package simulator.Packets;
 
+import logger.MyLogger;
 import simulator.Data;
 import simulator.Node;
 import simulator.noderelated.tasks.Data_Recieved;
-import logger.MyLogger;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 1, 2006
- * Time: 8:16:51 PM
- * To change this template use File | Settings | File Templates.
- */
 public class DataPacket extends Packet {
     public DataPacket(Data data, Node dest, Node src) {
         this.data = data;

@@ -1,16 +1,23 @@
-package simulator.noderelated;
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
 
-import simulator.Node;
+package simulator.noderelated;
 
 import java.util.Date;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 15, 2006
- * Time: 9:14:51 AM
- * To change this template use File | Settings | File Templates.
- */
+import simulator.Node;
+
 public class BroadCastField {
     Node source;
     int RREQ_ID;
