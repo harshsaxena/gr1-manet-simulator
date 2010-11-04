@@ -21,16 +21,16 @@ import simulator.Packets.RREPPacket;
 import simulator.Packets.RREQPacket;
 import simulator.noderelated.Route;
 
-public class RREQ_Recieved extends Thread{
+public class RREQ_Received extends Thread{
     Node mynode;
     private RREQPacket packet;
-    private Node recievedFrom;
+    private Node receivedFrom;
 
-    public RREQ_Recieved(String name, Node mynode, RREQPacket rreqPacket, Node recievedFrom) {
+    public RREQ_Received(String name, Node mynode, RREQPacket rreqPacket, Node receivedFrom) {
         super(name);
         this.mynode = mynode;
         this.packet = rreqPacket;
-        this.recievedFrom = recievedFrom;
+        this.receivedFrom = receivedFrom;
         start();
     }
 
@@ -48,7 +48,7 @@ public class RREQ_Recieved extends Thread{
         //it first increments the hop count value in the RREQ by one, to account for the new hop through the intermediate node.
         packet.hop_count++;
         //Then the node searches for a reverse route to the Originator IP Address
-        Route newroute = mynode.generateRouteFromRREQ(packet,recievedFrom);
+        Route newroute = mynode.generateRouteFromRREQ(packet,receivedFrom);
         Route oldroute = mynode.search(newroute.getDestination());
         Route backwardRoute = oldroute;
 // If need be, the route is created, or updated using the Originator Sequence Number from the
@@ -70,8 +70,8 @@ public class RREQ_Recieved extends Thread{
         Route forwardRoute = this.mynode.search(packet.dest);
         if (Route.isBad(forwardRoute)
                 || forwardRoute.getSeq_no() <= packet.seq_no){//TODO check this
-            MyLogger.logger.info("Node"+ mynode.getIP().toString()+":recieved RREQPacket from "+
-                    packet.source+" which handded from "+recievedFrom
+            MyLogger.logger.info("Node"+ mynode.getIP().toString()+":received RREQPacket from "+
+                    packet.source+" which handed from "+receivedFrom
                     +": but it is not the destination");
             if (packet.ttl>1){
                 packet.ttl--; //TODO check hop limit
@@ -84,8 +84,8 @@ public class RREQ_Recieved extends Thread{
             }
         }else {
             if (packet.dest.equals(mynode)){
-                MyLogger.logger.info("Node"+ mynode+":recieved RREQPacket from "+
-                        packet.source+" which handded from "+recievedFrom
+                MyLogger.logger.info("Node"+ mynode+":received RREQPacket from "+
+                        packet.source+" which handded from "+receivedFrom
                         +": it is destination; generating RREPPacket");
                 //MyLogger.logger.debug(packet.seq_no);
                 if (packet.seq_no==mynode.getSeq_no()+1 ){
@@ -98,16 +98,16 @@ public class RREQ_Recieved extends Thread{
                 rrepPacket.seq_no = mynode.getSeq_no();
                 rrepPacket.hop_count =0;
                 rrepPacket.setLifeTime(mynode.MY_ROUTE_TIMEOUT);
-                //route.getPrecursor().add(recievedFrom);
-                mynode.send(rrepPacket,recievedFrom);
+                //route.getPrecursor().add(receivedFrom);
+                mynode.send(rrepPacket,receivedFrom);
 
             }else{
                 if (packet.D){
                     mynode.send(packet,packet.dest);
                     return;
                 }
-                MyLogger.logger.info("Node "+ mynode+" : recieved RREQPacket from "+
-                        packet.source+" which handded from "+recievedFrom
+                MyLogger.logger.info("Node "+ mynode+" : received RREQPacket from "+
+                        packet.source+" which handed from "+receivedFrom
                         +": I have Route; generating RREPPacket");
                 RREPPacket rrepPacket = new RREPPacket();
                 rrepPacket.source=packet.source;
@@ -118,9 +118,9 @@ public class RREQ_Recieved extends Thread{
                 long currentTime = new Date().getTime();
                 rrepPacket.setLifeTime(currentTime -
                         (forwardRoute.getLifeTime() - currentTime));
-                forwardRoute.getPrecursor().add(recievedFrom);
+                forwardRoute.getPrecursor().add(receivedFrom);
                 backwardRoute.getPrecursor().add(forwardRoute.getNext_hop());
-//                mynode.send(rrepPacket,recievedFrom);
+//                mynode.send(rrepPacket,receivedFrom);
                 mynode.send(rrepPacket,packet.source);
                 //if free rrep should be sent to real destination
                 if (packet.G){

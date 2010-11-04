@@ -19,11 +19,11 @@ import simulator.Packets.RREPPacket;
 
 public class RREPPacketWrapper {
 	RREPPacket rrepPacket;
-	Node recievedFrom;
+	Node receivedFrom;
 
-	public RREPPacketWrapper(RREPPacket rrepPacket, Node recievedFrom) {
+	public RREPPacketWrapper(RREPPacket rrepPacket, Node receivedFrom) {
 		this.rrepPacket = rrepPacket;
-		this.recievedFrom = recievedFrom;
+		this.receivedFrom = receivedFrom;
 	}
 
 	public RREPPacket getRrepPacket() {
@@ -34,11 +34,11 @@ public class RREPPacketWrapper {
 		this.rrepPacket = rrepPacket;
 	}
 
-	public Node getRecievedFrom() {
-		return recievedFrom;
+	public Node getReceivedFrom() {
+		return receivedFrom;
 	}
 
-	public void setRecievedFrom(Node recievedFrom) {
-		this.recievedFrom = recievedFrom;
+	public void setReceivedFrom(Node receivedFrom) {
+		this.receivedFrom = receivedFrom;
 	}
 }

@@ -17,7 +17,7 @@ package simulator.Packets;
 import logger.MyLogger;
 import simulator.Data;
 import simulator.Node;
-import simulator.noderelated.tasks.Data_Recieved;
+import simulator.noderelated.tasks.Data_Received;
 
 public class DataPacket extends Packet {
     public DataPacket(Data data, Node dest, Node src) {
@@ -37,9 +37,9 @@ public class DataPacket extends Packet {
         this.data = data;
     }
 
-    public void recieve(Node reciever, Node prev_hop) {
-        new Data_Recieved("Data_Recieved"+reciever.getIP().toString(),reciever,this,prev_hop);
-            MyLogger.logger.info("Node"+ reciever.getIP().toString()+": Data_Recieved from "+this.source+" through "+prev_hop);
+    public void receive(Node receiver, Node prev_hop) {
+        new Data_Received("Data_Received"+receiver.getIP().toString(),receiver,this,prev_hop);
+            MyLogger.logger.info("Node"+ receiver.getIP().toString()+": Data_Received from "+this.source+" through "+prev_hop);
     }
 
     public String toString() {

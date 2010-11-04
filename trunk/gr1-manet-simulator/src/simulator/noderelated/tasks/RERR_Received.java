@@ -19,17 +19,17 @@ import simulator.Node;
 import simulator.Packets.RERRPacket;
 import simulator.noderelated.Route;
 
-public class RERR_Recieved extends Thread {
+public class RERR_Received extends Thread {
 	Node mynode;
 	private RERRPacket packet;
-	private Node recievedFrom;
+	private Node receivedFrom;
 
-	public RERR_Recieved(String name, Node mynode, RERRPacket packet,
-			Node recievedFrom) {
+	public RERR_Received(String name, Node mynode, RERRPacket packet,
+			Node receivedFrom) {
 		super(name);
 		this.mynode = mynode;
 		this.packet = packet;
-		this.recievedFrom = recievedFrom;
+		this.receivedFrom = receivedFrom;
 		start();
 	}
 
@@ -38,7 +38,7 @@ public class RERR_Recieved extends Thread {
 			Route lostRoute = mynode.search(lostNode);
 
 			if (lostRoute != null
-					&& lostRoute.getNext_hop().equals(recievedFrom)) {
+					&& lostRoute.getNext_hop().equals(receivedFrom)) {
 				lostRoute.setInvalid(true);
 				lostRoute
 						.setLifeTime(new Date().getTime() + Node.DELETE_PERIOD);

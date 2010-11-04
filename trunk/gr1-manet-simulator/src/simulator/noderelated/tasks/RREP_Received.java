@@ -23,11 +23,11 @@ import simulator.Packets.RREPPacket;
 import simulator.noderelated.RREPPacketWrapper;
 import simulator.noderelated.Route;
 
-public class RREP_Recieved extends Thread {
+public class RREP_Received extends Thread {
 	Node mynode;
 	private RREPPacketWrapper packetWrapper;
 
-	public RREP_Recieved(String name, Node mynode,
+	public RREP_Received(String name, Node mynode,
 			RREPPacketWrapper packetWrapper) {
 		super(name);
 		this.mynode = mynode;
@@ -38,12 +38,12 @@ public class RREP_Recieved extends Thread {
 	public void run() {
 		RREPPacket rrepPacket = packetWrapper.getRrepPacket();
 		// it searches for a route to the previous hop.
-		Route prevroute = this.mynode.search(packetWrapper.getRecievedFrom());
+		Route prevroute = this.mynode.search(packetWrapper.getReceivedFrom());
 		if (Route.isBad(prevroute)) {
 			// If needed, a route is created for the previous hop, but without a
 			// valid sequence number
-			prevroute = new Route(packetWrapper.getRecievedFrom(),
-					packetWrapper.getRecievedFrom(), -1, 1, new HashSet<Node>());
+			prevroute = new Route(packetWrapper.getReceivedFrom(),
+					packetWrapper.getReceivedFrom(), -1, 1, new HashSet<Node>());
 			prevroute.setLifeTime(new Date().getTime()
 					+ Node.DEFAULT_ROUTE_LIFETIME);
 			this.mynode.add_Route(prevroute);
@@ -98,7 +98,7 @@ public class RREP_Recieved extends Thread {
 			// the next hop in the route entry is assigned to be the node from
 			// which the RREP is received, which is indicated by the source IP
 			// address field in the IP header,
-			forwardRoute.setNext_hop(packetWrapper.getRecievedFrom());
+			forwardRoute.setNext_hop(packetWrapper.getReceivedFrom());
 			// the hop count is set to the value of the New Hop Count,
 			forwardRoute.setHop_count(rrepPacket.hop_count);
 			// the expiry time is set to the current time plus the value of the
@@ -116,9 +116,9 @@ public class RREP_Recieved extends Thread {
 			// if (mynode.getDiscoveryiswaiting()!=null){ //if this node is in
 			// discovery method wake it
 			MyLogger.logger.info("Node " + mynode.getIP().toString()
-					+ " :recieved RREPPacket from "
+					+ " :received RREPPacket from "
 					+ packetWrapper.getRrepPacket().source
-					+ " which handded from " + packetWrapper.getRecievedFrom()
+					+ " which handded from " + packetWrapper.getReceivedFrom()
 					+ ": It's the destination!,I was waiting for it");
 			mynode.setRrepPacketWrapper(this.packetWrapper);
 			synchronized (mynode.getDiscoveryiswaiting()) {
@@ -135,7 +135,7 @@ public class RREP_Recieved extends Thread {
 				MyLogger.logger.info("Node" + mynode
 						+ ":Passing RREPPacket from " + rrepPacket.dest
 						+ " which handded from "
-						+ packetWrapper.getRecievedFrom() + " to "
+						+ packetWrapper.getReceivedFrom() + " to "
 						+ backRoute.getNext_hop());
 				forwardRoute.getPrecursor().add(backRoute.getNext_hop());
 				backRoute.setLifeTime(Math.max(backRoute.getLifeTime(),
@@ -146,7 +146,7 @@ public class RREP_Recieved extends Thread {
 				MyLogger.logger.debug("Node" + mynode
 						+ ":receiving RREPPacket from " + rrepPacket.dest
 						+ " which handded from "
-						+ packetWrapper.getRecievedFrom()
+						+ packetWrapper.getReceivedFrom()
 						+ " but route is expired");
 			}
 

@@ -85,16 +85,16 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		this.statues.delete(0, this.statues.length());
 	}
 
-	public String getRecievedData() {
+	public String getReceivedData() {
 		return this.receivedData.toString();
 	}
 
-	public void addRecievedData(String st) {
+	public void addReceivedData(String st) {
 		this.receivedData.append(st).append("\n");
 		this.refreshNodePanel();
 	}
 
-	public void resetRecievedData() {
+	public void resetReceivedData() {
 		this.receivedData.delete(0, this.receivedData.length());
 	}
 
@@ -194,7 +194,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	private void refreshNodePanelDynamicData() {
 		Node_Properties np = myForm.getNodePanel();
 		np.statusText.setText(getStatus());
-		np.recievedDataText.setText(getRecievedData());
+		np.receivedDataText.setText(getReceivedData());
 
 	}
 

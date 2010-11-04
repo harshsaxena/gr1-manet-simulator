@@ -68,10 +68,10 @@ public class StatusManager {
 	 * @param sender
 	 * @param data
 	 */
-	public void showRecievedData(Node receiver, Node sender, Data data) {
+	public void showReceivedData(Node receiver, Node sender, Data data) {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
-			gNode.addRecievedData("From: " + sender + "\n" + data.getContent());
+			gNode.addReceivedData("From: " + sender + "\n" + data.getContent());
 			MyLogger.logger.info("Node " + gNode.getName() + " received "
 					+ data.getContent() + " from " + sender);
 		}

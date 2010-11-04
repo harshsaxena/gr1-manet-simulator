@@ -32,6 +32,6 @@ public class TaskSpeedSimulator extends TimerTask {
 
     public void run() {
         MyLogger.logger.info("MapManager Sending broadcast packet From " + src + " to " + dest);
-        dest.recieve(packet.copy_packet(), src);
+        dest.receive(packet.copy_packet(), src);
     }
 }

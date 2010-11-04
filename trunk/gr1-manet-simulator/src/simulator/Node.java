@@ -259,7 +259,7 @@ public class Node implements Serializable {
 			} else {
 				ttl += Node.TTL_INCREMENT;
 			}
-			// if wait got out after the time == rreppacket not recieved
+			// if wait got out after the time == rreppacket not received
 			// sending second
 			MyLogger.logger.info("Node" + this + ": discovery number " + retry
 					+ " for " + dest + " :faild");
@@ -290,7 +290,7 @@ public class Node implements Serializable {
 		Route route = new Route();
 		route.setDestination(rrepPacketWrapper.getRrepPacket().dest);
 		route.setHop_count(rrepPacketWrapper.getRrepPacket().hop_count);
-		route.setNext_hop(rrepPacketWrapper.getRecievedFrom());
+		route.setNext_hop(rrepPacketWrapper.getReceivedFrom());
 		route.setSeq_no(rrepPacketWrapper.getRrepPacket().seq_no);
 		return route;
 	}
@@ -299,25 +299,25 @@ public class Node implements Serializable {
 	 * generates a route from RREQPacket that received
 	 * 
 	 * @param rreqPacket
-	 * @param recievedFrom
+	 * @param receivedFrom
 	 *            the last node that passed it to this node
 	 * @return the {@link Route} object
 	 */
-	public Route generateRouteFromRREQ(RREQPacket rreqPacket, Node recievedFrom) {
+	public Route generateRouteFromRREQ(RREQPacket rreqPacket, Node receivedFrom) {
 		Route route = new Route();
 		route.setDestination(rreqPacket.source);
 		route.setHop_count(rreqPacket.hop_count);
-		route.setNext_hop(recievedFrom);
+		route.setNext_hop(receivedFrom);
 		route.setSeq_no(rreqPacket.getSourceSeq_no());
 		return route;
 	}
 
 	public Route generateRouteFromRREQtoprevHop(RREQPacket rreqPacket,
-			Node recievedFrom) {
+			Node receivedFrom) {
 		Route route = new Route();
-		route.setDestination(recievedFrom);
+		route.setDestination(receivedFrom);
 		route.setHop_count(rreqPacket.hop_count);
-		route.setNext_hop(recievedFrom);
+		route.setNext_hop(receivedFrom);
 		route.setSeq_no(-1);
 		route.setLifeTime(new Date().getTime() + Node.DEFAULT_ROUTE_LIFETIME);
 		return route;
@@ -421,10 +421,10 @@ public class Node implements Serializable {
 	 * @param packet
 	 *            the packet that is received
 	 */
-	public void recieve(Packet packet, Node prev_hop) {
+	public void receive(Packet packet, Node prev_hop) {
 		packet.ttl--;
-		StatusManager.get_instance().showNodeStatus(this, packet + " Recieved");
-		packet.recieve(this, prev_hop);
+		StatusManager.get_instance().showNodeStatus(this, packet + " Received");
+		packet.receive(this, prev_hop);
 	}
 	/**
 	 * searches if there is a route to a node in route table

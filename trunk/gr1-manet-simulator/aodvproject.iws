@@ -635,14 +635,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulator/noderelated/tasks/RREQ_Recieved.java">
+    <entry file="file://$PROJECT_DIR$/src/simulator/noderelated/tasks/RREQ_Received.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="121" column="62" selection-start="5436" selection-end="5436" vertical-scroll-proportion="1.7047452">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulator/noderelated/tasks/Data_Recieved.java">
+    <entry file="file://$PROJECT_DIR$/src/simulator/noderelated/tasks/Data_Received.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="18" selection-start="2433" selection-end="2433" vertical-scroll-proportion="1.494863">
           <folding />
