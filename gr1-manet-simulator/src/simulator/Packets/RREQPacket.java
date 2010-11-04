@@ -1,17 +1,23 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package simulator.Packets;
 
-import simulator.Packets.Packet;
+import logger.MyLogger;
 import simulator.Node;
 import simulator.noderelated.tasks.RREQ_Recieved;
-import logger.MyLogger;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 1, 2006
- * Time: 6:10:19 PM
- * To change this template use File | Settings | File Templates.
- */
 public class RREQPacket extends Packet {
     int SourceSeq_no;
     public boolean J,R,D,G,U;

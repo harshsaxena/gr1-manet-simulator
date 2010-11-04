@@ -1,19 +1,25 @@
-package simulator.mapmanagerrelated;
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
 
-import simulator.Packets.Packet;
-import simulator.Node;
+package simulator.mapmanagerrelated;
 
 import java.util.TimerTask;
 
 import logger.MyLogger;
+import simulator.Node;
+import simulator.Packets.Packet;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 18, 2006
- * Time: 6:15:25 PM
- * To change this template use File | Settings | File Templates.
- */
 public class TaskSpeedSimulator extends TimerTask {
     private Packet packet;
     private Node src,dest;

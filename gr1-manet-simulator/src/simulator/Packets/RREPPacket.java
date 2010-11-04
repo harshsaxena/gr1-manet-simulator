@@ -1,17 +1,24 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package simulator.Packets;
 
-import simulator.Node;
-import simulator.noderelated.tasks.RREP_Recieved;
-import simulator.noderelated.RREPPacketWrapper;
 import logger.MyLogger;
+import simulator.Node;
+import simulator.noderelated.RREPPacketWrapper;
+import simulator.noderelated.tasks.RREP_Recieved;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 1, 2006
- * Time: 5:36:15 PM
- * To change this template use File | Settings | File Templates.
- */
 public class RREPPacket extends Packet {
     public boolean R,A;
     private long LifeTime;

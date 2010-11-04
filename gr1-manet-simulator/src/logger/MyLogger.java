@@ -14,10 +14,10 @@
 
 package logger;
 
-import org.apache.log4j.Logger;
 import org.apache.log4j.ConsoleAppender;
-import org.apache.log4j.SimpleLayout;
 import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.SimpleLayout;
 
 /**
  * The MyLogger class is used to provide detailed logging about the state of each node, the overall

@@ -1,24 +1,43 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package simulator;
 
-import simulator.noderelated.tasks.*;
-import simulator.noderelated.*;
-import simulator.Packets.*;
-
-import java.util.*;
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.Timer;
 
 import logger.MyLogger;
 import logger.StatusManager;
-import utility.PropertyManager;
+import simulator.Packets.DataPacket;
+import simulator.Packets.Packet;
+import simulator.Packets.RERRPacket;
+import simulator.Packets.RREQPacket;
+import simulator.noderelated.BroadCastField;
+import simulator.noderelated.Coordinates;
+import simulator.noderelated.IPAddress;
+import simulator.noderelated.RREPPacketWrapper;
+import simulator.noderelated.Route;
+import simulator.noderelated.tasks.BroadCastTable_Expiry;
+import simulator.noderelated.tasks.Route_Delete;
+import simulator.noderelated.tasks.Route_Expiry;
 
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 1, 2006
- * Time: 5:24:46 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Node implements Serializable  {
     /**
      * akharin zamani ke hello ia broadcast ferestade

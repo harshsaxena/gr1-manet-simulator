@@ -1,22 +1,27 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package simulator.noderelated.tasks;
 
+import java.util.Date;
+import java.util.Iterator;
+import java.util.TimerTask;
+import logger.MyLogger;
+import logger.StatusManager;
 import simulator.Node;
 import simulator.noderelated.Route;
 
-import java.util.TimerTask;
-import java.util.Date;
-import java.util.Iterator;
-
-import logger.MyLogger;
-import logger.StatusManager;
-
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 15, 2006
- * Time: 10:14:07 AM
- * To change this template use File | Settings | File Templates.
- */
 public class Route_Delete extends TimerTask {
     Node mynode;
 

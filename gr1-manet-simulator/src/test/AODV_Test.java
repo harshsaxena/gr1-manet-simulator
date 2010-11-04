@@ -1,23 +1,26 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
 package test;
 
-import simulator.Map_Manager;
-import simulator.Node;
-import simulator.Data;
-import simulator.noderelated.IPAddress;
-import org.apache.log4j.Logger;
-import org.apache.log4j.SimpleLayout;
-import org.apache.log4j.ConsoleAppender;
-import org.apache.log4j.Level;
 import logger.MyLogger;
 import logger.StatusManager;
+import simulator.Data;
+import simulator.Map_Manager;
+import simulator.Node;
+import simulator.noderelated.IPAddress;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Ali
- * Date: Aug 5, 2006
- * Time: 1:27:27 PM
- * To change this template use File | Settings | File Templates.
- */
 public class AODV_Test {
 
     public static TestFlag waiting = new TestFlag();

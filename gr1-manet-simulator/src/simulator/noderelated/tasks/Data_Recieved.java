@@ -1,21 +1,28 @@
-package simulator.noderelated.tasks;
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
 
-import simulator.Node;
-import simulator.noderelated.Route;
-import simulator.Packets.DataPacket;
-import logger.MyLogger;
-import logger.StatusManager;
-import test.AODV_Test;
+package simulator.noderelated.tasks;
 
 import java.util.Date;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Masoud
- * Date: Aug 4, 2006
- * Time: 1:23:37 PM
- * To change this template use File | Settings | File Templates.
- */
+import logger.MyLogger;
+import logger.StatusManager;
+import simulator.Node;
+import simulator.Packets.DataPacket;
+import simulator.noderelated.Route;
+import test.AODV_Test;
+
 public class Data_Recieved extends Thread{
     Node mynode;
     private DataPacket packet;
