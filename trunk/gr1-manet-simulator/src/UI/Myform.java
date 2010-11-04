@@ -18,6 +18,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ImageIcon;
@@ -31,6 +32,7 @@ import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.SwingConstants;
+
 import logger.StatusManager;
 import simulator.Node;
 import UI.actions.DeleteBtnAction;
@@ -44,164 +46,182 @@ import UI.myobjects.PowerShower;
 import UI.myobjects.draganddrop.DropTargetImp;
 
 public class Myform extends JFrame {
-    public final NumberKeyListener nkl = new NumberKeyListener();
-    JPanel content;
-    MyMap myMap;
-    private Node_Properties nodePanel;
-    public int xScale = 10;
-    public int yScale = 10;
-    public final int mapWidth = 550;
-    public final int mapHeight = 550;
-    public NodeButton newNodeBtn = new NodeButton(new ImageIcon("images/SendingNode0.png"));
-    private final List<GraphicalNode> graphicalNodes = new ArrayList<GraphicalNode>();
-    private final JTextField minNumber = new JTextField("3",3);
-    private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",true);
-    private final JTextField searchText = new JTextField(8);
-    JButton generateBtn ;
-     JButton delGnodeBtn = new JButton(new ImageIcon("images/delete.png"));
-    PowerShower powerShower;
-    JToolBar toolBar;
-    private GraphicalNode selectedGNode;
 
-    public List<GraphicalNode> getGraphicalNodes() {
-        return graphicalNodes;
-    }
+	private static final long serialVersionUID = 1L;
+	
+	public static void main(String[] args) {
+		Myform frame = new Myform("AODV Simulator");
+		frame.newNodeBtn.myForm = frame;
+		frame.setNodePanel(new Node_Properties(frame));
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
+				frame.myMap, frame.getNodePanel());
+		splitPane.setOneTouchExpandable(true);
+		splitPane.setDividerLocation(550);
+		frame.content.add(splitPane, BorderLayout.CENTER);
+		frame.myMap.addMouseListener(new PanelAction(frame));
+		frame.generateBtn.addActionListener(new InitParameters(frame));
+		frame.powerShower = new PowerShower(frame);
+		frame.delGnodeBtn.addActionListener(new DeleteBtnAction(frame));
+		frame.searchText.addActionListener(new SearchGNodeAction(frame));
+		frame.setGlassPane(frame.powerShower);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
 
-    /**
-     *  returns the {@link GraphicalNode} that currently selecteed
-     */
-    public GraphicalNode getSelectedGNode() {
-        return selectedGNode;
-    }
+		MapForm mapForm = new MapForm(frame, "Initializing Map", true, frame);
+		mapForm.pack();
+		mapForm.setVisible(true);
+		StatusManager.init(frame);
 
-    public MyMap getMyMap() {
-        return myMap;
-    }
+	}
+	public JPanel content;
+	public JButton delGnodeBtn = new JButton(new ImageIcon("images/delete.png"));
+	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",
+			true);
+	public JButton generateBtn;
+	private final List<GraphicalNode> graphicalNodes = new ArrayList<GraphicalNode>();
+	public final int mapHeight = 550;
+	public final int mapWidth = 550;
+	private final JTextField minNumber = new JTextField("3", 3);
+	public MyMap myMap;
+	public NodeButton newNodeBtn = new NodeButton(new ImageIcon(
+			"images/SendingNode0.png"));
+	public final NumberKeyListener nkl = new NumberKeyListener();
+	private Node_Properties nodePanel;
+	public PowerShower powerShower;
+	private final JTextField searchText = new JTextField(8);
+	private GraphicalNode selectedGNode;
+	public JToolBar toolBar;
+	public int xScale = 10;
+	public int yScale = 10;
 
-    public void refreshPowerShower(){
-        this.powerShower.setVisible(false);
-        this.powerShower.setXYrXrY(selectedGNode.getLocation().x,selectedGNode.getLocation().y,
-                selectedGNode.getNode().getPower()/this.xScale,selectedGNode.getNode().getPower()/this.yScale);
-        this.powerShower.setVisible(true);
-        this.powerShower.invalidate();
-    }
-    public void setSelectedGNode(GraphicalNode selectedGNode) {
-        this.selectedGNode = selectedGNode;
-        if (selectedGNode!=null){
-            this.getNodePanel().nameText.setEnabled(selectedGNode.getName().trim().length()==0);
-            selectedGNode.fillNodePanel();
-           this.refreshPowerShower();
-        }else{
-            this.powerShower.setVisible(false);
-        }
-    }
+	public Myform(String title) {
+		super(title);
+		content = new JPanel(new BorderLayout());
+		content.setOpaque(true);
+		myMap = new MyMap();
+		myMap.setPreferredSize(new Dimension(this.mapWidth, this.mapHeight));
+		myMap.setBorder(BorderFactory.createEtchedBorder());
+		this.getContentPane().add(content);
+		toolBar = new JToolBar();
+		toolBar.add(newNodeBtn);
+		toolBar.add(delGnodeBtn);
+		toolBar.add(Box.createHorizontalStrut(5));
+		toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+		toolBar.add(Box.createHorizontalStrut(5));
+		toolBar.add(new JLabel("Min Neighbor: "));
+		toolBar.add(minNumber);
+		toolBar.add(doubleDirection);
+		generateBtn = new JButton("Fill Parameter");
+		toolBar.add(generateBtn);
+		minNumber.addKeyListener(new NumberKeyListener());
 
-    public Myform(String title) {
-        super(title);
-        content = new JPanel(new BorderLayout());
-        content.setOpaque(true);
-        myMap = new MyMap();
-        myMap.setPreferredSize(new Dimension(this.mapWidth,this.mapHeight));
-        myMap.setBorder(BorderFactory.createEtchedBorder());
-        this.getContentPane().add(content);
-        toolBar = new JToolBar();
-        toolBar.add(newNodeBtn);
-        toolBar.add(delGnodeBtn);
-        toolBar.add(Box.createHorizontalStrut(5));
-        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
-        toolBar.add(Box.createHorizontalStrut(5));
-        toolBar.add(new JLabel("Min Neighbor: "));
-        toolBar.add(minNumber);
-        toolBar.add(doubleDirection);
-        generateBtn = new JButton("Fill Parameter");
-        toolBar.add(generateBtn);
-        minNumber.addKeyListener(new NumberKeyListener());
+		toolBar.add(Box.createHorizontalStrut(5));
+		toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+		toolBar.add(Box.createHorizontalStrut(5));
+		toolBar.add(new JLabel("Search: "));
+		toolBar.add(searchText);
 
-        toolBar.add(Box.createHorizontalStrut(5));
-        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
-        toolBar.add(Box.createHorizontalStrut(5));
-        toolBar.add(new JLabel("Search: "));
-        toolBar.add(searchText);
+		content.add(toolBar, BorderLayout.PAGE_START);
+		myMap.setDropTarget(new DropTargetImp(myMap));
+		myMap.setLayout(null);
+	}
 
-        content.add(toolBar,BorderLayout.PAGE_START);
-        myMap.setDropTarget(new DropTargetImp(myMap));
-        myMap.setLayout(null);
+	/**
+	 * finds GraphicalNode in graphicalNode list
+	 * 
+	 * @param name
+	 * @return null: if it didn't find the gnode with name<br/>
+	 *         reference to that node if it found
+	 */
+	public GraphicalNode getGNode(String name) {
+		for (GraphicalNode graphicalNode : graphicalNodes) {
+			if (graphicalNode.getName().equals(name)) {
+				return graphicalNode;
+			}
+		}
+		return null;
+	}
 
-    }
+	/**
+	 * Searches the Graphical Nodes for a matching Node. If found the matching
+	 * Graphical Node is returned.
+	 * 
+	 * @param node
+	 * @return
+	 */
+	public GraphicalNode getGnodebyNode(Node node) {
+		for (GraphicalNode graphicalNode : graphicalNodes) {
+			if (graphicalNode.getNode().equals(node)) {
+				return graphicalNode;
+			}
+		}
+		return null;
+	}
 
-    public boolean isDoubleDirection(){
-        return this.doubleDirection.isSelected();
-    }
-    public int getMinNumberForFillParameter(){
-        if (this.minNumber.getText().trim().length()>0){
-            return Integer.parseInt(this.minNumber.getText());
-        }else{
-            return 0;
-        }
-    }
+	public List<GraphicalNode> getGraphicalNodes() {
+		return graphicalNodes;
+	}
 
-    /**
-     * finds GraphicalNode in graphicalNode list
-     * @param name
-     * @return null: if it didn't find the gnode with name<br/>
-     *          reference to that node if it found
-     */
-    public GraphicalNode getGNode(String name){
-        for (GraphicalNode graphicalNode : graphicalNodes) {
-            if (graphicalNode.getName().equals(name)){
-                return graphicalNode;
-            }
-        }
-        return null;
-    }
-    public void putGNode (GraphicalNode gNode){
-        graphicalNodes.add(gNode);
-    }
+	public int getMinNumberForFillParameter() {
+		if (this.minNumber.getText().trim().length() > 0) {
+			return Integer.parseInt(this.minNumber.getText());
+		} else {
+			return 0;
+		}
+	}
 
-    public Node_Properties getNodePanel() {
-        return nodePanel;
-    }
+	public MyMap getMyMap() {
+		return myMap;
+	}
 
-    public void setNodePanel(Node_Properties nodePanel) {
-        this.nodePanel = nodePanel;
-    }
+	public Node_Properties getNodePanel() {
+		return nodePanel;
+	}
 
-    public GraphicalNode getGnodebyNode(Node node){
-        for (GraphicalNode graphicalNode : graphicalNodes) {
-            if (graphicalNode.getNode().equals(node)){
-                return graphicalNode;
-            }
-        }
-        return null;
-    }
+	public JTextField getSearchText() {
+		return searchText;
+	}
 
-    public JTextField getSearchText() {
-        return searchText;
-    }
+	/**
+	 * returns the {@link GraphicalNode} that currently selected
+	 */
+	public GraphicalNode getSelectedGNode() {
+		return selectedGNode;
+	}
 
-    public static void main(String[] args) {
-        Myform frame = new Myform("AODV Simulator");
-        frame.newNodeBtn.myForm = frame;
-        frame.setNodePanel(new Node_Properties(frame));
-        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,frame.myMap,frame.getNodePanel());
-        splitPane.setOneTouchExpandable(true);
-        splitPane.setDividerLocation(550);
-        frame.content.add(splitPane,BorderLayout.CENTER);
-        frame.myMap.addMouseListener(new PanelAction(frame));
-        frame.generateBtn.addActionListener(new InitParameters(frame));
-        frame.powerShower = new PowerShower(frame);
-        frame.delGnodeBtn.addActionListener(new DeleteBtnAction(frame));
-        frame.searchText.addActionListener(new SearchGNodeAction(frame));
-        frame.setGlassPane(frame.powerShower);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+	public boolean isDoubleDirection() {
+		return this.doubleDirection.isSelected();
+	}
 
-        MapForm mapForm = new MapForm(frame,"Initializing Map",true,frame);
-        mapForm.pack();
-        mapForm.setVisible(true);
-        StatusManager.init(frame);
+	public void putGNode(GraphicalNode gNode) {
+		graphicalNodes.add(gNode);
+	}
 
-    }
+	public void refreshPowerShower() {
+		this.powerShower.setVisible(false);
+		this.powerShower
+				.setXYrXrY(selectedGNode.getLocation().x, selectedGNode
+						.getLocation().y, selectedGNode.getNode().getPower()
+						/ this.xScale, selectedGNode.getNode().getPower()
+						/ this.yScale);
+		this.powerShower.setVisible(true);
+		this.powerShower.invalidate();
+	}
 
+	public void setNodePanel(Node_Properties nodePanel) {
+		this.nodePanel = nodePanel;
+	}
+
+	public void setSelectedGNode(GraphicalNode selectedGNode) {
+		this.selectedGNode = selectedGNode;
+		if (selectedGNode != null) {
+			this.getNodePanel().nameText.setEnabled(selectedGNode.getName()
+					.trim().length() == 0);
+			selectedGNode.fillNodePanel();
+			this.refreshPowerShower();
+		} else {
+			this.powerShower.setVisible(false);
+		}
+	}
 
 }
