@@ -21,8 +21,10 @@ import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+
 import javax.swing.Icon;
 import javax.swing.JComponent;
+
 import logger.MyLogger;
 import simulator.Node;
 import simulator.noderelated.Coordinates;
@@ -35,6 +37,8 @@ import UI.Node_Properties;
  * communication between graphical properties and node properties
  */
 public class GraphicalNode extends NodeButton implements Transferable {
+
+	private static final long serialVersionUID = 1L;
 	private static final String mimeType = DataFlavor.javaJVMLocalObjectMimeType
 			+ ";class=UI.myobjects.GraphicalNode";
 	public static DataFlavor dataFlavor;
@@ -43,7 +47,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	public static final int ANIMATION_PERIOD = 500;
 	private String name = "";
 	private Color color;
-	private StringBuffer recievedData = new StringBuffer();
+	private StringBuffer receivedData = new StringBuffer();
 	private StringBuffer statues = new StringBuffer();
 
 	public String toString() {
@@ -52,7 +56,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 
 	/**
 	 * it overrides default setBounds method of {@link JComponent} class to make
-	 * a communication between x,y poroperties of graphical node and actual node
+	 * a communication between x,y properties of graphical node and actual node
 	 * by {@link myForm.xScale} and {@link myForm.yScale}
 	 * 
 	 * @param x
@@ -62,9 +66,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	 */
 
 	public void setBounds(int x, int y, int width, int height) {
-		super.setBounds(x, y, width, height); // To change body of overridden
-		// methods use File | Settings |
-		// File Templates.
+		super.setBounds(x, y, width, height); 
 		this.node.setNode_coordinates(new Coordinates(x * myForm.xScale, y
 				* myForm.yScale));
 		MyLogger.logger.debug("Mappanel setting boound");
@@ -84,16 +86,16 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	public String getRecievedData() {
-		return this.recievedData.toString();
+		return this.receivedData.toString();
 	}
 
 	public void addRecievedData(String st) {
-		this.recievedData.append(st).append("\n");
+		this.receivedData.append(st).append("\n");
 		this.refreshNodePanel();
 	}
 
 	public void resetRecievedData() {
-		this.recievedData.delete(0, this.recievedData.length());
+		this.receivedData.delete(0, this.receivedData.length());
 	}
 
 	public GraphicalNode(Icon icon) {
@@ -107,7 +109,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	/**
-	 * makes a Graphical Node componnet and calls another constructor
+	 * makes a Graphical Node component and calls another constructor
 	 * 
 	 * @param icon
 	 * @param myForm
@@ -123,7 +125,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	/**
-	 * sets this components x and y coresponding to x and y of actual node
+	 * sets this components x and y corresponding to x and y of actual node
 	 * 
 	 * @param x
 	 *            x dimension of actual node
@@ -133,8 +135,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	public void setScaledCoordinates(int x, int y) {
 		Dimension size = getSize();
 		super.setBounds(x / myForm.xScale, y / myForm.yScale, size.width,
-				size.height); // To change body of overridden methods use File |
-		// Settings | File Templates.
+				size.height); 
 		this.node.setNode_coordinates(new Coordinates(x, y));
 	}
 
