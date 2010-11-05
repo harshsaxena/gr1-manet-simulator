@@ -1,0 +1,8 @@
+2010.11.05  11:02:54 Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+2010.11.05  11:03:09 Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+2010.11.05  11:03:10 Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+2010.11.05  11:03:10 Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
+2010.11.05  11:03:11 Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
+2010.11.05  12:35:50 Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+2010.11.05  12:35:53 Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+2010.11.05  12:35:55 Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
