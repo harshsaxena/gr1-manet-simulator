@@ -14,7 +14,8 @@
 
 package simulator.Packets;
 
-import logger.MyLogger;
+import logger.ConsoleLogger;
+import logger.FileLogger;
 import simulator.Node;
 import simulator.noderelated.tasks.RREQ_Received;
 
@@ -63,7 +64,8 @@ public class RREQPacket extends Packet {
                 // checks if this packet has not broadcasted and the source node is not this
                 new RREQ_Received("RREQ_Received"+receiver.getIP().toString(),receiver,
                         this,prev_hop );
-                MyLogger.logger.info("Node"+ receiver.getIP().toString()+": RREQ_Received from "+this.source+" through "+prev_hop);
+                ConsoleLogger.logger.info("Node " + receiver.getIP().toString() + " : RREQ received from " + this.source + " through " + prev_hop);
+                FileLogger.write("Node " + receiver.getIP().toString() + " : RREQ received from " + this.source + " through " + prev_hop);
             }
     }
 
