@@ -19,8 +19,7 @@ import java.awt.datatransfer.Transferable;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
 
-import logger.ConsoleLogger;
-import logger.FileLogger;
+import logger.ConsoleAndFileLogger;
 import UI.myobjects.GraphicalNode;
 import UI.myobjects.NodeButton;
 
@@ -28,12 +27,14 @@ import UI.myobjects.NodeButton;
 public class MyButtonTransferHandler extends TransferHandler {
 
     protected Transferable createTransferable(JComponent c) {
+    	
         NodeButton source = (NodeButton)c;
-        ConsoleLogger.logger.debug("NodeButton createTranserable");
-        FileLogger.write("NodeButton createTranserable");
         GraphicalNode nodeTransferable = new GraphicalNode(source.getIcon(),source.myForm,false);
         source.myForm.putGNode(nodeTransferable);
         nodeTransferable.setTransferHandler(new MyNodeTransferHandler());
+        
+        ConsoleAndFileLogger.write("Node button create transerable", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
+        
         return nodeTransferable;
     }
 
