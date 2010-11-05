@@ -70,6 +70,7 @@ public class IPAddress {
 	}
 }
 
+@SuppressWarnings("serial")
 class IPFormatException extends RuntimeException {
 	public String getMessage() {
 		return super.getMessage() + " Error in IP Format";
