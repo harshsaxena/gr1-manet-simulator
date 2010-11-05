@@ -16,7 +16,8 @@ package simulator.Packets;
 
 import java.util.HashMap;
 import java.util.Map;
-import logger.MyLogger;
+import logger.ConsoleLogger;
+import logger.FileLogger;
 import simulator.Node;
 import simulator.noderelated.tasks.RERR_Received;
 
@@ -34,7 +35,8 @@ public class RERRPacket extends Packet {
 
     public void receive(Node receiver, Node prev_hop) {
         new RERR_Received("RERR_Received"+receiver.getIP().toString(),receiver,this,prev_hop);
-            MyLogger.logger.info("Node"+ receiver.getIP().toString()+": RERR_Received from "+this.source+" through "+prev_hop);
+        ConsoleLogger.logger.info("Node " + receiver.getIP().toString() + " : RERR received from " + this.source + " through " + prev_hop);
+        FileLogger.write("Node " + receiver.getIP().toString() + " : RERR received from " + this.source + " through " + prev_hop);
     }
 
     public String toString() {
