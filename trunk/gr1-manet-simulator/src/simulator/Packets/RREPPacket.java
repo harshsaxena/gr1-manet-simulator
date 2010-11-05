@@ -14,7 +14,7 @@
 
 package simulator.Packets;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import simulator.Node;
 import simulator.noderelated.RREPPacketWrapper;
 import simulator.noderelated.tasks.RREP_Received;
@@ -39,7 +39,7 @@ public class RREPPacket extends Packet {
     public void receive(Node receiver, Node prev_hop) {
         new RREP_Received("RREP_Received"+receiver.getIP().toString(),receiver,
                     new RREPPacketWrapper(this,prev_hop));
-        ConsoleAndFileLogger.write("Node "+ receiver.getIP().toString() + ": RREP received from " + this.source + " through " + prev_hop, ConsoleAndFileLogger.MSG_TYPE_INFO);
+        FileLogger.write("Node "+ receiver.getIP().toString() + ": RREP received from " + this.source + " through " + prev_hop, FileLogger.MSG_TYPE_INFO);
     }
 
     public String toString() {

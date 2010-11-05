@@ -24,7 +24,7 @@ import java.io.IOException;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import UI.myobjects.GraphicalNode;
 
 /**
@@ -41,7 +41,7 @@ public class DropTargetImp extends DropTarget {
 
 	public void drop(DropTargetDropEvent dtde) {
 
-		ConsoleAndFileLogger.write("Map Panel importing data.", ConsoleAndFileLogger.MSG_TYPE_INFO);
+		FileLogger.write("Map Panel importing data.", FileLogger.MSG_TYPE_INFO);
 		
 		if (dtde.isDataFlavorSupported(GraphicalNode.dataFlavor)) {
 			dtde.acceptDrop(dtde.getDropAction());
@@ -61,13 +61,13 @@ public class DropTargetImp extends DropTarget {
 				panel.invalidate();
 				node.myForm.refreshPowerShower();
 
-				ConsoleAndFileLogger.write("Map Panel after invalidate.", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
+				FileLogger.write("Map Panel after invalidate.", FileLogger.MSG_TYPE_DEBUG);
 
 				dtde.dropComplete(true);
 			} catch (UnsupportedFlavorException ufe) {
-				ConsoleAndFileLogger.write("importData: unsupported data flavor", ConsoleAndFileLogger.MSG_TYPE_ERROR);
+				FileLogger.write("importData: unsupported data flavor", FileLogger.MSG_TYPE_ERROR);
 			} catch (IOException ioe) {
-				ConsoleAndFileLogger.write("importData: I/O exception", ConsoleAndFileLogger.MSG_TYPE_ERROR);
+				FileLogger.write("importData: I/O exception", FileLogger.MSG_TYPE_ERROR);
 			}
 		}
 	}

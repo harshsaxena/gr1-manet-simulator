@@ -18,8 +18,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.TimerTask;
 
-import logger.ConsoleAndFileLogger;
-import logger.StatusLogger;
+import logger.FileLogger;
+import logger.OutputLogger;
 import simulator.Node;
 import simulator.noderelated.Route;
 
@@ -40,8 +40,8 @@ public class Route_Delete extends TimerTask {
 				if (route.getLifeTime() + Node.DELETE_PERIOD
 						* route.getIswaiting() < new Date().getTime()
 						&& !mynode.equals(route.getDestination())) {
-					ConsoleAndFileLogger.write("Node " + mynode + " : " + route + " Deleted!", ConsoleAndFileLogger.MSG_TYPE_INFO);
-					StatusLogger.get_instance().showNodeStatus(mynode, "Delete: " + route);
+					FileLogger.write("Node " + mynode + " : " + route + " Deleted!", FileLogger.MSG_TYPE_INFO);
+					OutputLogger.get_instance().showNodeStatus(mynode, "Delete: " + route);
 					itr.remove();
 				}
 			}

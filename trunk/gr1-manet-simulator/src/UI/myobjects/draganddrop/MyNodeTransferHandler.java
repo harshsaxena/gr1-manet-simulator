@@ -19,7 +19,7 @@ import java.awt.datatransfer.Transferable;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import UI.myobjects.GraphicalNode;
 
 @SuppressWarnings("serial")
@@ -29,7 +29,7 @@ public class MyNodeTransferHandler extends TransferHandler {
 		GraphicalNode source = (GraphicalNode) c;
 		source.setShouldRemoved(true);
 		
-		ConsoleAndFileLogger.write("Node button create transerable", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
+		FileLogger.write("Node button create transerable", FileLogger.MSG_TYPE_DEBUG);
 		
 		return source;
 	}

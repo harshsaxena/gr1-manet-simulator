@@ -33,7 +33,7 @@ import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.SwingConstants;
 
-import logger.StatusLogger;
+import logger.OutputLogger;
 import simulator.Node;
 import UI.actions.DeleteBtnAction;
 import UI.actions.InitParameters;
@@ -70,7 +70,7 @@ public class Myform extends JFrame {
 		MapForm mapForm = new MapForm(frame, "Initializing Map", true, frame);
 		mapForm.pack();
 		mapForm.setVisible(true);
-		StatusLogger.init(frame);
+		OutputLogger.init(frame);
 
 	}
 	public JPanel content;

@@ -16,7 +16,7 @@ package simulator.noderelated.tasks;
 
 import java.util.Date;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import simulator.Node;
 import simulator.Packets.RREPPacket;
 import simulator.Packets.RREQPacket;
@@ -71,9 +71,9 @@ public class RREQ_Received extends Thread{
         Route forwardRoute = this.mynode.search(packet.dest);
         if (Route.isBad(forwardRoute)
                 || forwardRoute.getSeq_no() <= packet.seq_no){//TODO check this
-            ConsoleAndFileLogger.write("Node"+ mynode.getIP().toString()+":received RREQPacket from "+
+            FileLogger.write("Node"+ mynode.getIP().toString()+":received RREQPacket from "+
                     packet.source+" which handed from "+receivedFrom
-                    +": but it is not the destination", ConsoleAndFileLogger.MSG_TYPE_INFO);
+                    +": but it is not the destination", FileLogger.MSG_TYPE_INFO);
             if (packet.ttl>1){
                 packet.ttl--; //TODO check hop limit
 //                     packet.hop_count++;
@@ -85,9 +85,9 @@ public class RREQ_Received extends Thread{
             }
         }else {
             if (packet.dest.equals(mynode)){
-                ConsoleAndFileLogger.write("Node"+ mynode+":received RREQPacket from "+
+                FileLogger.write("Node"+ mynode+":received RREQPacket from "+
                         packet.source+" which handded from "+receivedFrom
-                        +": it is destination; generating RREPPacket", ConsoleAndFileLogger.MSG_TYPE_INFO);
+                        +": it is destination; generating RREPPacket", FileLogger.MSG_TYPE_INFO);
 
                 if (packet.seq_no==mynode.getSeq_no()+1 ){
                     mynode.increaseseq_no();
@@ -107,9 +107,9 @@ public class RREQ_Received extends Thread{
                     return;
                 }
 
-                ConsoleAndFileLogger.write("Node "+ mynode+" : received RREQPacket from "+
+                FileLogger.write("Node "+ mynode+" : received RREQPacket from "+
                         packet.source+" which handed from "+receivedFrom
-                        +": I have Route; generating RREPPacket", ConsoleAndFileLogger.MSG_TYPE_INFO);
+                        +": I have Route; generating RREPPacket", FileLogger.MSG_TYPE_INFO);
                 
                 RREPPacket rrepPacket = new RREPPacket();
                 rrepPacket.source=packet.source;

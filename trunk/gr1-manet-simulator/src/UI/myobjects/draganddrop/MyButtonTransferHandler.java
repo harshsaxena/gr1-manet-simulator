@@ -19,7 +19,7 @@ import java.awt.datatransfer.Transferable;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import UI.myobjects.GraphicalNode;
 import UI.myobjects.NodeButton;
 
@@ -33,7 +33,7 @@ public class MyButtonTransferHandler extends TransferHandler {
         source.myForm.putGNode(nodeTransferable);
         nodeTransferable.setTransferHandler(new MyNodeTransferHandler());
         
-        ConsoleAndFileLogger.write("Node button create transerable", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
+        FileLogger.write("Node button create transerable", FileLogger.MSG_TYPE_DEBUG);
         
         return nodeTransferable;
     }

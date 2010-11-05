@@ -24,7 +24,7 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import UI.Myform;
 import UI.myobjects.draganddrop.MyButtonTransferHandler;
 
@@ -61,7 +61,7 @@ public class NodeButton extends JButton implements MouseMotionListener,
 
 	public void mousePressed(MouseEvent e) {
 		firstMouseEvent = e;
-		ConsoleAndFileLogger.write("Node button pressed.", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
+		FileLogger.write("Node button pressed.", FileLogger.MSG_TYPE_DEBUG);
 		e.consume();
 	}
 
@@ -99,7 +99,7 @@ public class NodeButton extends JButton implements MouseMotionListener,
 				JComponent c = (JComponent) e.getSource();
 				TransferHandler handler = c.getTransferHandler();
 				// Tell the transfer handler to initiate the drag.
-				ConsoleAndFileLogger.write("Node button exporting initiated", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
+				FileLogger.write("Node button exporting initiated", FileLogger.MSG_TYPE_DEBUG);
 				handler.exportAsDrag(c, firstMouseEvent, action);
 				firstMouseEvent = null;
 			}
