@@ -23,6 +23,7 @@ import javax.swing.JComponent;
 
 import UI.Myform;
 
+@SuppressWarnings("serial")
 public class PowerShower extends JComponent {
     Myform myform;
     int x,y,rX,rY;
