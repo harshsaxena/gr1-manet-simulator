@@ -17,16 +17,16 @@ package UI.utility;
 import UI.myobjects.GraphicalNode;
 
 public class GNodeWrapper implements Comparable {
-	double distace;
+	double distance;
 	GraphicalNode gnode;
 
 	public GNodeWrapper(double distace, GraphicalNode gnode) {
-		this.distace = distace;
+		this.distance = distace;
 		this.gnode = gnode;
 	}
 
 	public double getDistace() {
-		return distace;
+		return distance;
 	}
 
 	public GraphicalNode getGnode() {
@@ -34,6 +34,6 @@ public class GNodeWrapper implements Comparable {
 	}
 
 	public int compareTo(Object o) {
-		return Double.compare(this.distace, ((GNodeWrapper) o).getDistace());
+		return Double.compare(this.distance, ((GNodeWrapper) o).getDistace());
 	}
 }
