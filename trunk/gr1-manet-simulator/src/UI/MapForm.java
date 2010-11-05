@@ -27,6 +27,7 @@ import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class MapForm extends JDialog
         implements ActionListener,PropertyChangeListener
 {

@@ -31,6 +31,7 @@ import UI.actions.NodePropOKBtnAction;
 import UI.actions.NodePropResetBtnAction;
 import UI.actions.NodePropSendtoBtnAction;
 
+@SuppressWarnings("serial")
 public class Node_Properties extends JPanel implements ActionListener {
     JButton resetBtn,OkBtn,SendBtn;
     public JTextField IPText,nameText,xText,yText,powerText,sendToText;
