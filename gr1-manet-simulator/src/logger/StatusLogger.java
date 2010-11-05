@@ -54,10 +54,12 @@ public class StatusLogger {
 	 */
 	public void showNodeStatus(Node node, String status) {
 		if (!this.test) {
+			
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			gNode.addStatus(status);
-			ConsoleLogger.logger.info("Node " + gNode.getName() + " is " + gNode.getStatus());
-			FileLogger.write("Node " + gNode.getName() + " is " + gNode.getStatus());
+			
+			ConsoleAndFileLogger.write("Node " + gNode.getName() + " is " + gNode.getStatus(), ConsoleAndFileLogger.MSG_TYPE_INFO);
+			
 		}
 	}
 
@@ -71,12 +73,11 @@ public class StatusLogger {
 	 */
 	public void showReceivedData(Node receiver, Node sender, Data data) {
 		if (!this.test) {
+			
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
-			gNode.addReceivedData("From: " + sender + "\n" + data.getContent());
-			ConsoleLogger.logger.info("Node " + gNode.getName() + " received "
-					+ data.getContent() + " from " + sender);
-			FileLogger.write("Node " + gNode.getName() + " received "
-					+ data.getContent() + " from " + sender);
+			gNode.addReceivedData(data.getContent() + " received from " + sender);
+			ConsoleAndFileLogger.write(data.getContent() + " received from " + sender, ConsoleAndFileLogger.MSG_TYPE_INFO);
+			
 		}
 	}
 

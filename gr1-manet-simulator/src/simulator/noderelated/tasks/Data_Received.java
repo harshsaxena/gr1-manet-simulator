@@ -16,9 +16,8 @@ package simulator.noderelated.tasks;
 
 import java.util.Date;
 
-import logger.ConsoleLogger;
-import logger.FileLogger;
-import logger.StatusManager;
+import logger.ConsoleAndFileLogger;
+import logger.StatusLogger;
 import simulator.Node;
 import simulator.Packets.DataPacket;
 import simulator.noderelated.Route;
@@ -39,13 +38,11 @@ public class Data_Received extends Thread{
 
     public void run() {
         if (packet.dest.equals(mynode)){
-            ConsoleLogger.logger.info("Node"+ mynode+":received DataPacket from "+
-                    packet.source+" which handded from "+receivedFrom
-                    +":I'm the destination");
+            //ConsoleLogger.logger.info("Node"+ mynode+":received DataPacket from "+ packet.source+" which handded from "+receivedFrom +":I'm the destination");
                     
-            FileLogger.write("Node"+ mynode+":received DataPacket from "+
-                    packet.source+" which handded from "+receivedFrom
-                    +":I'm the destination");
+            ConsoleAndFileLogger.write("Node " + mynode + " : received DataPacket from " +
+                    packet.source + " which handded from " + receivedFrom
+                    + " : I'm the destination", ConsoleAndFileLogger.MSG_TYPE_INFO);
 
             //only for test
             synchronized(AODV_Test.waiting){
@@ -54,16 +51,14 @@ public class Data_Received extends Thread{
             }
             //
             //call UI received data
-            StatusManager.get_instance().showReceivedData(mynode,packet.source,packet.getData());
+            StatusLogger.get_instance().showReceivedData(mynode,packet.source,packet.getData());
         }else{
             Route route = mynode.search(packet.dest);
             if (!Route.isBad(route)){
-                ConsoleLogger.logger.info("Node"+ mynode+":passing DataPacket from "+
-                        packet.source+" which handded from "+receivedFrom
-                        +" to "+ route.getNext_hop());
-                FileLogger.write("Node"+ mynode+":passing DataPacket from "+
-                        packet.source+" which handded from "+receivedFrom
-                        +" to "+ route.getNext_hop());
+                //ConsoleLogger.logger.info("Node " + mynode + " : passing DataPacket from " + packet.source + " which handded from " + receivedFrom + " to " + route.getNext_hop());
+                ConsoleAndFileLogger.write("Node "+ mynode + ": passing DataPacket from "+
+                        packet.source + " which handded from " + receivedFrom
+                        + " to " + route.getNext_hop(), ConsoleAndFileLogger.MSG_TYPE_INFO);
                     
                 route.setLifeTime(new Date().getTime()+Node.ACTIVE_ROUTE_TIMEOUT);
                 Route route2 = mynode.search(packet.source);
@@ -71,10 +66,7 @@ public class Data_Received extends Thread{
                     route2.setLifeTime(new Date().getTime()+Node.ACTIVE_ROUTE_TIMEOUT);
                 }
                 if (!mynode.send(packet,route.getNext_hop())){
-                    ConsoleLogger.logger.info("Node"+ mynode+": node "
-                            + route.getNext_hop() + " lost.");
-                FileLogger.write("Node"+ mynode+": node "
-                            + route.getNext_hop() + " lost.");
+                ConsoleAndFileLogger.write("Node"+ mynode+": node " + route.getNext_hop() + " lost.", ConsoleAndFileLogger.MSG_TYPE_INFO);
                         
                     route.setSeq_no(route.getSeq_no()+1);
                     route.setInvalid(true);
@@ -84,12 +76,10 @@ public class Data_Received extends Thread{
                 }
             }else{
                 int lostNodeseq_no = -1;
-                ConsoleLogger.logger.debug("Node"+ mynode+":receiving DataPacket from "+
-                        packet.source+" which handded from "+receivedFrom
-                        +"but have no route!");
-                FileLogger.write("Node"+ mynode+":receiving DataPacket from "+
-                        packet.source+" which handded from "+receivedFrom
-                        +"but have no route!");
+                //ConsoleLogger.logger.debug("Node"+ mynode+":receiving DataPacket from "+ packet.source+" which handded from "+receivedFrom+"but have no route!");
+                ConsoleAndFileLogger.write("Node " + mynode + ": receiving data from " +
+                        packet.source + " which handed from " + receivedFrom
+                        + " but have no route!", ConsoleAndFileLogger.MSG_TYPE_INFO);
                         
                 if (route!=null){
                     route.setInvalid(true);
