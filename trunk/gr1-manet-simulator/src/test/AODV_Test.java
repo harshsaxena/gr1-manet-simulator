@@ -14,7 +14,7 @@
 
 package test;
 
-import logger.MyLogger;
+import logger.ConsoleLogger;
 import logger.StatusManager;
 import simulator.Data;
 import simulator.Map_Manager;
@@ -39,7 +39,7 @@ public class AODV_Test {
             new_node.setPower(43);
 //            Map_Manager.get_instance().addNode(new_node);
 
-            MyLogger.logger.info("Node " + i + " created at: x = "
+            ConsoleLogger.logger.info("Node " + i + " created at: x = "
                     + new_node.getNode_coordinates().getX_coordinate()
                     + ", y = " + new_node.getNode_coordinates().getY_coordinate()
                     + ", power = " + new_node.getPower());
@@ -60,21 +60,21 @@ public class AODV_Test {
         Data test_data = new Data();
         test_data.setContent("test");
 
-        MyLogger.logger.info("Trying to send data form node " + src_number
+        ConsoleLogger.logger.info("Trying to send data form node " + src_number
                 + " to node " + dest_number);
 
         if (src_node.send_Data(test_data, dest_node)) {
-            MyLogger.logger.info("#############Data sent successfully.############");
+            ConsoleLogger.logger.info("#############Data sent successfully.############");
             dest_node.getNode_coordinates().setX_coordinate(90 - dest_node.getNode_coordinates().getX_coordinate());
             dest_node.getNode_coordinates().setY_coordinate(90 - dest_node.getNode_coordinates().getY_coordinate());
 
             if (src_node.send_Data(test_data, dest_node)) {
-                MyLogger.logger.info("%%%%%%%%%%%%%%%%%Data sent successfully.%%%%%%%%%%%%%%");
+                ConsoleLogger.logger.info("%%%%%%%%%%%%%%%%%Data sent successfully.%%%%%%%%%%%%%%");
             } else {
-                MyLogger.logger.info("Failed to send data.");
+                ConsoleLogger.logger.info("Failed to send data.");
             }
         } else {
-            MyLogger.logger.info("Failed to send data.");
+            ConsoleLogger.logger.info("Failed to send data.");
         }
     }
 
@@ -87,7 +87,7 @@ public class AODV_Test {
             new_node.setPower(nodexyp[i][2]);
 //            Map_Manager.get_instance().addNode(new_node);
 
-            MyLogger.logger.info("Node " + (i) + " created at: x = "
+            ConsoleLogger.logger.info("Node " + (i) + " created at: x = "
                     + new_node.getNode_coordinates().getX_coordinate()
                     + ", y = " + new_node.getNode_coordinates().getY_coordinate()
                     + ", power = " + new_node.getPower());
@@ -100,7 +100,7 @@ public class AODV_Test {
 
         Data test_data = new Data();
         test_data.setContent("test");
-        MyLogger.logger.info("Trying to send data form node " + 0
+        ConsoleLogger.logger.info("Trying to send data form node " + 0
                 + " to node " + 3);
         src_node.send_Data(test_data, dest_node);
         synchronized(waiting){
@@ -111,18 +111,18 @@ public class AODV_Test {
             }
         }
         if (waiting.s.equals("true")) {
-            MyLogger.logger.info("#############Data sent successfully.############");
+            ConsoleLogger.logger.info("#############Data sent successfully.############");
             Node tempnode = (Node) Map_Manager.get_instance().getNode_list().get(2);
             tempnode.getNode_coordinates().setX_coordinate(75);
             tempnode.getNode_coordinates().setY_coordinate(45);
 
             if (src_node.send_Data(test_data, dest_node)) {
-                MyLogger.logger.info("%%%%%%%%%%%%%%%%%Data sent successfully.%%%%%%%%%%%%%%");
+                ConsoleLogger.logger.info("%%%%%%%%%%%%%%%%%Data sent successfully.%%%%%%%%%%%%%%");
             } else {
-                MyLogger.logger.info("Failed to send data.");
+                ConsoleLogger.logger.info("Failed to send data.");
             }
         } else {
-            MyLogger.logger.info("Failed to send data.");
+            ConsoleLogger.logger.info("Failed to send data.");
         }
     }
 
