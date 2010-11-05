@@ -17,7 +17,8 @@ package simulator.noderelated.tasks;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.TimerTask;
-import logger.MyLogger;
+import logger.ConsoleLogger;
+import logger.FileLogger;
 import logger.StatusManager;
 import simulator.Node;
 import simulator.noderelated.Route;
@@ -40,7 +41,8 @@ public class Route_Delete extends TimerTask {
                 Route route = mynode.getRout_Arr().get(node);
                 if (route.getLifeTime() +Node.DELETE_PERIOD * route.getIswaiting()<new Date().getTime()
                         && !mynode.equals(route.getDestination())){
-                    MyLogger.logger.info("Node "+mynode +" : "+route+" Deleted!");
+                    ConsoleLogger.logger.info("Node "+mynode +" : "+route+" Deleted!");
+                    FileLogger.write("Node "+mynode +" : "+route+" Deleted!");
                     StatusManager.get_instance().showNodeStatus(mynode,"Delete: "+route);
                     itr.remove();
                 }
