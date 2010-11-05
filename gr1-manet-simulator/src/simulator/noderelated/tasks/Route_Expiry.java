@@ -17,8 +17,8 @@ package simulator.noderelated.tasks;
 import java.util.Date;
 import java.util.TimerTask;
 
-import logger.ConsoleAndFileLogger;
-import logger.StatusLogger;
+import logger.FileLogger;
+import logger.OutputLogger;
 import simulator.Node;
 import simulator.noderelated.Route;
 
@@ -37,8 +37,8 @@ public class Route_Expiry extends TimerTask {
             Route route = mynode.getRout_Arr().get(node);
             if (route.getLifeTime()<new Date().getTime() && !mynode.equals(route.getDestination())
                     && route.getHop_count()< Route.INFINITE){
-                ConsoleAndFileLogger.write("Node " + mynode + ": " + route + " expires!", ConsoleAndFileLogger.MSG_TYPE_INFO);
-                StatusLogger.get_instance().showNodeStatus(mynode,"Expire: "+route);
+                FileLogger.write("Node " + mynode + ": " + route + " expires!", FileLogger.MSG_TYPE_INFO);
+                OutputLogger.get_instance().showNodeStatus(mynode,"Expire: "+route);
                 route.setSeq_no(route.getSeq_no()+1);
                 route.setHop_count(Route.INFINITE);
             }

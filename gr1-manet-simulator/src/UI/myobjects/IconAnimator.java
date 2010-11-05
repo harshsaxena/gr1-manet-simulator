@@ -19,7 +19,7 @@ import java.util.TimerTask;
 
 import javax.swing.ImageIcon;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import UI.Myform;
 
 public class IconAnimator extends TimerTask {
@@ -78,7 +78,7 @@ public class IconAnimator extends TimerTask {
 					.setIcon(ANIMATIONFRAMES[myNode.currentIconNumber.getType()][myNode.currentIconNumber
 							.getValue()]);
 
-			ConsoleAndFileLogger.write(this + " " + myNode.currentIconNumber, ConsoleAndFileLogger.MSG_TYPE_INFO);
+			FileLogger.write(this + " " + myNode.currentIconNumber, FileLogger.MSG_TYPE_INFO);
 
 			if (myNode.currentIconNumber.isShouldStop()) {
 				myNode.currentIconNumber.setValue(0);

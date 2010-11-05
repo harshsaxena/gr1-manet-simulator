@@ -23,47 +23,19 @@ import java.util.Date;
 
 /**
  * Writes log information or exceptions to a log file.
+ * Also writes log information to the system console.
  */
 public class FileLogger {
 
-	private static String logFile;
-	private final static String logDirPath = "./logs/";
-	private final static String fileName = "simlog_";
+	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd  hh:mm:ss");
 	private final static String ext = ".txt";
-	private final static DateFormat df = new SimpleDateFormat(
-			"yyyy.MM.dd  hh:mm:ss");
+	private final static String fileName = "simlog_";
+	private final static String logDirPath = "./logs/";
+	private static String logFile;
+	public final static String MSG_TYPE_DEBUG = "DEBUG";
+	public final static String MSG_TYPE_ERROR = "ERROR";
+	public final static String MSG_TYPE_INFO = "INFO";
 	private final static DateFormat shortDf = new SimpleDateFormat("yyyy.MM.dd");
-
-	private FileLogger() {
-	}
-
-	private static void setFileNameAndPath() {
-		Date currDate = new Date();
-		String currDateString = FileLogger.shortDf.format(currDate);
-		logFile = logDirPath + fileName + currDateString + ext;
-	}
-
-	/**
-	 * Takes in a String message, updates the file name and path if needed and
-	 * sends the message to the write method.
-	 * 
-	 * @param msg
-	 */
-	public static void write(String msg) {
-		setFileNameAndPath();
-		write(logFile, msg);
-	}
-
-	/**
-	 * Takes in an Exception message, updates the file name and path if needed
-	 * and sends the message to the write method.
-	 * 
-	 * @param e
-	 */
-	public static void write(Exception e) {
-		setFileNameAndPath();
-		write(logFile, stack2string(e));
-	}
 
 	/**
 	 * Writes a log to the log file.
@@ -71,20 +43,26 @@ public class FileLogger {
 	 * @param file
 	 * @param msg
 	 */
-	public static void write(String file, String msg) {
+	public static void commitMsg(String file, String msg, String msgeType) {
 
 		try {
 			Date now = new Date();
 			String currentTime = FileLogger.df.format(now);
 			FileWriter aWriter = new FileWriter(file, true);
-			aWriter.write(currentTime + " " + msg
+			aWriter.write(msgeType + " - " + currentTime + " " + msg
 					+ System.getProperty("line.separator"));
-			System.out.println(currentTime + " " + msg);
+			System.out.println(msgeType + " - " + currentTime + " " + msg);
 			aWriter.flush();
 			aWriter.close();
 		} catch (Exception e) {
 			System.out.println(stack2string(e));
 		}
+	}
+
+	private static void setFileNameAndPath() {
+		Date currDate = new Date();
+		String currDateString = FileLogger.shortDf.format(currDate);
+		logFile = logDirPath + fileName + currDateString + ext;
 	}
 
 	/**
@@ -102,6 +80,33 @@ public class FileLogger {
 		} catch (Exception e2) {
 			return "bad stack2string";
 		}
+	}
+
+	/**
+	 * Takes in an Exception message, updates the file name and path if needed
+	 * and sends the error message to the commit message method.
+	 * 
+	 * @param e
+	 */
+	public static void write(Exception e) {
+		setFileNameAndPath();
+		commitMsg(logFile, stack2string(e), MSG_TYPE_ERROR);
+	}
+
+	/**
+	 * Takes in a String message, updates the file name and path if needed and
+	 * sends the message to the commit message method.
+	 * 
+	 * Message Types: INFO, DEBUG, ERROR
+	 * 
+	 * @param msg
+	 */
+	public static void write(String message, String messageType) {
+		setFileNameAndPath();
+		commitMsg(logFile, message, messageType);
+	}
+
+	private FileLogger() {
 	}
 
 }

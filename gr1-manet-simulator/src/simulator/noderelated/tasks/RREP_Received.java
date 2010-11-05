@@ -17,7 +17,7 @@ package simulator.noderelated.tasks;
 import java.util.Date;
 import java.util.HashSet;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import simulator.Node;
 import simulator.Packets.RREPPacket;
 import simulator.noderelated.RREPPacketWrapper;
@@ -56,8 +56,8 @@ public class RREP_Received extends Thread {
 		// already exist.
 		Route forwardRoute = this.mynode.search(rrepPacket.dest);
 
-		ConsoleAndFileLogger.write("Node: " + mynode + " forwardRoute is "
-				+ forwardRoute, ConsoleAndFileLogger.MSG_TYPE_INFO);
+		FileLogger.write("Node: " + mynode + " forwardRoute is "
+				+ forwardRoute, FileLogger.MSG_TYPE_INFO);
 		boolean routeAddedorUpdated = false;
 		if (forwardRoute == null) {
 			forwardRoute = mynode.generateRouteFromRREP(packetWrapper);
@@ -68,10 +68,10 @@ public class RREP_Received extends Thread {
 		// for the Destination IP Address in the RREP message.
 		else {
 
-			ConsoleAndFileLogger.write("Node: " + mynode + " :"
+			FileLogger.write("Node: " + mynode + " :"
 					+ forwardRoute.getSeq_no() + "," + rrepPacket.seq_no + ","
 					+ forwardRoute.isInvalid() + ","
-					+ (rrepPacket.hop_count < forwardRoute.getHop_count()), ConsoleAndFileLogger.MSG_TYPE_INFO);
+					+ (rrepPacket.hop_count < forwardRoute.getHop_count()), FileLogger.MSG_TYPE_INFO);
 			
 			if (forwardRoute.getSeq_no() < 0 ||
 			// the sequence number in the routing table is marked as invalid in
@@ -90,7 +90,7 @@ public class RREP_Received extends Thread {
 			// the sequence numbers are the same, and the New Hop Count is
 			// smaller than the hop count in route table entry.
 			) {
-				ConsoleAndFileLogger.write("Node: " + mynode + " :one if is true", ConsoleAndFileLogger.MSG_TYPE_INFO);
+				FileLogger.write("Node: " + mynode + " :one if is true", FileLogger.MSG_TYPE_INFO);
 				forwardRoute.setSeq_no(rrepPacket.seq_no);
 				routeAddedorUpdated = true;
 			}
@@ -118,11 +118,11 @@ public class RREP_Received extends Thread {
 		if (mynode.equals(rrepPacket.source)) {
 			// if (mynode.getDiscoveryiswaiting()!=null){ //if this node is in
 			// discovery method wake it
-			ConsoleAndFileLogger.write("Node " + mynode.getIP().toString()
+			FileLogger.write("Node " + mynode.getIP().toString()
 					+ " : received RREPPacket from "
 					+ packetWrapper.getRrepPacket().source
 					+ " which handded from " + packetWrapper.getReceivedFrom()
-					+ ": It's the destination!,I was waiting for it", ConsoleAndFileLogger.MSG_TYPE_INFO);
+					+ ": It's the destination!,I was waiting for it", FileLogger.MSG_TYPE_INFO);
 			mynode.setRrepPacketWrapper(this.packetWrapper);
 			synchronized (mynode.getDiscoveryiswaiting()) {
 				mynode.getDiscoveryiswaiting().notify();
@@ -135,22 +135,22 @@ public class RREP_Received extends Thread {
 		if (routeAddedorUpdated) {
 			Route backRoute = this.mynode.search(rrepPacket.source);
 			if (!Route.isBad(backRoute)) {
-				ConsoleAndFileLogger.write("Node" + mynode
+				FileLogger.write("Node" + mynode
 						+ ": Passing RREPPacket from " + rrepPacket.dest
 						+ " which handded from "
 						+ packetWrapper.getReceivedFrom() + " to "
-						+ backRoute.getNext_hop(), ConsoleAndFileLogger.MSG_TYPE_INFO);
+						+ backRoute.getNext_hop(), FileLogger.MSG_TYPE_INFO);
 				forwardRoute.getPrecursor().add(backRoute.getNext_hop());
 				backRoute.setLifeTime(Math.max(backRoute.getLifeTime(),
 						new Date().getTime() + Node.ACTIVE_ROUTE_TIMEOUT));
 				backRoute.getPrecursor().add(forwardRoute.getNext_hop());
 				this.mynode.send(rrepPacket, backRoute.getNext_hop());
 			} else {
-				ConsoleAndFileLogger.write("Node" + mynode
+				FileLogger.write("Node" + mynode
 						+ ": receiving RREPPacket from " + rrepPacket.dest
 						+ " which handded from "
 						+ packetWrapper.getReceivedFrom()
-						+ " but route is expired", ConsoleAndFileLogger.MSG_TYPE_INFO);
+						+ " but route is expired", FileLogger.MSG_TYPE_INFO);
 			}
 
 		}

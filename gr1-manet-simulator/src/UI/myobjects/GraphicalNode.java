@@ -25,7 +25,7 @@ import java.io.IOException;
 import javax.swing.Icon;
 import javax.swing.JComponent;
 
-import logger.ConsoleAndFileLogger;
+import logger.FileLogger;
 import simulator.Node;
 import simulator.noderelated.Coordinates;
 import simulator.noderelated.IPAddress;
@@ -68,7 +68,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		super.setBounds(x, y, width, height); 
 		this.node.setNode_coordinates(new Coordinates(x * myForm.xScale, y
 				* myForm.yScale));
-		ConsoleAndFileLogger.write("Map Panel setting bound.", ConsoleAndFileLogger.MSG_TYPE_INFO);
+		FileLogger.write("Map Panel setting bound.", FileLogger.MSG_TYPE_INFO);
 	}
 
 	public String getStatus() {
