@@ -24,13 +24,15 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
 
-import logger.MyLogger;
+import logger.ConsoleLogger;
+import logger.FileLogger;
 import UI.Myform;
 import UI.myobjects.draganddrop.MyButtonTransferHandler;
 
 /**
  * Represents a non-real node for Tool Bar
  */
+@SuppressWarnings("serial")
 public class NodeButton extends JButton implements MouseMotionListener,
 		MouseListener {
 	private MouseEvent firstMouseEvent = null;
@@ -62,7 +64,8 @@ public class NodeButton extends JButton implements MouseMotionListener,
 
 	public void mousePressed(MouseEvent e) {
 		firstMouseEvent = e;
-		MyLogger.logger.debug("NodeButton mouse pressed");
+		ConsoleLogger.logger.debug("NodeButton mouse pressed");
+		FileLogger.write("NodeButton mouse pressed");
 		e.consume();
 	}
 
@@ -100,7 +103,8 @@ public class NodeButton extends JButton implements MouseMotionListener,
 				JComponent c = (JComponent) e.getSource();
 				TransferHandler handler = c.getTransferHandler();
 				// Tell the transfer handler to initiate the drag.
-				MyLogger.logger.debug("NodeButton exporting initiated");
+				ConsoleLogger.logger.debug("NodeButton exporting initiated");
+				FileLogger.write("NodeButton exporting initiated");
 				handler.exportAsDrag(c, firstMouseEvent, action);
 				firstMouseEvent = null;
 			}
