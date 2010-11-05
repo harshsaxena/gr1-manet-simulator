@@ -29,7 +29,7 @@ public class NodePropOKBtnAction implements ActionListener {
     }
 
     /**
-     * it should loads information from right pane (Node Panel Properties) and sets selected graphical node properties
+     * it should load information from right pane (Node Panel Properties) and set selected graphical node properties
      * @param e
      */
     public void actionPerformed(ActionEvent e) {

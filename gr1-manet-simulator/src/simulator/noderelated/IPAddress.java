@@ -23,11 +23,11 @@ public class IPAddress {
 			for (int i = 0; i < ips.length; i++) {
 				this.IP[i] = Integer.parseInt(ips[i]);
 				if (this.IP[i] > 254 || this.IP[i] < 1) {
-					throw new IPFormatExcepiton();
+					throw new IPFormatException();
 				}
 			}
 		} else {
-			throw new IPFormatExcepiton();
+			throw new IPFormatException();
 		}
 
 	}
@@ -70,7 +70,7 @@ public class IPAddress {
 	}
 }
 
-class IPFormatExcepiton extends RuntimeException {
+class IPFormatException extends RuntimeException {
 	public String getMessage() {
 		return super.getMessage() + " Error in IP Format";
 	}
