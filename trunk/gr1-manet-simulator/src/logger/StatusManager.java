@@ -56,7 +56,7 @@ public class StatusManager {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			gNode.addStatus(status);
-			MyLogger.logger.info("Node " + gNode.getName() + " is " + gNode.getStatus());
+			ConsoleLogger.logger.info("Node " + gNode.getName() + " is " + gNode.getStatus());
 		}
 	}
 
@@ -72,7 +72,7 @@ public class StatusManager {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
 			gNode.addReceivedData("From: " + sender + "\n" + data.getContent());
-			MyLogger.logger.info("Node " + gNode.getName() + " received "
+			ConsoleLogger.logger.info("Node " + gNode.getName() + " received "
 					+ data.getContent() + " from " + sender);
 		}
 	}
