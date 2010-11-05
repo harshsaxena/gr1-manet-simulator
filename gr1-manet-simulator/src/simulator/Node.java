@@ -23,6 +23,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Timer;
 
+import logger.FileLogger;
 import logger.MyLogger;
 import logger.StatusManager;
 import simulator.Packets.DataPacket;
@@ -62,6 +63,7 @@ public class Node implements Serializable {
 	public final static int TTL_INCREMENT = 2;
 	public final static int TTL_START = 20;
 	public final static int TTL_THRESHOLD = 7;
+
 	public static Node getInstance(IPAddress IP) {
 		Node node = new Node();
 		node.IP = IP;
@@ -69,6 +71,7 @@ public class Node implements Serializable {
 		Map_Manager.get_instance().addNode(node);
 		return node;
 	}
+
 	/**
 	 * Default node constructor which initializes this object other constructors
 	 * should call this method this is for when node receives RREQPacket can
@@ -91,7 +94,7 @@ public class Node implements Serializable {
 				new Route_Delete(node), Node.ROUTE_DELETE_INTERVAL,
 				Node.ROUTE_DELETE_INTERVAL);
 	}
-	
+
 	private Set<BroadCastField> broadCastTable = new HashSet<BroadCastField>();
 	private Object discoveryiswaiting;
 	public IPAddress IP;
@@ -101,6 +104,7 @@ public class Node implements Serializable {
 	private RREPPacketWrapper rrepPacketWrapper;
 	public int RREQ_ID = 0;
 	public int SEQ_NO = 0;
+
 	private Node() {
 	}
 
@@ -112,13 +116,10 @@ public class Node implements Serializable {
 	 */
 
 	public void add_Route(Route route) {
-
 		Rout_Arr.put(route.getDestination(), route);
-		MyLogger.logger.info("Node" + this + ": new route to "
-				+ route.getDestination() + " through " + route.getNext_hop()
-				+ " added");
-		StatusManager.get_instance().showNodeStatus(this,
-				"new Route: " + route + " added");
+		MyLogger.logger.info("Node " + this + ": new route to " + route.getDestination() + " through " + route.getNext_hop() + " added");
+		FileLogger.write("Node " + this + ": new route to " + route.getDestination() + " through " + route.getNext_hop() + " added");
+		StatusManager.get_instance().showNodeStatus(this, "new Route: " + route + " added");
 	}
 
 	/**
@@ -322,62 +323,79 @@ public class Node implements Serializable {
 		route.setLifeTime(new Date().getTime() + Node.DEFAULT_ROUTE_LIFETIME);
 		return route;
 	}
-	
+
 	public int getActiveRouteTimeout() {
 		return ACTIVE_ROUTE_TIMEOUT;
 	}
-	
+
 	public int getAllowedHelloLoss() {
 		return ALLOWED_HELLO_LOSS;
 	}
+
 	public Set<BroadCastField> getBroadCastTable() {
 		return broadCastTable;
 	}
+
 	public int getDefaultRouteLifetime() {
 		return DEFAULT_ROUTE_LIFETIME;
 	}
+
 	public int getDeletePeriod() {
 		return DELETE_PERIOD;
 	}
+
 	public Object getDiscoveryiswaiting() {
 		return discoveryiswaiting;
 	}
+
 	public int getHelloInterval() {
 		return HELLO_INTERVAL;
 	}
+
 	public long getHelloTime() {
 		return helloTime;
 	}
+
 	public IPAddress getIP() {
 		return IP;
 	}
+
 	public long getLoopbackExpireTime() {
 		return LOOPBACK_EXPIRETIME;
 	}
+
 	public int getMyRouteTimeout() {
 		return MY_ROUTE_TIMEOUT;
 	}
+
 	public int getNetDiameter() {
 		return NET_DIAMETER;
 	}
+
 	public int getNetTraversalTime() {
 		return NET_TRAVERSAL_TIME;
 	}
+
 	public Coordinates getNode_coordinates() {
 		return node_coordinates;
 	}
+
 	public int getNodeTraversalTime() {
 		return NODE_TRAVERSAL_TIME;
 	}
+
 	public int getPathDiscoveryInterval() {
 		return PATH_DISCOVERY_INTERVAL;
 	}
+
 	public int getPathDiscoveryTime() {
 		return PATH_DISCOVERY_TIME;
 	}
+
 	public int getPower() {
 		return power;
 	}
+
 	public int getRepAckRequired() {
 		return RREP_ACK_REQUIRED;
 	}
@@ -393,27 +411,35 @@ public class Node implements Serializable {
 	public int getRouteDeleteInterval() {
 		return ROUTE_DELETE_INTERVAL;
 	}
+
 	public int getRouteExpireInterval() {
 		return ROUTE_EXPIRE_INTERVAL;
 	}
+
 	public RREPPacketWrapper getRrepPacketWrapper() {
 		return rrepPacketWrapper;
 	}
+
 	public int getSeq_no() {
 		return SEQ_NO;
 	}
+
 	public int getTtlIncrement() {
 		return TTL_INCREMENT;
 	}
+
 	public int getTtlStart() {
 		return TTL_START;
 	}
+
 	public int getTtlThreshold() {
 		return TTL_THRESHOLD;
 	}
+
 	public void increaseseq_no() {
 		this.SEQ_NO++;
 	}
+
 	/**
 	 * recognizes the packet type that this node received and run a thread for
 	 * it
@@ -426,6 +452,7 @@ public class Node implements Serializable {
 		StatusManager.get_instance().showNodeStatus(this, packet + " Received");
 		packet.receive(this, prev_hop);
 	}
+
 	/**
 	 * searches if there is a route to a node in route table
 	 * 
@@ -448,6 +475,7 @@ public class Node implements Serializable {
 		}
 		return result;
 	}
+
 	/**
 	 * calls map_manager to broadcast a packet
 	 * 
@@ -462,7 +490,7 @@ public class Node implements Serializable {
 		StatusManager.get_instance().NodeSend(this, packet.type);
 		Map_Manager.get_instance().sendPacket(packet, this);
 	}
-	
+
 	/**
 	 * calls map_manager to send a packet to a particular node
 	 * 
@@ -562,7 +590,6 @@ public class Node implements Serializable {
 	public void setIP(IPAddress IP) {
 		this.IP = IP;
 	}
-
 
 	public void setNode_coordinates(Coordinates xy) {
 		this.node_coordinates = xy;
