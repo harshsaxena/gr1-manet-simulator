@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 
-import logger.MyLogger;
+import logger.ConsoleLogger;
 import simulator.Packets.Packet;
 import simulator.mapmanagerrelated.TaskSpeedSimulator;
 
@@ -58,7 +58,7 @@ public class Map_Manager {
 				- b.getNode_coordinates().getY_coordinate();
 		double distance = Math.sqrt((x_distance * x_distance)
 				+ (y_distance * y_distance));
-		MyLogger.logger.debug(a.getNode_coordinates() + ", "
+		ConsoleLogger.logger.debug(a.getNode_coordinates() + ", "
 				+ b.getNode_coordinates() + ", " + distance + ","
 				+ a.getPower());
 		return distance;
