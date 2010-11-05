@@ -17,7 +17,8 @@ package simulator.noderelated.tasks;
 import java.util.Date;
 import java.util.HashSet;
 
-import logger.MyLogger;
+import logger.ConsoleLogger;
+import logger.FileLogger;
 import simulator.Node;
 import simulator.Packets.RREPPacket;
 import simulator.noderelated.RREPPacketWrapper;
@@ -55,7 +56,9 @@ public class RREP_Received extends Thread {
 		// Then the forward route for this destination is created if it does not
 		// already exist.
 		Route forwardRoute = this.mynode.search(rrepPacket.dest);
-		MyLogger.logger.debug("Node: " + mynode + " forwardRoute is "
+		ConsoleLogger.logger.debug("Node: " + mynode + " forwardRoute is "
+				+ forwardRoute);
+		FileLogger.write("Node: " + mynode + " forwardRoute is "
 				+ forwardRoute);
 		boolean routeAddedorUpdated = false;
 		if (forwardRoute == null) {
@@ -66,7 +69,11 @@ public class RREP_Received extends Thread {
 		// Number in the message with its own stored destination sequence number
 		// for the Destination IP Address in the RREP message.
 		else {
-			MyLogger.logger.debug("Node: " + mynode + " :"
+			ConsoleLogger.logger.debug("Node: " + mynode + " :"
+					+ forwardRoute.getSeq_no() + "," + rrepPacket.seq_no + ","
+					+ forwardRoute.isInvalid() + ","
+					+ (rrepPacket.hop_count < forwardRoute.getHop_count()));
+			FileLogger.write("Node: " + mynode + " :"
 					+ forwardRoute.getSeq_no() + "," + rrepPacket.seq_no + ","
 					+ forwardRoute.isInvalid() + ","
 					+ (rrepPacket.hop_count < forwardRoute.getHop_count()));
@@ -87,7 +94,8 @@ public class RREP_Received extends Thread {
 			// the sequence numbers are the same, and the New Hop Count is
 			// smaller than the hop count in route table entry.
 			) {
-				MyLogger.logger.debug("Node: " + mynode + " :one if is true");
+				ConsoleLogger.logger.debug("Node: " + mynode + " :one if is true");
+				FileLogger.write("Node: " + mynode + " :one if is true");
 				forwardRoute.setSeq_no(rrepPacket.seq_no);
 				routeAddedorUpdated = true;
 			}
@@ -115,8 +123,13 @@ public class RREP_Received extends Thread {
 		if (mynode.equals(rrepPacket.source)) {
 			// if (mynode.getDiscoveryiswaiting()!=null){ //if this node is in
 			// discovery method wake it
-			MyLogger.logger.info("Node " + mynode.getIP().toString()
-					+ " :received RREPPacket from "
+			ConsoleLogger.logger.info("Node " + mynode.getIP().toString()
+					+ " : received RREPPacket from "
+					+ packetWrapper.getRrepPacket().source
+					+ " which handded from " + packetWrapper.getReceivedFrom()
+					+ ": It's the destination!,I was waiting for it");
+			FileLogger.write("Node " + mynode.getIP().toString()
+					+ " : received RREPPacket from "
 					+ packetWrapper.getRrepPacket().source
 					+ " which handded from " + packetWrapper.getReceivedFrom()
 					+ ": It's the destination!,I was waiting for it");
@@ -125,15 +138,20 @@ public class RREP_Received extends Thread {
 				mynode.getDiscoveryiswaiting().notify();
 			}
 			return;
-			// }
+
 		}
 
 		// if it is not the source
 		if (routeAddedorUpdated) {
 			Route backRoute = this.mynode.search(rrepPacket.source);
 			if (!Route.isBad(backRoute)) {
-				MyLogger.logger.info("Node" + mynode
-						+ ":Passing RREPPacket from " + rrepPacket.dest
+				ConsoleLogger.logger.info("Node" + mynode
+						+ ": Passing RREPPacket from " + rrepPacket.dest
+						+ " which handded from "
+						+ packetWrapper.getReceivedFrom() + " to "
+						+ backRoute.getNext_hop());
+				FileLogger.write("Node" + mynode
+						+ ": Passing RREPPacket from " + rrepPacket.dest
 						+ " which handded from "
 						+ packetWrapper.getReceivedFrom() + " to "
 						+ backRoute.getNext_hop());
@@ -143,8 +161,13 @@ public class RREP_Received extends Thread {
 				backRoute.getPrecursor().add(forwardRoute.getNext_hop());
 				this.mynode.send(rrepPacket, backRoute.getNext_hop());
 			} else {
-				MyLogger.logger.debug("Node" + mynode
-						+ ":receiving RREPPacket from " + rrepPacket.dest
+				ConsoleLogger.logger.debug("Node" + mynode
+						+ ": receiving RREPPacket from " + rrepPacket.dest
+						+ " which handded from "
+						+ packetWrapper.getReceivedFrom()
+						+ " but route is expired");
+				FileLogger.write("Node" + mynode
+						+ ": receiving RREPPacket from " + rrepPacket.dest
 						+ " which handded from "
 						+ packetWrapper.getReceivedFrom()
 						+ " but route is expired");
