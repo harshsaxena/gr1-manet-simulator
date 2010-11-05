@@ -25,7 +25,7 @@ public class Route {
     private Node next_hop;
     private int seq_no;
     private int hop_count;
-    private Set <Node> precursor =  new  HashSet<Node>();                   //$masoud
+    private Set <Node> precursor =  new  HashSet<Node>();
     private long lifeTime;
     private byte iswaiting=1;
 
@@ -63,7 +63,6 @@ public class Route {
         this.seq_no = seq_no;
         this.hop_count = hop_count;
         this.precursor = precursor;
-        this.lifeTime = lifeTime;
     }
 
     public Node getDestination() {
