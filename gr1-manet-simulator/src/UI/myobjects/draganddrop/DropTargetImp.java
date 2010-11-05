@@ -15,7 +15,6 @@
 package UI.myobjects.draganddrop;
 
 import java.awt.Dimension;
-import java.awt.Insets;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.DropTarget;
@@ -25,13 +24,15 @@ import java.io.IOException;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-import logger.MyLogger;
+import logger.ConsoleLogger;
+import logger.FileLogger;
 import UI.myobjects.GraphicalNode;
 
 /**
  * A class that implements action of coping or moving {@link GraphicalNode} on
  * target place
  */
+@SuppressWarnings("serial")
 public class DropTargetImp extends DropTarget {
 	private JComponent c;
 
@@ -41,7 +42,8 @@ public class DropTargetImp extends DropTarget {
 
 	public void drop(DropTargetDropEvent dtde) {
 
-		MyLogger.logger.debug("Mappanel importing data");
+		ConsoleLogger.logger.debug("Mappanel importing data");
+		FileLogger.write("Mappanel importing data");
 		if (dtde.isDataFlavorSupported(GraphicalNode.dataFlavor)) {
 			dtde.acceptDrop(dtde.getDropAction());
 			JPanel panel = (JPanel) this.c;
@@ -49,7 +51,6 @@ public class DropTargetImp extends DropTarget {
 			try {
 				GraphicalNode node = (GraphicalNode) t
 						.getTransferData(GraphicalNode.dataFlavor);
-				Insets insets = panel.getInsets();
 				Dimension size = node.getPreferredSize();
 				if (!node.isShouldRemoved()) {
 					panel.add(node);
@@ -60,14 +61,14 @@ public class DropTargetImp extends DropTarget {
 				node.fillNodePanel();
 				panel.invalidate();
 				node.myForm.refreshPowerShower();
-				MyLogger.logger.debug("Mappanel after invalidate");
-				// panel.repaint();
+				ConsoleLogger.logger.debug("Mappanel after invalidate");
+				FileLogger.write("Mappanel after invalidate");
 
 				dtde.dropComplete(true);
 			} catch (UnsupportedFlavorException ufe) {
-				MyLogger.logger.error("importData: unsupported data flavor");
+				ConsoleLogger.logger.error("importData: unsupported data flavor");
 			} catch (IOException ioe) {
-				MyLogger.logger.error("importData: I/O exception");
+				ConsoleLogger.logger.error("importData: I/O exception");
 			}
 		}
 	}
