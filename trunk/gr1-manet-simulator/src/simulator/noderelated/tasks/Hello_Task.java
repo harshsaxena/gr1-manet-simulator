@@ -29,7 +29,7 @@ public class Hello_Task extends TimerTask {
 	}
 
 	public void run() {
-		if (mynode.helloTime + Node.HELLO_INTERVAL < new Date().getTime()) {
+		if (Node.helloTime + Node.HELLO_INTERVAL < new Date().getTime()) {
 			boolean haveActive = false;
 			synchronized (this.mynode.getRout_Arr()) {
 				for (Route r : this.mynode.getRout_Arr().values()) {
