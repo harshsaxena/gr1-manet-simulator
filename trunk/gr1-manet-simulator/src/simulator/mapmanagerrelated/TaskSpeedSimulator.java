@@ -16,8 +16,7 @@ package simulator.mapmanagerrelated;
 
 import java.util.TimerTask;
 
-import logger.ConsoleLogger;
-import logger.FileLogger;
+import logger.ConsoleAndFileLogger;
 import simulator.Node;
 import simulator.Packets.Packet;
 
@@ -32,8 +31,7 @@ public class TaskSpeedSimulator extends TimerTask {
     }
 
     public void run() {
-        ConsoleLogger.logger.info("MapManager Sending broadcast packet From " + src + " to " + dest);
-        FileLogger.write("MapManager Sending broadcast packet From " + src + " to " + dest);
+        ConsoleAndFileLogger.write("Map Manager sending broadcast packet from " + src + " to " + dest, ConsoleAndFileLogger.MSG_TYPE_INFO);
         dest.receive(packet.copy_packet(), src);
     }
 }

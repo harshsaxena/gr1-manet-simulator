@@ -14,8 +14,8 @@
 
 package test;
 
-import logger.ConsoleLogger;
-import logger.StatusManager;
+import logger.ConsoleAndFileLogger;
+import logger.StatusLogger;
 import simulator.Data;
 import simulator.Map_Manager;
 import simulator.Node;
@@ -37,12 +37,11 @@ public class AODV_Test {
             new_node.getNode_coordinates().setX_coordinate((int) (MAP_LENGTH * Math.random()));
             new_node.getNode_coordinates().setY_coordinate((int) (MAP_WIDTH * Math.random()));
             new_node.setPower(43);
-//            Map_Manager.get_instance().addNode(new_node);
 
-            ConsoleLogger.logger.info("Node " + i + " created at: x = "
+            ConsoleAndFileLogger.write("Node " + i + " created at: x = "
                     + new_node.getNode_coordinates().getX_coordinate()
                     + ", y = " + new_node.getNode_coordinates().getY_coordinate()
-                    + ", power = " + new_node.getPower());
+                    + ", power = " + new_node.getPower(), ConsoleAndFileLogger.MSG_TYPE_DEBUG);
         }
     }
 
@@ -60,21 +59,21 @@ public class AODV_Test {
         Data test_data = new Data();
         test_data.setContent("test");
 
-        ConsoleLogger.logger.info("Trying to send data form node " + src_number
-                + " to node " + dest_number);
+        ConsoleAndFileLogger.write("Trying to send data form node " + src_number
+                + " to node " + dest_number, ConsoleAndFileLogger.MSG_TYPE_DEBUG);
 
         if (src_node.send_Data(test_data, dest_node)) {
-            ConsoleLogger.logger.info("#############Data sent successfully.############");
+            ConsoleAndFileLogger.write("Data sent successfully!!!!", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
             dest_node.getNode_coordinates().setX_coordinate(90 - dest_node.getNode_coordinates().getX_coordinate());
             dest_node.getNode_coordinates().setY_coordinate(90 - dest_node.getNode_coordinates().getY_coordinate());
 
             if (src_node.send_Data(test_data, dest_node)) {
-                ConsoleLogger.logger.info("%%%%%%%%%%%%%%%%%Data sent successfully.%%%%%%%%%%%%%%");
+            	ConsoleAndFileLogger.write("Data sent successfully!!!!", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
             } else {
-                ConsoleLogger.logger.info("Failed to send data.");
+                ConsoleAndFileLogger.write("Failed to send data.", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
             }
         } else {
-            ConsoleLogger.logger.info("Failed to send data.");
+            ConsoleAndFileLogger.write("Failed to send data.", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
         }
     }
 
@@ -85,12 +84,11 @@ public class AODV_Test {
             new_node.getNode_coordinates().setX_coordinate(nodexyp[i][0]);
             new_node.getNode_coordinates().setY_coordinate(nodexyp[i][1]);
             new_node.setPower(nodexyp[i][2]);
-//            Map_Manager.get_instance().addNode(new_node);
 
-            ConsoleLogger.logger.info("Node " + (i) + " created at: x = "
+            ConsoleAndFileLogger.write("Node " + (i) + " created at: x = "
                     + new_node.getNode_coordinates().getX_coordinate()
                     + ", y = " + new_node.getNode_coordinates().getY_coordinate()
-                    + ", power = " + new_node.getPower());
+                    + ", power = " + new_node.getPower(), ConsoleAndFileLogger.MSG_TYPE_DEBUG);
         }
     }
 
@@ -100,8 +98,7 @@ public class AODV_Test {
 
         Data test_data = new Data();
         test_data.setContent("test");
-        ConsoleLogger.logger.info("Trying to send data form node " + 0
-                + " to node " + 3);
+        ConsoleAndFileLogger.write("Trying to send data form node " + 0 + " to node " + 3, ConsoleAndFileLogger.MSG_TYPE_DEBUG);
         src_node.send_Data(test_data, dest_node);
         synchronized(waiting){
             try {
@@ -111,23 +108,23 @@ public class AODV_Test {
             }
         }
         if (waiting.s.equals("true")) {
-            ConsoleLogger.logger.info("#############Data sent successfully.############");
+        	ConsoleAndFileLogger.write("Data sent successfully!!!!", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
             Node tempnode = (Node) Map_Manager.get_instance().getNode_list().get(2);
             tempnode.getNode_coordinates().setX_coordinate(75);
             tempnode.getNode_coordinates().setY_coordinate(45);
 
             if (src_node.send_Data(test_data, dest_node)) {
-                ConsoleLogger.logger.info("%%%%%%%%%%%%%%%%%Data sent successfully.%%%%%%%%%%%%%%");
+            	ConsoleAndFileLogger.write("Data sent successfully!!!!", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
             } else {
-                ConsoleLogger.logger.info("Failed to send data.");
+            	ConsoleAndFileLogger.write("Failed to send data.", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
             }
         } else {
-            ConsoleLogger.logger.info("Failed to send data.");
+        	ConsoleAndFileLogger.write("Failed to send data.", ConsoleAndFileLogger.MSG_TYPE_DEBUG);
         }
     }
 
     public static void main(String[] args) {
-        StatusManager.init();
+        StatusLogger.init();
         randomnode_create();
         random_send();
     }

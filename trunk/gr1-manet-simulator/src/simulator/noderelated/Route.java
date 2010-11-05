@@ -51,8 +51,6 @@ public class Route {
         this.invalid = invalid;
     }
 
-    //$masoud
-
     public String toString() {
         return "Route to " +this.getDestination()+" through "+this.getNext_hop();
     }
