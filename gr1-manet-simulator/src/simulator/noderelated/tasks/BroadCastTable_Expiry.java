@@ -18,7 +18,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.TimerTask;
 
-import logger.MyLogger;
+import logger.ConsoleLogger;
+import logger.FileLogger;
 import logger.StatusManager;
 import simulator.Node;
 import simulator.noderelated.BroadCastField;
@@ -36,8 +37,8 @@ public class BroadCastTable_Expiry extends TimerTask {
 				.hasNext();) {
 			BroadCastField bcf = (BroadCastField) itr.next();
 			if (bcf.getLifeTime() < new Date().getTime()) {
-				MyLogger.logger.info("Node " + mynode + " : " + bcf
-						+ " Expires!");
+				ConsoleLogger.logger.info("Node " + mynode + " : " + bcf + " Expires!");
+				FileLogger.write("Node " + mynode + " : " + bcf + " Expires!");
 				StatusManager.get_instance().showNodeStatus(mynode,
 						"Expire: " + bcf);
 				itr.remove();
