@@ -23,7 +23,7 @@ import java.util.Date;
 
 /**
  * Writes log information or exceptions to a log file.
- * Also writes log information to the system console.
+ * Also writes log info to the system console.
  */
 public class FileLogger {
 
