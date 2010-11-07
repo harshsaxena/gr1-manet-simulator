@@ -33,7 +33,7 @@ public class MyButtonTransferHandler extends TransferHandler {
         source.myForm.putGNode(nodeTransferable);
         nodeTransferable.setTransferHandler(new MyNodeTransferHandler());
         
-        FileLogger.write("Node button create transerable", FileLogger.MSG_TYPE_DEBUG);
+        FileLogger.write("Node button create transferable", FileLogger.MSG_TYPE_DEBUG);
         
         return nodeTransferable;
     }
