@@ -29,7 +29,7 @@ public class MyNodeTransferHandler extends TransferHandler {
 		GraphicalNode source = (GraphicalNode) c;
 		source.setShouldRemoved(true);
 		
-		FileLogger.write("Node button create transerable", FileLogger.MSG_TYPE_DEBUG);
+		FileLogger.write("Node button create transferable", FileLogger.MSG_TYPE_DEBUG);
 		
 		return source;
 	}
