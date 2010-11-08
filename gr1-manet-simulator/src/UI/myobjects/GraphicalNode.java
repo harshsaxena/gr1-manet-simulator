@@ -30,7 +30,7 @@ import simulator.Node;
 import simulator.noderelated.Coordinates;
 import simulator.noderelated.IPAddress;
 import UI.Myform;
-import UI.Node_Properties;
+import UI.NodeProperties;
 
 /**
  * A graphical representation of a node it implements some method to make a
@@ -176,12 +176,12 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	public void fillNodePanel() {
-		Node_Properties np = myForm.getNodePanel();
+		NodeProperties np = myForm.getNodePanel();
 		np.nameText.setText(this.name);
-		np.IPText.setText(node.getIP().toString());
-		np.xText.setText(Integer.toString(node.getNode_coordinates()
+		np.ipText.setText(node.getIP().toString());
+		np.xCordText.setText(Integer.toString(node.getNode_coordinates()
 				.getX_coordinate()));
-		np.yText.setText(Integer.toString(node.getNode_coordinates()
+		np.yCordText.setText(Integer.toString(node.getNode_coordinates()
 				.getY_coordinate()));
 		np.powerText.setText(Integer.toString(node.getPower()));
 		np.colorBtn.setBackground(this.color);
@@ -191,7 +191,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	private void refreshNodePanelDynamicData() {
-		Node_Properties np = myForm.getNodePanel();
+		NodeProperties np = myForm.getNodePanel();
 		np.statusText.setText(getStatus());
 		np.receivedDataText.setText(getReceivedData());
 
