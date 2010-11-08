@@ -1,0 +1,64 @@
+DEBUG - 2010.11.06  11:54:37 Node button pressed.
+DEBUG - 2010.11.06  11:54:37 Node button exporting initiated
+DEBUG - 2010.11.06  11:54:37 Node button create transerable
+INFO - 2010.11.06  11:54:37 Map Panel importing data.
+INFO - 2010.11.06  11:54:37 Map Panel setting bound.
+DEBUG - 2010.11.06  11:54:37 Map Panel after invalidate.
+DEBUG - 2010.11.06  11:54:38 Node button pressed.
+DEBUG - 2010.11.06  11:54:38 Node button exporting initiated
+DEBUG - 2010.11.06  11:54:38 Node button create transerable
+INFO - 2010.11.06  11:54:39 Map Panel importing data.
+INFO - 2010.11.06  11:54:39 Map Panel setting bound.
+DEBUG - 2010.11.06  11:54:39 Map Panel after invalidate.
+DEBUG - 2010.11.06  11:55:58 Node button pressed.
+DEBUG - 2010.11.06  11:55:58 Node button exporting initiated
+DEBUG - 2010.11.06  11:55:58 Node button create transferable
+INFO - 2010.11.06  11:55:59 Map Panel importing data.
+INFO - 2010.11.06  11:55:59 Map Panel setting bound.
+DEBUG - 2010.11.06  11:55:59 Map Panel after invalidate.
+DEBUG - 2010.11.06  11:56:01 Node button pressed.
+DEBUG - 2010.11.06  11:56:01 Node button exporting initiated
+DEBUG - 2010.11.06  11:56:01 Node button create transferable
+INFO - 2010.11.06  11:56:03 Map Panel importing data.
+INFO - 2010.11.06  11:56:03 Map Panel setting bound.
+DEBUG - 2010.11.06  11:56:03 Map Panel after invalidate.
+DEBUG - 2010.11.06  11:56:05 Node button pressed.
+DEBUG - 2010.11.06  11:56:05 Node button exporting initiated
+DEBUG - 2010.11.06  11:56:05 Node button create transferable
+INFO - 2010.11.06  11:56:06 Map Panel importing data.
+INFO - 2010.11.06  11:56:06 Map Panel setting bound.
+DEBUG - 2010.11.06  11:56:06 Map Panel after invalidate.
+INFO - 2010.11.06  11:56:21 [3100, 765], [730, 0], 2490.4065933096144,0
+INFO - 2010.11.06  11:56:21 [3100, 765], [2315, 1405], 1012.8301930728566,0
+INFO - 2010.11.06  11:56:21 [730, 0], [3100, 765], 2490.4065933096144,2491
+INFO - 2010.11.06  11:56:21 [730, 0], [2315, 1405], 2118.0769579975135,2491
+DEBUG - 2010.11.06  11:56:22 Node button pressed.
+DEBUG - 2010.11.06  11:57:12 Node button pressed.
+DEBUG - 2010.11.06  11:57:13 Node button pressed.
+DEBUG - 2010.11.06  11:57:13 Node button pressed.
+DEBUG - 2010.11.06  11:57:13 Node button pressed.
+DEBUG - 2010.11.06  11:57:13 Node button exporting initiated
+DEBUG - 2010.11.06  11:57:13 Node button create transferable
+INFO - 2010.11.06  11:57:14 Map Panel importing data.
+INFO - 2010.11.06  11:57:14 Map Panel setting bound.
+DEBUG - 2010.11.06  11:57:14 Map Panel after invalidate.
+DEBUG - 2010.11.06  11:57:20 Node button pressed.
+DEBUG - 2010.11.06  11:57:20 Node button pressed.
+DEBUG - 2010.11.06  11:57:21 Node button exporting initiated
+DEBUG - 2010.11.06  11:57:21 Node button create transferable
+INFO - 2010.11.06  11:57:21 Map Panel importing data.
+INFO - 2010.11.06  11:57:21 Map Panel setting bound.
+DEBUG - 2010.11.06  11:57:21 Map Panel after invalidate.
+DEBUG - 2010.11.06  11:57:21 Node button pressed.
+DEBUG - 2010.11.06  11:57:22 Node button pressed.
+DEBUG - 2010.11.06  11:57:23 Node button pressed.
+DEBUG - 2010.11.06  11:57:23 Node button pressed.
+DEBUG - 2010.11.06  11:57:28 Node button pressed.
+DEBUG - 2010.11.06  11:57:29 Node button pressed.
+DEBUG - 2010.11.06  11:57:30 Node button pressed.
+DEBUG - 2010.11.06  11:57:31 Node button pressed.
+DEBUG - 2010.11.06  11:57:31 Node button exporting initiated
+DEBUG - 2010.11.06  11:57:31 Node button create transferable
+INFO - 2010.11.06  11:57:31 Map Panel importing data.
+INFO - 2010.11.06  11:57:31 Map Panel setting bound.
+DEBUG - 2010.11.06  11:57:31 Map Panel after invalidate.

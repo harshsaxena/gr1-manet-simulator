@@ -65,9 +65,9 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	 * @param height
 	 */
 	public void setBounds(int x, int y, int width, int height) {
-		super.setBounds(x, y, width, height); 
-		this.node.setNode_coordinates(new Coordinates(x * myForm.xScale, y
-				* myForm.yScale));
+		super.setBounds(x, y, width, height);
+		this.node.setNode_coordinates(new Coordinates(x * myForm.getXScale(), y
+				* myForm.getYScale()));
 		FileLogger.write("Map Panel setting bound.", FileLogger.MSG_TYPE_INFO);
 	}
 
@@ -133,8 +133,8 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	 */
 	public void setScaledCoordinates(int x, int y) {
 		Dimension size = getSize();
-		super.setBounds(x / myForm.xScale, y / myForm.yScale, size.width,
-				size.height); 
+		super.setBounds(x / myForm.getXScale(), y / myForm.getYScale(),
+				size.width, size.height);
 		this.node.setNode_coordinates(new Coordinates(x, y));
 	}
 
