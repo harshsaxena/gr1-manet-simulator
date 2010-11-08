@@ -35,7 +35,7 @@ public class NodePropSendtoBtnAction implements ActionListener {
                     myForm.getNodePanel().sendToText.getText().trim().toLowerCase());
             if (dest!=null){
                 new SendDataThread(myForm.getSelectedGNode().getNode(),dest.getNode(),
-                        new Data(myForm.getNodePanel().dataText.getText()));
+                        new Data(myForm.getNodePanel().msgText.getText()));
             }else{
                 JOptionPane.showMessageDialog(myForm,"Destination node not found!");
             }
