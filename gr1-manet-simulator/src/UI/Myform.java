@@ -39,7 +39,6 @@ import UI.actions.DeleteBtnAction;
 import UI.actions.InitParameters;
 import UI.actions.NumberKeyListener;
 import UI.actions.PanelAction;
-import UI.actions.SearchGNodeAction;
 import UI.myobjects.GraphicalNode;
 import UI.myobjects.NodeButton;
 import UI.myobjects.PowerShower;
@@ -48,33 +47,39 @@ import UI.myobjects.draganddrop.DropTargetImp;
 public class Myform extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	public JPanel content;
-	public JButton delGnodeBtn = new JButton(new ImageIcon("images/delete.png"));
-	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",
-			true);
-	public JButton generateBtn;
-	private final List<GraphicalNode> graphicalNodes = new ArrayList<GraphicalNode>();
 	public final int mapHeight = 550;
 	public final int mapWidth = 550;
-	private final JTextField minNumber = new JTextField("3", 3);
-	public MyMap myMap;
-	public NodeButton newNodeBtn = new NodeButton(new ImageIcon(
-			"images/SendingNode0.png"));
-	public final NumberKeyListener nkl = new NumberKeyListener();
-	private Node_Properties nodePanel;
-	public PowerShower powerShower;
-	private final JTextField searchText = new JTextField(8);
-	private GraphicalNode selectedGNode;
-	public JToolBar toolBar;
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
+	
+	public JPanel content;
+	public JPanel test;
+	private NodeProperties nodePanel;
+	private OutputLogProperties outputLogPanel;
+	public JToolBar toolBar;
+	
+	public JButton delGnodeBtn = new JButton(new ImageIcon("images/delete.png"));
+	public NodeButton newNodeBtn = new NodeButton(new ImageIcon("images/SendingNode0.png"));
+	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection", true);
+	public JButton generateBtn;
+	private final JTextField minNumber = new JTextField("3", 3);
+	//private final JTextField searchText = new JTextField(8);
+	
+	private final List<GraphicalNode> graphicalNodes = new ArrayList<GraphicalNode>();
+	private GraphicalNode selectedGNode;
+	public MyMap myMap;
+	public final NumberKeyListener numKeyListener = new NumberKeyListener();
+	public PowerShower powerShower;
 
 	public static void main(String[] args) {
-		Myform frame = new Myform("AODV Simulator");
+		Myform frame = new Myform("MANET Simulator");
 		frame.newNodeBtn.myForm = frame;
-		frame.setNodePanel(new Node_Properties(frame));
-		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
-				frame.myMap, frame.getNodePanel());
+		frame.setNodePanel(new NodeProperties(frame));
+		//frame.setOutputLogPanel(new OutputLogProperties(frame));
+		
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, frame.myMap, frame.getNodePanel());
+		//JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, frame.myMap, frame.getOutputLogPanel());
+		
 		splitPane.setOneTouchExpandable(true);
 		splitPane.setDividerLocation(550);
 		frame.content.add(splitPane, BorderLayout.CENTER);
@@ -82,11 +87,14 @@ public class Myform extends JFrame {
 		frame.generateBtn.addActionListener(new InitParameters(frame));
 		frame.powerShower = new PowerShower(frame);
 		frame.delGnodeBtn.addActionListener(new DeleteBtnAction(frame));
-		frame.searchText.addActionListener(new SearchGNodeAction(frame));
+		
+		//frame.searchText.addActionListener(new SearchGNodeAction(frame));
 		frame.setGlassPane(frame.powerShower);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
+		
+		
 
 		// don't display mapForm
 		// MapForm mapForm = new MapForm(frame, "Initializing Map", true,
@@ -108,24 +116,25 @@ public class Myform extends JFrame {
 		toolBar.add(newNodeBtn);
 		toolBar.add(delGnodeBtn);
 		toolBar.add(Box.createHorizontalStrut(5));
-		toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+		//toolBar.add(new JSeparator(SwingConstants.VERTICAL));
 		toolBar.add(Box.createHorizontalStrut(5));
-		toolBar.add(new JLabel("Min Neighbor: "));
-		toolBar.add(minNumber);
-		toolBar.add(doubleDirection);
+		//toolBar.add(new JLabel("Min Neighbor: "));
+		//toolBar.add(minNumber);
+		//toolBar.add(doubleDirection);
 		generateBtn = new JButton("Fill Parameter");
 		toolBar.add(generateBtn);
 		minNumber.addKeyListener(new NumberKeyListener());
 
-		toolBar.add(Box.createHorizontalStrut(5));
-		toolBar.add(new JSeparator(SwingConstants.VERTICAL));
-		toolBar.add(Box.createHorizontalStrut(5));
-		toolBar.add(new JLabel("Search: "));
-		toolBar.add(searchText);
+		toolBar.add(Box.createHorizontalStrut(15));
+		//toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+		toolBar.add(Box.createHorizontalStrut(15));
+		//toolBar.add(new JLabel("Search: "));
+		//toolBar.add(searchText);
 
 		content.add(toolBar, BorderLayout.PAGE_START);
 		myMap.setDropTarget(new DropTargetImp(myMap));
 		myMap.setLayout(null);
+
 	}
 
 	/**
@@ -176,13 +185,13 @@ public class Myform extends JFrame {
 		return myMap;
 	}
 
-	public Node_Properties getNodePanel() {
+	public NodeProperties getNodePanel() {
 		return nodePanel;
 	}
 
-	public JTextField getSearchText() {
+	/*public JTextField getSearchText() {
 		return searchText;
-	}
+	}*/
 
 	/**
 	 * returns the {@link GraphicalNode} that currently selected
@@ -210,7 +219,7 @@ public class Myform extends JFrame {
 		this.powerShower.invalidate();
 	}
 
-	public void setNodePanel(Node_Properties nodePanel) {
+	public void setNodePanel(NodeProperties nodePanel) {
 		this.nodePanel = nodePanel;
 	}
 
@@ -240,5 +249,13 @@ public class Myform extends JFrame {
 
 	public void setYScale(int yScale) {
 		this.yScale = yScale;
+	}
+
+	public void setOutputLogPanel(OutputLogProperties outputLogPanel) {
+		this.outputLogPanel = outputLogPanel;
+	}
+
+	public OutputLogProperties getOutputLogPanel() {
+		return outputLogPanel;
 	}
 }
