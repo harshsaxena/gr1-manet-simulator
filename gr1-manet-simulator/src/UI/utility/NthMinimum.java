@@ -14,6 +14,7 @@
 
 package UI.utility;
 
+// TODO exchange() produces array out of bounds exception
 public class NthMinimum {
 	/**
 	 * generates n th minimum of array A

@@ -48,31 +48,6 @@ import UI.myobjects.draganddrop.DropTargetImp;
 public class Myform extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	
-	public static void main(String[] args) {
-		Myform frame = new Myform("AODV Simulator");
-		frame.newNodeBtn.myForm = frame;
-		frame.setNodePanel(new Node_Properties(frame));
-		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
-				frame.myMap, frame.getNodePanel());
-		splitPane.setOneTouchExpandable(true);
-		splitPane.setDividerLocation(550);
-		frame.content.add(splitPane, BorderLayout.CENTER);
-		frame.myMap.addMouseListener(new PanelAction(frame));
-		frame.generateBtn.addActionListener(new InitParameters(frame));
-		frame.powerShower = new PowerShower(frame);
-		frame.delGnodeBtn.addActionListener(new DeleteBtnAction(frame));
-		frame.searchText.addActionListener(new SearchGNodeAction(frame));
-		frame.setGlassPane(frame.powerShower);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.pack();
-
-		MapForm mapForm = new MapForm(frame, "Initializing Map", true, frame);
-		mapForm.pack();
-		mapForm.setVisible(true);
-		OutputLogger.init(frame);
-
-	}
 	public JPanel content;
 	public JButton delGnodeBtn = new JButton(new ImageIcon("images/delete.png"));
 	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",
@@ -91,8 +66,35 @@ public class Myform extends JFrame {
 	private final JTextField searchText = new JTextField(8);
 	private GraphicalNode selectedGNode;
 	public JToolBar toolBar;
-	public int xScale = 10;
-	public int yScale = 10;
+	private int xScale = 3000 / 550; // default setting from mapForm
+	private int yScale = 3000 / 550; // default setting from mapForm
+
+	public static void main(String[] args) {
+		Myform frame = new Myform("AODV Simulator");
+		frame.newNodeBtn.myForm = frame;
+		frame.setNodePanel(new Node_Properties(frame));
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
+				frame.myMap, frame.getNodePanel());
+		splitPane.setOneTouchExpandable(true);
+		splitPane.setDividerLocation(550);
+		frame.content.add(splitPane, BorderLayout.CENTER);
+		frame.myMap.addMouseListener(new PanelAction(frame));
+		frame.generateBtn.addActionListener(new InitParameters(frame));
+		frame.powerShower = new PowerShower(frame);
+		frame.delGnodeBtn.addActionListener(new DeleteBtnAction(frame));
+		frame.searchText.addActionListener(new SearchGNodeAction(frame));
+		frame.setGlassPane(frame.powerShower);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setVisible(true);
+
+		// don't display mapForm
+		// MapForm mapForm = new MapForm(frame, "Initializing Map", true,
+		// frame);
+		// mapForm.pack();
+		// mapForm.setVisible(true);
+		OutputLogger.init(frame);
+	}
 
 	public Myform(String title) {
 		super(title);
@@ -224,4 +226,19 @@ public class Myform extends JFrame {
 		}
 	}
 
+	public int getXScale() {
+		return xScale;
+	}
+
+	public void setXScale(int xScale) {
+		this.xScale = xScale;
+	}
+
+	public int getYScale() {
+		return yScale;
+	}
+
+	public void setYScale(int yScale) {
+		this.yScale = yScale;
+	}
 }
