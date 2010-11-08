@@ -18,7 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import UI.Myform;
-import UI.Node_Properties;
+import UI.NodeProperties;
 import UI.myobjects.GraphicalNode;
 
 public class NodePropOKBtnAction implements ActionListener {
@@ -35,11 +35,11 @@ public class NodePropOKBtnAction implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (myForm.getSelectedGNode()!=null){
             GraphicalNode gNode = myForm.getSelectedGNode();
-            Node_Properties np = myForm.getNodePanel();
+            NodeProperties np = myForm.getNodePanel();
             gNode.setName(np.nameText.getText().trim().toLowerCase());
-            gNode.setNodeIP(np.IPText.getText());
-            gNode.setScaledCoordinates(Integer.parseInt(np.xText.getText()),
-                    Integer.parseInt(np.yText.getText()));
+            gNode.setNodeIP(np.ipText.getText());
+            gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()),
+                    Integer.parseInt(np.yCordText.getText()));
             gNode.setColor(np.colorBtn.getBackground());
             gNode.setNodePower(Integer.parseInt(np.powerText.getText()));
             if (np.nameText.getText().trim().length()>0){

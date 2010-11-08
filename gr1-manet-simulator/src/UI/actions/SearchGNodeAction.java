@@ -28,8 +28,8 @@ public class SearchGNodeAction  implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent e) {
-        GraphicalNode dest = myForm.getGNode(
-                myForm.getSearchText().getText().trim().toLowerCase());
+        //GraphicalNode dest = myForm.getGNode(myForm.getSearchText().getText().trim().toLowerCase());
+        GraphicalNode dest = myForm.getGNode(myForm.getNodePanel().searchNodeText.getText().trim().toLowerCase());
         if (dest!=null){
             myForm.setSelectedGNode(dest);
         }else{
