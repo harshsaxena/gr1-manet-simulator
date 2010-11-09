@@ -25,13 +25,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSeparator;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
-import javax.swing.SwingConstants;
 
 import logger.OutputLogger;
 import simulator.Node;
@@ -48,18 +45,20 @@ public class Myform extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	public final int mapHeight = 550;
-	public final int mapWidth = 550;
+	public final int mapWidth = 600;
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
 	
 	public JPanel content;
-	public JPanel test;
-	private NodeProperties nodePanel;
-	private OutputLogProperties outputLogPanel;
+	public JPanel outlogPanel;
 	public JToolBar toolBar;
 	
-	public JButton delGnodeBtn = new JButton(new ImageIcon("images/delete.png"));
-	public NodeButton newNodeBtn = new NodeButton(new ImageIcon("images/SendingNode0.png"));
+	public JButton delGNodeBtn = new JButton(new ImageIcon("images/delete.png"));
+	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/SendingNode0.png"));
+
+	private NodeProperties nodePanel;
+	private OutputLogProperties outputLogProperties;	
+
 	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection", true);
 	public JButton generateBtn;
 	private final JTextField minNumber = new JTextField("3", 3);
@@ -73,12 +72,10 @@ public class Myform extends JFrame {
 
 	public static void main(String[] args) {
 		Myform frame = new Myform("MANET Simulator");
-		frame.newNodeBtn.myForm = frame;
+		frame.addNodeBtn.myForm = frame;
 		frame.setNodePanel(new NodeProperties(frame));
-		//frame.setOutputLogPanel(new OutputLogProperties(frame));
 		
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, frame.myMap, frame.getNodePanel());
-		//JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, frame.myMap, frame.getOutputLogPanel());
 		
 		splitPane.setOneTouchExpandable(true);
 		splitPane.setDividerLocation(550);
@@ -86,15 +83,13 @@ public class Myform extends JFrame {
 		frame.myMap.addMouseListener(new PanelAction(frame));
 		frame.generateBtn.addActionListener(new InitParameters(frame));
 		frame.powerShower = new PowerShower(frame);
-		frame.delGnodeBtn.addActionListener(new DeleteBtnAction(frame));
+		frame.delGNodeBtn.addActionListener(new DeleteBtnAction(frame));
 		
 		//frame.searchText.addActionListener(new SearchGNodeAction(frame));
 		frame.setGlassPane(frame.powerShower);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
-		
-		
 
 		// don't display mapForm
 		// MapForm mapForm = new MapForm(frame, "Initializing Map", true,
@@ -113,8 +108,8 @@ public class Myform extends JFrame {
 		myMap.setBorder(BorderFactory.createEtchedBorder());
 		this.getContentPane().add(content);
 		toolBar = new JToolBar();
-		toolBar.add(newNodeBtn);
-		toolBar.add(delGnodeBtn);
+		toolBar.add(addNodeBtn);
+		toolBar.add(delGNodeBtn);
 		toolBar.add(Box.createHorizontalStrut(5));
 		//toolBar.add(new JSeparator(SwingConstants.VERTICAL));
 		toolBar.add(Box.createHorizontalStrut(5));
@@ -132,6 +127,11 @@ public class Myform extends JFrame {
 		//toolBar.add(searchText);
 
 		content.add(toolBar, BorderLayout.PAGE_START);
+		
+		outputLogProperties = new OutputLogProperties();
+		outlogPanel = outputLogProperties.getOutputLogProperties();		
+		content.add(outlogPanel, BorderLayout.AFTER_LAST_LINE);
+		
 		myMap.setDropTarget(new DropTargetImp(myMap));
 		myMap.setLayout(null);
 
@@ -251,11 +251,11 @@ public class Myform extends JFrame {
 		this.yScale = yScale;
 	}
 
-	public void setOutputLogPanel(OutputLogProperties outputLogPanel) {
-		this.outputLogPanel = outputLogPanel;
+	public void setOutputLogProperties(OutputLogProperties outputLogProperties) {
+		this.outputLogProperties = outputLogProperties;
 	}
 
-	public OutputLogProperties getOutputLogPanel() {
-		return outputLogPanel;
+	public OutputLogProperties getOutputLogProperties() {
+		return outputLogProperties;
 	}
 }
