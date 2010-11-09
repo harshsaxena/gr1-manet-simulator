@@ -31,6 +31,7 @@ import simulator.noderelated.Coordinates;
 import simulator.noderelated.IPAddress;
 import UI.Myform;
 import UI.NodeProperties;
+import UI.OutputLogProperties;
 
 /**
  * A graphical representation of a node it implements some method to make a
@@ -191,10 +192,13 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	private void refreshNodePanelDynamicData() {
-		NodeProperties np = myForm.getNodePanel();
-		np.statusText.setText(getStatus());
-		np.receivedDataText.setText(getReceivedData());
-
+		//NodeProperties np = myForm.getNodePanel();
+		//np.statusText.setText(getStatus());
+		//np.receivedDataText.setText(getReceivedData());
+		
+		OutputLogProperties outputLogObj = myForm.getOutputLogProperties();
+		outputLogObj.statusText.setText(getStatus());
+		outputLogObj.receivedDataText.setText(getReceivedData());
 	}
 
 	public void setSelectGNode() {
