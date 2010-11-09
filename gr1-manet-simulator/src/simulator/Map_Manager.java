@@ -23,7 +23,7 @@ import simulator.Packets.Packet;
 import simulator.mapmanagerrelated.TaskSpeedSimulator;
 
 public class Map_Manager {
-	private List<Object> node_list = new ArrayList<Object>();
+	private List<Node> node_list = new ArrayList<Node>();
 	private static Map_Manager map_manager = new Map_Manager();
 	private static long speedPercent = 200;
 
@@ -35,11 +35,11 @@ public class Map_Manager {
 		return map_manager;
 	}
 
-	public List<Object> getNode_list() {
+	public List<Node> getNode_list() {
 		return node_list;
 	}
 
-	public void setNode_list(List<Object> node_list) {
+	public void setNode_list(List<Node> node_list) {
 		this.node_list = node_list;
 	}
 
