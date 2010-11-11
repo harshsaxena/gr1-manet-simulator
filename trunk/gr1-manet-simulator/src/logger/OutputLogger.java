@@ -46,26 +46,27 @@ public class OutputLogger {
 	}
 
 	/**
-	 * Creates a Graphical Node and add the passed in Status to the Graphical
-	 * Node.
+	 * Gets the Graphical Node associated with node and adds the passed in
+	 * Status to the Graphical Node.
 	 * 
 	 * @param node
 	 * @param status
 	 */
 	public void showNodeStatus(Node node, String status) {
 		if (!this.test) {
-			
+
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			gNode.addStatus(status);
-			
-			FileLogger.write("Node " + gNode.getName() + " is " + gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
-			
+
+			FileLogger.write("Node " + gNode.getName() + " is "
+					+ gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
+
 		}
 	}
 
 	/**
-	 * Creates a Graphical Node and adds sender and received data to the
-	 * Graphical Node
+	 * Gets the Graphical Node associated with node and adds sender and received
+	 * data to the Graphical Node
 	 * 
 	 * @param receiver
 	 * @param sender
@@ -73,11 +74,13 @@ public class OutputLogger {
 	 */
 	public void showReceivedData(Node receiver, Node sender, Data data) {
 		if (!this.test) {
-			
+
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
-			gNode.addReceivedData(data.getContent() + " received from " + sender);
-			FileLogger.write(data.getContent() + " received from " + sender, FileLogger.MSG_TYPE_INFO);
-			
+			gNode.addReceivedData(data.getContent() + " received from "
+					+ sender);
+			FileLogger.write(data.getContent() + " received from " + sender,
+					FileLogger.MSG_TYPE_INFO);
+
 		}
 	}
 

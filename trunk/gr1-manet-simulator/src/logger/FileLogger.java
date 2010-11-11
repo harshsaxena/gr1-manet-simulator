@@ -22,12 +22,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Writes log information or exceptions to a log file.
- * Also writes log info to the system console.
+ * Writes log information or exceptions to a log file. Also writes log info to
+ * the system console.
  */
 public class FileLogger {
 
-	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd  hh:mm:ss");
+	private final static DateFormat df = new SimpleDateFormat(
+			"yyyy.MM.dd  hh:mm:ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
 	private final static String logDirPath = "./logs/";
@@ -49,6 +50,8 @@ public class FileLogger {
 			Date now = new Date();
 			String currentTime = FileLogger.df.format(now);
 			FileWriter aWriter = new FileWriter(file, true);
+			// TODO overwrite, don't append to log file
+			// FileWriter aWriter = new FileWriter(file, false);
 			aWriter.write(msgeType + " - " + currentTime + " " + msg
 					+ System.getProperty("line.separator"));
 			System.out.println(msgeType + " - " + currentTime + " " + msg);
