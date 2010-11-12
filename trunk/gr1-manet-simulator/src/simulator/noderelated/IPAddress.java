@@ -17,12 +17,23 @@ package simulator.noderelated;
 public class IPAddress {
 	int[] IP = new int[4];
 
+	// public IPAddress(int i, int j, int k, int l) {
+	// IP[0] = i;
+	// IP[1] = j;
+	// IP[2] = k;
+	// IP[3] = l;
+	// }
+
 	public IPAddress(String IP) {
 		if (IP.matches("^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$")) {
 			String[] ips = IP.split("\\.");
 			for (int i = 0; i < ips.length; i++) {
 				this.IP[i] = Integer.parseInt(ips[i]);
-				if (this.IP[i] > 254 || this.IP[i] < 1) {
+				if (this.IP[i] > 254) {
+					// this.IP[i] = 254;
+					throw new IPFormatException();
+				} else if (this.IP[i] < 1) {
+					// this.IP[i] = 1;
 					throw new IPFormatException();
 				}
 			}

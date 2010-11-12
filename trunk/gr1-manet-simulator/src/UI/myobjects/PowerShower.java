@@ -57,7 +57,10 @@ public class PowerShower extends JComponent {
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setColor(Color.black);
 		g2.setStroke(dashed);
-		g2.drawOval(x - rX + 1, y - rY + 41, 2 * rX, 2 * rY);
-		// g2.drawOval(x - rX + 1, y - rY + 1, 2 * rX, 2 * rY);
+		g2.drawOval(x - rX + 16, y - rY + 41 + 15, 2 * rX, 2 * rY);
+		// int xScale = myform.getXScale();
+		// int yScale = myform.getYScale();
+		// g2.drawOval(x - rX + 16 / xScale, y - rY + 16 / yScale, 2 * rX, 2 *
+		// rY);
 	}
 }
