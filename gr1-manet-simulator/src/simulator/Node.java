@@ -142,7 +142,8 @@ public class Node implements Serializable {
 			}
 		}
 		if (bfc == null) {
-			broadCastTable.add(new BroadCastField(source, RREQPacket.getRREQ_ID()));
+			broadCastTable.add(new BroadCastField(source, RREQPacket
+					.getRREQ_ID()));
 			return true;
 		}
 		if (bfc.getRREQ_ID() < RREQPacket.getRREQ_ID()) {
@@ -161,7 +162,8 @@ public class Node implements Serializable {
 	 */
 	public void del_Route(Route route) {
 		Rout_Arr.remove(route.getDestination());
-		FileLogger.write("Node: " + this + " : " + route + " Deleted!", FileLogger.MSG_TYPE_INFO);
+		FileLogger.write("Node: " + this + " : " + route + " Deleted!",
+				FileLogger.MSG_TYPE_INFO);
 		OutputLogger.get_instance().showNodeStatus(this, "Delete: " + route);
 	}
 
@@ -249,7 +251,8 @@ public class Node implements Serializable {
 				rrepPacketWrapper = null; // resets it for next try
 				discoveryiswaiting = null; // we are not in discovery any more
 				FileLogger.write("Node " + IP.toString()
-						+ ": first discovery for " + dest + " : successful", FileLogger.MSG_TYPE_INFO);
+						+ ": first discovery for " + dest + " : successful",
+						FileLogger.MSG_TYPE_INFO);
 				Route foundRoute = generateRouteFromRREP(temprrepPacketWrapper);
 				foundRoute.resetIswaiting();
 				return foundRoute;
@@ -267,9 +270,10 @@ public class Node implements Serializable {
 			// the node MAY try again to discover a route by broadcasting
 			// another RREQ, up to a maximum of RREQ_RETRIES
 		}
-		
-		FileLogger.write("Node " + this + ": discovery for " + dest + " : failed", FileLogger.MSG_TYPE_INFO);
-		
+
+		FileLogger.write("Node " + this + ": discovery for " + dest
+				+ " : failed", FileLogger.MSG_TYPE_INFO);
+
 		if (route != null) {
 			route.resetIswaiting();
 		}
@@ -463,16 +467,20 @@ public class Node implements Serializable {
 	 *         null : if there isn't any route to that destination
 	 */
 	public Route search(Node dest) {
-		
-		FileLogger.write("Node " + IP.toString() + ": Searching for " + dest, FileLogger.MSG_TYPE_INFO);
-		OutputLogger.get_instance().showNodeStatus(this,"Searching for " + dest);
-		
+
+		FileLogger.write("Node " + IP.toString() + ": Searching for " + dest,
+				FileLogger.MSG_TYPE_INFO);
+		OutputLogger.get_instance().showNodeStatus(this,
+				"Searching for " + dest);
+
 		Route result = Rout_Arr.get(dest);
 		if (result == null) {
-			FileLogger.write("Node" + IP.toString() + ": Route to " + dest + " not found!", FileLogger.MSG_TYPE_INFO);
-			OutputLogger.get_instance().showNodeStatus(this, "Searching for " + dest + " not found!");
+			FileLogger.write("Node" + IP.toString() + ": Route to " + dest
+					+ " not found!", FileLogger.MSG_TYPE_INFO);
+			OutputLogger.get_instance().showNodeStatus(this,
+					"Searching for " + dest + " not found!");
 		}
-		
+
 		return result;
 	}
 
@@ -483,8 +491,10 @@ public class Node implements Serializable {
 	 *            the packet that should be broadcasted
 	 */
 	public void send(Packet packet) {
-		FileLogger.write("Node" + IP.toString() + ": Sending Broadcast Packet", FileLogger.MSG_TYPE_INFO);
-		OutputLogger.get_instance().showNodeStatus(this, "BroadCasting " + packet);
+		FileLogger.write("Node" + IP.toString() + ": Sending Broadcast Packet",
+				FileLogger.MSG_TYPE_INFO);
+		OutputLogger.get_instance().showNodeStatus(this,
+				"BroadCasting " + packet);
 		OutputLogger.get_instance().NodeSend(this, packet.type);
 		Map_Manager.get_instance().sendPacket(packet, this);
 	}
@@ -499,8 +509,10 @@ public class Node implements Serializable {
 	 * @return the output that map_manager generates
 	 */
 	public boolean send(Packet packet, Node dest) {
-		FileLogger.write("Node" + IP.toString() + ": Unicasting packet to " + dest, FileLogger.MSG_TYPE_INFO);
-		OutputLogger.get_instance().showNodeStatus(this, "Unicasting " + packet + " to " + dest);
+		FileLogger.write("Node" + IP.toString() + ": Unicasting packet to "
+				+ dest, FileLogger.MSG_TYPE_INFO);
+		OutputLogger.get_instance().showNodeStatus(this,
+				"Unicasting " + packet + " to " + dest);
 		OutputLogger.get_instance().NodeSend(this, packet.type);
 		if (Map_Manager.get_instance().sendPacket(packet, this, dest)) {
 			return true;
@@ -525,7 +537,8 @@ public class Node implements Serializable {
 	 */
 
 	public boolean send_Data(Data data, Node dest) {
-		FileLogger.write("Node" + IP + ": Sending data to " + dest, FileLogger.MSG_TYPE_INFO);
+		FileLogger.write("Node" + IP + ": Sending data to " + dest,
+				FileLogger.MSG_TYPE_INFO);
 		Route route = discovery(dest);
 		if (route == null) {
 			OutputLogger.get_instance().showNodeStatus(this,

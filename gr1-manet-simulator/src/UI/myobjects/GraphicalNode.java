@@ -50,6 +50,9 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	private Color color;
 	private StringBuffer receivedData = new StringBuffer();
 	private StringBuffer statues = new StringBuffer();
+	// private static int curIP = 1;
+	private static IPAddress curIP = new IPAddress("192.168.10.1");
+	public static int DEFAULT_POWER = 1000;
 
 	public String toString() {
 		return this.getName();
@@ -104,8 +107,12 @@ public class GraphicalNode extends NodeButton implements Transferable {
 			dataFlavor = new DataFlavor(GraphicalNode.mimeType);
 		} catch (ClassNotFoundException e) {
 		}
-		this.node = Node.getInstance(new IPAddress("192.168.10.1"));
+		// this.node = Node.getInstance(new IPAddress("192.168.10.1"));
+		// this.node = Node.getInstance(new IPAddress(192, 168, 10, curIP++));
+		this.node = Node.getInstance(curIP);
+		curIP = IPAddress.createNext(curIP);
 		this.color = this.getBackground();
+		this.node.setPower(DEFAULT_POWER);
 	}
 
 	/**
@@ -192,10 +199,10 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	private void refreshNodePanelDynamicData() {
-		//NodeProperties np = myForm.getNodePanel();
-		//np.statusText.setText(getStatus());
-		//np.receivedDataText.setText(getReceivedData());
-		
+		// NodeProperties np = myForm.getNodePanel();
+		// np.statusText.setText(getStatus());
+		// np.receivedDataText.setText(getReceivedData());
+
 		OutputLogProperties outputLogObj = myForm.getOutputLogProperties();
 		outputLogObj.statusText.setText(getStatus());
 		outputLogObj.receivedDataText.setText(getReceivedData());
