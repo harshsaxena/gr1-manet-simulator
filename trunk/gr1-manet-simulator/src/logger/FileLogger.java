@@ -27,8 +27,7 @@ import java.util.Date;
  */
 public class FileLogger {
 
-	private final static DateFormat df = new SimpleDateFormat(
-			"yyyy.MM.dd  hh:mm:ss");
+	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
 	private final static String logDirPath = "./logs/";
@@ -36,7 +35,7 @@ public class FileLogger {
 	public final static String MSG_TYPE_DEBUG = "DEBUG";
 	public final static String MSG_TYPE_ERROR = "ERROR";
 	public final static String MSG_TYPE_INFO = "INFO";
-	private final static DateFormat shortDf = new SimpleDateFormat("yyyy.MM.dd");
+	private static boolean createLoggerFile = true;
 
 	/**
 	 * Writes a log to the log file.
@@ -50,11 +49,11 @@ public class FileLogger {
 			Date now = new Date();
 			String currentTime = FileLogger.df.format(now);
 			FileWriter aWriter = new FileWriter(file, true);
-			// TODO overwrite, don't append to log file
+
 			// FileWriter aWriter = new FileWriter(file, false);
-			aWriter.write(msgeType + " - " + currentTime + " " + msg
-					+ System.getProperty("line.separator"));
-			System.out.println(msgeType + " - " + currentTime + " " + msg);
+			aWriter.write(msgeType + " " + currentTime + ": " + msg + System.getProperty("line.separator"));
+			System.out.println(msgeType + " " + currentTime + ": " + msg);
+			
 			aWriter.flush();
 			aWriter.close();
 		} catch (Exception e) {
@@ -63,9 +62,12 @@ public class FileLogger {
 	}
 
 	private static void setFileNameAndPath() {
-		Date currDate = new Date();
-		String currDateString = FileLogger.shortDf.format(currDate);
-		logFile = logDirPath + fileName + currDateString + ext;
+		if (createLoggerFile == true) {
+			Date currDate = new Date();
+			createLoggerFile = false;
+			String currDateString = FileLogger.df.format(currDate);
+			logFile = logDirPath + fileName + currDateString + ext;
+		}
 	}
 
 	/**
