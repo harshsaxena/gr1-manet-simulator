@@ -24,7 +24,7 @@ import simulator.noderelated.RREPPacketWrapper;
 import simulator.noderelated.Route;
 
 public class RREP_Received extends Thread {
-	Node mynode;
+	private Node mynode;
 	private RREPPacketWrapper packetWrapper;
 
 	public RREP_Received(String name, Node mynode,
@@ -56,8 +56,9 @@ public class RREP_Received extends Thread {
 		// already exist.
 		Route forwardRoute = this.mynode.search(rrepPacket.dest);
 
-		FileLogger.write("Node: " + mynode + " forwardRoute is "
-				+ forwardRoute, FileLogger.MSG_TYPE_INFO);
+		FileLogger.write(
+				"Node: " + mynode + " forwardRoute is " + forwardRoute,
+				FileLogger.MSG_TYPE_INFO);
 		boolean routeAddedorUpdated = false;
 		if (forwardRoute == null) {
 			forwardRoute = mynode.generateRouteFromRREP(packetWrapper);
@@ -71,11 +72,12 @@ public class RREP_Received extends Thread {
 			FileLogger.write("Node: " + mynode + " :"
 					+ forwardRoute.getSeq_no() + "," + rrepPacket.seq_no + ","
 					+ forwardRoute.isInvalid() + ","
-					+ (rrepPacket.hop_count < forwardRoute.getHop_count()), FileLogger.MSG_TYPE_INFO);
-			
+					+ (rrepPacket.hop_count < forwardRoute.getHop_count()),
+					FileLogger.MSG_TYPE_INFO);
+
 			if (forwardRoute.getSeq_no() < 0 ||
 			// the sequence number in the routing table is marked as invalid in
-			// route table entry.
+					// route table entry.
 					rrepPacket.seq_no > forwardRoute.getSeq_no() ||
 					// the Destination Sequence Number in the RREP is greater
 					// than
@@ -90,7 +92,8 @@ public class RREP_Received extends Thread {
 			// the sequence numbers are the same, and the New Hop Count is
 			// smaller than the hop count in route table entry.
 			) {
-				FileLogger.write("Node: " + mynode + " :one if is true", FileLogger.MSG_TYPE_INFO);
+				FileLogger.write("Node: " + mynode + " :one if is true",
+						FileLogger.MSG_TYPE_INFO);
 				forwardRoute.setSeq_no(rrepPacket.seq_no);
 				routeAddedorUpdated = true;
 			}
@@ -122,7 +125,8 @@ public class RREP_Received extends Thread {
 					+ " : received RREPPacket from "
 					+ packetWrapper.getRrepPacket().source
 					+ " which handded from " + packetWrapper.getReceivedFrom()
-					+ ": It's the destination!,I was waiting for it", FileLogger.MSG_TYPE_INFO);
+					+ ": It's the destination!,I was waiting for it",
+					FileLogger.MSG_TYPE_INFO);
 			mynode.setRrepPacketWrapper(this.packetWrapper);
 			synchronized (mynode.getDiscoveryiswaiting()) {
 				mynode.getDiscoveryiswaiting().notify();
@@ -135,9 +139,8 @@ public class RREP_Received extends Thread {
 		if (routeAddedorUpdated) {
 			Route backRoute = this.mynode.search(rrepPacket.source);
 			if (!Route.isBad(backRoute)) {
-				FileLogger.write("Node" + mynode
-						+ ": Passing RREPPacket from " + rrepPacket.dest
-						+ " which handded from "
+				FileLogger.write("Node" + mynode + ": Passing RREPPacket from "
+						+ rrepPacket.dest + " which handded from "
 						+ packetWrapper.getReceivedFrom() + " to "
 						+ backRoute.getNext_hop(), FileLogger.MSG_TYPE_INFO);
 				forwardRoute.getPrecursor().add(backRoute.getNext_hop());

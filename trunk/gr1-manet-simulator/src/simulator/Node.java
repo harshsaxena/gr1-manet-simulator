@@ -63,6 +63,19 @@ public class Node implements Serializable {
 	public final static int TTL_START = 20;
 	public final static int TTL_THRESHOLD = 7;
 
+	private Set<BroadCastField> broadCastTable = new HashSet<BroadCastField>();
+	private Object discoveryiswaiting;
+	private IPAddress IP;
+	private Coordinates node_coordinates = new Coordinates();
+	private int power = 0;
+	private Map<Node, Route> Rout_Arr = new HashMap<Node, Route>();
+	private RREPPacketWrapper rrepPacketWrapper;
+	public int RREQ_ID = 0;
+	public int SEQ_NO = 0;
+
+	private Node() {
+	}
+
 	public static Node getInstance(IPAddress IP) {
 		Node node = new Node();
 		node.IP = IP;
@@ -92,19 +105,6 @@ public class Node implements Serializable {
 		new Timer(node + " delete timer", true).schedule(
 				new Route_Delete(node), Node.ROUTE_DELETE_INTERVAL,
 				Node.ROUTE_DELETE_INTERVAL);
-	}
-
-	private Set<BroadCastField> broadCastTable = new HashSet<BroadCastField>();
-	private Object discoveryiswaiting;
-	public IPAddress IP;
-	private Coordinates node_coordinates = new Coordinates();
-	public int power = 0;
-	private Map<Node, Route> Rout_Arr = new HashMap<Node, Route>();
-	private RREPPacketWrapper rrepPacketWrapper;
-	public int RREQ_ID = 0;
-	public int SEQ_NO = 0;
-
-	private Node() {
 	}
 
 	/**
@@ -232,7 +232,8 @@ public class Node implements Serializable {
 			// RREQ
 			// ID and the Originator IP address (its own address) of the RREQ
 			// for PATH_DISCOVERY_TIME
-			this.broadCastTable.add(new BroadCastField(this, rreqPacket.getRREQ_ID()));
+			this.broadCastTable.add(new BroadCastField(this, rreqPacket
+					.getRREQ_ID()));
 			send(rreqPacket); // sending
 			try {
 				synchronized (discoveryiswaiting) {
@@ -467,14 +468,17 @@ public class Node implements Serializable {
 	 */
 	public Route search(Node dest) {
 
-		FileLogger.write("Node " + IP.toString() + ": Searching for " + dest, FileLogger.MSG_TYPE_INFO);
-		OutputLogger.get_instance().showNodeStatus(this, "Searching for " + dest);
+		FileLogger.write("Node " + IP.toString() + ": Searching for " + dest,
+				FileLogger.MSG_TYPE_INFO);
+		OutputLogger.get_instance().showNodeStatus(this,
+				"Searching for " + dest);
 
 		Route result = Rout_Arr.get(dest);
-		
+
 		if (result == null) {
 			FileLogger.write(dest + " not found!", FileLogger.MSG_TYPE_INFO);
-			OutputLogger.get_instance().showNodeStatus(this, dest + " not found!");
+			OutputLogger.get_instance().showNodeStatus(this,
+					dest + " not found!");
 		}
 
 		return result;
@@ -487,8 +491,10 @@ public class Node implements Serializable {
 	 *            the packet that should be broadcasted
 	 */
 	public void send(Packet packet) {
-		FileLogger.write("Node" + IP.toString() + ": Sending Broadcast Packet", FileLogger.MSG_TYPE_INFO);
-		OutputLogger.get_instance().showNodeStatus(this, "Broadcasting message...");
+		FileLogger.write("Node" + IP.toString() + ": Sending Broadcast Packet",
+				FileLogger.MSG_TYPE_INFO);
+		OutputLogger.get_instance().showNodeStatus(this,
+				"Broadcasting message...");
 		OutputLogger.get_instance().NodeSend(this, packet.type);
 		Map_Manager.get_instance().sendPacket(packet, this);
 	}
@@ -503,8 +509,10 @@ public class Node implements Serializable {
 	 * @return the output that map_manager generates
 	 */
 	public boolean send(Packet packet, Node dest) {
-		FileLogger.write("Sending message to " + dest, FileLogger.MSG_TYPE_INFO);
-		OutputLogger.get_instance().showNodeStatus(this, "Sending message to " + dest);
+		FileLogger
+				.write("Sending message to " + dest, FileLogger.MSG_TYPE_INFO);
+		OutputLogger.get_instance().showNodeStatus(this,
+				"Sending message to " + dest);
 		OutputLogger.get_instance().NodeSend(this, packet.type);
 		if (Map_Manager.get_instance().sendPacket(packet, this, dest)) {
 			return true;

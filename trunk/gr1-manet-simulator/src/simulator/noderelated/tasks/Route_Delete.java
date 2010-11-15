@@ -24,7 +24,7 @@ import simulator.Node;
 import simulator.noderelated.Route;
 
 public class Route_Delete extends TimerTask {
-	Node mynode;
+	private Node mynode;
 
 	public Route_Delete(Node mynode) {
 		super();

@@ -24,7 +24,7 @@ import simulator.noderelated.Route;
 import test.AODV_Test;
 
 public class Data_Received extends Thread{
-    Node mynode;
+    private Node mynode;
     private DataPacket packet;
     private Node receivedFrom;
 
