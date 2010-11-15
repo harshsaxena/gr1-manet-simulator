@@ -38,7 +38,7 @@ public class Route_Expiry extends TimerTask {
             if (route.getLifeTime()<new Date().getTime() && !mynode.equals(route.getDestination())
                     && route.getHop_count()< Route.INFINITE){
                 FileLogger.write("Node " + mynode + ": " + route + " expires!", FileLogger.MSG_TYPE_INFO);
-                OutputLogger.get_instance().showNodeStatus(mynode,"Expire: "+route);
+                OutputLogger.get_instance().showNodeStatus(mynode,"Route expired: " + route);
                 route.setSeq_no(route.getSeq_no()+1);
                 route.setHop_count(Route.INFINITE);
             }
