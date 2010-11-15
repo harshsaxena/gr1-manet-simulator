@@ -21,6 +21,8 @@ import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.swing.Icon;
 import javax.swing.JComponent;
@@ -46,7 +48,8 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	public final IntegerWrapper currentIconNumber = new IntegerWrapper();
 	private Node node;
 	public static final int ANIMATION_PERIOD = 500;
-	private String name = "";
+	private static String curName = "`"; // 'a' - 1 = '`'
+	private String name;
 	private Color color;
 	private StringBuffer receivedData = new StringBuffer();
 	private StringBuffer statues = new StringBuffer();
@@ -56,6 +59,22 @@ public class GraphicalNode extends NodeButton implements Transferable {
 
 	public String toString() {
 		return this.getName();
+	}
+
+	/** Returns the next lexicographic name. **/
+	private static String getNextName() {
+		// TODO extend to longer names
+		// assume curName is length 1
+		char s = curName.charAt(0);
+		StringBuffer prefix = new StringBuffer("");
+		String name = curName;
+		name = prefix.toString() + ++s;
+		if (s > 'z') {
+			prefix.append("a");
+			s = 'a';
+		}
+		curName = name;
+		return name;
 	}
 
 	/**
@@ -129,6 +148,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		this(icon);
 		this.shouldRemoved = shouldRemoved;
 		this.myForm = myForm;
+		this.name = getNextName();
 	}
 
 	/**

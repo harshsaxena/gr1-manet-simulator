@@ -21,7 +21,7 @@ import simulator.Packets.RREPPacket;
 import simulator.noderelated.Route;
 
 public class Hello_Task extends TimerTask {
-	Node mynode;
+	private Node mynode;
 
 	public Hello_Task(Node mynode) {
 		super();

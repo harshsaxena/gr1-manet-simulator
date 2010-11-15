@@ -19,9 +19,9 @@ import simulator.Node;
 import simulator.noderelated.tasks.RREQ_Received;
 
 public class RREQPacket extends Packet {
-    int SourceSeq_no;
+    private int SourceSeq_no;
     public boolean J,R,D,G,U;
-    int RREQ_ID;
+    private int RREQ_ID;
 
     public int getRREQ_ID() {
         return RREQ_ID;

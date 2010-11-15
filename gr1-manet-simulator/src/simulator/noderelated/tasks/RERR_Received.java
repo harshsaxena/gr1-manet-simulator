@@ -20,7 +20,7 @@ import simulator.Packets.RERRPacket;
 import simulator.noderelated.Route;
 
 public class RERR_Received extends Thread {
-	Node mynode;
+	private Node mynode;
 	private RERRPacket packet;
 	private Node receivedFrom;
 
