@@ -41,6 +41,6 @@ public abstract class Packet {
 	public abstract void receive(Node receiver, Node prev_hop);
 
 	public String toString() {
-		return "seq_no=" + seq_no;
+		return "message number = " + seq_no;
 	}
 }
