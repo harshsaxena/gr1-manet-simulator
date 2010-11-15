@@ -61,14 +61,13 @@ public class RREQPacket extends Packet {
         receiver.add_Route(receiver.generateRouteFromRREQtoprevHop(this,prev_hop));
         if (receiver.checkAndUpdateBroadCastTable(this.source, this)){
                 // checks if this packet has not broadcasted and the source node is not this
-                new RREQ_Received("RREQ_Received"+receiver.getIP().toString(),receiver,
-                        this,prev_hop );
-                FileLogger.write("Node " + receiver.getIP().toString() + " : RREQ received from " + this.source + " through " + prev_hop, FileLogger.MSG_TYPE_INFO);
+                new RREQ_Received("Message received from " + receiver.getIP().toString(),receiver, this,prev_hop );
+                FileLogger.write("Message received from " + receiver.getIP().toString(), FileLogger.MSG_TYPE_INFO);
             }
     }
 
     public String toString() {
-        return "RREQ "+super.toString();
+        return "RREQ X "+super.toString();
     }
 
 }
