@@ -78,7 +78,7 @@ public class Myform extends JFrame {
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, frame.myMap, frame.getNodePanel());
 		
 		splitPane.setOneTouchExpandable(true);
-		splitPane.setDividerLocation(550);
+		splitPane.setDividerLocation(575);
 		frame.content.add(splitPane, BorderLayout.CENTER);
 		frame.myMap.addMouseListener(new PanelAction(frame));
 		frame.generateBtn.addActionListener(new InitParameters(frame));
