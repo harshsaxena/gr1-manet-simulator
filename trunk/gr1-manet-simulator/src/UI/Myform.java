@@ -129,7 +129,7 @@ public class Myform extends JFrame {
 		content.add(toolBar, BorderLayout.PAGE_START);
 		
 		outputLogProperties = new OutputLogProperties();
-		outlogPanel = outputLogProperties.getOutputLogProperties();		
+		outlogPanel = outputLogProperties.getOutputLogProperties();
 		content.add(outlogPanel, BorderLayout.AFTER_LAST_LINE);
 		
 		myMap.setDropTarget(new DropTargetImp(myMap));

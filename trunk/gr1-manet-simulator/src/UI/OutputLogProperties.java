@@ -14,6 +14,7 @@
 
 package UI;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -38,50 +39,46 @@ public class OutputLogProperties extends JPanel implements ActionListener {
 	
 	public JPanel getOutputLogProperties()
 	{
-		JPanel testPanel = new JPanel();
+		JPanel outputLogPanel = new JPanel();
 		
 		// Main Box
 		Box mainOutputLogBox = Box.createHorizontalBox();
-		testPanel.add(mainOutputLogBox);
+		outputLogPanel.add(mainOutputLogBox);
 		
         // Action Listener
 		// TODO: Create action listener to clear text
         // ActionListener okAction = new NodePropOKBtnAction(this.myForm);
 		
-        /* To Be Moved */
-        receivedDataLbl = new JLabel("RData: ");
+		/* Message Data Received */
+        receivedDataLbl = new JLabel("Message Data Received: ");
+        receivedDataLbl.setHorizontalAlignment(JLabel.LEFT);
+        receivedDataLbl.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+
         receivedDataText = new JTextArea(5,20);
         receivedDataText.setEditable(false);
         JScrollPane rdataSP= new JScrollPane(receivedDataText);
         
-        statusLbl = new JLabel("Status: ");
-        statusText = new JTextArea(5,20);
+        Box msgReceivedBox = Box.createVerticalBox();
+        msgReceivedBox.setAlignmentX(Box.LEFT_ALIGNMENT);
+        msgReceivedBox.add(receivedDataLbl);
+        msgReceivedBox.add(rdataSP);
+        mainOutputLogBox.add(msgReceivedBox);
+        
+        mainOutputLogBox.add(Box.createHorizontalStrut(10));
+        
+        /* Routing Data */
+        statusLbl = new JLabel("Routing Data: ");
+        statusText = new JTextArea(5,30);
         statusText.setEditable(false);
         JScrollPane statusSP = new JScrollPane(statusText);
         
-        mainOutputLogBox.add(Box.createHorizontalStrut(10));
+        Box routingDataBox = Box.createVerticalBox();
+        routingDataBox.add(statusLbl);
+        routingDataBox.add(statusSP);
+        mainOutputLogBox.add(routingDataBox);
+        mainOutputLogBox.setAlignmentX(Box.LEFT_ALIGNMENT);
         
-        Box receivedDataLabelAndTextBox = Box.createHorizontalBox();
-        Box receivedLabelGlueBox = Box.createVerticalBox();
-        receivedLabelGlueBox.add(receivedDataLbl);
-        receivedLabelGlueBox.add(Box.createVerticalGlue());
-        receivedDataLabelAndTextBox.add(receivedLabelGlueBox);
-        receivedDataLabelAndTextBox.add(rdataSP);
-        mainOutputLogBox.add(receivedDataLabelAndTextBox);
-        
-        mainOutputLogBox.add(Box.createHorizontalStrut(10));
-        
-        Box statusDataLabelAndTextBox = Box.createHorizontalBox();
-        Box statusLabelGlueBox = Box.createVerticalBox();
-        statusLabelGlueBox.add(statusLbl);
-        statusLabelGlueBox.add(Box.createVerticalGlue());
-        statusDataLabelAndTextBox.add(statusLabelGlueBox);
-        statusDataLabelAndTextBox.add(statusSP);
-        mainOutputLogBox.add(statusDataLabelAndTextBox);
-        
-        mainOutputLogBox.add(Box.createHorizontalStrut(10));
-        
-        return testPanel;
+        return outputLogPanel;
         
 	}
 	
