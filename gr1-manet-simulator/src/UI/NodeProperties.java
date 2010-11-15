@@ -262,12 +262,12 @@ public class NodeProperties extends JPanel implements ActionListener {
         sendToComboLabelAndTextBox.add(sendToComboBox);
         messagingBox.add(sendToComboLabelAndTextBox);*/
         
-		/*messagingBox.add(Box.createVerticalStrut(5));
+		/*messagingBox.add(Box.createVerticalStrut(5));*/
         
         Box sendBtnBox = Box.createHorizontalBox();
         sendBtnBox.add(Box.createHorizontalGlue());
         sendBtnBox.add(sendBtn);
-        messagingBox.add(sendBtnBox); */
+        messagingBox.add(sendBtnBox); 
         
         /* Configuration and Miscellaneous Panel 
         JPanel configMiscPanel = new JPanel();
