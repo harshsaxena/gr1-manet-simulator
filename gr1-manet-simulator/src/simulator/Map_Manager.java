@@ -27,9 +27,7 @@ public class Map_Manager {
 	private static Map_Manager map_manager = new Map_Manager();
 	private static long speedPercent = 200;
 
-	private Map_Manager() {
-
-	}
+	private Map_Manager() {}
 
 	public static Map_Manager get_instance() {
 		return map_manager;
@@ -54,8 +52,10 @@ public class Map_Manager {
 	public double getDistance(Node a, Node b) {
 		int x_distance = a.getNode_coordinates().getX_coordinate()
 				- b.getNode_coordinates().getX_coordinate();
+		
 		int y_distance = a.getNode_coordinates().getY_coordinate()
 				- b.getNode_coordinates().getY_coordinate();
+		
 		double distance = Math.sqrt((x_distance * x_distance)
 				+ (y_distance * y_distance));
 		
