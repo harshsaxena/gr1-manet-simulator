@@ -23,7 +23,7 @@ public class OutputLogger {
 
 	Myform myform;
 	boolean test = false;
-	private static OutputLogger status_manager;
+	private static OutputLogger outputLogger;
 
 	private OutputLogger(Myform myform) {
 		this.myform = myform;
@@ -34,15 +34,15 @@ public class OutputLogger {
 	}
 
 	public static void init(Myform myForm) {
-		status_manager = new OutputLogger(myForm);
+		outputLogger = new OutputLogger(myForm);
 	}
 
 	public static void init() {
-		status_manager = new OutputLogger(true);
+		outputLogger = new OutputLogger(true);
 	}
 
 	public static OutputLogger get_instance() {
-		return status_manager;
+		return outputLogger;
 	}
 
 	/**
@@ -58,8 +58,7 @@ public class OutputLogger {
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			gNode.addStatus(status);
 
-			FileLogger.write("Node " + gNode.getName() + " is "
-					+ gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
+			FileLogger.write("Node " + gNode.getName() + " is " + gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
 
 		}
 	}
@@ -76,10 +75,8 @@ public class OutputLogger {
 		if (!this.test) {
 
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
-			gNode.addReceivedData(data.getContent() + " received from "
-					+ sender);
-			FileLogger.write(data.getContent() + " received from " + sender,
-					FileLogger.MSG_TYPE_INFO);
+			gNode.addReceivedData(receiver + " received " + "'" + data.getContent() + "'");
+			FileLogger.write(receiver + " received " + "'" + data.getContent() + "'", FileLogger.MSG_TYPE_INFO);
 
 		}
 	}
