@@ -37,7 +37,7 @@ public class BroadCastTable_Expiry extends TimerTask {
 			BroadCastField bcf = (BroadCastField) itr.next();
 			if (bcf.getLifeTime() < new Date().getTime()) {
 				FileLogger.write("Node " + mynode + " : " + bcf + " Expires!", FileLogger.MSG_TYPE_INFO);
-				OutputLogger.get_instance().showNodeStatus(mynode, "Expire: " + bcf);
+				OutputLogger.get_instance().showNodeStatus(mynode, "Broadcast expired: " + bcf);
 				itr.remove();
 			}
 		}
