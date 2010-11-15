@@ -18,10 +18,14 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.List;
 
+import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
@@ -48,6 +52,8 @@ public class NodeProperties extends JPanel implements ActionListener {
 	public JComboBox modeComboBox;
 	public JComboBox protocolComboBox;
 	public JComboBox sendToComboBox;
+	
+	public BufferedImage wirelessTowerImg = new BufferedImage(200, 92, BufferedImage.TYPE_INT_RGB);
 	
 	public JComboBox getSendToComboBox() {
 		return sendToComboBox;
@@ -78,6 +84,8 @@ public class NodeProperties extends JPanel implements ActionListener {
 	public JTextField sendToText;
 	public JTextField searchNodeText;
 	
+	public JLabel picLabel;
+	
 	//public JTextArea receivedDataText;  // move edit
 	//public JTextArea statusText;  // move edit
 	
@@ -87,8 +95,14 @@ public class NodeProperties extends JPanel implements ActionListener {
     public NodeProperties(Myform myForm) {
         this.myForm = myForm;
         
-        String[] modeStrings = {"Mode - Node Management", "Mode - Simulation Mode"};
-        String[] protocolStrings = {"Protocol - AODV", "Protocol - DSDV"};
+        // String[] modeStrings = {"Mode - Node Management", "Mode - Simulation Mode"};
+        // String[] protocolStrings = {"Protocol - AODV", "Protocol - DSDV"};
+        
+		try {
+			wirelessTowerImg = ImageIO.read(new File("images/wirelessTowerTitle.png"));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
         
         // Main Box
         Box mainVerticalBox = Box.createVerticalBox();
@@ -249,7 +263,7 @@ public class NodeProperties extends JPanel implements ActionListener {
         sendBtnBox.add(sendBtn);
         messagingBox.add(sendBtnBox);
         
-        /* Configuration and Miscellaneous Panel */
+        /* Configuration and Miscellaneous Panel 
         JPanel configMiscPanel = new JPanel();
         mainVerticalBox.add(configMiscPanel);
         configMiscPanel.setBorder(
@@ -274,7 +288,11 @@ public class NodeProperties extends JPanel implements ActionListener {
         configMiscPanel.add(configMiscBox);
         configMiscBox.add(modeComboBox);
         configMiscBox.add(Box.createVerticalStrut(5));
-        configMiscBox.add(protocolComboBox);
+        configMiscBox.add(protocolComboBox);*/
+        
+        picLabel = new JLabel(new ImageIcon( wirelessTowerImg ));
+        
+        mainVerticalBox.add(picLabel);
 
     }
 
