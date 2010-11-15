@@ -106,18 +106,19 @@ public class NodeProperties extends JPanel implements ActionListener {
         
         // Main Box
         Box mainVerticalBox = Box.createVerticalBox();
-        this.add(mainVerticalBox);
+        mainVerticalBox.add(Box.createGlue());
+        this.add(mainVerticalBox); 
         
         // Action Listener 
         ActionListener okAction = new NodePropOKBtnAction(this.myForm);
         
         /* Find a Node Panel */
-        JPanel findNodePanel = new JPanel();
+		JPanel findNodePanel = new JPanel();
         mainVerticalBox.add(findNodePanel);
         findNodePanel.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createTitledBorder("Find a Node"),
-                        BorderFactory.createEmptyBorder(0,2,4,2)));
+                        BorderFactory.createEmptyBorder(0,0,0,0)));
         
         searchNodeLabel = new JLabel("Search: ");
         searchNodeText = new JTextField(10);
@@ -126,51 +127,23 @@ public class NodeProperties extends JPanel implements ActionListener {
         Box searchLabelAndTextBox = Box.createHorizontalBox();
         searchLabelAndTextBox.add(searchNodeLabel);
         searchLabelAndTextBox.add(searchNodeText);
-        findNodePanel.add(searchLabelAndTextBox);
+        findNodePanel.add(searchLabelAndTextBox); 
         
         /* Node Data Panel */
-        JPanel nodeDataPanel = new JPanel();
+		JPanel nodeDataPanel = new JPanel();
         mainVerticalBox.add(nodeDataPanel);
         nodeDataPanel.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createTitledBorder("Node Properties"),
-                        BorderFactory.createEmptyBorder(0,2,4,2)));
+                        BorderFactory.createEmptyBorder(0,0,0,0))); 
         
+        Box nodeDataBox = Box.createVerticalBox();
+        nodeDataPanel.add(nodeDataBox);
+        
+        // Name
         nameLabel = new JLabel("Name: ");
         nameText = new JTextField(8);
         nameText.addActionListener(okAction);
-        
-        ipLabel = new JLabel("IP: ");
-        ipText = new JTextField(8);
-        ipText.addActionListener(okAction);
-        
-        xCordLabel = new JLabel("X: ");
-        xCordText = new JTextField(1);
-        xCordText.addKeyListener(myForm.numKeyListener);
-        
-        yCordLabel = new JLabel(" Y: ");
-        yCordText = new JTextField(1);
-        yCordText.addKeyListener(myForm.numKeyListener);
-        
-        powerLabel = new JLabel("Power: ");
-        powerText = new JTextField(3);
-        powerText.addKeyListener(myForm.numKeyListener);
-        powerText.addActionListener(okAction);
-        
-        colorLabel = new JLabel("Color: ");
-        colorBtn = new JButton();
-        colorBtn.setMaximumSize(new Dimension(50,50));
-        colorBtn.addActionListener(this);
-
-        okBtn = new JButton("OK");
-        okBtn.addActionListener(okAction );
-        
-        resetBtn = new JButton("Reset");
-        resetBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
-        
-        // Build Node Data Panel
-        Box nodeDataBox = Box.createVerticalBox();
-        nodeDataPanel.add(nodeDataBox);
         
         Box nameLabelAndTextBox = Box.createHorizontalBox();
         nameLabelAndTextBox.add(nameLabel);
@@ -179,12 +152,26 @@ public class NodeProperties extends JPanel implements ActionListener {
         
         nodeDataBox.add(Box.createVerticalStrut(5));
         
+        // IP
+        ipLabel = new JLabel("IP: ");
+        ipText = new JTextField(8);
+        ipText.addActionListener(okAction);
+        
         Box ipLabelAndTextBox = Box.createHorizontalBox();
         ipLabelAndTextBox.add(ipLabel);
         ipLabelAndTextBox.add(ipText);
         nodeDataBox.add(ipLabelAndTextBox);
         
         nodeDataBox.add(Box.createVerticalStrut(5));
+        
+        // X Y Coordinates
+        xCordLabel = new JLabel("X: ");
+        xCordText = new JTextField(1);
+        xCordText.addKeyListener(myForm.numKeyListener);
+        
+        yCordLabel = new JLabel(" Y: ");
+        yCordText = new JTextField(1);
+        yCordText.addKeyListener(myForm.numKeyListener);
         
         Box xyCordsLabelAndTextBox = Box.createHorizontalBox();
         xyCordsLabelAndTextBox.add(xCordLabel);
@@ -195,6 +182,17 @@ public class NodeProperties extends JPanel implements ActionListener {
         
         nodeDataBox.add(Box.createVerticalStrut(5));
         
+        // Power & Color
+        powerLabel = new JLabel("Power: ");
+        powerText = new JTextField(3);
+        powerText.addKeyListener(myForm.numKeyListener);
+        powerText.addActionListener(okAction);
+        
+        colorLabel = new JLabel("Color: ");
+        colorBtn = new JButton();
+        colorBtn.setMaximumSize(new Dimension(25,25));
+        colorBtn.addActionListener(this);
+        
         Box pwrColorLabelAndTextBox = Box.createHorizontalBox();
         pwrColorLabelAndTextBox.add(powerLabel);
         pwrColorLabelAndTextBox.add(powerText);
@@ -203,6 +201,13 @@ public class NodeProperties extends JPanel implements ActionListener {
         nodeDataBox.add(pwrColorLabelAndTextBox);
         
         nodeDataBox.add(Box.createVerticalStrut(5));
+
+        // Buttons
+        okBtn = new JButton("OK");
+        okBtn.addActionListener(okAction );
+        
+        resetBtn = new JButton("Reset");
+        resetBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
         
         Box resetAndOkBtnsBox = Box.createHorizontalBox();
         resetAndOkBtnsBox.add(Box.createHorizontalGlue());
@@ -211,23 +216,15 @@ public class NodeProperties extends JPanel implements ActionListener {
         resetAndOkBtnsBox.add(okBtn);
         nodeDataBox.add(resetAndOkBtnsBox);
         
-        nodeDataBox.add(Box.createVerticalStrut(5));
+        nodeDataBox.add(Box.createVerticalStrut(5)); 
         
         /* Messaging Panel */
-        JPanel messagingPanel = new JPanel();
+		JPanel messagingPanel = new JPanel();
         mainVerticalBox.add(messagingPanel);
         messagingPanel.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createTitledBorder("Messaging"),
-                        BorderFactory.createEmptyBorder(0,2,4,2)));
-        
-        msgLabel = new JLabel("Message: ");
-        msgText = new JTextField(10);
-        msgText.addActionListener(okAction);
-        
-        sendToLabel = new JLabel("Send to: ");
-        sendToText = new JTextField(10);
-        sendToText.addActionListener(okAction);
+                        BorderFactory.createEmptyBorder(0,0,0,0)));
         
         //sendToComboBox = new JComboBox();
         
@@ -237,6 +234,11 @@ public class NodeProperties extends JPanel implements ActionListener {
         Box messagingBox = Box.createVerticalBox();
         messagingPanel.add(messagingBox);
         
+        
+        sendToLabel = new JLabel("Send to: ");
+        sendToText = new JTextField(10);
+        sendToText.addActionListener(okAction);
+        
         Box sendToLabelAndTextBox = Box.createHorizontalBox();
         sendToLabelAndTextBox.add(sendToLabel);
         sendToLabelAndTextBox.add(sendToText);
@@ -244,24 +246,28 @@ public class NodeProperties extends JPanel implements ActionListener {
         
         messagingBox.add(Box.createVerticalStrut(5));
         
+        msgLabel = new JLabel("Message: ");
+        msgText = new JTextField(10);
+        msgText.addActionListener(okAction);
+        
         Box msgLabelAndTextBox = Box.createHorizontalBox();
         msgLabelAndTextBox.add(msgLabel);
         msgLabelAndTextBox.add(msgText);
         messagingBox.add(msgLabelAndTextBox);
         
-        messagingBox.add(Box.createVerticalStrut(5));
+        messagingBox.add(Box.createVerticalStrut(5)); 
         
         /*Box sendToComboLabelAndTextBox = Box.createHorizontalBox();
         sendToComboLabelAndTextBox.add(sendToLabel);
         sendToComboLabelAndTextBox.add(sendToComboBox);
         messagingBox.add(sendToComboLabelAndTextBox);*/
         
-        messagingBox.add(Box.createVerticalStrut(5));
+		/*messagingBox.add(Box.createVerticalStrut(5));
         
         Box sendBtnBox = Box.createHorizontalBox();
         sendBtnBox.add(Box.createHorizontalGlue());
         sendBtnBox.add(sendBtn);
-        messagingBox.add(sendBtnBox);
+        messagingBox.add(sendBtnBox); */
         
         /* Configuration and Miscellaneous Panel 
         JPanel configMiscPanel = new JPanel();
@@ -290,9 +296,14 @@ public class NodeProperties extends JPanel implements ActionListener {
         configMiscBox.add(Box.createVerticalStrut(5));
         configMiscBox.add(protocolComboBox);*/
         
-        picLabel = new JLabel(new ImageIcon( wirelessTowerImg ));
+        /* Image Panel */
+		JPanel imagePanel = new JPanel();
+        mainVerticalBox.add(imagePanel);
         
-        mainVerticalBox.add(picLabel);
+        Box imageBox = Box.createVerticalBox();
+        imagePanel.add(imageBox);
+		picLabel = new JLabel(new ImageIcon( wirelessTowerImg ));
+		imageBox.add(picLabel);
 
     }
 
