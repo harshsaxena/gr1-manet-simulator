@@ -18,21 +18,16 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
-import javax.swing.ComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import simulator.Map_Manager;
-import simulator.Node;
 
 import UI.actions.NodePropOKBtnAction;
 import UI.actions.NodePropResetBtnAction;
@@ -94,15 +89,6 @@ public class NodeProperties extends JPanel implements ActionListener {
         
         String[] modeStrings = {"Mode - Node Management", "Mode - Simulation Mode"};
         String[] protocolStrings = {"Protocol - AODV", "Protocol - DSDV"};
-		// TODO: Generate and update from map panel as nodes are added and subtracted
-		
-		/*graphicalNodeList = this.myForm.getGraphicalNodes();
-		int count = 0;
-		for(GraphicalNode gnode : graphicalNodeList)
-		{
-			availableNodes[count] = gnode.getName();
-			count++;
-		}*/
         
         // Main Box
         Box mainVerticalBox = Box.createVerticalBox();
@@ -229,27 +215,13 @@ public class NodeProperties extends JPanel implements ActionListener {
         sendToText = new JTextField(10);
         sendToText.addActionListener(okAction);
         
-        /*List<Node> nodeList = Map_Manager.get_instance().getNode_list();
-        sendToComboBox = new JComboBox();
-        for(Node node : nodeList){
-        	sendToComboBox.addItem(node.IP);
-        }*/
-        
-        sendToComboBox = new JComboBox();
-        //sendToComboBox.setSelectedIndex(0);
+        //sendToComboBox = new JComboBox();
         
         sendBtn = new JButton("Send");
         sendBtn.addActionListener(new NodePropSendtoBtnAction(this.myForm));
         
         Box messagingBox = Box.createVerticalBox();
         messagingPanel.add(messagingBox);
-        
-        Box msgLabelAndTextBox = Box.createHorizontalBox();
-        msgLabelAndTextBox.add(msgLabel);
-        msgLabelAndTextBox.add(msgText);
-        messagingBox.add(msgLabelAndTextBox);
-        
-        messagingBox.add(Box.createVerticalStrut(5));
         
         Box sendToLabelAndTextBox = Box.createHorizontalBox();
         sendToLabelAndTextBox.add(sendToLabel);
@@ -258,10 +230,17 @@ public class NodeProperties extends JPanel implements ActionListener {
         
         messagingBox.add(Box.createVerticalStrut(5));
         
-        Box sendToComboLabelAndTextBox = Box.createHorizontalBox();
+        Box msgLabelAndTextBox = Box.createHorizontalBox();
+        msgLabelAndTextBox.add(msgLabel);
+        msgLabelAndTextBox.add(msgText);
+        messagingBox.add(msgLabelAndTextBox);
+        
+        messagingBox.add(Box.createVerticalStrut(5));
+        
+        /*Box sendToComboLabelAndTextBox = Box.createHorizontalBox();
         sendToComboLabelAndTextBox.add(sendToLabel);
         sendToComboLabelAndTextBox.add(sendToComboBox);
-        messagingBox.add(sendToComboLabelAndTextBox);
+        messagingBox.add(sendToComboLabelAndTextBox);*/
         
         messagingBox.add(Box.createVerticalStrut(5));
         
