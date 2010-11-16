@@ -81,7 +81,7 @@ public class Myform extends JFrame {
 		splitPane.setDividerLocation(575);
 		frame.content.add(splitPane, BorderLayout.CENTER);
 		frame.myMap.addMouseListener(new PanelAction(frame));
-		frame.generateBtn.addActionListener(new InitParameters(frame));
+		//frame.generateBtn.addActionListener(new InitParameters(frame));
 		frame.powerShower = new PowerShower(frame);
 		frame.delGNodeBtn.addActionListener(new DeleteBtnAction(frame));
 		
@@ -116,8 +116,8 @@ public class Myform extends JFrame {
 		//toolBar.add(new JLabel("Min Neighbor: "));
 		//toolBar.add(minNumber);
 		//toolBar.add(doubleDirection);
-		generateBtn = new JButton("Fill Parameter");
-		toolBar.add(generateBtn);
+		//generateBtn = new JButton("Fill Parameter");
+		//toolBar.add(generateBtn);
 		minNumber.addKeyListener(new NumberKeyListener());
 
 		toolBar.add(Box.createHorizontalStrut(15));
