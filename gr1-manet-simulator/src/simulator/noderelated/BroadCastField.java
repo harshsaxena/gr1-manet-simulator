@@ -35,12 +35,12 @@ public class BroadCastField {
     }
 
     public String toString() {
-        return "Broadcast field: "+getSource()+" : "+getRREQ_ID();
+        return getSource() + " Route " + getRREQ_ID();
     }
 
     public Node getSource() {
         return source;
-    }
+    } 
 
     public void setSource(Node source) {
         this.source = source;
