@@ -64,7 +64,8 @@ public class Node implements Serializable {
 	public final static int TTL_THRESHOLD = 7;
 
 	private Set<BroadCastField> broadCastTable = new HashSet<BroadCastField>();
-	private Object discoveryiswaiting;
+	// private Object discoveryiswaiting;
+	private Object discoveryiswaiting = null;
 	private IPAddress IP;
 	private Coordinates node_coordinates = new Coordinates();
 	private int power = 0;
@@ -94,11 +95,11 @@ public class Node implements Serializable {
 		r.setLifeTime(LOOPBACK_EXPIRETIME);
 		node.Rout_Arr.put(node, r);
 
-		new Timer(node + " expriy timer", true).schedule(
+		new Timer(node + " expiry timer", true).schedule(
 				new Route_Expiry(node), Node.ROUTE_EXPIRE_INTERVAL,
 				Node.ROUTE_EXPIRE_INTERVAL);
 
-		new Timer(node + " broadcasttable expriy timer", true).schedule(
+		new Timer(node + " broadcast table expiry timer", true).schedule(
 				new BroadCastTable_Expiry(node), 0,
 				Node.PATH_DISCOVERY_INTERVAL);
 
