@@ -33,15 +33,17 @@ public class Route_Delete extends TimerTask {
 
 	public void run() {
 		synchronized (mynode.getRout_Arr()) {
-			for (Iterator itr = mynode.getRout_Arr().keySet().iterator(); itr
+			for (Iterator<Node> itr = mynode.getRout_Arr().keySet().iterator(); itr
 					.hasNext();) {
 				Node node = (Node) itr.next();
 				Route route = mynode.getRout_Arr().get(node);
 				if (route.getLifeTime() + Node.DELETE_PERIOD
 						* route.getIswaiting() < new Date().getTime()
 						&& !mynode.equals(route.getDestination())) {
-					FileLogger.write("Node " + mynode + " : " + route + " Deleted!", FileLogger.MSG_TYPE_INFO);
-					OutputLogger.get_instance().showNodeStatus(mynode, "Delete: " + route);
+					FileLogger.write("Node " + mynode + " : " + route
+							+ " Deleted!", FileLogger.MSG_TYPE_INFO);
+					OutputLogger.get_instance().showNodeStatus(mynode,
+							"Delete: " + route);
 					itr.remove();
 				}
 			}

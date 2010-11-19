@@ -14,8 +14,8 @@
 
 package UI;
 
-import javax.swing.JPanel;
+import javax.swing.JLayeredPane;
 
 @SuppressWarnings("serial")
-public class MyMap extends JPanel {
+public class MyMap extends JLayeredPane {
 }

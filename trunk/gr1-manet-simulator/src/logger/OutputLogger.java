@@ -56,10 +56,11 @@ public class OutputLogger {
 		if (!this.test) {
 
 			GraphicalNode gNode = myform.getGnodebyNode(node);
-			gNode.addStatus(status);
-
-			FileLogger.write("Node " + gNode.getName() + " is " + gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
-
+			if (gNode != null) {
+				gNode.addStatus(status);
+				FileLogger.write("Node " + gNode.getName() + " is "
+						+ gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
+			}
 		}
 	}
 
@@ -75,16 +76,21 @@ public class OutputLogger {
 		if (!this.test) {
 
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
-			gNode.addReceivedData(receiver + " received " + "'" + data.getContent() + "'");
-			FileLogger.write(receiver + " received " + "'" + data.getContent() + "'", FileLogger.MSG_TYPE_INFO);
-
+			if (gNode != null) {
+				gNode.addReceivedData(receiver + " received " + "'"
+						+ data.getContent() + "'");
+				FileLogger.write(receiver + " received " + "'"
+						+ data.getContent() + "'", FileLogger.MSG_TYPE_INFO);
+			}
 		}
 	}
 
 	public void NodeSend(Node sender, int type) {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(sender);
-			gNode.sending(type);
+			if (gNode != null) {
+				gNode.sending(type);
+			}
 		}
 	}
 }
