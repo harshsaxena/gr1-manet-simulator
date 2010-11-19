@@ -23,7 +23,6 @@ import java.io.IOException;
 
 import javax.swing.JComponent;
 import javax.swing.JLayeredPane;
-import javax.swing.JPanel;
 
 import logger.FileLogger;
 import UI.myobjects.GraphicalNode;

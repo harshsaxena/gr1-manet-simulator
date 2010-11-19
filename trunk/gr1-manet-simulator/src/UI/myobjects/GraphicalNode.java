@@ -21,8 +21,6 @@ import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.swing.Icon;
 import javax.swing.JComponent;
