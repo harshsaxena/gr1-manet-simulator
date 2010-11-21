@@ -76,31 +76,20 @@ public class Myform extends JFrame {
 		super(title);
 		content = new JPanel(new BorderLayout());
 		content.setOpaque(true);
+		
 		myMap = new MyMap();
 		myMap.setPreferredSize(new Dimension(this.mapWidth, this.mapHeight));
 		myMap.setBorder(BorderFactory.createEtchedBorder());
 		this.getContentPane().add(content);
+		
 		toolBar = new JToolBar();
+		toolBar.add(Box.createHorizontalStrut(10));
 		toolBar.add(addNodeBtn);
+		toolBar.add(Box.createHorizontalStrut(10));
 		toolBar.add(delGNodeBtn);
-		toolBar.add(Box.createHorizontalStrut(5));
-		// toolBar.add(new JSeparator(SwingConstants.VERTICAL));
-		toolBar.add(Box.createHorizontalStrut(5));
-		// toolBar.add(new JLabel("Min Neighbor: "));
-		// toolBar.add(minNumber);
-		// toolBar.add(doubleDirection);
-		// generateBtn = new JButton("Fill Parameter");
-		// toolBar.add(generateBtn);
-		minNumber.addKeyListener(new NumberKeyListener());
-
-		toolBar.add(Box.createHorizontalStrut(15));
-		// toolBar.add(new JSeparator(SwingConstants.VERTICAL));
-		toolBar.add(Box.createHorizontalStrut(15));
-		// toolBar.add(new JLabel("Search: "));
-		// toolBar.add(searchText);
-
+		toolBar.add(Box.createHorizontalStrut(10));
 		content.add(toolBar, BorderLayout.PAGE_START);
-
+		
 		outputLogProperties = new OutputLogProperties();
 		outlogPanel = outputLogProperties.getOutputLogProperties();
 		content.add(outlogPanel, BorderLayout.AFTER_LAST_LINE);
@@ -122,29 +111,14 @@ public class Myform extends JFrame {
 		splitPane.setDividerLocation(575);
 		frame.content.add(splitPane, BorderLayout.CENTER);
 		frame.myMap.addMouseListener(new PanelAction(frame));
-		// frame.generateBtn.addActionListener(new InitParameters(frame));
 		frame.powerShower = new PowerShower(frame);
 		frame.delGNodeBtn.addActionListener(new DeleteBtnAction(frame));
-
-		// frame.searchText.addActionListener(new SearchGNodeAction(frame));
-		// frame.setGlassPane(frame.powerShower);
-		// frame.setLayeredPane(frame.powerShower);
-		// JLabel label = new JLabel("jsdalfkjkls");
-		// label.setBounds(0, 0, 140, 140);
-		// frame.myMap.add(label, JLayeredPane.PALETTE_LAYER);
-		// frame.myMap.add(new JTex, JLayeredPane.PALETTE_LAYER);
-		// TODO get rid of magic numbers
 		frame.powerShower.setBounds(0, 0, 9999, 9999);
 		frame.myMap.add(frame.powerShower, JLayeredPane.PALETTE_LAYER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
 
-		// don't display mapForm
-		// MapForm mapForm = new MapForm(frame, "Initializing Map", true,
-		// frame);
-		// mapForm.pack();
-		// mapForm.setVisible(true);
 		OutputLogger.init(frame);
 	}
 
@@ -199,10 +173,6 @@ public class Myform extends JFrame {
 	public NodeProperties getNodePanel() {
 		return nodePanel;
 	}
-
-	/*
-	 * public JTextField getSearchText() { return searchText; }
-	 */
 
 	/**
 	 * returns the {@link GraphicalNode} that currently selected
