@@ -240,19 +240,24 @@ public class NodeProperties extends JPanel implements ActionListener {
 		sendFromText = new JTextField(10);
 		sendFromText.addActionListener(okAction);
 
+		Box sendFromLabelAndTextBox = Box.createHorizontalBox();
+		sendFromLabelAndTextBox.add(sendFromLabel);
+		sendFromLabelAndTextBox.add(sendFromText);
+		messagingBox.add(sendFromLabelAndTextBox);
+
+		messagingBox.add(Box.createVerticalStrut(5));
+
 		sendToLabel = new JLabel("Send to: ");
 		sendToText = new JTextField(10);
 		sendToText.addActionListener(okAction);
-
+		
 		Box sendToLabelAndTextBox = Box.createHorizontalBox();
-		sendToLabelAndTextBox.add(sendFromLabel);
-		sendToLabelAndTextBox.add(sendFromText);
 		sendToLabelAndTextBox.add(sendToLabel);
 		sendToLabelAndTextBox.add(sendToText);
 		messagingBox.add(sendToLabelAndTextBox);
 
 		messagingBox.add(Box.createVerticalStrut(5));
-
+		
 		msgLabel = new JLabel("Message: ");
 		msgText = new JTextField(10);
 		msgText.addActionListener(okAction);
