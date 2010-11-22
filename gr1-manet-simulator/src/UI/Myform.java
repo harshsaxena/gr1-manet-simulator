@@ -10,6 +10,7 @@
  * @version: $Revision$
  * @date: $Date$
  * @author: $Author$
+ * @log: $$
  */
 
 package UI;
@@ -44,7 +45,7 @@ import UI.myobjects.draganddrop.DropTargetImp;
 public class Myform extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	public final int mapHeight = 550;
+	public final int mapHeight = 551;
 	public final int mapWidth = 600;
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
