@@ -44,32 +44,27 @@ import UI.myobjects.draganddrop.DropTargetImp;
 public class Myform extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	public final int mapHeight = 551;
-	public final int mapWidth = 600;
+	private final JTextField minNumber = new JTextField("3", 3);
+	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",true);
+	private final List<GraphicalNode> graphicalNodes = new ArrayList<GraphicalNode>();
+	
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
+	private GraphicalNode selectedGNode;
+	private NodeProperties nodePanel;
+	private OutputLogProperties outputLogProperties;
+	
+	public final int mapHeight = 551;
+	public final int mapWidth = 600;
+	public final NumberKeyListener numKeyListener = new NumberKeyListener();
 
+	public JButton generateBtn;
 	public JPanel content;
 	public JPanel outlogPanel;
 	public JToolBar toolBar;
-
 	public JButton delGNodeBtn = new JButton(new ImageIcon("images/delete.png"));
-	public NodeButton addNodeBtn = new NodeButton(new ImageIcon(
-			"images/SendingNode0.png"));
-
-	private NodeProperties nodePanel;
-	private OutputLogProperties outputLogProperties;
-
-	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",
-			true);
-	public JButton generateBtn;
-	private final JTextField minNumber = new JTextField("3", 3);
-	// private final JTextField searchText = new JTextField(8);
-
-	private final List<GraphicalNode> graphicalNodes = new ArrayList<GraphicalNode>();
-	private GraphicalNode selectedGNode;
+	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/SendingNode0.png"));
 	public MyMap myMap;
-	public final NumberKeyListener numKeyListener = new NumberKeyListener();
 	public PowerShower powerShower;
 
 	public Myform(String title) {
@@ -102,16 +97,17 @@ public class Myform extends JFrame {
 	public static void main(String[] args) {
 		Myform frame = new Myform("MANET Simulator");
 		frame.addNodeBtn.myForm = frame;
+		frame.addNodeBtn.setToolTipText("Click and drag to add a new node");
 		frame.setNodePanel(new NodeProperties(frame));
 
-		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
-				frame.myMap, frame.getNodePanel());
-
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, frame.myMap, frame.getNodePanel());
 		splitPane.setOneTouchExpandable(true);
 		splitPane.setDividerLocation(575);
+		
 		frame.content.add(splitPane, BorderLayout.CENTER);
 		frame.myMap.addMouseListener(new PanelAction(frame));
 		frame.powerShower = new PowerShower(frame);
+		frame.delGNodeBtn.setToolTipText("Remove selected node");
 		frame.delGNodeBtn.addActionListener(new DeleteBtnAction(frame));
 		frame.powerShower.setBounds(0, 0, 9999, 9999);
 		frame.myMap.add(frame.powerShower, JLayeredPane.PALETTE_LAYER);
