@@ -10,7 +10,6 @@
  * @version: $Revision$
  * @date: $Date$
  * @author: $Author$
- * @log: $$
  */
 
 package UI;
