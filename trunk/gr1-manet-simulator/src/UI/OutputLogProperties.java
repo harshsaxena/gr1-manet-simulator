@@ -14,7 +14,6 @@
 
 package UI;
 
-//import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -26,27 +25,20 @@ import javax.swing.JTextArea;
 @SuppressWarnings("serial")
 public class OutputLogProperties extends JPanel implements ActionListener {
 
-	public JTextArea receivedDataText; // move edit
-	public JTextArea statusText; // move edit
+	public JTextArea receivedDataText;
+	public JTextArea statusText;
 
-	// private Myform myForm;
-
-	public OutputLogProperties() {
-	}
+	public OutputLogProperties() {}
 
 	public JPanel getOutputLogProperties() {
 		JPanel outputLogPanel = new JPanel();
 
-		// Main Box
+		/* Main Box */
 		Box mainOutputLogBox = Box.createHorizontalBox();
 		outputLogPanel.add(mainOutputLogBox);
 
-		// Action Listener
-		// TODO: Create action listener to clear text
-		// ActionListener okAction = new NodePropOKBtnAction(this.myForm);
-
 		/* Message Data Received */
-		receivedDataText = new JTextArea(5, 25);
+		receivedDataText = new JTextArea(8, 25);
 		receivedDataText.setEditable(false);
 		receivedDataText.setToolTipText("Successfully received messages");
 		JScrollPane rdataSP = new JScrollPane(receivedDataText);
@@ -59,7 +51,7 @@ public class OutputLogProperties extends JPanel implements ActionListener {
 		mainOutputLogBox.add(Box.createHorizontalStrut(10));
 
 		/* Routing Data */
-		statusText = new JTextArea(5, 45);
+		statusText = new JTextArea(8, 45);
 		statusText.setEditable(false);
 		statusText.setToolTipText("Broadcasting message information");
 		JScrollPane statusSP = new JScrollPane(statusText);
