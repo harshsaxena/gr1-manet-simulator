@@ -48,6 +48,7 @@ public class OutputLogProperties extends JPanel implements ActionListener {
 		/* Message Data Received */
 		receivedDataText = new JTextArea(5, 25);
 		receivedDataText.setEditable(false);
+		receivedDataText.setToolTipText("Successfully received messages");
 		JScrollPane rdataSP = new JScrollPane(receivedDataText);
 
 		Box msgReceivedBox = Box.createVerticalBox();
@@ -60,6 +61,7 @@ public class OutputLogProperties extends JPanel implements ActionListener {
 		/* Routing Data */
 		statusText = new JTextArea(5, 45);
 		statusText.setEditable(false);
+		statusText.setToolTipText("Broadcasting message information");
 		JScrollPane statusSP = new JScrollPane(statusText);
 
 		Box routingDataBox = Box.createVerticalBox();
