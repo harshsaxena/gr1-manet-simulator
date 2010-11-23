@@ -17,13 +17,18 @@ package logger;
 import simulator.Data;
 import simulator.Node;
 import UI.Myform;
+import UI.OutputLogProperties;
 import UI.myobjects.GraphicalNode;
 
 public class OutputLogger {
 
-	Myform myform;
-	boolean test = false;
 	private static OutputLogger outputLogger;
+	
+	private StringBuffer msgsReceived = new StringBuffer();
+	private StringBuffer broadcastInfo = new StringBuffer();
+	
+	public Myform myform;
+	public boolean test = false;
 
 	private OutputLogger(Myform myform) {
 		this.myform = myform;
@@ -57,9 +62,9 @@ public class OutputLogger {
 
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			if (gNode != null) {
-				gNode.addStatus(status);
-				FileLogger.write("Node " + gNode.getName() + " is "
-						+ gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
+				setBroadcastInfo("Node '" + gNode.getName() + "' " + status);
+				//myform.getOutputLogProperties().statusText.setText("TEST " + status);
+				FileLogger.write("Node '" + gNode.getName() + "' is " + gNode.getStatus(), FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}
@@ -77,10 +82,9 @@ public class OutputLogger {
 
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
 			if (gNode != null) {
-				gNode.addReceivedData(receiver + " received " + "'"
-						+ data.getContent() + "'");
-				FileLogger.write(receiver + " received " + "'"
-						+ data.getContent() + "'", FileLogger.MSG_TYPE_INFO);
+				//gNode.addReceivedData(receiver + " received " + "'" + data.getContent() + "'");
+				setMsgsReceived("Node '" + gNode.getName() + "' " + " received " + " " + data.getContent());
+				FileLogger.write(receiver + " received " + " " + data.getContent(), FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}
@@ -92,5 +96,29 @@ public class OutputLogger {
 				gNode.sending(type);
 			}
 		}
+	}
+	
+	private void addInfoToOutputLogs() {
+		OutputLogProperties outputLogObj = myform.getOutputLogProperties();
+		outputLogObj.statusText.setText(getBroadcastInfo());
+		outputLogObj.receivedDataText.setText(getMsgsReceived());
+	}
+
+	public String getMsgsReceived() {
+		return msgsReceived.toString();
+	}
+
+	public void setMsgsReceived(String msgs) {
+		this.msgsReceived.append(msgs).append("\n");
+		addInfoToOutputLogs();
+	}
+
+	public String getBroadcastInfo() {
+		return broadcastInfo.toString();
+	}
+
+	public void setBroadcastInfo(String info) {
+		this.broadcastInfo.append(info).append("\n");
+		addInfoToOutputLogs();
 	}
 }
