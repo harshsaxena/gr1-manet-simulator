@@ -31,7 +31,6 @@ import simulator.noderelated.Coordinates;
 import simulator.noderelated.IPAddress;
 import UI.Myform;
 import UI.NodeProperties;
-import UI.OutputLogProperties;
 
 /**
  * A graphical representation of a node it implements some method to make a
@@ -39,21 +38,21 @@ import UI.OutputLogProperties;
  */
 public class GraphicalNode extends NodeButton implements Transferable {
 
+	public final IntegerWrapper currentIconNumber = new IntegerWrapper();
+
 	private static final long serialVersionUID = 1L;
 	private static final String mimeType = DataFlavor.javaJVMLocalObjectMimeType
 			+ ";class=UI.myobjects.GraphicalNode";
-	public static DataFlavor dataFlavor;
-	public final IntegerWrapper currentIconNumber = new IntegerWrapper();
-	private Node node;
-	public static final int ANIMATION_PERIOD = 500;
 	private static String curName = "`"; // 'a' - 1 = '`'
+	private static IPAddress curIP = new IPAddress("192.168.10.1");
+
+	public static final int ANIMATION_PERIOD = 500;
+	public static DataFlavor dataFlavor;
+	public static int DEFAULT_POWER = 1000;
+
+	private Node node;
 	private String name;
 	private Color color;
-	private StringBuffer receivedData = new StringBuffer();
-	private StringBuffer statues = new StringBuffer();
-	// private static int curIP = 1;
-	private static IPAddress curIP = new IPAddress("192.168.10.1");
-	public static int DEFAULT_POWER = 1000;
 
 	public String toString() {
 		return this.getName();
@@ -92,40 +91,13 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		FileLogger.write("Map Panel setting bound.", FileLogger.MSG_TYPE_INFO);
 	}
 
-	public String getStatus() {
-		return this.statues.toString();
-	}
-
-	public void addStatus(String st) {
-		this.statues.append(st).append("\n");
-		this.refreshNodePanel();
-	}
-
-	public void resetStatus() {
-		this.statues.delete(0, this.statues.length());
-	}
-
-	public String getReceivedData() {
-		return this.receivedData.toString();
-	}
-
-	public void addReceivedData(String st) {
-		this.receivedData.append(st).append("\n");
-		this.refreshNodePanel();
-	}
-
-	public void resetReceivedData() {
-		this.receivedData.delete(0, this.receivedData.length());
-	}
-
 	public GraphicalNode(Icon icon) {
 		super(icon);
 		try {
 			dataFlavor = new DataFlavor(GraphicalNode.mimeType);
 		} catch (ClassNotFoundException e) {
 		}
-		// this.node = Node.getInstance(new IPAddress("192.168.10.1"));
-		// this.node = Node.getInstance(new IPAddress(192, 168, 10, curIP++));
+
 		this.node = Node.getInstance(curIP);
 		curIP = IPAddress.createNext(curIP);
 		this.color = this.getBackground();
@@ -194,13 +166,6 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		this.color = color;
 	}
 
-	private void refreshNodePanel() {
-		if (myForm.getSelectedGNode() != null
-				&& myForm.getSelectedGNode().equals(this)) {
-			this.refreshNodePanelDynamicData();
-		}
-	}
-
 	public void fillNodePanel() {
 		NodeProperties np = myForm.getNodePanel();
 		np.nameText.setText(this.name);
@@ -212,18 +177,6 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		np.powerText.setText(Integer.toString(node.getPower()));
 		np.colorBtn.setBackground(this.color);
 
-		refreshNodePanelDynamicData();
-
-	}
-
-	private void refreshNodePanelDynamicData() {
-		// NodeProperties np = myForm.getNodePanel();
-		// np.statusText.setText(getStatus());
-		// np.receivedDataText.setText(getReceivedData());
-
-		OutputLogProperties outputLogObj = myForm.getOutputLogProperties();
-		outputLogObj.statusText.setText(getStatus());
-		outputLogObj.receivedDataText.setText(getReceivedData());
 	}
 
 	public void setSelectGNode() {
