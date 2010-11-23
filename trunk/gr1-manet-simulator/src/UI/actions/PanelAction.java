@@ -26,6 +26,6 @@ public class PanelAction extends MouseAdapter {
     }
     public void mouseClicked(MouseEvent e) {
         myForm.setSelectedGNode(null);
-        myForm.getNodePanel().resetNodePanel();
+        myForm.getNodePanel().resetNodeProperties();
     }
 }
