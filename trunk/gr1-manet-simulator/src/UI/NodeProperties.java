@@ -126,6 +126,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		searchNodeLabel = new JLabel("Search: ");
 		searchNodeText = new JTextField(10);
+		searchNodeText.setToolTipText("Enter a node name to search");
 		searchNodeText.addActionListener(new SearchGNodeAction(myForm));
 
 		Box searchLabelAndTextBox = Box.createHorizontalBox();
@@ -206,10 +207,12 @@ public class NodeProperties extends JPanel implements ActionListener {
 		nodeDataBox.add(Box.createVerticalStrut(5));
 
 		// Buttons
-		okBtn = new JButton("OK");
+		okBtn = new JButton("Save");
+		okBtn.setToolTipText("Save node properties");
 		okBtn.addActionListener(okAction);
 
 		resetBtn = new JButton("Reset");
+		resetBtn.setToolTipText("Reset node properties");
 		resetBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
 
 		Box resetAndOkBtnsBox = Box.createHorizontalBox();
@@ -231,6 +234,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// sendToComboBox = new JComboBox();
 
 		sendBtn = new JButton("Send");
+		sendBtn.setToolTipText("Send message");
 		sendBtn.addActionListener(new NodePropSendtoBtnAction(this.myForm));
 
 		Box messagingBox = Box.createVerticalBox();
@@ -238,6 +242,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		sendFromLabel = new JLabel("Send from: ");
 		sendFromText = new JTextField(10);
+		sendFromText.setToolTipText("Enter node name");
 		sendFromText.addActionListener(okAction);
 
 		Box sendFromLabelAndTextBox = Box.createHorizontalBox();
@@ -249,6 +254,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		sendToLabel = new JLabel("Send to: ");
 		sendToText = new JTextField(10);
+		sendToText.setToolTipText("Enter node name or node names");
 		sendToText.addActionListener(okAction);
 		
 		Box sendToLabelAndTextBox = Box.createHorizontalBox();
