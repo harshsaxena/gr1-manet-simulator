@@ -33,6 +33,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import simulator.Node;
 import UI.actions.NodePropOKBtnAction;
 import UI.actions.NodePropResetBtnAction;
 import UI.actions.NodePropSendtoBtnAction;
@@ -45,8 +46,8 @@ public class NodeProperties extends JPanel implements ActionListener {
 	private Myform myForm;
 
 	public JButton colorBtn;
-	public JButton okBtn;
-	public JButton resetBtn;
+	public JButton saveBtn;
+	public JButton clearBtn;
 	public JButton sendBtn;
 
 	public JComboBox modeComboBox;
@@ -207,20 +208,20 @@ public class NodeProperties extends JPanel implements ActionListener {
 		nodeDataBox.add(Box.createVerticalStrut(5));
 
 		// Buttons
-		okBtn = new JButton("Save");
-		okBtn.setToolTipText("Save node properties");
-		okBtn.addActionListener(okAction);
+		saveBtn = new JButton("Save");
+		saveBtn.setToolTipText("Save node properties");
+		saveBtn.addActionListener(okAction);
+		
+		clearBtn = new JButton("Clear Properties");
+		clearBtn.setToolTipText("Clear selected node properties");
+		clearBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
 
-		resetBtn = new JButton("Reset");
-		resetBtn.setToolTipText("Reset node properties");
-		resetBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
-
-		Box resetAndOkBtnsBox = Box.createHorizontalBox();
-		resetAndOkBtnsBox.add(Box.createHorizontalGlue());
-		resetAndOkBtnsBox.add(resetBtn);
-		resetAndOkBtnsBox.add(Box.createHorizontalStrut(5));
-		resetAndOkBtnsBox.add(okBtn);
-		nodeDataBox.add(resetAndOkBtnsBox);
+		Box clearAndSendBtnsBox = Box.createHorizontalBox();
+		clearAndSendBtnsBox.add(Box.createHorizontalGlue());
+		clearAndSendBtnsBox.add(clearBtn);
+		clearAndSendBtnsBox.add(Box.createHorizontalStrut(5));
+		clearAndSendBtnsBox.add(saveBtn);
+		nodeDataBox.add(clearAndSendBtnsBox);
 
 		nodeDataBox.add(Box.createVerticalStrut(5));
 
@@ -330,9 +331,8 @@ public class NodeProperties extends JPanel implements ActionListener {
 		}
 	}
 
-	public void resetNodePropertiest() {
+	public void clearNodeProperties(Node node, GraphicalNode gNode) {
 		this.nameText.setText("");
-
 		this.ipText.setText("");
 		this.nameText.setText("");
 		this.nameText.setEnabled(true);
@@ -341,14 +341,25 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.powerText.setText("");
 		this.colorBtn.setBackground(this.getBackground());
 	}
-
-	public void resetNodePanel() {
-		resetNodePropertiest();
-		// this.sendFromText.setText("");
-		// this.sendToText.setText("");
-		// this.msgText.setText("");
-
-		// this.receivedDataText.setText("");
-		// this.statusText.setText("");
+	
+	public void resetNodeProperties(Node node, GraphicalNode gNode) {
+		this.nameText.setText(gNode.getName());
+		this.nameText.setEnabled(true);
+		this.ipText.setText(node.getIP().toString());
+		this.xCordText.setText(Float.toString(gNode.getAlignmentX()));
+		this.yCordText.setText(Float.toString(gNode.getAlignmentY()));
+		this.powerText.setText(Integer.toString(node.getPower()));
+		this.colorBtn.setBackground(gNode.getBackground());
 	}
+
+	public void resetNodeProperties() {
+		this.nameText.setText("");
+		this.nameText.setEnabled(true);
+		this.ipText.setText("");
+		this.xCordText.setText("");
+		this.yCordText.setText("");
+		this.powerText.setText("");
+		this.colorBtn.setBackground(this.getBackground());
+	}
+	
 }
