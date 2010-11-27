@@ -119,7 +119,7 @@ public class Node implements Serializable {
 		Rout_Arr.put(route.getDestination(), route);
 		FileLogger.write("Node " + this + ": new route to "
 				+ route.getDestination() + " through " + route.getNext_hop()
-				+ " added", FileLogger.MSG_TYPE_INFO);
+				+ " added", FileLogger.MSG_TYPE_REPLAY);
 		OutputLogger.get_instance().showNodeStatus(this,
 				"Attempting new route to " + route.getDestination());
 	}
