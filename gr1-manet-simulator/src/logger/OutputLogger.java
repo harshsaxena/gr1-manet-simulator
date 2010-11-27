@@ -82,7 +82,7 @@ public class OutputLogger {
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
 			if (gNode != null) {
 				setMsgsReceived("Node '" + gNode.getName() + "' " + " received " + " " + data.getContent());
-				FileLogger.write(receiver + " received " + " " + data.getContent(), FileLogger.MSG_TYPE_INFO);
+				FileLogger.write("Node '" + gNode.getName() + "' " + " received " + " " + data.getContent(), FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}
@@ -115,7 +115,7 @@ public class OutputLogger {
 	}
 
 	public void setMsgsReceived(String msgs) {
-		this.msgsReceived.append(msgs).append("\n");
+		this.msgsReceived.insert(0, msgs + "\n");
 		addInfoToOutputLogs();
 	}
 
@@ -124,7 +124,7 @@ public class OutputLogger {
 	}
 
 	public void setBroadcastInfo(String info) {
-		this.broadcastInfo.append(info).append("\n");
+		this.broadcastInfo.insert(0, info + "\n");
 		addInfoToOutputLogs();
 	}
 }
