@@ -21,13 +21,16 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import utility.PropertyManager;
+
 /**
  * Writes log information or exceptions to a log file. Also writes log info to
  * the system console.
  */
 public class FileLogger {
 
-	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss");
+	private final static DateFormat df = new SimpleDateFormat(
+			"yyyy.MM.dd_hh.mm.ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
 	private final static String logDirPath = "./logs/";
@@ -35,7 +38,9 @@ public class FileLogger {
 	public final static String MSG_TYPE_DEBUG = "DEBUG";
 	public final static String MSG_TYPE_ERROR = "ERROR";
 	public final static String MSG_TYPE_INFO = "INFO";
+	public final static String MSG_TYPE_REPLAY = "REPLAY";
 	private static boolean createLoggerFile = true;
+	private static String loggerType;
 
 	/**
 	 * Writes a log to the log file.
@@ -46,14 +51,35 @@ public class FileLogger {
 	public static void commitMsg(String file, String msg, String msgeType) {
 
 		try {
-			Date now = new Date();
-			String currentTime = FileLogger.df.format(now);
 			FileWriter aWriter = new FileWriter(file, true);
 
-			// FileWriter aWriter = new FileWriter(file, false);
-			aWriter.write(msgeType + " " + currentTime + ": " + msg + System.getProperty("line.separator"));
-			System.out.println(msgeType + " " + currentTime + ": " + msg);
-			
+			PropertyManager propMngr = new PropertyManager();
+			loggerType = propMngr.getPropertyVal("logger_type");
+
+			if (loggerType.equals(MSG_TYPE_DEBUG)) {
+				aWriter.write(msgeType + ": " + msg
+						+ System.getProperty("line.separator"));
+				System.out.println(msgeType + ": " + msg);
+			}
+
+			if (loggerType.equals(MSG_TYPE_ERROR) && loggerType.equals(msgeType)) {
+				aWriter.write(msgeType + ": " + msg
+						+ System.getProperty("line.separator"));
+				System.out.println(msgeType + ": " + msg);
+			}
+
+			if (loggerType.equals(MSG_TYPE_INFO) && loggerType.equals(msgeType)){
+				aWriter.write(msgeType + ": " + msg
+						+ System.getProperty("line.separator"));
+				System.out.println(msgeType + ": " + msg);
+			}
+
+			if (loggerType.equals(MSG_TYPE_REPLAY) && loggerType.equals(msgeType)) {
+				aWriter.write(msgeType + ": " + msg
+						+ System.getProperty("line.separator"));
+				System.out.println(msgeType + ": " + msg);
+			}
+
 			aWriter.flush();
 			aWriter.close();
 		} catch (Exception e) {
