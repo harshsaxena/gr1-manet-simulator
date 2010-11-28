@@ -64,7 +64,6 @@ public class Node implements Serializable {
 	public final static int TTL_THRESHOLD = 7;
 
 	private Set<BroadCastField> broadCastTable = new HashSet<BroadCastField>();
-	// private Object discoveryiswaiting;
 	private Object discoveryiswaiting = null;
 	private IPAddress IP;
 	private Coordinates node_coordinates = new Coordinates();
@@ -74,8 +73,7 @@ public class Node implements Serializable {
 	public int RREQ_ID = 0;
 	public int SEQ_NO = 0;
 
-	private Node() {
-	}
+	private Node(){}
 
 	public static Node getInstance(IPAddress IP) {
 		Node node = new Node();
@@ -119,7 +117,7 @@ public class Node implements Serializable {
 		Rout_Arr.put(route.getDestination(), route);
 		FileLogger.write("Node " + this + ": new route to "
 				+ route.getDestination() + " through " + route.getNext_hop()
-				+ " added", FileLogger.MSG_TYPE_REPLAY);
+				+ " added", FileLogger.MSG_TYPE_DEBUG);
 		OutputLogger.get_instance().showNodeStatus(this,
 				"Attempting new route to " + route.getDestination());
 	}
