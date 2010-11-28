@@ -128,8 +128,12 @@ public class RREP_Received extends Thread {
 					+ ": It's the destination!,I was waiting for it",
 					FileLogger.MSG_TYPE_INFO);
 			mynode.setRrepPacketWrapper(this.packetWrapper);
-			synchronized (mynode.getDiscoveryiswaiting()) {
-				mynode.getDiscoveryiswaiting().notify();
+
+			// this was added to get rid of a null pointer exception
+			if (mynode != null && mynode.getDiscoveryiswaiting() != null) {
+				synchronized (mynode.getDiscoveryiswaiting()) {
+					mynode.getDiscoveryiswaiting().notify();
+				}
 			}
 			return;
 
