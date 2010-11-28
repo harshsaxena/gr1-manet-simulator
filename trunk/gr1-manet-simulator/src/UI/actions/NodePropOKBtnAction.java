@@ -38,8 +38,7 @@ public class NodePropOKBtnAction implements ActionListener {
             NodeProperties np = myForm.getNodePanel();
             gNode.setName(np.nameText.getText().trim().toLowerCase());
             gNode.setNodeIP(np.ipText.getText());
-            gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()),
-                    Integer.parseInt(np.yCordText.getText()));
+            gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
             gNode.setColor(np.colorBtn.getBackground());
             gNode.setNodePower(Integer.parseInt(np.powerText.getText()));
             if (np.nameText.getText().trim().length()>0){
