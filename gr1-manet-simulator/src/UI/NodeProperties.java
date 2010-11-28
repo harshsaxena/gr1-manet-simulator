@@ -90,9 +90,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 	public JLabel picLabel;
 
-	// public JTextArea receivedDataText; // move edit
-	// public JTextArea statusText; // move edit
-
 	public List<GraphicalNode> graphicalNodeList;
 	public String[] availableNodes = new String[100];
 
