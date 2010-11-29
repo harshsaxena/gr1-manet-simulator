@@ -1,0 +1,2836 @@
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Node192.168.10.1: Sending data to 192.168.10.2
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.2
+INFO: Node192.168.10.1: Sending data to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: 192.168.10.3 not found!
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: 192.168.10.2 not found!
+INFO: Node 'a' is 192.168.10.3 not found!
+INFO: Node 'a' is 192.168.10.2 not found!
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'a' is Broadcasting message...
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating a 1|false
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating a 2|false
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 0 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 0
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating a 1|false
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: 192.168.10.2 not found!
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: 192.168.10.3 not found!
+INFO: Node 'c' is 192.168.10.2 not found!
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.3: Sending Broadcast Packet
+INFO: Node 'c' is Broadcasting message...
+INFO: Node 'b' is 192.168.10.3 not found!
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Message received from 192.168.10.3
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'b' is Broadcasting message...
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Node 'c' is Sending message to 192.168.10.1
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: [1480, 635], [1480, 635], 0.0,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1020, 1310], [1020, 1310], 0.0,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating c 1|false
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating b 1|false
+INFO: Animating b 2|false
+INFO: Animating c 2|false
+INFO: Animating a 3|false
+INFO: Animating c 3|false
+INFO: Animating b 3|false
+INFO: Animating c 0|true
+INFO: Animating b 0|true
+INFO: Animating a 0|true
+INFO: Animating c 1|false
+INFO: Animating b 1|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating c 2|false
+INFO: Animating b 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'a' is Attempting new route to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.3: it is destination; generating RREPPacket
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Sending message to 192.168.10.3
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node 'b' is Sending message to 192.168.10.3
+INFO: Node: 192.168.10.1 :-1,0,false,false
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 192.168.10.1: first discovery for 192.168.10.3 : successful
+INFO: Sending message to 192.168.10.2
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.1 :0,0,false,false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.3: It's the destination!,I was waiting for it
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Animating a 1|false
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Animating b 3|false
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.3: but it is not the destination
+INFO: Animating a 2|false
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Animating a 3|false
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating c 3|false
+INFO: Animating b 0|true
+INFO: Animating a 0|true
+INFO: Animating b 1|false
+INFO: Animating a 1|false
+INFO: Animating a 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating c 0|true
+INFO: Animating b 2|false
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating b 3|false
+INFO: Animating a 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2 : received DataPacket from 192.168.10.1 which handded from 192.168.10.1 : I'm the destination
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'b'  received  
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is RREPPacket message number = 0 Received
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 192.168.10.3: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.3: Sending Broadcast Packet
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.3 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.3 :0,0,false,false
+INFO: Node 'c' is Broadcasting message...
+INFO: Node 'b' is Broadcasting message...
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating c 1|false
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Animating b 0|true
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1480, 635], [1480, 635], 0.0,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1020, 1310], [1020, 1310], 0.0,1000
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating b 1|false
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating b 2|false
+INFO: Animating a 2|false
+INFO: Animating c 2|false
+INFO: Animating b 3|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating b 0|true
+INFO: Animating a 3|false
+INFO: Animating c 3|false
+INFO: Animating b 1|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Animating a 0|true
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating c 0|true
+INFO: Animating b 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.3: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Animating a 1|false
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Animating a 2|false
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.3: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.3
+INFO: Node 'b' is Sending message to 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :0,0,false,true
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating b 3|false
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating c 1|false
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Animating b 0|true
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Animating b 1|false
+INFO: Animating c 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating a 1|false
+INFO: Animating b 2|false
+INFO: Animating c 3|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 0 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 0
+INFO: Animating a 2|false
+INFO: Animating b 3|false
+INFO: Animating c 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'b' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 'c' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'c' is Sending message to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Animating c 1|false
+INFO: Node 192.168.10.3: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :-1,0,false,false
+INFO: Node: 192.168.10.2 :one if is true
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node192.168.10.3: Sending Broadcast Packet
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.3 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.3 :0,0,false,false
+INFO: Node 'b' is Broadcasting message...
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node192.168.10.2: Passing RREPPacket from 192.168.10.3 which handded from 192.168.10.3 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: Node 'c' is Broadcasting message...
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Animating b 0|true
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: [1480, 635], [1480, 635], 0.0,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Animating c 2|false
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating b 1|false
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1020, 1310], [1020, 1310], 0.0,1000
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating b 2|false
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating a 3|false
+INFO: Animating b 3|false
+INFO: Animating c 3|false
+INFO: Animating c 0|true
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Animating a 0|true
+INFO: Animating b 2|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating c 1|false
+INFO: Animating b 3|false
+INFO: Animating b 0|true
+INFO: Animating c 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating b 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.1 :0,0,false,true
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.3: It's the destination!,I was waiting for it
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.3: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.3: it is destination; generating RREPPacket
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :0,0,false,false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Sending message to 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'b' is Sending message to 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.1 :0,0,false,true
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Animating c 3|false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Animating a 1|false
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating a 2|false
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating b 2|false
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating c 0|true
+INFO: Animating b 3|false
+INFO: Animating c 1|false
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Animating c 2|false
+INFO: Animating a 1|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating b 2|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating c 3|false
+INFO: Animating a 2|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 0 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 0
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'c' is RREPPacket message number = 0 Received
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 0 Received
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.3 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.3 :-1,0,false,false
+INFO: Node: 192.168.10.3 :one if is true
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node192.168.10.3: Passing RREPPacket from 192.168.10.2 which handded from 192.168.10.2 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'c' is Sending message to 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :-1,0,false,false
+INFO: Node: 192.168.10.2 :one if is true
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating c 0|true
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node192.168.10.2: Passing RREPPacket from 192.168.10.3 which handded from 192.168.10.3 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating b 3|false
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'b' is Broadcasting message...
+INFO: Node 'c' is Sending message to 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node192.168.10.3: Sending Broadcast Packet
+INFO: Node 'c' is Broadcasting message...
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating b 0|true
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating c 1|false
+INFO: [1480, 635], [1480, 635], 0.0,1000
+INFO: Animating b 1|false
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating c 2|false
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1020, 1310], [1020, 1310], 0.0,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating b 2|false
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Animating b 3|false
+INFO: Animating b 0|true
+INFO: Animating c 0|true
+INFO: Animating c 1|false
+INFO: Animating b 1|false
+INFO: Animating c 2|false
+INFO: Animating a 0|true
+INFO: Animating b 2|false
+INFO: Animating c 3|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating b 3|false
+INFO: Animating c 0|true
+INFO: Animating b 0|true
+INFO: Animating c 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :0,0,false,false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.3: It's the destination!,I was waiting for it
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :0,0,false,false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Animating b 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.2
+INFO: Node: 192.168.10.1 :0,0,false,false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 'a' is Attempting new route to 192.168.10.3
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.1 :-1,0,false,false
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.3: It's the destination!,I was waiting for it
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.3: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Broadcasting message...
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [600, 560], [600, 560], 0.0,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Animating a 1|false
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Animating a 2|false
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Animating c 2|false
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating c 3|false
+INFO: Animating b 2|false
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Animating c 0|true
+INFO: Animating c 1|false
+INFO: Animating b 3|false
+INFO: Animating a 1|false
+INFO: Animating c 2|false
+INFO: Animating b 0|true
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Broadcasting message...
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating b 1|false
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: [1480, 635], [1480, 635], 0.0,1000
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :0,0,false,true
+INFO: Node: 192.168.10.2 :one if is true
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node192.168.10.2: Passing RREPPacket from 192.168.10.3 which handded from 192.168.10.3 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.3: Sending Broadcast Packet
+INFO: Node 'c' is Broadcasting message...
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating c 3|false
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Animating b 2|false
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1020, 1310], [1020, 1310], 0.0,1000
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 1 Expires!
+INFO: Animating b 3|false
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 1
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating c 0|true
+INFO: Animating a 3|false
+INFO: Animating b 0|true
+INFO: Animating c 1|false
+INFO: Animating b 1|false
+INFO: Animating b 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Animating a 0|true
+INFO: Animating c 2|false
+INFO: Animating b 3|false
+INFO: Animating b 0|true
+INFO: Animating c 3|false
+INFO: Animating b 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 0 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 0 Received
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Animating c 0|true
+INFO: Node 'a' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :-1,0,false,false
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.3: but it is not the destination
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.3: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.1 :-1,0,false,true
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 'b' is Sending message to 192.168.10.3
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating b 2|false
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating c 1|false
+INFO: Animating b 3|false
+INFO: Animating b 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 0 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 0
+INFO: Animating c 2|false
+INFO: Animating b 1|false
+INFO: Animating c 3|false
+INFO: Animating b 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 1 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 1
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :-1,0,false,false
+INFO: Node: 192.168.10.2 :one if is true
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node192.168.10.2: Passing RREPPacket from 192.168.10.3 which handded from 192.168.10.3 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Animating b 3|false
+INFO: [1480, 635], [600, 560], 883.1902399823042,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.3: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.3 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.3 :-1,0,false,false
+INFO: Node: 192.168.10.3 :one if is true
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node192.168.10.3: Passing RREPPacket from 192.168.10.2 which handded from 192.168.10.2 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'c' is Sending message to 192.168.10.1
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating c 0|true
+INFO: [1020, 1310], [600, 560], 859.5929269136642,1000
+INFO: Animating c 1|false
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Animating c 2|false
+INFO: Animating b 2|false
+INFO: Animating c 3|false
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.2
+INFO: Node: 192.168.10.1 :0,0,false,false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Animating c 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :0,0,false,false
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.3: It's the destination!,I was waiting for it
+INFO: Animating b 0|true
+INFO: Node 192.168.10.1: first discovery for 192.168.10.2 : successful
+INFO: Sending message to 192.168.10.3
+INFO: Node 'a' is Sending message to 192.168.10.3
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating a 1|false
+INFO: [600, 560], [1020, 1310], 859.5929269136642,1000
+INFO: Animating a 2|false
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.3
+INFO: Node 'c' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.3 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.2
+INFO: Node 'c' is Searching for 192.168.10.2
+INFO: Node 192.168.10.3: passing DataPacket from 192.168.10.1 which handded from 192.168.10.1 to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Animating c 1|false
+INFO: [1020, 1310], [1480, 635], 816.8384173139752,1000
+INFO: Animating c 2|false
+INFO: Animating c 3|false
+INFO: Animating c 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2 : received DataPacket from 192.168.10.1 which handded from 192.168.10.3 : I'm the destination
+INFO: Node 'b'  received  
+INFO: Node192.168.10.1: Sending data to 192.168.10.2
+INFO: Node192.168.10.1: Sending data to 192.168.10.3
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Animating a 1|false
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: [600, 560], [1480, 635], 883.1902399823042,1000
+INFO: Animating a 2|false
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Animating a 1|false
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2 : received DataPacket from 192.168.10.1 which handded from 192.168.10.1 : I'm the destination
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b'  received  
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: passing DataPacket from 192.168.10.1 which handded from 192.168.10.1 to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Sending message to 192.168.10.3
+INFO: Node 'b' is Sending message to 192.168.10.3
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating b 1|false
+INFO: [1480, 635], [1020, 1310], 816.8384173139752,1000
+INFO: Animating a 3|false
+INFO: Animating b 2|false
+INFO: Animating a 0|true
+INFO: Animating b 3|false
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.3 : Data received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.3 : received DataPacket from 192.168.10.1 which handded from 192.168.10.2 : I'm the destination
+INFO: Node 'c'  received  
+INFO: Node 192.168.10.1: Route to 192.168.10.3 through 192.168.10.2 expires!
+INFO: Node 'a' is Route expired: Route to 192.168.10.3 through 192.168.10.2
+INFO: Node 192.168.10.1: Route to 192.168.10.2 through 192.168.10.2 expires!
+INFO: Node 'a' is Route expired: Route to 192.168.10.2 through 192.168.10.2
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Node 192.168.10.2: Route to 192.168.10.3 through 192.168.10.3 expires!
+INFO: Node 'b' is Route expired: Route to 192.168.10.3 through 192.168.10.3
+INFO: Node 192.168.10.2: Route to 192.168.10.1 through 192.168.10.1 expires!
+INFO: Node 'b' is Route expired: Route to 192.168.10.1 through 192.168.10.1
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Node 192.168.10.3: Route to 192.168.10.1 through 192.168.10.1 expires!
+INFO: Node 'c' is Route expired: Route to 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.3: Route to 192.168.10.2 through 192.168.10.2 expires!
+INFO: Node 'c' is Route expired: Route to 192.168.10.2 through 192.168.10.2
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Node192.168.10.1: Sending data to 192.168.10.2
+INFO: Node192.168.10.1: Sending data to 192.168.10.3
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.3
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 2|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 3 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 3
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 2 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 2
+INFO: Animating a 1|false
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating a 3|false
+INFO: Animating b 2|false
+INFO: Animating a 0|true
+INFO: Animating b 3|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 3 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 3
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :-1,1,false,false
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 192.168.10.1: first discovery for 192.168.10.2 : successful
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 2|false
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2 : received DataPacket from 192.168.10.1 which handded from 192.168.10.1 : I'm the destination
+INFO: Node 'b'  received  
+INFO: Node192.168.10.1: Sending data to 192.168.10.2
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node192.168.10.1: Sending data to 192.168.10.3
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 2|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Animating a 1|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 4 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 4
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2 : received DataPacket from 192.168.10.1 which handded from 192.168.10.1 : I'm the destination
+INFO: Node 'b'  received  l
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating a 3|false
+INFO: Animating b 2|false
+INFO: Animating a 0|true
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 4 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 4
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 4 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 4
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :-1,1,false,false
+INFO: Node: 192.168.10.2 :one if is true
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node192.168.10.2: Passing RREPPacket from 192.168.10.3 which handded from 192.168.10.3 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating c 0|true
+INFO: Animating a 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 4 Expires!
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 4
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 2|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 3|false
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 4 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 4
+INFO: Animating b 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.2
+INFO: Node: 192.168.10.1 :1,1,false,true
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 192.168.10.1: first discovery for 192.168.10.3 : successful
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Animating b 3|false
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: Animating a 2|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating a 3|false
+INFO: Animating c 2|false
+INFO: Animating b 0|true
+INFO: Animating a 0|true
+INFO: Node 192.168.10.1: discovery number 0 for 192.168.10.3 : failed
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating a 2|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 4 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 4
+INFO: Animating c 3|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 4 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 4
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: passing DataPacket from 192.168.10.1 which handded from 192.168.10.1 to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Sending message to 192.168.10.3
+INFO: Node 'b' is Sending message to 192.168.10.3
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating c 0|true
+INFO: Animating a 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 2|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 3|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Animating b 0|true
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Animating a 3|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating b 0|true
+INFO: Node 'c' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.3 : Data received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.3 : received DataPacket from 192.168.10.1 which handded from 192.168.10.2 : I'm the destination
+INFO: Node 'c'  received  l
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Animating c 2|false
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 3|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Animating a 2|false
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 3|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 0|true
+INFO: Animating c 1|false
+INFO: Animating b 3|false
+INFO: Animating a 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating a 1|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 2|false
+INFO: Animating b 0|true
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Animating b 2|false
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 3|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating c 0|true
+INFO: Animating a 0|true
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Animating a 1|false
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Animating c 2|false
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 3|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: Animating a 2|false
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 3|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 0|true
+INFO: Animating c 1|false
+INFO: Animating b 0|true
+INFO: Animating a 0|true
+INFO: Animating a 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating c 2|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 2|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 3|false
+INFO: Animating c 0|true
+INFO: Animating a 0|true
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Animating c 2|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 3|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcasting message...
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 0|true
+INFO: Animating c 1|false
+INFO: Animating b 0|true
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 2|false
+INFO: Animating a 3|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 3|false
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating c 0|true
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Animating c 0|true
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating a 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 0|true
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Animating c 3|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating a 3|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 0|true
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 0|true
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 1 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 1 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Animating c 2|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Animating c 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :1,1,false,false
+INFO: Animating c 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 5 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 5
+INFO: Node 192.168.10.1: Route to 192.168.10.3 through 192.168.10.2 expires!
+INFO: Node 'a' is Route expired: Route to 192.168.10.3 through 192.168.10.2
+INFO: Node 192.168.10.2: Route to 192.168.10.3 through 192.168.10.3 expires!
+INFO: Node 'b' is Route expired: Route to 192.168.10.3 through 192.168.10.3
+INFO: Node 192.168.10.3: Route to 192.168.10.1 through 192.168.10.2 expires!
+INFO: Node 'c' is Route expired: Route to 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Route to 192.168.10.2 through 192.168.10.2 expires!
+INFO: Node 'a' is Route expired: Route to 192.168.10.2 through 192.168.10.2
+INFO: Node 192.168.10.2: Route to 192.168.10.1 through 192.168.10.1 expires!
+INFO: Node 'b' is Route expired: Route to 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.3: Route to 192.168.10.2 through 192.168.10.2 expires!
+INFO: Node 'c' is Route expired: Route to 192.168.10.2 through 192.168.10.2
+INFO: Node192.168.10.1: Sending data to 192.168.10.3
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.3
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating a 2|false
+INFO: Animating a 3|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 2 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 6 Expires!
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Node 'c' is RREQ X message number = 2 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 'c' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 2 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 2 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 'b' is Attempting new route to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :-1,2,false,false
+INFO: Node: 192.168.10.2 :one if is true
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node192.168.10.2: Passing RREPPacket from 192.168.10.3 which handded from 192.168.10.3 to 192.168.10.1
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating c 0|true
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Animating a 0|true
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 2 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 2|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 3|false
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Animating b 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 2 Received
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.3 through 192.168.10.2
+INFO: Node: 192.168.10.1 :2,2,false,true
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 192.168.10.1: first discovery for 192.168.10.3 : successful
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 2 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 2 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Animating b 3|false
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 2|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Animating a 3|false
+INFO: Animating c 2|false
+INFO: Animating b 0|true
+INFO: Animating a 0|true
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 6 Expires!
+INFO: Animating c 3|false
+INFO: Animating a 1|false
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Animating a 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 2 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :2,2,false,false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Animating c 0|true
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: passing DataPacket from 192.168.10.1 which handded from 192.168.10.1 to 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Sending message to 192.168.10.3
+INFO: Node 'b' is Sending message to 192.168.10.3
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 2 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Animating a 3|false
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 2|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 3|false
+INFO: Animating a 0|true
+INFO: Animating b 0|true
+INFO: Animating b 1|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.3 : Data received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.3 : received DataPacket from 192.168.10.1 which handded from 192.168.10.2 : I'm the destination
+INFO: Node 'c'  received  l
+INFO: Animating b 2|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 2 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 2 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Animating b 3|false
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating b 0|true
+INFO: Animating a 2|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Animating c 3|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 2 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :2,2,false,false
+INFO: Animating c 0|true
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 2 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 6 Expires!
+INFO: Animating b 3|false
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 2 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: Animating c 1|false
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 2 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating c 2|false
+INFO: Animating a 2|false
+INFO: Animating c 3|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Animating a 3|false
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 'b' is RREPPacket message number = 2 Received
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :2,2,false,false
+INFO: Animating c 0|true
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 2 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO: Node192.168.10.2: Sending Broadcast Packet
+INFO: Node 'b' is Broadcasting message...
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [1505, 1200], 0.0,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: [1505, 1200], [2150, 1530], 724.5170805439993,1000
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO: Node 'c' is RREQ X message number = 2 Received
+INFO: Node 'c' is Attempting new route to 192.168.10.2
+INFO: Message received from 192.168.10.3
+INFO: Node 192.168.10.3: Searching for 192.168.10.1
+INFO: Node 'c' is Searching for 192.168.10.1
+INFO: Node 192.168.10.3: Searching for 192.168.10.3
+INFO: Node 'c' is Searching for 192.168.10.3
+INFO: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.2
+INFO: Node 'c' is Sending message to 192.168.10.2
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: [2150, 1530], [1505, 1200], 724.5170805439993,1000
+INFO: Animating c 1|false
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREQ X message number = 2 Received
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.1
+INFO: Message received from 192.168.10.1
+INFO: Node 'a' is Searching for 192.168.10.1
+INFO: Node 192.168.10.1: Searching for 192.168.10.3
+INFO: Node 'a' is Searching for 192.168.10.3
+INFO: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO: Animating c 2|false
+INFO: Animating c 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'b' is RREPPacket message number = 2 Received
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node 192.168.10.2: Searching for 192.168.10.3
+INFO: Node 'b' is Searching for 192.168.10.3
+INFO: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO: Node: 192.168.10.2 :2,2,false,false
+INFO: Animating c 0|true
+INFO: Node 192.168.10.3 : 192.168.10.1 Route 6 Expires!
+INFO: Node 'c' is Broadcast expired: 192.168.10.1 Route 6
+INFO: Node192.168.10.1: Sending data to 192.168.10.2
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [785, 710], [785, 710], 0.0,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: [785, 710], [2150, 1530], 1592.3645939294179,1000
+INFO: Animating a 2|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 7 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 7
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = -1 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: Animating b 1|false
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: [1505, 1200], [785, 710], 870.9190547921202,1000
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 7 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 7
+INFO: Animating b 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 1 Received
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :-1,1,false,false
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 192.168.10.1: first discovery for 192.168.10.2 : successful
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 1|false
+INFO: [785, 710], [1505, 1200], 870.9190547921202,1000
+INFO: Animating a 2|false
+INFO: Animating a 3|false
+INFO: Animating a 0|true
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2 : received DataPacket from 192.168.10.1 which handded from 192.168.10.1 : I'm the destination
+INFO: Node 'b'  received  l

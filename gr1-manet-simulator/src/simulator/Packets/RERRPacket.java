@@ -22,24 +22,28 @@ import simulator.Node;
 import simulator.noderelated.tasks.RERR_Received;
 
 public class RERRPacket extends Packet {
-    private Map<Node,Integer> lost_nodes = new HashMap<Node,Integer>();
+	private Map<Node, Integer> lost_nodes = new HashMap<Node, Integer>();
 
-    boolean N;
-    public Map <Node,Integer> getLost_nodes() {
-        return lost_nodes;
-    }
+	boolean N;
 
-    public RERRPacket() {
-        this.type = 3;
-    }
+	public Map<Node, Integer> getLost_nodes() {
+		return lost_nodes;
+	}
 
-    public void receive(Node receiver, Node prev_hop) {
-        new RERR_Received("RERR_Received"+receiver.getIP().toString(),receiver,this,prev_hop);
-        FileLogger.write("Node " + receiver.getIP().toString() + " : RERR received from " + this.source + " through " + prev_hop, FileLogger.MSG_TYPE_INFO);
-    }
+	public RERRPacket() {
+		this.type = 3;
+	}
 
-    public String toString() {
-        return "RERRPacket "+super.toString();
-    }
+	public void receive(Node receiver, Node prev_hop) {
+		new RERR_Received("RERR_Received" + receiver.getIP().toString(),
+				receiver, this, prev_hop);
+		FileLogger.write("Node " + receiver.getIP().toString()
+				+ " : RERR received from " + this.source + " through "
+				+ prev_hop, FileLogger.MSG_TYPE_INFO);
+	}
+
+	public String toString() {
+		return "RERRPacket " + super.toString();
+	}
 
 }
