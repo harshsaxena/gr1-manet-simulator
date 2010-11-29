@@ -23,6 +23,8 @@ import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 
 import logger.FileLogger;
+
+import replay.ReplayLogger;
 import simulator.Data;
 import UI.Myform;
 import UI.actions.threads.SendDataThread;
@@ -36,6 +38,8 @@ public class NodePropSendtoBtnAction implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		FileLogger.write("*****Start_Node_Properties*****", FileLogger.MSG_TYPE_REPLAY);
+		
 		// if (myForm.getSelectedGNode()!=null){
 		// GraphicalNode dest = myForm.getGNode(
 		// myForm.getNodePanel().sendToText.getText().trim().toLowerCase());
@@ -48,56 +52,29 @@ public class NodePropSendtoBtnAction implements ActionListener {
 		// }
 		// }
 
-		// get source node
-		GraphicalNode src = myForm.getGNode(myForm.getNodePanel().sendFromText.getText().trim().toLowerCase());
-		
-		GraphicalNode fromNode = myForm.getGNode(myForm.getNodePanel().sendFromText.getText().trim().toLowerCase());
-		FileLogger.write("SendFromGNode_AlignX = " + fromNode.getAlignmentX(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromGNode_AlignY = " + fromNode.getAlignmentY(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromGNode_Name = " + fromNode.getName(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromGNode_X = " + fromNode.getX(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromGNode_Y = " + fromNode.getY(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromGNode_Color = " + fromNode.getColor().toString(), FileLogger.MSG_TYPE_REPLAY);
-		
-		FileLogger.write("SendFromNode_ActiveRouteTimeout = " + fromNode.getNode().getActiveRouteTimeout(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_AllowedHelloLoss = " + fromNode.getNode().getAllowedHelloLoss(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_DefaultRouteLifetime = " + fromNode.getNode().getDefaultRouteLifetime(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_DeletePeriod = " + fromNode.getNode().getDeletePeriod(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_HelloInterval = " + fromNode.getNode().getHelloInterval(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_HelloTime = " + fromNode.getNode().getHelloTime(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_LoopbackExpireTime = " + fromNode.getNode().getLoopbackExpireTime(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_RouteTimeout = " + fromNode.getNode().getMyRouteTimeout(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_NetDiameter = " + fromNode.getNode().getNetDiameter(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_NetTraversalTime = " + fromNode.getNode().getNetTraversalTime(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_NodeTraversalTime = " + fromNode.getNode().getNodeTraversalTime(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_PathDiscoveryInterval = " + fromNode.getNode().getPathDiscoveryInterval(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_PathDiscoveryTime = " + fromNode.getNode().getPathDiscoveryTime(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_Power = " + fromNode.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_RepAckRequired = " + fromNode.getNode().getRepAckRequired(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_RepRetires = " + fromNode.getNode().getReqRetries(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_RouteDeleteInterval = " + fromNode.getNode().getRouteDeleteInterval(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("SendFromNode_RouteExpireInterval = " + fromNode.getNode().getRouteExpireInterval(), FileLogger.MSG_TYPE_REPLAY);
-		//FileLogger.write("SendFromNode_Power = " + fromNode.getNode().getRout_Arr(), FileLogger.MSG_TYPE_REPLAY);
+		// get From node
+		GraphicalNode fromGNode = myForm.getGNode(myForm.getNodePanel().sendFromText.getText().trim().toLowerCase());
+		ReplayLogger.logNodePropertiesForReplay(fromGNode, 0, fromGNode.getName());
 
-		// get list of destinations
+		// get To nodes
 		List<GraphicalNode> destList = new ArrayList<GraphicalNode>();
-		StringTokenizer tok = new StringTokenizer(myForm.getNodePanel().sendToText.getText().trim().toLowerCase(),
-				" ,");
+		StringTokenizer tok = new StringTokenizer(myForm.getNodePanel().sendToText.getText().trim().toLowerCase()," ,");
 		while (tok.hasMoreTokens()) {
 			GraphicalNode g = myForm.getGNode(tok.nextToken());
 			if (g != null)
+				ReplayLogger.logNodePropertiesForReplay(g, 1, g.getName());
 				destList.add(g);
 		}
 
 		// send to each destination
 		for (GraphicalNode dest : destList) {
-			if (src != null && dest != null) {
-				new SendDataThread(src.getNode(), dest.getNode(), new Data(myForm.getNodePanel().msgText.getText()));
-				FileLogger.write("SentToNode = " + dest.getName(), FileLogger.MSG_TYPE_REPLAY);
+			if (fromGNode != null && dest != null) {
+				new SendDataThread(fromGNode.getNode(), dest.getNode(), new Data(myForm.getNodePanel().msgText.getText()));
 			} else {
-				JOptionPane.showMessageDialog(myForm,
-						"Destination node not found!");
+				JOptionPane.showMessageDialog(myForm, "Destination node not found!");
 			}
 		}
+		
+		FileLogger.write("*****End_Node_Properties*****", FileLogger.MSG_TYPE_REPLAY);
 	}
 }
