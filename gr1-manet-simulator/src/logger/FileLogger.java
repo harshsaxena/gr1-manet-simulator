@@ -29,12 +29,11 @@ import utility.PropertyManager;
  */
 public class FileLogger {
 
-	private final static DateFormat df = new SimpleDateFormat(
-			"yyyy.MM.dd_hh.mm.ss");
+	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
 	private final static String logDirPath = "./logs/";
-	private static String logFile;
+	public static String logFile;
 	public final static String MSG_TYPE_DEBUG = "DEBUG";
 	public final static String MSG_TYPE_ERROR = "ERROR";
 	public final static String MSG_TYPE_INFO = "INFO";
