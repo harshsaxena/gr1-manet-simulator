@@ -73,44 +73,58 @@ public class Map_Manager {
 	}
 
 	// broadcast packet (probably)
-	public void sendPacket(Packet packet_to_send, Node src_node) {
+	public void sendPacket(Packet packetToSend, Node src) {
 		for (Object aNode_list : nodeList) {
 			Node tempNode = (Node) aNode_list;
-			if (getDistance(src_node, tempNode) <= src_node.getPower()
-					&& !tempNode.equals(src_node)) {
-				new Timer("Mapmanager: Sending packet from " + src_node
-						+ " to " + tempNode, true).schedule(
-						new TaskSpeedSimulator(packet_to_send, src_node,
-								tempNode), Math.round(getDistance(src_node,
-								tempNode))
-								/ 100 * speedPercent);
+			if (getDistance(src, tempNode) <= src.getPower()
+					&& !tempNode.equals(src)) {
+				new Timer("Mapmanager: Sending packet from " + src + " to "
+						+ tempNode, true).schedule(new TaskSpeedSimulator(
+						packetToSend, src, tempNode), Math.round(getDistance(
+						src, tempNode))
+						/ 100 * speedPercent);
 			}
 		}
 	}
 
-	public boolean sendPacket(Packet packet_to_send, Node src_node,
-			Node dest_node) {
+	public boolean sendPacket(Packet packetToSend, Node src, Node dest) {
 
 		if (mode == Protocol.AODV) {
-			if (getDistance(src_node, dest_node) <= src_node.getPower()) {
-				new Timer("Mapmanager: Sending packet from " + src_node
-						+ " to " + dest_node, true).schedule(
-						new TaskSpeedSimulator(packet_to_send, src_node,
-								dest_node), Math.round(getDistance(src_node,
-								dest_node))
-								/ 100 * speedPercent);
+			if (getDistance(src, dest) <= src.getPower()) {
+				new Timer("Mapmanager: Sending packet from " + src + " to "
+						+ dest, true).schedule(new TaskSpeedSimulator(
+						packetToSend, src, dest), Math.round(getDistance(src,
+						dest))
+						/ 100 * speedPercent);
 				return true;
 			}
+
 		} else if (mode == Protocol.DSDV) {
-			// TODO
+			RoutingTable src_rt = src.getDSDVTable();
+			Node next = src_rt.getEntry(dest).getNextHop();
+			while (next != null) {
+				// TODO send from src to next
+				if (next == dest)
+					return true;
+				RoutingTable next_rt = next.getDSDVTable();
+				next = next_rt.getEntry(dest).getNextHop();
+			}
 		}
 
 		return false;
 	}
 
+	/* Update all routing tables */
+	private void updateAllDSDV() {
+		List<Edge> edges = generateEdges();
+		for (Node src : nodeList) {
+			updateDSDV(edges, src);
+		}
+	}
+
 	/* Update routing table for src_node */
-	public void updateDSDV(Node src) {
-		bellmanFord(generateEdges(), src);
+	public void updateDSDV(List<Edge> edges, Node src) {
+		bellmanFord(edges, src);
 		for (Node dest : nodeList) {
 			if (dest != src)
 				src.getDSDVTable().generateNextHop(dest);
