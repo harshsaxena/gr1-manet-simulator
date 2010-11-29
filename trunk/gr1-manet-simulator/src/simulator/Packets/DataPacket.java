@@ -20,29 +20,32 @@ import simulator.Node;
 import simulator.noderelated.tasks.Data_Received;
 
 public class DataPacket extends Packet {
-    public DataPacket(Data data, Node dest, Node src) {
-        this.data = data;
-        this.dest = dest;
-        this.source = src;
-        this.type = 0;
-    }
+	public DataPacket(Data data, Node dest, Node src) {
+		this.data = data;
+		this.dest = dest;
+		this.source = src;
+		this.type = 0;
+	}
 
-    private Data data;
+	private Data data;
 
-    public Data getData() {
-        return data;
-    }
+	public Data getData() {
+		return data;
+	}
 
-    public void setData(Data data) {
-        this.data = data;
-    }
+	public void setData(Data data) {
+		this.data = data;
+	}
 
-    public void receive(Node receiver, Node prev_hop) {
-        new Data_Received("Data_Received"+receiver.getIP().toString(),receiver,this,prev_hop);
-            FileLogger.write("Node "+ receiver.getIP().toString() + " : Data received from " + this.source + " through " + prev_hop, FileLogger.MSG_TYPE_INFO);
-    }
+	public void receive(Node receiver, Node prev_hop) {
+		new Data_Received("Data_Received" + receiver.getIP().toString(),
+				receiver, this, prev_hop);
+		FileLogger.write("Node " + receiver.getIP().toString()
+				+ " : Data received from " + this.source + " through "
+				+ prev_hop, FileLogger.MSG_TYPE_INFO);
+	}
 
-    public String toString() {
-        return "DataPacket "+super.toString();
-    }
+	public String toString() {
+		return "DataPacket " + super.toString();
+	}
 }

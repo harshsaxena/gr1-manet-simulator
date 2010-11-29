@@ -81,8 +81,8 @@ public class OutputLogger {
 
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
 			if (gNode != null) {
-				setMsgsReceived("Node '" + gNode.getName() + "' " + " received " + " " + data.getContent());
-				FileLogger.write("Node '" + gNode.getName() + "' " + " received " + " " + data.getContent(), FileLogger.MSG_TYPE_INFO);
+				setMsgsReceived("Node '" + gNode.getName() + "'" + " received " + " " + data.getContent());
+				FileLogger.write("Node '" + gNode.getName() + "'" + " received " + " " + data.getContent(), FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}

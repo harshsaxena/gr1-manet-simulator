@@ -1,0 +1,69 @@
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Map Panel importing data.
+INFO: Map Panel setting bound.
+INFO: Node192.168.10.1: Sending data to 192.168.10.2
+INFO: Node 192.168.10.1: discovery initiated to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: 192.168.10.2 not found!
+INFO: Node 'a' is 192.168.10.2 not found!
+INFO: Node192.168.10.1: Sending Broadcast Packet
+INFO: Node 'a' is Broadcasting message...
+INFO: [575, 565], [575, 565], 0.0,1000
+INFO: Animating a 1|false
+INFO: [575, 565], [1215, 560], 640.0195309519859,1000
+INFO: [575, 565], [1215, 560], 640.0195309519859,1000
+INFO: Animating a 2|false
+INFO: Node 192.168.10.1 : 192.168.10.1 Route 0 Expires!
+INFO: Node 'a' is Broadcast expired: 192.168.10.1 Route 0
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is RREQ X message number = 0 Received
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Message received from 192.168.10.2
+INFO: Node 192.168.10.2: Searching for 192.168.10.1
+INFO: Node 'b' is Searching for 192.168.10.1
+INFO: Node 'b' is Attempting new route to 192.168.10.1
+INFO: Node 192.168.10.2: Searching for 192.168.10.2
+INFO: Node 'b' is Searching for 192.168.10.2
+INFO: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handded from 192.168.10.1: it is destination; generating RREPPacket
+INFO: Sending message to 192.168.10.1
+INFO: Node 'b' is Sending message to 192.168.10.1
+INFO: [1215, 560], [575, 565], 640.0195309519859,1000
+INFO: [1215, 560], [575, 565], 640.0195309519859,1000
+INFO: Animating b 1|false
+INFO: Animating a 0|true
+INFO: Animating b 2|false
+INFO: Animating b 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO: Node 'a' is RREPPacket message number = 0 Received
+INFO: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: 192.168.10.2 not found!
+INFO: Node 'a' is 192.168.10.2 not found!
+INFO: Node 'a' is Attempting new route to 192.168.10.2
+INFO: Node 192.168.10.1: Searching for 192.168.10.2
+INFO: Node 'a' is Searching for 192.168.10.2
+INFO: Node: 192.168.10.1 forwardRoute is Route to 192.168.10.2 through 192.168.10.2
+INFO: Node: 192.168.10.1 :-1,0,false,false
+INFO: Node: 192.168.10.1 :one if is true
+INFO: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO: Node 192.168.10.1: first discovery for 192.168.10.2 : successful
+INFO: Sending message to 192.168.10.2
+INFO: Node 'a' is Sending message to 192.168.10.2
+INFO: Animating a 1|false
+INFO: [575, 565], [1215, 560], 640.0195309519859,1000
+INFO: [575, 565], [1215, 560], 640.0195309519859,1000
+INFO: Node 192.168.10.2 : 192.168.10.1 Route 0 Expires!
+INFO: Node 'b' is Broadcast expired: 192.168.10.1 Route 0
+INFO: Animating b 0|true
+INFO: Animating a 2|false
+INFO: Animating a 3|false
+INFO: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO: Node 'b' is DataPacket message number = 0 Received
+INFO: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO: Node 192.168.10.2 : received DataPacket from 192.168.10.1 which handded from 192.168.10.1 : I'm the destination
+INFO: Node 'b' received  
+INFO: Animating a 0|true

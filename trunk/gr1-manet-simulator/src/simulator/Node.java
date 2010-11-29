@@ -37,6 +37,7 @@ import simulator.noderelated.Route;
 import simulator.noderelated.tasks.BroadCastTable_Expiry;
 import simulator.noderelated.tasks.Route_Delete;
 import simulator.noderelated.tasks.Route_Expiry;
+import simulator.routing.dsdv.RoutingTable;
 
 @SuppressWarnings("serial")
 public class Node implements Serializable {
@@ -72,8 +73,10 @@ public class Node implements Serializable {
 	private RREPPacketWrapper rrepPacketWrapper;
 	public int RREQ_ID = 0;
 	public int SEQ_NO = 0;
+	private RoutingTable dsdvTable = new RoutingTable();
 
-	private Node(){}
+	private Node() {
+	}
 
 	public static Node getInstance(IPAddress IP) {
 		Node node = new Node();
@@ -613,6 +616,10 @@ public class Node implements Serializable {
 
 	public String toString() {
 		return IP.toString();
+	}
+
+	public RoutingTable getDSDVTable() {
+		return dsdvTable;
 	}
 
 }

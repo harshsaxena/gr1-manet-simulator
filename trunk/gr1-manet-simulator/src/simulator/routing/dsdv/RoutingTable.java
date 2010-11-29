@@ -1,0 +1,56 @@
+/**  
+ * ----------------------------------------------------------
+ * This software is for educational purposes only.
+ * The base of this software was created by IntelliJ IDEA.
+ * Additions to the base have been made by the Hood College
+ * Computer Science Department, Graduate Group 1.
+ * ----------------------------------------------------------
+ *
+ * History:
+ * @version: $Revision$
+ * @date: $Date$
+ * @author: $Author$
+ */
+
+package simulator.routing.dsdv;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import simulator.Node;
+
+public class RoutingTable {
+	/* The node to which this routing table belongs */
+	private Node owner;
+	/* A map of destination nodes to routing entries */
+	private Map<Node, RoutingEntry> entries;
+
+	public RoutingTable() {
+		entries = new HashMap<Node, RoutingEntry>();
+	}
+
+	public void update(Node dest, RoutingEntry entry) {
+		entries.put(dest, entry);
+	}
+
+	public RoutingEntry getEntry(Node dest) {
+		if (entries.get(dest) != null)
+			return entries.get(dest);
+		else {
+			System.err.println("Error in RoutingTable: node not found.");
+			return null;
+		}
+	}
+
+	public void generateNextHop(Node dest) {
+		Node next = dest;
+		while (next != null && next != owner) {
+			if (entries.get(next).getPredecessor() == owner) {
+				getEntry(dest).setNextHop(next);
+				break;
+			}
+			next = entries.get(next).getPredecessor();
+		}
+	}
+
+}
