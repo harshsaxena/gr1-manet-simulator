@@ -35,6 +35,7 @@ import javax.swing.JTextField;
 
 import simulator.Node;
 import UI.actions.NodePropOKBtnAction;
+import UI.actions.NodePropReplayBtnAction;
 import UI.actions.NodePropResetBtnAction;
 import UI.actions.NodePropSendtoBtnAction;
 import UI.actions.SearchGNodeAction;
@@ -49,6 +50,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 	public JButton saveBtn;
 	public JButton clearBtn;
 	public JButton sendBtn;
+	public JButton replayBtn;
 
 	public JComboBox modeComboBox;
 	public JComboBox protocolComboBox;
@@ -209,16 +211,17 @@ public class NodeProperties extends JPanel implements ActionListener {
 		saveBtn.setToolTipText("Save node properties");
 		saveBtn.addActionListener(okAction);
 		
-		clearBtn = new JButton("Clear Properties");
-		clearBtn.setToolTipText("Clear selected node properties");
-		clearBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
+		//clearBtn = new JButton("Clear Properties");
+		//clearBtn.setToolTipText("Clear selected node properties");
+		//clearBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
 
-		Box clearAndSendBtnsBox = Box.createHorizontalBox();
-		clearAndSendBtnsBox.add(Box.createHorizontalGlue());
-		clearAndSendBtnsBox.add(clearBtn);
-		clearAndSendBtnsBox.add(Box.createHorizontalStrut(5));
-		clearAndSendBtnsBox.add(saveBtn);
-		nodeDataBox.add(clearAndSendBtnsBox);
+		//Box clearAndSendBtnsBox = Box.createHorizontalBox();
+		//clearAndSendBtnsBox.add(Box.createHorizontalGlue());
+		//clearAndSendBtnsBox.add(clearBtn);
+		//clearAndSendBtnsBox.add(Box.createHorizontalStrut(5));
+		//clearAndSendBtnsBox.add(saveBtn);
+		//nodeDataBox.add(clearAndSendBtnsBox);
+		nodeDataBox.add(saveBtn);
 
 		nodeDataBox.add(Box.createVerticalStrut(5));
 
@@ -230,10 +233,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 						.createEmptyBorder(0, 0, 0, 0)));
 
 		// sendToComboBox = new JComboBox();
-
-		sendBtn = new JButton("Send");
-		sendBtn.setToolTipText("Send message");
-		sendBtn.addActionListener(new NodePropSendtoBtnAction(this.myForm));
 
 		Box messagingBox = Box.createVerticalBox();
 		messagingPanel.add(messagingBox);
@@ -272,20 +271,22 @@ public class NodeProperties extends JPanel implements ActionListener {
 		messagingBox.add(msgLabelAndTextBox);
 
 		messagingBox.add(Box.createVerticalStrut(5));
-
-		/*
-		 * Box sendToComboLabelAndTextBox = Box.createHorizontalBox();
-		 * sendToComboLabelAndTextBox.add(sendToLabel);
-		 * sendToComboLabelAndTextBox.add(sendToComboBox);
-		 * messagingBox.add(sendToComboLabelAndTextBox);
-		 */
-
-		/* messagingBox.add(Box.createVerticalStrut(5)); */
-
-		Box sendBtnBox = Box.createHorizontalBox();
-		sendBtnBox.add(Box.createHorizontalGlue());
-		sendBtnBox.add(sendBtn);
-		messagingBox.add(sendBtnBox);
+		
+		Box msgBtnBox = Box.createHorizontalBox();
+		messagingBox.add(msgBtnBox);
+		
+		sendBtn = new JButton("Send");
+		sendBtn.setToolTipText("Send message");
+		sendBtn.addActionListener(new NodePropSendtoBtnAction(this.myForm));
+		msgBtnBox.add(sendBtn);
+		
+		msgBtnBox.add(Box.createHorizontalStrut(5));
+		
+		replayBtn = new JButton("Replay");
+		replayBtn.setToolTipText("Replay last broadcast");
+		replayBtn.addActionListener(new NodePropReplayBtnAction(this.myForm));
+		
+		msgBtnBox.add(replayBtn);
 
 		/*
 		 * Configuration and Miscellaneous Panel JPanel configMiscPanel = new
