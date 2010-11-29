@@ -115,7 +115,7 @@ public class Map_Manager {
 	}
 
 	/* Update all routing tables */
-	private void updateAllDSDV() {
+	public void updateAllDSDV() {
 		List<Edge> edges = generateEdges();
 		for (Node src : nodeList) {
 			updateDSDV(edges, src);
