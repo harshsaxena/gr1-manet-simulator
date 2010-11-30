@@ -242,12 +242,12 @@ public class Myform extends JFrame {
 		return outputLogProperties;
 	}
 
-	public void send(Node src, int type) {
-		GraphicalNode gNode = getGnodebyNode(src);
-		if (gNode != null) {
-			gNode.sending(type);
-		}
-		// FileLogger.write("Map Manager sending broadcast packet from " + src
-		// + " to " + dest, FileLogger.MSG_TYPE_INFO);
-	}
+	// public void send(Node src, int type) {
+	// GraphicalNode gNode = getGnodebyNode(src);
+	// if (gNode != null) {
+	// gNode.sending(type);
+	// }
+	// // FileLogger.write("Map Manager sending broadcast packet from " + src
+	// // + " to " + dest, FileLogger.MSG_TYPE_INFO);
+	// }
 }
