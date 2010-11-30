@@ -31,7 +31,9 @@ import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 
+import logger.FileLogger;
 import logger.OutputLogger;
+import simulator.Map_Manager;
 import simulator.Node;
 import UI.actions.DeleteBtnAction;
 import UI.actions.NumberKeyListener;
@@ -45,15 +47,16 @@ public class Myform extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private final JTextField minNumber = new JTextField("3", 3);
-	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",true);
+	private final JCheckBox doubleDirection = new JCheckBox("DoubleDirection",
+			true);
 	private final List<GraphicalNode> graphicalNodes = new ArrayList<GraphicalNode>();
-	
+
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
 	private GraphicalNode selectedGNode;
 	private NodeProperties nodePanel;
 	private OutputLogProperties outputLogProperties;
-	
+
 	public final int mapHeight = 551;
 	public final int mapWidth = 600;
 	public final NumberKeyListener numKeyListener = new NumberKeyListener();
@@ -63,7 +66,8 @@ public class Myform extends JFrame {
 	public JPanel outlogPanel;
 	public JToolBar toolBar;
 	public JButton delGNodeBtn = new JButton(new ImageIcon("images/delete.png"));
-	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/SendingNode0.png"));
+	public NodeButton addNodeBtn = new NodeButton(new ImageIcon(
+			"images/SendingNode0.png"));
 	public MyMap myMap;
 	public PowerShower powerShower;
 
@@ -71,12 +75,12 @@ public class Myform extends JFrame {
 		super(title);
 		content = new JPanel(new BorderLayout());
 		content.setOpaque(true);
-		
+
 		myMap = new MyMap();
 		myMap.setPreferredSize(new Dimension(this.mapWidth, this.mapHeight));
 		myMap.setBorder(BorderFactory.createEtchedBorder());
 		this.getContentPane().add(content);
-		
+
 		toolBar = new JToolBar();
 		toolBar.add(Box.createHorizontalStrut(10));
 		toolBar.add(addNodeBtn);
@@ -84,7 +88,7 @@ public class Myform extends JFrame {
 		toolBar.add(delGNodeBtn);
 		toolBar.add(Box.createHorizontalStrut(10));
 		content.add(toolBar, BorderLayout.PAGE_START);
-		
+
 		outputLogProperties = new OutputLogProperties();
 		outlogPanel = outputLogProperties.getOutputLogProperties();
 		content.add(outlogPanel, BorderLayout.AFTER_LAST_LINE);
@@ -92,6 +96,7 @@ public class Myform extends JFrame {
 		myMap.setDropTarget(new DropTargetImp(myMap));
 		myMap.setLayout(null);
 
+		Map_Manager.get_instance().setMyForm(this);
 	}
 
 	public static void main(String[] args) {
@@ -100,10 +105,11 @@ public class Myform extends JFrame {
 		frame.addNodeBtn.setToolTipText("Click and drag to add a new node");
 		frame.setNodePanel(new NodeProperties(frame));
 
-		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, frame.myMap, frame.getNodePanel());
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
+				frame.myMap, frame.getNodePanel());
 		splitPane.setOneTouchExpandable(true);
 		splitPane.setDividerLocation(575);
-		
+
 		frame.content.add(splitPane, BorderLayout.CENTER);
 		frame.myMap.addMouseListener(new PanelAction(frame));
 		frame.powerShower = new PowerShower(frame);
@@ -234,5 +240,14 @@ public class Myform extends JFrame {
 
 	public OutputLogProperties getOutputLogProperties() {
 		return outputLogProperties;
+	}
+
+	public void send(Node src, int type) {
+		GraphicalNode gNode = getGnodebyNode(src);
+		if (gNode != null) {
+			gNode.sending(type);
+		}
+		// FileLogger.write("Map Manager sending broadcast packet from " + src
+		// + " to " + dest, FileLogger.MSG_TYPE_INFO);
 	}
 }

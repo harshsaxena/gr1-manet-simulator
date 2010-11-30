@@ -18,7 +18,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 
+import UI.Myform;
+
 import logger.FileLogger;
+import logger.OutputLogger;
+import simulator.Packets.DataPacket;
 import simulator.Packets.Packet;
 import simulator.mapmanagerrelated.TaskSpeedSimulator;
 import simulator.routing.dsdv.Edge;
@@ -29,10 +33,26 @@ public class Map_Manager {
 	private List<Node> nodeList = new ArrayList<Node>();
 	private static Map_Manager mapManager = new Map_Manager();
 	private static long speedPercent = 200;
-
-	private Protocol mode = Protocol.AODV;
+	private Protocol mode = Protocol.DSDV;
+	private Myform myForm;
 
 	private Map_Manager() {
+	}
+
+	public Protocol getMode() {
+		return mode;
+	}
+
+	public void setMode(Protocol mode) {
+		this.mode = mode;
+	}
+
+	public Myform getMyForm() {
+		return myForm;
+	}
+
+	public void setMyForm(Myform myForm) {
+		this.myForm = myForm;
 	}
 
 	public static Map_Manager get_instance() {
@@ -100,12 +120,20 @@ public class Map_Manager {
 			}
 
 		} else if (mode == Protocol.DSDV) {
+			// TODO advertise tables instead of running bellman-ford multiple
+			// times
+			updateAllDSDV();
+
 			RoutingTable src_rt = src.getDSDVTable();
 			Node next = src_rt.getEntry(dest).getNextHop();
 			while (next != null) {
-				// TODO send from src to next
-				if (next == dest)
+				// TODO get right num for 2nd param
+				myForm.send(src, 0);
+				if (next == dest) {
+					OutputLogger.get_instance().showReceivedData(dest, src,
+							new Data("djfalfsd;"));
 					return true;
+				}
 				RoutingTable next_rt = next.getDSDVTable();
 				next = next_rt.getEntry(dest).getNextHop();
 			}
@@ -161,10 +189,10 @@ public class Map_Manager {
 
 		// Step 1: initialize graph
 		for (Node dest : nodeList) {
-			RoutingEntry destEntry = rt.getEntry(dest);
-
 			// create entry in routing table
 			rt.update(dest, new RoutingEntry());
+
+			RoutingEntry destEntry = rt.getEntry(dest);
 
 			if (dest == src)
 				destEntry.setNumHops(0);
