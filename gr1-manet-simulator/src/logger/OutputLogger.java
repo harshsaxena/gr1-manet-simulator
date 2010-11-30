@@ -59,7 +59,6 @@ public class OutputLogger {
 	 */
 	public void showNodeStatus(Node node, String status) {
 		if (!this.test) {
-
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			if (gNode != null) {
 				setBroadcastInfo("Node '" + gNode.getName() + "' " + status);
@@ -78,7 +77,6 @@ public class OutputLogger {
 	 */
 	public void showReceivedData(Node receiver, Node sender, Data data) {
 		if (!this.test) {
-
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
 			if (gNode != null) {
 				setMsgsReceived("Node '" + gNode.getName() + "'" + " received " + " " + data.getContent());

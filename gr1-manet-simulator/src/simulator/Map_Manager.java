@@ -17,12 +17,11 @@ package simulator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
+import java.util.TimerTask;
 
 import UI.Myform;
 
 import logger.FileLogger;
-import logger.OutputLogger;
-import simulator.Packets.DataPacket;
 import simulator.Packets.Packet;
 import simulator.mapmanagerrelated.TaskSpeedSimulator;
 import simulator.routing.dsdv.Edge;
@@ -92,7 +91,19 @@ public class Map_Manager {
 		return distance;
 	}
 
-	// broadcast packet (probably)
+	private void sendSingleHop(Packet packetToSend, Node cur, Node next) {
+		if (getDistance(cur, next) <= cur.getPower()) {
+			TimerTask task = new TaskSpeedSimulator(packetToSend, cur, next);
+			long delay = Math
+					.round(getDistance(cur, next) / 100 * speedPercent);
+			new Timer("Mapmanager: Sending packet from " + cur + " to " + next,
+					true).schedule(task, delay);
+		} else
+			System.err
+					.println("Error in sendSingleHop(): Destination out of range");
+	}
+
+	// broadcast packet
 	public void sendPacket(Packet packetToSend, Node src) {
 		for (Object aNode_list : nodeList) {
 			Node tempNode = (Node) aNode_list;
@@ -107,6 +118,10 @@ public class Map_Manager {
 		}
 	}
 
+	/*
+	 * Send a packet from src to dest. If mode is AODV, only one hop is allowed.
+	 * If mode is DSDV, multiple hops are allowed.
+	 */
 	public boolean sendPacket(Packet packetToSend, Node src, Node dest) {
 
 		if (mode == Protocol.AODV) {
@@ -125,16 +140,16 @@ public class Map_Manager {
 			updateAllDSDV();
 
 			RoutingTable src_rt = src.getDSDVTable();
+			Node cur = src;
 			Node next = src_rt.getEntry(dest).getNextHop();
-			while (next != null) {
-				// TODO get right num for 2nd param
-				myForm.send(src, 0);
-				if (next == dest) {
-					OutputLogger.get_instance().showReceivedData(dest, src,
-							new Data("djfalfsd;"));
+			while (next != null && cur != next) {
+				// send packet from cur to next
+				sendSingleHop(packetToSend, cur, next);
+
+				if (next == dest)
 					return true;
-				}
 				RoutingTable next_rt = next.getDSDVTable();
+				cur = next;
 				next = next_rt.getEntry(dest).getNextHop();
 			}
 		}

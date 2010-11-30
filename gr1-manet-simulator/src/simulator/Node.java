@@ -284,7 +284,6 @@ public class Node implements Serializable {
 	}
 
 	public boolean equals(Object obj) {
-
 		return IP.equals(((Node) obj).IP); // To change body of overridden
 	}
 
@@ -517,19 +516,24 @@ public class Node implements Serializable {
 		OutputLogger.get_instance().showNodeStatus(this,
 				"Sending message to " + dest);
 		OutputLogger.get_instance().NodeSend(this, packet.type);
-		if (Map_Manager.get_instance().sendPacket(packet, this, dest)) {
-			return true;
-		}
-		// only continue if using AODV
-		if (mapManager.getMode() == Protocol.DSDV)
-			return false;
 
-		Route route = this.search(dest);
-		if (Route.isBad(route)) {
-			return false;
+		if (mapManager.getMode() == Protocol.AODV) {
+			if (Map_Manager.get_instance().sendPacket(packet, this, dest)) {
+				return true;
+			}
+			Route route = this.search(dest);
+			if (Route.isBad(route)) {
+				return false;
+			}
+			return Map_Manager.get_instance().sendPacket(packet, this,
+					route.getNext_hop());
 		}
-		return Map_Manager.get_instance().sendPacket(packet, this,
-				route.getNext_hop());
+
+		else if (mapManager.getMode() == Protocol.DSDV) {
+			return Map_Manager.get_instance().sendPacket(packet, this, dest);
+		}
+
+		return false;
 	}
 
 	/**
@@ -546,20 +550,35 @@ public class Node implements Serializable {
 	public boolean send_Data(Data data, Node dest) {
 		FileLogger.write("Node" + IP + ": Sending data to " + dest,
 				FileLogger.MSG_TYPE_INFO);
-		Route route = discovery(dest);
-		if (route == null) {
-			OutputLogger.get_instance().showNodeStatus(this,
-					"Failed to send data to " + dest);
-			return false;
+
+		if (mapManager.getMode() == Protocol.AODV) {
+			Route route = discovery(dest);
+			if (route == null) {
+				OutputLogger.get_instance().showNodeStatus(this,
+						"Failed to send data to " + dest);
+				return false;
+			}
+
+			DataPacket dataPacket = new DataPacket(data,
+					route.getDestination(), this);
+			if (send(dataPacket, route.getNext_hop())) {
+				return true;
+			}
+			route.setHop_count(Route.INFINITE);
+			route.setInvalid(true);
+			return send_Data(data, dest);
 		}
-		DataPacket dataPacket = new DataPacket(data, route.getDestination(),
-				this);
-		if (send(dataPacket, route.getNext_hop())) {
-			return true;
+
+		else if (mapManager.getMode() == Protocol.DSDV) {
+			DataPacket dataPacket = new DataPacket(data, dest, this);
+			if (send(dataPacket, dest)) {
+				// OutputLogger.get_instance().showReceivedData(dest, this,
+				// data);
+				return true;
+			}
 		}
-		route.setHop_count(Route.INFINITE);
-		route.setInvalid(true);
-		return send_Data(data, dest);
+
+		return false;
 	}
 
 	/**
