@@ -74,6 +74,7 @@ public class Node implements Serializable {
 	public int RREQ_ID = 0;
 	public int SEQ_NO = 0;
 	private RoutingTable dsdvTable = new RoutingTable();
+	private Map_Manager mapManager = Map_Manager.get_instance();
 
 	private Node() {
 	}
@@ -519,6 +520,10 @@ public class Node implements Serializable {
 		if (Map_Manager.get_instance().sendPacket(packet, this, dest)) {
 			return true;
 		}
+		// only continue if using AODV
+		if (mapManager.getMode() == Protocol.DSDV)
+			return false;
+
 		Route route = this.search(dest);
 		if (Route.isBad(route)) {
 			return false;
