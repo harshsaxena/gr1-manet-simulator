@@ -76,37 +76,40 @@ public class Node implements Serializable {
 	private RoutingTable dsdvTable = new RoutingTable(this);
 	private Map_Manager mapManager = Map_Manager.get_instance();
 
-	private Node() {
+	public Node(IPAddress IP) {
+		this.IP = IP;
+		init();
+		Map_Manager.get_instance().addNode(this);
 	}
 
-	public static Node getInstance(IPAddress IP) {
-		Node node = new Node();
-		node.IP = IP;
-		init(node);
-		Map_Manager.get_instance().addNode(node);
-		return node;
-	}
+	// public static Node getInstance(IPAddress IP) {
+	// Node node = new Node();
+	// node.IP = IP;
+	// init(node);
+	// Map_Manager.get_instance().addNode(node);
+	// return node;
+	// }
 
 	/**
 	 * Default node constructor which initializes this object other constructors
 	 * should call this method this is for when node receives RREQPacket can
 	 * understand that have a route to itself.
 	 */
-	private static void init(Node node) {
-		Route r = new Route(node, node, '1', '0', new HashSet<Node>());
+	private void init() {
+		Route r = new Route(this, this, '1', '0', new HashSet<Node>());
 		r.setLifeTime(LOOPBACK_EXPIRETIME);
-		node.Rout_Arr.put(node, r);
+		Rout_Arr.put(this, r);
 
-		new Timer(node + " expiry timer", true).schedule(
-				new Route_Expiry(node), Node.ROUTE_EXPIRE_INTERVAL,
+		new Timer(this + " expiry timer", true).schedule(
+				new Route_Expiry(this), Node.ROUTE_EXPIRE_INTERVAL,
 				Node.ROUTE_EXPIRE_INTERVAL);
 
-		new Timer(node + " broadcast table expiry timer", true).schedule(
-				new BroadCastTable_Expiry(node), 0,
+		new Timer(this + " broadcast table expiry timer", true).schedule(
+				new BroadCastTable_Expiry(this), 0,
 				Node.PATH_DISCOVERY_INTERVAL);
 
-		new Timer(node + " delete timer", true).schedule(
-				new Route_Delete(node), Node.ROUTE_DELETE_INTERVAL,
+		new Timer(this + " delete timer", true).schedule(
+				new Route_Delete(this), Node.ROUTE_DELETE_INTERVAL,
 				Node.ROUTE_DELETE_INTERVAL);
 	}
 

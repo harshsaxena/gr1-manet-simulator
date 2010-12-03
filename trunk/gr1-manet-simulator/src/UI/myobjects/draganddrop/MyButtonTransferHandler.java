@@ -26,20 +26,22 @@ import UI.myobjects.NodeButton;
 @SuppressWarnings("serial")
 public class MyButtonTransferHandler extends TransferHandler {
 
-    protected Transferable createTransferable(JComponent c) {
-    	
-        NodeButton source = (NodeButton)c;
-        GraphicalNode nodeTransferable = new GraphicalNode(source.getIcon(),source.myForm,false);
-        source.myForm.putGNode(nodeTransferable);
-        nodeTransferable.setTransferHandler(new MyNodeTransferHandler());
-        
-        FileLogger.write("Node button create transferable", FileLogger.MSG_TYPE_DEBUG);
-        
-        return nodeTransferable;
-    }
+	protected Transferable createTransferable(JComponent c) {
 
-    public int getSourceActions(JComponent c) {
-        return COPY_OR_MOVE;
-    }
+		NodeButton source = (NodeButton) c;
+		GraphicalNode nodeTransferable = new GraphicalNode(source.getIcon(),
+				source.myForm, false);
+		source.myForm.putGNode(nodeTransferable);
+		nodeTransferable.setTransferHandler(new MyNodeTransferHandler());
+
+		FileLogger.write("Node button create transferable",
+				FileLogger.MSG_TYPE_DEBUG);
+
+		return nodeTransferable;
+	}
+
+	public int getSourceActions(JComponent c) {
+		return COPY_OR_MOVE;
+	}
 
 }
