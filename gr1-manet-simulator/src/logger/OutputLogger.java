@@ -23,10 +23,10 @@ import UI.myobjects.GraphicalNode;
 public class OutputLogger {
 
 	private static OutputLogger outputLogger;
-	
+
 	private StringBuffer msgsReceived = new StringBuffer();
 	private StringBuffer broadcastInfo = new StringBuffer();
-	
+
 	public Myform myform;
 	public boolean test = false;
 
@@ -62,7 +62,8 @@ public class OutputLogger {
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			if (gNode != null) {
 				setBroadcastInfo("Node '" + gNode.getName() + "' " + status);
-				FileLogger.write("Node '" + gNode.getName() + "' is " + status, FileLogger.MSG_TYPE_INFO);
+				FileLogger.write("Node '" + gNode.getName() + "' is " + status,
+						FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}
@@ -79,8 +80,11 @@ public class OutputLogger {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
 			if (gNode != null) {
-				setMsgsReceived("Node '" + gNode.getName() + "'" + " received " + " " + data.getContent());
-				FileLogger.write("Node '" + gNode.getName() + "'" + " received " + " " + data.getContent(), FileLogger.MSG_TYPE_INFO);
+				setMsgsReceived("Node '" + gNode.getName() + "'" + " received "
+						+ data.getContent());
+				FileLogger.write("Node '" + gNode.getName() + "'"
+						+ " received " + data.getContent(),
+						FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}
@@ -93,15 +97,15 @@ public class OutputLogger {
 			}
 		}
 	}
-	
+
 	public void resetMsgsReceived() {
 		this.msgsReceived.delete(0, this.msgsReceived.length());
 	}
-	
+
 	public void resetBroadcastInfo() {
 		this.broadcastInfo.delete(0, this.broadcastInfo.length());
 	}
-	
+
 	private void addInfoToOutputLogs() {
 		OutputLogProperties outputLogObj = myform.getOutputLogProperties();
 		outputLogObj.statusText.setText(getBroadcastInfo());

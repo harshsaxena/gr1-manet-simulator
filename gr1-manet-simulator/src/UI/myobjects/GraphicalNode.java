@@ -98,7 +98,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		} catch (ClassNotFoundException e) {
 		}
 
-		this.node = Node.getInstance(curIP);
+		this.node = new Node(curIP);
 		curIP = IPAddress.createNext(curIP);
 		this.color = this.getBackground();
 		this.node.setPower(DEFAULT_POWER);
