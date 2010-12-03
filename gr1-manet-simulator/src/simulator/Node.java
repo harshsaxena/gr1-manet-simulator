@@ -73,7 +73,7 @@ public class Node implements Serializable {
 	private RREPPacketWrapper rrepPacketWrapper;
 	public int RREQ_ID = 0;
 	public int SEQ_NO = 0;
-	private RoutingTable dsdvTable = new RoutingTable();
+	private RoutingTable dsdvTable = new RoutingTable(this);
 	private Map_Manager mapManager = Map_Manager.get_instance();
 
 	private Node() {

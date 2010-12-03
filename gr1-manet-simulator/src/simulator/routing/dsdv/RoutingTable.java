@@ -25,7 +25,8 @@ public class RoutingTable {
 	/* A map of destination nodes to routing entries */
 	private Map<Node, RoutingEntry> entries;
 
-	public RoutingTable() {
+	public RoutingTable(Node owner) {
+		this.owner = owner;
 		entries = new HashMap<Node, RoutingEntry>();
 	}
 
@@ -45,11 +46,11 @@ public class RoutingTable {
 	public void generateNextHop(Node dest) {
 		Node next = dest;
 		while (next != null && next != owner) {
-			if (entries.get(next).getPredecessor() == owner) {
+			if (getEntry(next).getPredecessor() == owner) {
 				getEntry(dest).setNextHop(next);
 				break;
 			}
-			next = entries.get(next).getPredecessor();
+			next = getEntry(next).getPredecessor();
 		}
 	}
 
