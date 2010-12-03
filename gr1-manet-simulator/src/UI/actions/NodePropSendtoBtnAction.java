@@ -26,7 +26,10 @@ import logger.FileLogger;
 
 import replay.ReplayLogger;
 import simulator.Data;
+import simulator.Map_Manager;
+import simulator.Protocol;
 import UI.Myform;
+import UI.NodeProperties;
 import UI.actions.threads.SendDataThread;
 import UI.myobjects.GraphicalNode;
 
@@ -54,6 +57,15 @@ public class NodePropSendtoBtnAction implements ActionListener {
 
 		// get From node
 		GraphicalNode fromGNode = myForm.getGNode(myForm.getNodePanel().sendFromText.getText().trim().toLowerCase());
+		String procotolSelection = myForm.getNodePanel().protocolComboBox.getSelectedItem().toString();
+		NodeProperties np = new NodeProperties();
+		if(procotolSelection.equals(np.getKEY_DSDV()))
+		{
+			Map_Manager.get_instance().setMode(Protocol.DSDV);
+		}else{
+			Map_Manager.get_instance().setMode(Protocol.AODV);
+		}
+		
 		ReplayLogger.logNodePropertiesForReplay(fromGNode, 0, fromGNode.getName());
 
 		// get To nodes
