@@ -77,7 +77,7 @@ public class RREQ_Received extends Thread {
 		Route forwardRoute = this.mynode.search(packet.dest);
 		if (Route.isBad(forwardRoute)
 				|| forwardRoute.getSeq_no() <= packet.seq_no) {// TODO check
-																// this
+			// this
 			FileLogger.write("Node" + mynode.getIP().toString()
 					+ ":received RREQPacket from " + packet.source
 					+ " which handed from " + receivedFrom
@@ -97,7 +97,7 @@ public class RREQ_Received extends Thread {
 		} else {
 			if (packet.dest.equals(mynode)) {
 				FileLogger.write("Node" + mynode + ":received RREQPacket from "
-						+ packet.source + " which handded from " + receivedFrom
+						+ packet.source + " which handed from " + receivedFrom
 						+ ": it is destination; generating RREPPacket",
 						FileLogger.MSG_TYPE_INFO);
 

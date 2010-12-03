@@ -124,7 +124,7 @@ public class RREP_Received extends Thread {
 			FileLogger.write("Node " + mynode.getIP().toString()
 					+ " : received RREPPacket from "
 					+ packetWrapper.getRrepPacket().source
-					+ " which handded from " + packetWrapper.getReceivedFrom()
+					+ " which handed from " + packetWrapper.getReceivedFrom()
 					+ ": It's the destination!,I was waiting for it",
 					FileLogger.MSG_TYPE_INFO);
 			mynode.setRrepPacketWrapper(this.packetWrapper);
@@ -144,7 +144,7 @@ public class RREP_Received extends Thread {
 			Route backRoute = this.mynode.search(rrepPacket.source);
 			if (!Route.isBad(backRoute)) {
 				FileLogger.write("Node" + mynode + ": Passing RREPPacket from "
-						+ rrepPacket.dest + " which handded from "
+						+ rrepPacket.dest + " which handed from "
 						+ packetWrapper.getReceivedFrom() + " to "
 						+ backRoute.getNext_hop(), FileLogger.MSG_TYPE_INFO);
 				forwardRoute.getPrecursor().add(backRoute.getNext_hop());
@@ -155,7 +155,7 @@ public class RREP_Received extends Thread {
 			} else {
 				FileLogger.write("Node" + mynode
 						+ ": receiving RREPPacket from " + rrepPacket.dest
-						+ " which handded from "
+						+ " which handed from "
 						+ packetWrapper.getReceivedFrom()
 						+ " but route is expired", FileLogger.MSG_TYPE_INFO);
 			}

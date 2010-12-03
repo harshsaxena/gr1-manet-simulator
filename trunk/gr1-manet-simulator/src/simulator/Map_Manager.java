@@ -32,7 +32,7 @@ public class Map_Manager {
 	private List<Node> nodeList = new ArrayList<Node>();
 	private static Map_Manager mapManager = new Map_Manager();
 	private static long speedPercent = 200;
-	private Protocol mode = Protocol.AODV;
+	private Protocol mode = Protocol.DSDV;
 	private Myform myForm;
 
 	private Map_Manager() {
