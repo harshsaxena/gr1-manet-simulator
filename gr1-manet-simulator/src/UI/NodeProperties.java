@@ -35,8 +35,6 @@ import javax.swing.JTextField;
 
 import simulator.Node;
 import UI.actions.NodePropOKBtnAction;
-import UI.actions.NodePropReplayBtnAction;
-import UI.actions.NodePropResetBtnAction;
 import UI.actions.NodePropSendtoBtnAction;
 import UI.actions.SearchGNodeAction;
 import UI.myobjects.GraphicalNode;
@@ -74,6 +72,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 	public JLabel powerLabel;
 	public JLabel colorLabel;
 	public JLabel msgLabel;
+	public JLabel protocolLabel;
 	public JLabel sendToLabel;
 	public JLabel sendFromLabel;
 	public JLabel receivedDataLbl; // move edit
@@ -94,14 +93,15 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 	public List<GraphicalNode> graphicalNodeList;
 	public String[] availableNodes = new String[100];
+	
+	public final String KEY_AODV = "AODV";
+	public final String KEY_DSDV = "DSDV";
 
 	public NodeProperties(Myform myForm) {
 		this.myForm = myForm;
 
-		// String[] modeStrings = {"Mode - Node Management",
-		// "Mode - Simulation Mode"};
-		// String[] protocolStrings = {"Protocol - AODV", "Protocol - DSDV"};
-
+		String[] protocolStrings = {KEY_AODV, KEY_DSDV};
+		
 		try {
 			wirelessTowerImg = ImageIO.read(new File(
 					"images/wirelessTowerTitle.png"));
@@ -115,7 +115,10 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.add(mainVerticalBox);
 
 		// Action Listener
-		ActionListener okAction = new NodePropOKBtnAction(this.myForm);
+		ActionListener saveAction = new NodePropOKBtnAction(this.myForm);
+		ActionListener sendAction = new NodePropSendtoBtnAction(this.myForm);
+		ActionListener searchAction = new SearchGNodeAction(this.myForm);
+		ActionListener replayAction = new NodePropSendtoBtnAction(this.myForm);
 
 		/* Find a Node Panel */
 		JPanel findNodePanel = new JPanel();
@@ -127,7 +130,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		searchNodeLabel = new JLabel("Search: ");
 		searchNodeText = new JTextField(10);
 		searchNodeText.setToolTipText("Enter a node name to search");
-		searchNodeText.addActionListener(new SearchGNodeAction(myForm));
+		searchNodeText.addActionListener(searchAction);
 
 		Box searchLabelAndTextBox = Box.createHorizontalBox();
 		searchLabelAndTextBox.add(searchNodeLabel);
@@ -147,7 +150,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// Name
 		nameLabel = new JLabel("Name: ");
 		nameText = new JTextField(8);
-		nameText.addActionListener(okAction);
+		//nameText.addActionListener(saveAction);
 
 		Box nameLabelAndTextBox = Box.createHorizontalBox();
 		nameLabelAndTextBox.add(nameLabel);
@@ -159,7 +162,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// IP
 		ipLabel = new JLabel("IP: ");
 		ipText = new JTextField(8);
-		ipText.addActionListener(okAction);
+		//ipText.addActionListener(saveAction);
 
 		Box ipLabelAndTextBox = Box.createHorizontalBox();
 		ipLabelAndTextBox.add(ipLabel);
@@ -171,11 +174,11 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// X Y Coordinates
 		xCordLabel = new JLabel("X: ");
 		xCordText = new JTextField(1);
-		xCordText.addKeyListener(myForm.numKeyListener);
+		//xCordText.addKeyListener(myForm.numKeyListener);
 
 		yCordLabel = new JLabel(" Y: ");
 		yCordText = new JTextField(1);
-		yCordText.addKeyListener(myForm.numKeyListener);
+		//yCordText.addKeyListener(myForm.numKeyListener);
 
 		Box xyCordsLabelAndTextBox = Box.createHorizontalBox();
 		xyCordsLabelAndTextBox.add(xCordLabel);
@@ -190,12 +193,12 @@ public class NodeProperties extends JPanel implements ActionListener {
 		powerLabel = new JLabel("Power: ");
 		powerText = new JTextField(3);
 		powerText.addKeyListener(myForm.numKeyListener);
-		powerText.addActionListener(okAction);
+		//powerText.addActionListener(saveAction);
 
 		colorLabel = new JLabel("Color: ");
 		colorBtn = new JButton();
 		colorBtn.setMaximumSize(new Dimension(25, 25));
-		colorBtn.addActionListener(this);
+		//colorBtn.addActionListener(this);
 
 		Box pwrColorLabelAndTextBox = Box.createHorizontalBox();
 		pwrColorLabelAndTextBox.add(powerLabel);
@@ -209,18 +212,8 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// Buttons
 		saveBtn = new JButton("Save");
 		saveBtn.setToolTipText("Save node properties");
-		saveBtn.addActionListener(okAction);
+		saveBtn.addActionListener(saveAction);
 		
-		//clearBtn = new JButton("Clear Properties");
-		//clearBtn.setToolTipText("Clear selected node properties");
-		//clearBtn.addActionListener(new NodePropResetBtnAction(this.myForm));
-
-		//Box clearAndSendBtnsBox = Box.createHorizontalBox();
-		//clearAndSendBtnsBox.add(Box.createHorizontalGlue());
-		//clearAndSendBtnsBox.add(clearBtn);
-		//clearAndSendBtnsBox.add(Box.createHorizontalStrut(5));
-		//clearAndSendBtnsBox.add(saveBtn);
-		//nodeDataBox.add(clearAndSendBtnsBox);
 		nodeDataBox.add(saveBtn);
 
 		nodeDataBox.add(Box.createVerticalStrut(5));
@@ -232,15 +225,13 @@ public class NodeProperties extends JPanel implements ActionListener {
 				BorderFactory.createTitledBorder("Messaging"), BorderFactory
 						.createEmptyBorder(0, 0, 0, 0)));
 
-		// sendToComboBox = new JComboBox();
-
 		Box messagingBox = Box.createVerticalBox();
 		messagingPanel.add(messagingBox);
 
 		sendFromLabel = new JLabel("Send from: ");
 		sendFromText = new JTextField(10);
 		sendFromText.setToolTipText("Enter node name");
-		sendFromText.addActionListener(okAction);
+		//sendFromText.addActionListener(sendAction);
 
 		Box sendFromLabelAndTextBox = Box.createHorizontalBox();
 		sendFromLabelAndTextBox.add(sendFromLabel);
@@ -252,7 +243,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		sendToLabel = new JLabel("Send to: ");
 		sendToText = new JTextField(10);
 		sendToText.setToolTipText("Enter node name or node names");
-		sendToText.addActionListener(okAction);
+		//sendToText.addActionListener(sendAction);
 		
 		Box sendToLabelAndTextBox = Box.createHorizontalBox();
 		sendToLabelAndTextBox.add(sendToLabel);
@@ -263,7 +254,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		
 		msgLabel = new JLabel("Message: ");
 		msgText = new JTextField(10);
-		msgText.addActionListener(okAction);
+		//msgText.addActionListener(sendAction);
 
 		Box msgLabelAndTextBox = Box.createHorizontalBox();
 		msgLabelAndTextBox.add(msgLabel);
@@ -272,43 +263,33 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		messagingBox.add(Box.createVerticalStrut(5));
 		
+		protocolLabel = new JLabel("Protocol: ");
+		protocolComboBox = new JComboBox(protocolStrings); 
+		protocolComboBox.setSelectedIndex(0); 
+		//protocolComboBox.addActionListener(sendAction);
+		
+		Box protocolLabelAndTextBox = Box.createHorizontalBox();
+		protocolLabelAndTextBox.add(protocolLabel);
+		protocolLabelAndTextBox.add(protocolComboBox);
+		messagingBox.add(protocolLabelAndTextBox);
+		
+		messagingBox.add(Box.createVerticalStrut(5));
+		
 		Box msgBtnBox = Box.createHorizontalBox();
 		messagingBox.add(msgBtnBox);
 		
 		sendBtn = new JButton("Send");
 		sendBtn.setToolTipText("Send message");
-		sendBtn.addActionListener(new NodePropSendtoBtnAction(this.myForm));
+		sendBtn.addActionListener(sendAction);
 		msgBtnBox.add(sendBtn);
 		
 		msgBtnBox.add(Box.createHorizontalStrut(5));
 		
 		replayBtn = new JButton("Replay");
 		replayBtn.setToolTipText("Replay last broadcast");
-		replayBtn.addActionListener(new NodePropReplayBtnAction(this.myForm));
+		replayBtn.addActionListener(replayAction);
 		
 		msgBtnBox.add(replayBtn);
-
-		/*
-		 * Configuration and Miscellaneous Panel JPanel configMiscPanel = new
-		 * JPanel(); mainVerticalBox.add(configMiscPanel);
-		 * configMiscPanel.setBorder( BorderFactory.createCompoundBorder(
-		 * BorderFactory.createTitledBorder("Configuration and Misc"),
-		 * BorderFactory.createEmptyBorder(0,2,4,2)));
-		 * 
-		 * // Mode ComboBox modeComboBox = new JComboBox(modeStrings);
-		 * modeComboBox.setSelectedIndex(0); // TODO: Add action listener
-		 * //modeComboBox.addActionListener(this);
-		 * 
-		 * // Protocol ComboBox protocolComboBox = new
-		 * JComboBox(protocolStrings); protocolComboBox.setSelectedIndex(0); //
-		 * TODO: Add action listener //protocolComboBox.addActionListener(this);
-		 * 
-		 * // Build Configuration and Miscellaneous Panel Box configMiscBox =
-		 * Box.createVerticalBox(); configMiscPanel.add(configMiscBox);
-		 * configMiscBox.add(modeComboBox);
-		 * configMiscBox.add(Box.createVerticalStrut(5));
-		 * configMiscBox.add(protocolComboBox);
-		 */
 
 		/* Image Panel */
 		JPanel imagePanel = new JPanel();
@@ -319,6 +300,17 @@ public class NodeProperties extends JPanel implements ActionListener {
 		picLabel = new JLabel(new ImageIcon(wirelessTowerImg));
 		imageBox.add(picLabel);
 
+	}
+
+	public NodeProperties() {
+	}
+
+	public String getKEY_AODV() {
+		return KEY_AODV;
+	}
+
+	public String getKEY_DSDV() {
+		return KEY_DSDV;
 	}
 
 	public void actionPerformed(ActionEvent e) {
