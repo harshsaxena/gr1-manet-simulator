@@ -31,17 +31,16 @@ import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 
-import logger.FileLogger;
 import logger.OutputLogger;
 import simulator.Map_Manager;
 import simulator.Node;
-import UI.actions.DeleteBtnAction;
+import UI.actions.DeleteNodeAction;
 import UI.actions.NumberKeyListener;
 import UI.actions.PanelAction;
 import UI.myobjects.GraphicalNode;
 import UI.myobjects.NodeButton;
 import UI.myobjects.PowerShower;
-import UI.myobjects.draganddrop.DropTargetImp;
+import UI.myobjects.draganddrop.AddNodeToMap;
 
 public class Myform extends JFrame {
 
@@ -93,7 +92,7 @@ public class Myform extends JFrame {
 		outlogPanel = outputLogProperties.getOutputLogProperties();
 		content.add(outlogPanel, BorderLayout.AFTER_LAST_LINE);
 
-		myMap.setDropTarget(new DropTargetImp(myMap));
+		myMap.setDropTarget(new AddNodeToMap(myMap));
 		myMap.setLayout(null);
 
 		Map_Manager.get_instance().setMyForm(this);
@@ -114,7 +113,7 @@ public class Myform extends JFrame {
 		frame.myMap.addMouseListener(new PanelAction(frame));
 		frame.powerShower = new PowerShower(frame);
 		frame.delGNodeBtn.setToolTipText("Remove selected node");
-		frame.delGNodeBtn.addActionListener(new DeleteBtnAction(frame));
+		frame.delGNodeBtn.addActionListener(new DeleteNodeAction(frame));
 		frame.powerShower.setBounds(0, 0, 9999, 9999);
 		frame.myMap.add(frame.powerShower, JLayeredPane.PALETTE_LAYER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
