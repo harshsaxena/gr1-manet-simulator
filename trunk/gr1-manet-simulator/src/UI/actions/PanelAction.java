@@ -28,6 +28,6 @@ public class PanelAction extends MouseAdapter {
     // Sets node properties to zero since a node was not selected
     public void mouseClicked(MouseEvent e) {
         myForm.setSelectedGNode(null);
-        myForm.getNodePanel().resetNodeProperties();
+        myForm.getNodePropertiesPanel().resetNodeProperties();
     }
 }
