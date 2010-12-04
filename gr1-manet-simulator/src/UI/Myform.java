@@ -40,7 +40,7 @@ import UI.actions.PanelAction;
 import UI.myobjects.GraphicalNode;
 import UI.myobjects.NodeButton;
 import UI.myobjects.PowerShower;
-import UI.myobjects.draganddrop.AddNodeToMap;
+import UI.myobjects.draganddrop.MapActions;
 
 public class Myform extends JFrame {
 
@@ -92,7 +92,7 @@ public class Myform extends JFrame {
 		outlogPanel = outputLogProperties.getOutputLogProperties();
 		content.add(outlogPanel, BorderLayout.AFTER_LAST_LINE);
 
-		myMap.setDropTarget(new AddNodeToMap(myMap));
+		myMap.setDropTarget(new MapActions(myMap));
 		myMap.setLayout(null);
 
 		Map_Manager.get_instance().setMyForm(this);
