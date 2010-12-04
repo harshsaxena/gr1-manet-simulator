@@ -53,7 +53,7 @@ public class Myform extends JFrame {
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
 	private GraphicalNode selectedGNode;
-	private NodeProperties nodePanel;
+	private NodeProperties nodePropertiesPanel;
 	private OutputLogProperties outputLogProperties;
 
 	public final int mapHeight = 551;
@@ -102,10 +102,10 @@ public class Myform extends JFrame {
 		Myform frame = new Myform("MANET Simulator");
 		frame.addNodeBtn.myForm = frame;
 		frame.addNodeBtn.setToolTipText("Click and drag to add a new node");
-		frame.setNodePanel(new NodeProperties(frame));
+		frame.setNodePropertiesPanel(new NodeProperties(frame));
 
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
-				frame.myMap, frame.getNodePanel());
+				frame.myMap, frame.getNodePropertiesPanel());
 		splitPane.setOneTouchExpandable(true);
 		splitPane.setDividerLocation(575);
 
@@ -171,8 +171,8 @@ public class Myform extends JFrame {
 		return myMap;
 	}
 
-	public NodeProperties getNodePanel() {
-		return nodePanel;
+	public NodeProperties getNodePropertiesPanel() {
+		return nodePropertiesPanel;
 	}
 
 	/**
@@ -201,14 +201,14 @@ public class Myform extends JFrame {
 		this.powerShower.invalidate();
 	}
 
-	public void setNodePanel(NodeProperties nodePanel) {
-		this.nodePanel = nodePanel;
+	public void setNodePropertiesPanel(NodeProperties nodePanel) {
+		this.nodePropertiesPanel = nodePanel;
 	}
 
 	public void setSelectedGNode(GraphicalNode selectedGNode) {
 		this.selectedGNode = selectedGNode;
 		if (selectedGNode != null) {
-			this.getNodePanel().nameText.setEnabled(selectedGNode.getName()
+			this.getNodePropertiesPanel().nameText.setEnabled(selectedGNode.getName()
 					.trim().length() == 0);
 			selectedGNode.fillNodePanel();
 			this.refreshPowerShower();
