@@ -41,7 +41,7 @@ public class SendMsgAction implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		FileLogger.write("*****Start_Node_Properties*****", FileLogger.MSG_TYPE_REPLAY);
+		FileLogger.write("ACTION=SendMsgs_START", FileLogger.MSG_TYPE_REPLAY);
 
 		// get From node
 		GraphicalNode fromGNode = myForm.getGNode(myForm.getNodePanel().sendFromText.getText().trim().toLowerCase());
@@ -54,7 +54,7 @@ public class SendMsgAction implements ActionListener {
 			Map_Manager.get_instance().setMode(Protocol.AODV);
 		}
 		
-		ReplayLogger.logNodePropertiesForReplay(fromGNode, 0, fromGNode.getName());
+		ReplayLogger.logSendNodeMsg(fromGNode, 0, fromGNode.getName());
 
 		// get To nodes
 		List<GraphicalNode> destList = new ArrayList<GraphicalNode>();
@@ -62,9 +62,12 @@ public class SendMsgAction implements ActionListener {
 		while (tok.hasMoreTokens()) {
 			GraphicalNode g = myForm.getGNode(tok.nextToken());
 			if (g != null)
-				ReplayLogger.logNodePropertiesForReplay(g, 1, g.getName());
+				ReplayLogger.logSendNodeMsg(g, 1, g.getName());
 				destList.add(g);
 		}
+		
+		FileLogger.write("\tMsg=" + myForm.getNodePanel().msgText.getText(), FileLogger.MSG_TYPE_REPLAY);
+		FileLogger.write("\tProtocol=" + procotolSelection, FileLogger.MSG_TYPE_REPLAY);
 
 		// send to each destination
 		for (GraphicalNode dest : destList) {
@@ -75,6 +78,6 @@ public class SendMsgAction implements ActionListener {
 			}
 		}
 		
-		FileLogger.write("*****End_Node_Properties*****", FileLogger.MSG_TYPE_REPLAY);
+		FileLogger.write("ACTION=SendMsgs_END", FileLogger.MSG_TYPE_REPLAY);
 	}
 }
