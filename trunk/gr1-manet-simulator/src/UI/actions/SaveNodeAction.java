@@ -7,9 +7,9 @@
  * ----------------------------------------------------------
  *
  * History:
- * @version: $Revision$
- * @date: $Date$
- * @author: $Author$
+ * @version: $Revision: 151 $
+ * @date: $Date: 2010-11-28 16:08:50 -0500 (Sun, 28 Nov 2010) $
+ * @author: $Author: quiksillvr $
  */
 
 package UI.actions;
@@ -21,10 +21,10 @@ import UI.Myform;
 import UI.NodeProperties;
 import UI.myobjects.GraphicalNode;
 
-public class NodePropOKBtnAction implements ActionListener {
+public class SaveNodeAction implements ActionListener {
     Myform myForm;
 
-    public NodePropOKBtnAction(Myform myForm) {
+    public SaveNodeAction(Myform myForm) {
         this.myForm = myForm;
     }
 
