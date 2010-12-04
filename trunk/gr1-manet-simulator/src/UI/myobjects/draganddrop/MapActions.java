@@ -70,18 +70,18 @@ public class MapActions extends DropTarget {
 				node.myForm.refreshPowerShower();
 
 				if (actionType.equals(ACTION_ADD)) {
-					FileLogger.write("NodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("NodeIP=" + node.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("NodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("NodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tNodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tNodeIP=" + node.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
 				}else{
-					FileLogger.write("NodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("NodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("NodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tNodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
 				}
 				
 				dropEvent.dropComplete(true);
-				FileLogger.write("ACTION=" + actionType + "_DONE", FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("ACTION=" + actionType + "_END", FileLogger.MSG_TYPE_REPLAY);
 				
 			} catch (UnsupportedFlavorException ufe) {
 				FileLogger.write("Error dropping node, unsupported flavor: " + ufe, FileLogger.MSG_TYPE_ERROR);
