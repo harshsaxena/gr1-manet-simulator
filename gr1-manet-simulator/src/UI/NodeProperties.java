@@ -215,7 +215,9 @@ public class NodeProperties extends JPanel implements ActionListener {
 		saveBtn.setToolTipText("Save node properties");
 		saveBtn.addActionListener(saveAction);
 		
-		nodeDataBox.add(saveBtn);
+		Box saveButtonBox = Box.createHorizontalBox();
+		saveButtonBox.add(saveBtn);
+		nodeDataBox.add(saveButtonBox);
 
 		nodeDataBox.add(Box.createVerticalStrut(5));
 
@@ -322,7 +324,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		}
 	}
 
-	public void clearNodeProperties(Node node, GraphicalNode gNode) {
+	public void clearNodeProperties() {
 		this.nameText.setText("");
 		this.ipText.setText("");
 		this.nameText.setText("");
