@@ -24,54 +24,33 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
 
-import logger.FileLogger;
 import UI.Myform;
-import UI.myobjects.draganddrop.MyButtonTransferHandler;
+import UI.myobjects.draganddrop.AddNodeTransferHandler;
 
 /**
  * Represents a non-real node for Tool Bar
  */
 @SuppressWarnings("serial")
-public class NodeButton extends JButton implements MouseMotionListener,
-		MouseListener {
+public class NodeButton extends JButton implements MouseMotionListener, MouseListener {
+	
 	private MouseEvent firstMouseEvent = null;
-
-	protected boolean shouldRemoved = false;
-
 	public Myform myForm;
+	protected boolean shouldRemoved = false;
 
 	public NodeButton(Icon icon) {
 		super(icon);
 		this.addMouseListener(this);
 		this.addMouseMotionListener(this);
 		this.setPreferredSize(new Dimension(32, 32));
-		this.setTransferHandler(new MyButtonTransferHandler());
+		this.setTransferHandler(new AddNodeTransferHandler());
 	}
 
 	public boolean isShouldRemoved() {
 		return shouldRemoved;
 	}
 
-	public void setShouldRemoved(boolean shouldRemoved) {
-		this.shouldRemoved = shouldRemoved;
-	}
-
 	public void mouseClicked(MouseEvent e) {
 	}
-
-	public void mousePressed(MouseEvent e) {
-		firstMouseEvent = e;
-		FileLogger.write("Node button pressed.", FileLogger.MSG_TYPE_DEBUG);
-		e.consume();
-	}
-
-	public void mouseReleased(MouseEvent e) {
-		firstMouseEvent = null;
-	}
-
-	public void mouseEntered(MouseEvent e) {}
-
-	public void mouseExited(MouseEvent e) {}
 
 	/**
 	 * initiates drag and drop action
@@ -90,12 +69,12 @@ public class NodeButton extends JButton implements MouseMotionListener,
 			
 			// Arbitrarily define a 5-pixel shift as the official beginning of a drag.
 			if (dx > 5 || dy > 5) {
+				
 				// This is a drag, not a click.
 				JComponent c = (JComponent) e.getSource();
 				TransferHandler handler = c.getTransferHandler();
 				
 				// Tell the transfer handler to initiate the drag.
-				FileLogger.write("Node button drag and drop initiated", FileLogger.MSG_TYPE_DEBUG);
 				handler.exportAsDrag(c, firstMouseEvent, action);
 				firstMouseEvent = null;
 			}
@@ -103,5 +82,22 @@ public class NodeButton extends JButton implements MouseMotionListener,
 
 	}
 
+	public void mouseEntered(MouseEvent e) {}
+
+	public void mouseExited(MouseEvent e) {}
+
 	public void mouseMoved(MouseEvent e) {}
+
+	public void mousePressed(MouseEvent e) {
+		firstMouseEvent = e;
+		e.consume();
+	}
+
+	public void mouseReleased(MouseEvent e) {
+		firstMouseEvent = null;
+	}
+
+	public void setShouldRemoved(boolean shouldRemoved) {
+		this.shouldRemoved = shouldRemoved;
+	}
 }
