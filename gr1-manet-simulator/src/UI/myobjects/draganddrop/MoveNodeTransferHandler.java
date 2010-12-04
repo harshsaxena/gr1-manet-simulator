@@ -19,17 +19,15 @@ import java.awt.datatransfer.Transferable;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
 
-import logger.FileLogger;
 import UI.myobjects.GraphicalNode;
 
 @SuppressWarnings("serial")
-public class MyNodeTransferHandler extends TransferHandler {
-	protected Transferable createTransferable(JComponent c) {
+public class MoveNodeTransferHandler extends TransferHandler {
+	
+	protected Transferable createTransferable(JComponent component) {
 		
-		GraphicalNode source = (GraphicalNode) c;
+		GraphicalNode source = (GraphicalNode) component;
 		source.setShouldRemoved(true);
-		
-		FileLogger.write("Node button create transferable", FileLogger.MSG_TYPE_DEBUG);
 		
 		return source;
 	}
@@ -38,10 +36,4 @@ public class MyNodeTransferHandler extends TransferHandler {
 		return COPY_OR_MOVE;
 	}
 
-	protected void exportDone(JComponent c, Transferable data, int action) {
-		// if (shouldRemove && (action == MOVE)) {
-		// sourcePic.setImage(null);
-		// }
-		// sourcePic = null;
-	}
 }
