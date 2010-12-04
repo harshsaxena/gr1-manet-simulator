@@ -29,7 +29,8 @@ import utility.PropertyManager;
  */
 public class FileLogger {
 
-	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss");
+	private final static DateFormat df = new SimpleDateFormat(
+			"yyyy.MM.dd_hh.mm.ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
 	private final static String logDirPath = "./logs/";
@@ -56,26 +57,24 @@ public class FileLogger {
 			loggerType = propMngr.getPropertyVal("logger_type");
 
 			if (loggerType.equals(MSG_TYPE_DEBUG)) {
-				aWriter.write(msgeType + ": " + msg
-						+ System.getProperty("line.separator"));
+				aWriter.write(msg + System.getProperty("line.separator"));
 				System.out.println(msgeType + ": " + msg);
 			}
 
-			if (loggerType.equals(MSG_TYPE_ERROR) && loggerType.equals(msgeType)) {
-				aWriter.write(msgeType + ": " + msg
-						+ System.getProperty("line.separator"));
+			if (loggerType.equals(MSG_TYPE_ERROR)
+					&& loggerType.equals(msgeType)) {
+				aWriter.write(msg + System.getProperty("line.separator"));
 				System.out.println(msgeType + ": " + msg);
 			}
 
-			if (loggerType.equals(MSG_TYPE_INFO) && loggerType.equals(msgeType)){
-				aWriter.write(msgeType + ": " + msg
-						+ System.getProperty("line.separator"));
+			if (loggerType.equals(MSG_TYPE_INFO) && loggerType.equals(msgeType)) {
+				aWriter.write(msg + System.getProperty("line.separator"));
 				System.out.println(msgeType + ": " + msg);
 			}
 
-			if (loggerType.equals(MSG_TYPE_REPLAY) && loggerType.equals(msgeType)) {
-				aWriter.write(msgeType + ": " + msg
-						+ System.getProperty("line.separator"));
+			if (loggerType.equals(MSG_TYPE_REPLAY)
+					&& loggerType.equals(msgeType)) {
+				aWriter.write(msg + System.getProperty("line.separator"));
 				System.out.println(msgeType + ": " + msg);
 			}
 
