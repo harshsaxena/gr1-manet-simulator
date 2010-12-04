@@ -17,6 +17,8 @@ package UI.actions;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+
+import logger.FileLogger;
 import simulator.Map_Manager;
 import UI.Myform;
 
@@ -27,16 +29,19 @@ public class DeleteNodeAction implements ActionListener {
         this.myForm = myForm;
     }
 
-    /**
-     *
-     * @param e
-     */
     public void actionPerformed(ActionEvent e) {
         if (myForm.getSelectedGNode()!=null){
+        	
+            FileLogger.write("ACTION=DeleteNode_START", FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("NodeName=" + myForm.getSelectedGNode().getName(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("NodeIP=" + myForm.getSelectedGNode().getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
+            FileLogger.write("ACTION=DeleteNode_DONE", FileLogger.MSG_TYPE_REPLAY);
+        	
             myForm.getMyMap().remove(myForm.getSelectedGNode());
             myForm.getGraphicalNodes().remove(myForm.getSelectedGNode());
             Map_Manager.get_instance().getNode_list().remove(myForm.getSelectedGNode().getNode());
             myForm.setSelectedGNode(null);
+            
         }else{
             JOptionPane.showMessageDialog(myForm,"Please Select a Node");
         }
