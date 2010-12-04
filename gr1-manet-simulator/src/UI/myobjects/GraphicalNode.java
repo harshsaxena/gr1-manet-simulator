@@ -167,7 +167,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	}
 
 	public void fillNodePanel() {
-		NodeProperties np = myForm.getNodePanel();
+		NodeProperties np = myForm.getNodePropertiesPanel();
 		np.nameText.setText(this.name);
 		np.ipText.setText(node.getIP().toString());
 		np.xCordText.setText(Integer.toString(node.getNode_coordinates()
@@ -176,7 +176,6 @@ public class GraphicalNode extends NodeButton implements Transferable {
 				.getY_coordinate()));
 		np.powerText.setText(Integer.toString(node.getPower()));
 		np.colorBtn.setBackground(this.color);
-
 	}
 
 	public void setSelectGNode() {
