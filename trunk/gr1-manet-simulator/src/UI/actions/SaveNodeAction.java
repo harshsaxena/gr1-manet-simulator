@@ -53,13 +53,13 @@ public class SaveNodeAction implements ActionListener {
             myForm.refreshPowerShower();
             
             FileLogger.write("ACTION=UpdateNodeProps_START", FileLogger.MSG_TYPE_REPLAY);
-            FileLogger.write("NodeName=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("NodeIP=" + gNode.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("NodeXCoord=" + gNode.getX(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("NodeYCoord=" + gNode.getY(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("NodeColor=" + gNode.getColor().toString(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("NodePower=" + gNode.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
-            FileLogger.write("ACTION=UpdateNodeProps_DONE", FileLogger.MSG_TYPE_REPLAY);
+            FileLogger.write("\tNodeName=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeIP=" + gNode.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeXCoord=" + gNode.getX(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeYCoord=" + gNode.getY(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeColor=" + gNode.getColor().toString(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodePower=" + gNode.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
+            FileLogger.write("ACTION=UpdateNodeProps_END", FileLogger.MSG_TYPE_REPLAY);
 
         }else{
             JOptionPane.showMessageDialog(myForm,"Please Select a Node");

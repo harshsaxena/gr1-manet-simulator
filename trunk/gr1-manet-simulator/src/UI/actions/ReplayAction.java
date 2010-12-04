@@ -39,7 +39,7 @@ public class ReplayAction implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		FileLogger.write("*****Replay_Initiated*****", FileLogger.MSG_TYPE_REPLAY);
+		FileLogger.write("ACTION=Replay_START", FileLogger.MSG_TYPE_REPLAY);
 		
 		// Parse log for node properties
 		try {
@@ -47,6 +47,8 @@ public class ReplayAction implements ActionListener {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
+		
+		FileLogger.write("ACTION=Replay_END", FileLogger.MSG_TYPE_REPLAY);
 	}
 
 	public void setMyForm(Myform myForm) {
