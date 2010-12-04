@@ -37,7 +37,7 @@ import simulator.Node;
 import UI.actions.ReplayAction;
 import UI.actions.SaveNodeAction;
 import UI.actions.SearchNodeAction;
-import UI.actions.SendAction;
+import UI.actions.SendMsgAction;
 import UI.myobjects.GraphicalNode;
 
 @SuppressWarnings("serial")
@@ -117,7 +117,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		// Action Listener
 		ActionListener saveAction = new SaveNodeAction(this.myForm);
-		ActionListener sendAction = new SendAction(this.myForm);
+		ActionListener sendAction = new SendMsgAction(this.myForm);
 		ActionListener searchAction = new SearchNodeAction(this.myForm);
 		ActionListener replayAction = new ReplayAction(this.myForm);
 
