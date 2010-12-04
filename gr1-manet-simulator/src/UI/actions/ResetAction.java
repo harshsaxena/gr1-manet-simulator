@@ -16,29 +16,20 @@ package UI.actions;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
-import simulator.Map_Manager;
 import UI.Myform;
 
-public class DeleteBtnAction implements ActionListener {
+public class ResetAction implements ActionListener {
     Myform myForm;
 
-    public DeleteBtnAction(Myform myForm) {
+    public ResetAction(Myform myForm) {
         this.myForm = myForm;
     }
 
-    /**
-     *
-     * @param e
-     */
     public void actionPerformed(ActionEvent e) {
         if (myForm.getSelectedGNode()!=null){
-            myForm.getMyMap().remove(myForm.getSelectedGNode());
-            myForm.getGraphicalNodes().remove(myForm.getSelectedGNode());
-            Map_Manager.get_instance().getNode_list().remove(myForm.getSelectedGNode().getNode());
-            myForm.setSelectedGNode(null);
+            myForm.getSelectedGNode().fillNodePanel();
         }else{
-            JOptionPane.showMessageDialog(myForm,"Please Select a Node");
+            myForm.getNodePanel().resetNodeProperties();
         }
     }
 }

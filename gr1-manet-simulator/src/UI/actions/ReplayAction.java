@@ -31,11 +31,11 @@ import UI.Myform;
  * @author mroberts
  *
  */
-public class NodePropReplayBtnAction implements ActionListener {
+public class ReplayAction implements ActionListener {
 	private Myform myForm;
 
-	public NodePropReplayBtnAction(Myform myForm) {
-		this.myForm = myForm;
+	public ReplayAction(Myform myForm) {
+		this.setMyForm(myForm);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
@@ -47,6 +47,14 @@ public class NodePropReplayBtnAction implements ActionListener {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
+	}
+
+	public void setMyForm(Myform myForm) {
+		this.myForm = myForm;
+	}
+
+	public Myform getMyForm() {
+		return myForm;
 	}
 	
 }

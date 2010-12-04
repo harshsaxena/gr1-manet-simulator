@@ -33,10 +33,10 @@ import UI.NodeProperties;
 import UI.actions.threads.SendDataThread;
 import UI.myobjects.GraphicalNode;
 
-public class NodePropSendtoBtnAction implements ActionListener {
+public class SendAction implements ActionListener {
 	private Myform myForm;
 
-	public NodePropSendtoBtnAction(Myform myForm) {
+	public SendAction(Myform myForm) {
 		this.myForm = myForm;
 	}
 

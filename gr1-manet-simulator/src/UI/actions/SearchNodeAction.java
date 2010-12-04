@@ -7,9 +7,9 @@
  * ----------------------------------------------------------
  *
  * History:
- * @version: $Revision$
- * @date: $Date$
- * @author: $Author$
+ * @version: $Revision: 97 $
+ * @date: $Date: 2010-11-08 16:58:38 -0500 (Mon, 08 Nov 2010) $
+ * @author: $Author: quiksillvr $
  */
 
 package UI.actions;
@@ -20,10 +20,10 @@ import javax.swing.JOptionPane;
 import UI.Myform;
 import UI.myobjects.GraphicalNode;
 
-public class SearchGNodeAction  implements ActionListener{
+public class SearchNodeAction  implements ActionListener{
     Myform myForm;
 
-    public SearchGNodeAction(Myform myForm) {
+    public SearchNodeAction(Myform myForm) {
         this.myForm = myForm;
     }
 
