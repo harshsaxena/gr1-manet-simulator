@@ -39,7 +39,7 @@ public class SaveNodeAction implements ActionListener {
         if (myForm.getSelectedGNode()!=null){
             
         	GraphicalNode gNode = myForm.getSelectedGNode();
-            NodeProperties np = myForm.getNodePanel();
+            NodeProperties np = myForm.getNodePropertiesPanel();
             gNode.setName(np.nameText.getText().trim().toLowerCase());
             gNode.setNodeIP(np.ipText.getText());
             gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));

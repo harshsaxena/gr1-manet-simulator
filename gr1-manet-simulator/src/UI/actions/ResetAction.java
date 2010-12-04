@@ -29,7 +29,7 @@ public class ResetAction implements ActionListener {
         if (myForm.getSelectedGNode()!=null){
             myForm.getSelectedGNode().fillNodePanel();
         }else{
-            myForm.getNodePanel().resetNodeProperties();
+            myForm.getNodePropertiesPanel().resetNodeProperties();
         }
     }
 }
