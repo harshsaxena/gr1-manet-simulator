@@ -33,11 +33,6 @@ public class GNodeWrapper implements Comparable<GNodeWrapper> {
 		return gnode;
 	}
 
-	// public int compareTo(Object o) {
-	// return Double.compare(this.distance, ((GNodeWrapper) o).getDistace());
-	// }
-
-	@Override
 	public int compareTo(GNodeWrapper o) {
 		return Double.compare(this.distance, o.getDistace());
 	}

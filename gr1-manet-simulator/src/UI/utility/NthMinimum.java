@@ -16,6 +16,31 @@ package UI.utility;
 
 // TODO exchange() produces array out of bounds exception
 public class NthMinimum {
+	private static void exchange(GNodeWrapper[] A, int i, int j) {
+		GNodeWrapper temp = A[j];
+		A[j] = A[i];
+		A[i] = temp;
+	}
+
+	private static int partition(GNodeWrapper[] A, int p, int r) {
+		GNodeWrapper x = A[r];
+		int i = p - 1;
+		for (int j = p; j < r; j++) {
+			if (A[j].compareTo(x) <= 0) {
+				i++;
+				exchange(A, i, j);
+			}
+		}
+		exchange(A, i + 1, r);
+		return i + 1;
+	}
+
+	private static int randomized_Partition(GNodeWrapper[] A, int p, int r) {
+		int i = (int) (Math.random() * (r - p + 1)) + p;
+		exchange(A, i, r);
+		return partition(A, p, r);
+	}
+
 	/**
 	 * generates n th minimum of array A
 	 * 
@@ -38,30 +63,5 @@ public class NthMinimum {
 		} else {
 			return randomized_Select(A, q + 1, r, i - k);
 		}
-	}
-
-	private static int randomized_Partition(GNodeWrapper[] A, int p, int r) {
-		int i = (int) (Math.random() * (r - p + 1)) + p;
-		exchange(A, i, r);
-		return partition(A, p, r);
-	}
-
-	private static void exchange(GNodeWrapper[] A, int i, int j) {
-		GNodeWrapper temp = A[j];
-		A[j] = A[i];
-		A[i] = temp;
-	}
-
-	private static int partition(GNodeWrapper[] A, int p, int r) {
-		GNodeWrapper x = A[r];
-		int i = p - 1;
-		for (int j = p; j < r; j++) {
-			if (A[j].compareTo(x) <= 0) {
-				i++;
-				exchange(A, i, j);
-			}
-		}
-		exchange(A, i + 1, r);
-		return i + 1;
 	}
 }
