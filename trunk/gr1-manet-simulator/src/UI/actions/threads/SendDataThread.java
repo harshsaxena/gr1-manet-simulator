@@ -22,8 +22,7 @@ public class SendDataThread extends Thread {
 	Data data;
 
 	public SendDataThread(Node source, Node dest, Data data) {
-		super("Swing send data from : " + source.getIP() + " to "
-				+ dest.getIP());
+		super("Send data from: " + source.getIP() + " to " + dest.getIP());
 		this.source = source;
 		this.dest = dest;
 		this.data = data;
