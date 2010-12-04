@@ -41,21 +41,15 @@ public class ReplayLogger {
 	 * @param nodeName 
 	 */
 	@SuppressWarnings("unchecked")
-	public static void logNodePropertiesForReplay(GraphicalNode graphicalNode, int nodeType, String nodeName)
+	public static void logSendNodeMsg(GraphicalNode graphicalNode, int nodeType, String nodeName)
 	{	
 		String nodeText = FROM_TEXT;
 		if (nodeType == 1) {
 			nodeText = TO_TEXT;
 		}
-		FileLogger.write("**NODE "+nodeName+" REPLAY DATA**", FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write(nodeText + "GNode_"+ nodeName +"_AlignX = " + graphicalNode.getAlignmentX(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write(nodeText + "GNode_"+ nodeName +"_AlignY = " + graphicalNode.getAlignmentY(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write(nodeText + "GNode_"+ nodeName +"_Name = " + graphicalNode.getName(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write(nodeText + "GNode_"+ nodeName +"_X = " + graphicalNode.getX(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write(nodeText + "GNode_"+ nodeName +"_Y = " + graphicalNode.getY(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write(nodeText + "GNode_"+ nodeName +"_Color = " + graphicalNode.getColor().toString(), FileLogger.MSG_TYPE_REPLAY);
-		
-		FileLogger.write(nodeText + "Node_"+ nodeName +"_ActiveRouteTimeout = " + graphicalNode.getNode().getActiveRouteTimeout(), FileLogger.MSG_TYPE_REPLAY);
+
+		FileLogger.write("\t" + nodeText + "Name=" + graphicalNode.getName(), FileLogger.MSG_TYPE_REPLAY);
+		/*FileLogger.write(nodeText + "Node_"+ nodeName +"_ActiveRouteTimeout = " + graphicalNode.getNode().getActiveRouteTimeout(), FileLogger.MSG_TYPE_REPLAY);
 		FileLogger.write(nodeText + "Node_"+ nodeName +"_AllowedHelloLoss = " + graphicalNode.getNode().getAllowedHelloLoss(), FileLogger.MSG_TYPE_REPLAY);
 		FileLogger.write(nodeText + "Node_"+ nodeName +"_DefaultRouteLifetime = " + graphicalNode.getNode().getDefaultRouteLifetime(), FileLogger.MSG_TYPE_REPLAY);
 		FileLogger.write(nodeText + "Node_"+ nodeName +"_DeletePeriod = " + graphicalNode.getNode().getDeletePeriod(), FileLogger.MSG_TYPE_REPLAY);
@@ -72,13 +66,13 @@ public class ReplayLogger {
 		FileLogger.write(nodeText + "Node_"+ nodeName +"_RepAckRequired = " + graphicalNode.getNode().getRepAckRequired(), FileLogger.MSG_TYPE_REPLAY);
 		FileLogger.write(nodeText + "Node_"+ nodeName +"_RepRetires = " + graphicalNode.getNode().getReqRetries(), FileLogger.MSG_TYPE_REPLAY);
 		FileLogger.write(nodeText + "Node_"+ nodeName +"_RouteDeleteInterval = " + graphicalNode.getNode().getRouteDeleteInterval(), FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write(nodeText + "Node_"+ nodeName +"_RouteExpireInterval = " + graphicalNode.getNode().getRouteExpireInterval(), FileLogger.MSG_TYPE_REPLAY);
+		FileLogger.write(nodeText + "Node_"+ nodeName +"_RouteExpireInterval = " + graphicalNode.getNode().getRouteExpireInterval(), FileLogger.MSG_TYPE_REPLAY);*/
 		
 		Map<Node, Route> routeMap = graphicalNode.getNode().getRout_Arr();
 	    Iterator it = routeMap.entrySet().iterator();
 	    while (it.hasNext()) {
 	        Map.Entry pairs = (Map.Entry)it.next();
-	        FileLogger.write(nodeText + "Node_"+ nodeName +"_RouteMap = Key " + pairs.getKey() + " : Value " + pairs.getValue(), FileLogger.MSG_TYPE_REPLAY);
+	        FileLogger.write("\tRouteMapKeyValue=" + pairs.getKey() + ":" + pairs.getValue(), FileLogger.MSG_TYPE_REPLAY);
 	    }
 	}
 
