@@ -34,9 +34,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import simulator.Node;
-import UI.actions.NodePropOKBtnAction;
-import UI.actions.NodePropSendtoBtnAction;
-import UI.actions.SearchGNodeAction;
+import UI.actions.ReplayAction;
+import UI.actions.SaveNodeAction;
+import UI.actions.SearchNodeAction;
+import UI.actions.SendAction;
 import UI.myobjects.GraphicalNode;
 
 @SuppressWarnings("serial")
@@ -115,10 +116,10 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.add(mainVerticalBox);
 
 		// Action Listener
-		ActionListener saveAction = new NodePropOKBtnAction(this.myForm);
-		ActionListener sendAction = new NodePropSendtoBtnAction(this.myForm);
-		ActionListener searchAction = new SearchGNodeAction(this.myForm);
-		ActionListener replayAction = new NodePropSendtoBtnAction(this.myForm);
+		ActionListener saveAction = new SaveNodeAction(this.myForm);
+		ActionListener sendAction = new SendAction(this.myForm);
+		ActionListener searchAction = new SearchNodeAction(this.myForm);
+		ActionListener replayAction = new ReplayAction(this.myForm);
 
 		/* Find a Node Panel */
 		JPanel findNodePanel = new JPanel();
