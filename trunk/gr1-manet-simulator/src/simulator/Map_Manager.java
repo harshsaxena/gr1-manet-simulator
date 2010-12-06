@@ -157,21 +157,6 @@ public class Map_Manager {
 			}
 
 		} else if (mode == Protocol.DSDV) {
-			// updateAllDSDV();
-			//
-			// RoutingTable src_rt = src.getDSDVTable();
-			// Node cur = src;
-			// Node next = src_rt.getEntry(dest).getNextHop();
-			// while (next != null && cur != next) {
-			// // send packet from cur to next
-			// sendSingleHop(packetToSend, cur, next);
-			// if (next == dest)
-			// return true;
-			// RoutingTable next_rt = next.getDSDVTable();
-			// cur = next;
-			// next = next_rt.getEntry(dest).getNextHop();
-			// }
-
 			// update routing table
 			updateDSDV(src);
 			// get path from src to dest
@@ -196,14 +181,6 @@ public class Map_Manager {
 		}
 		return false;
 	}
-
-	/* Update all routing tables */
-	// public void updateAllDSDV() {
-	// List<Edge> edges = generateEdges();
-	// for (Node src : nodeList) {
-	// updateDSDV(edges, src);
-	// }
-	// }
 
 	/* Update routing table for src_node */
 	// must be synchronized because sendPacket is multithreaded and
