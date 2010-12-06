@@ -55,14 +55,18 @@ public class Data_Received extends Thread {
 				AODV_Test.waiting.s = "true";
 				AODV_Test.waiting.notify();
 			}
-			//
+
 			// call UI received data
 			OutputLogger.get_instance().showReceivedData(mynode, packet.source,
 					packet.getData());
 		} else {
-			// if using DSDV, skip all this
-			if (Map_Manager.get_instance().getMode() == Protocol.DSDV)
+			if (Map_Manager.get_instance().getMode() == Protocol.DSDV) {
+				FileLogger.write("Node " + mynode
+						+ ": passing DataPacket from " + packet.source
+						+ " which handed from " + receivedFrom,
+						FileLogger.MSG_TYPE_INFO);
 				return;
+			}
 
 			Route route = mynode.search(packet.dest);
 			if (!Route.isBad(route)) {

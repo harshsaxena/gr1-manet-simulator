@@ -95,7 +95,7 @@ public class Node implements Serializable {
 	 * should call this method this is for when node receives RREQPacket can
 	 * understand that have a route to itself.
 	 */
-	private void init() {
+	public void init() {
 		Route r = new Route(this, this, '1', '0', new HashSet<Node>());
 		r.setLifeTime(LOOPBACK_EXPIRETIME);
 		Rout_Arr.put(this, r);
