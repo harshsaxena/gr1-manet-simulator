@@ -188,7 +188,6 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		atimer.schedule(new IconAnimator(this.myForm, this, atimer,
 				"Animating " + this.name, type), 0,
 				GraphicalNode.ANIMATION_PERIOD);
-
 	}
 
 	/**

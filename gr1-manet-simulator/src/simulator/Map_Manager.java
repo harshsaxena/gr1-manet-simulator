@@ -22,6 +22,7 @@ import java.util.TimerTask;
 import UI.Myform;
 
 import logger.FileLogger;
+import logger.OutputLogger;
 import simulator.Packets.Packet;
 import simulator.mapmanagerrelated.TaskSpeedSimulator;
 import simulator.routing.dsdv.Edge;
@@ -31,7 +32,7 @@ import simulator.routing.dsdv.RoutingTable;
 public class Map_Manager {
 	private List<Node> nodeList = new ArrayList<Node>();
 	private static Map_Manager mapManager = new Map_Manager();
-	private static long speedPercent = 200;
+	private static long speedPercent = 100;
 	private Protocol mode = Protocol.DSDV;
 	private Myform myForm;
 
@@ -93,11 +94,27 @@ public class Map_Manager {
 
 	private void sendSingleHop(Packet packetToSend, Node cur, Node next) {
 		if (getDistance(cur, next) <= cur.getPower()) {
+			// send packet after distance-based delay
 			TimerTask task = new TaskSpeedSimulator(packetToSend, cur, next);
 			long delay = Math
 					.round(getDistance(cur, next) / 100 * speedPercent);
 			new Timer("Mapmanager: Sending packet from " + cur + " to " + next,
 					true).schedule(task, delay);
+
+			// useless logging
+			// FileLogger.write("Sending message to " + next,
+			// FileLogger.MSG_TYPE_INFO);
+			// OutputLogger.get_instance().showNodeStatus(cur,
+			// "Sending message to " + next);
+
+			// animate and wait
+			OutputLogger.get_instance().startNodeAnimation(cur,
+					packetToSend.type);
+			try {
+				Thread.sleep(delay);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		} else
 			System.err
 					.println("Error in sendSingleHop(): Destination out of range");
