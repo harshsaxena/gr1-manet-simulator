@@ -98,7 +98,6 @@ public class FileLogger {
 	 * Returns the stack traces error message as a String.
 	 * 
 	 * @param e
-	 * @return
 	 */
 	public static String stack2string(Exception e) {
 		try {
@@ -128,7 +127,6 @@ public class FileLogger {
 	 * 
 	 * Message Types: INFO, DEBUG, ERROR
 	 * 
-	 * @param msg
 	 */
 	public static void write(String message, String messageType) {
 		setFileNameAndPath();

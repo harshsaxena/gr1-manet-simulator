@@ -77,7 +77,6 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	/**
 	 * it overrides default setBounds method of {@link JComponent} class to make
 	 * a communication between x,y properties of graphical node and actual node
-	 * by {@link myForm.xScale} and {@link myForm.yScale}
 	 * 
 	 * @param x
 	 * @param y
