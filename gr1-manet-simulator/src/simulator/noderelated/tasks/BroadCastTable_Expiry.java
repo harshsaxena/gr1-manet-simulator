@@ -20,7 +20,9 @@ import java.util.TimerTask;
 
 import logger.FileLogger;
 import logger.OutputLogger;
+import simulator.Map_Manager;
 import simulator.Node;
+import simulator.Protocol;
 import simulator.noderelated.BroadCastField;
 
 public class BroadCastTable_Expiry extends TimerTask {
@@ -32,11 +34,16 @@ public class BroadCastTable_Expiry extends TimerTask {
 	}
 
 	public void run() {
-		for (Iterator<BroadCastField> itr = mynode.getBroadCastTable().iterator(); itr.hasNext();) {
+		for (Iterator<BroadCastField> itr = mynode.getBroadCastTable()
+				.iterator(); itr.hasNext();) {
 			BroadCastField bcf = (BroadCastField) itr.next();
 			if (bcf.getLifeTime() < new Date().getTime()) {
-				FileLogger.write("Node " + mynode + " : " + bcf + " Expires!",   FileLogger.MSG_TYPE_INFO);
-				OutputLogger.get_instance().showNodeStatus(mynode, "Broadcast expired: " + bcf);
+				if (Map_Manager.get_instance().getMode() == Protocol.AODV) {
+					FileLogger.write("Node " + mynode + " : " + bcf
+							+ " Expires!", FileLogger.MSG_TYPE_INFO);
+					OutputLogger.get_instance().showNodeStatus(mynode,
+							"Broadcast expired: " + bcf);
+				}
 				itr.remove();
 			}
 		}

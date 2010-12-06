@@ -20,7 +20,9 @@ import java.util.TimerTask;
 
 import logger.FileLogger;
 import logger.OutputLogger;
+import simulator.Map_Manager;
 import simulator.Node;
+import simulator.Protocol;
 import simulator.noderelated.Route;
 
 public class Route_Delete extends TimerTask {
@@ -40,10 +42,12 @@ public class Route_Delete extends TimerTask {
 				if (route.getLifeTime() + Node.DELETE_PERIOD
 						* route.getIswaiting() < new Date().getTime()
 						&& !mynode.equals(route.getDestination())) {
-					FileLogger.write("Node " + mynode + " : " + route
-							+ " Deleted!", FileLogger.MSG_TYPE_INFO);
-					OutputLogger.get_instance().showNodeStatus(mynode,
-							"Delete: " + route);
+					if (Map_Manager.get_instance().getMode() == Protocol.AODV) {
+						FileLogger.write("Node " + mynode + " : " + route
+								+ " Deleted!", FileLogger.MSG_TYPE_INFO);
+						OutputLogger.get_instance().showNodeStatus(mynode,
+								"Delete: " + route);
+					}
 					itr.remove();
 				}
 			}

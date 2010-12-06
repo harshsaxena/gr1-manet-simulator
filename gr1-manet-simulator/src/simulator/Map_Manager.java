@@ -145,7 +145,6 @@ public class Map_Manager {
 			while (next != null && cur != next) {
 				// send packet from cur to next
 				sendSingleHop(packetToSend, cur, next);
-
 				if (next == dest)
 					return true;
 				RoutingTable next_rt = next.getDSDVTable();
@@ -166,7 +165,9 @@ public class Map_Manager {
 	}
 
 	/* Update routing table for src_node */
-	public void updateDSDV(List<Edge> edges, Node src) {
+	// must be synchronized because sendPacket is multithreaded and
+	// ConcurrentModificationException could occur otherwise
+	public synchronized void updateDSDV(List<Edge> edges, Node src) {
 		bellmanFord(edges, src);
 		for (Node dest : nodeList) {
 			if (dest != src)

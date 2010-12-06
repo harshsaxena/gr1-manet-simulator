@@ -114,6 +114,7 @@ public class Myform extends JFrame {
 		frame.powerShower = new PowerShower(frame);
 		frame.delGNodeBtn.setToolTipText("Remove selected node");
 		frame.delGNodeBtn.addActionListener(new DeleteNodeAction(frame));
+		// TODO figure out proper bounds
 		frame.powerShower.setBounds(0, 0, 9999, 9999);
 		frame.myMap.add(frame.powerShower, JLayeredPane.PALETTE_LAYER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -208,8 +209,8 @@ public class Myform extends JFrame {
 	public void setSelectedGNode(GraphicalNode selectedGNode) {
 		this.selectedGNode = selectedGNode;
 		if (selectedGNode != null) {
-			this.getNodePropertiesPanel().nameText.setEnabled(selectedGNode.getName()
-					.trim().length() == 0);
+			this.getNodePropertiesPanel().nameText.setEnabled(selectedGNode
+					.getName().trim().length() == 0);
 			selectedGNode.fillNodePanel();
 			this.refreshPowerShower();
 		} else {
