@@ -574,11 +574,7 @@ public class Node implements Serializable {
 
 		else if (mapManager.getMode() == Protocol.DSDV) {
 			DataPacket dataPacket = new DataPacket(data, dest, this);
-			if (send(dataPacket, dest)) {
-				// OutputLogger.get_instance().showReceivedData(dest, this,
-				// data);
-				return true;
-			}
+			return send(dataPacket, dest);
 		}
 
 		return false;

@@ -225,7 +225,9 @@ public class Map_Manager {
 				Node v = uv.getDest();
 				RoutingEntry uEntry = rt.getEntry(u);
 				RoutingEntry vEntry = rt.getEntry(v);
-				if (uEntry.getNumHops() + 1 < vEntry.getNumHops()) {
+				// first condition is necessary to account for overflow
+				if (uEntry.getNumHops() != Integer.MAX_VALUE
+						&& uEntry.getNumHops() + 1 < vEntry.getNumHops()) {
 					vEntry.setNumHops(uEntry.getNumHops() + 1);
 					vEntry.setPredecessor(u);
 				}
