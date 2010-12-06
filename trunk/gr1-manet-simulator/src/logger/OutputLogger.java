@@ -89,7 +89,7 @@ public class OutputLogger {
 		}
 	}
 
-	public void NodeSend(Node sender, int type) {
+	public void startNodeAnimation(Node sender, int type) {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(sender);
 			if (gNode != null) {

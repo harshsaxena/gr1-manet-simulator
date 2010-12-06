@@ -500,7 +500,7 @@ public class Node implements Serializable {
 				FileLogger.MSG_TYPE_INFO);
 		OutputLogger.get_instance().showNodeStatus(this,
 				"Broadcasting message...");
-		OutputLogger.get_instance().NodeSend(this, packet.type);
+		OutputLogger.get_instance().startNodeAnimation(this, packet.type);
 		Map_Manager.get_instance().sendPacket(packet, this);
 	}
 
@@ -518,9 +518,12 @@ public class Node implements Serializable {
 				.write("Sending message to " + dest, FileLogger.MSG_TYPE_INFO);
 		OutputLogger.get_instance().showNodeStatus(this,
 				"Sending message to " + dest);
-		OutputLogger.get_instance().NodeSend(this, packet.type);
+		// startNodeAnimation is called in Map_Manager::sendSingleHop() for DSDV
+		// OutputLogger.get_instance().startNodeAnimation(this, packet.type);
 
 		if (mapManager.getMode() == Protocol.AODV) {
+			OutputLogger.get_instance().startNodeAnimation(this, packet.type);
+
 			if (Map_Manager.get_instance().sendPacket(packet, this, dest)) {
 				return true;
 			}

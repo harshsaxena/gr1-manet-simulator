@@ -56,6 +56,15 @@ public class Data_Received extends Thread {
 				AODV_Test.waiting.notify();
 			}
 
+			// useless logging
+			// FileLogger.write("Sending message to " + next,
+			// FileLogger.MSG_TYPE_INFO);
+			// OutputLogger.get_instance().showNodeStatus(cur,
+			// "Sending message to " + next);
+
+			// animate reception
+			OutputLogger.get_instance().startNodeAnimation(mynode, packet.type);
+
 			// call UI received data
 			OutputLogger.get_instance().showReceivedData(mynode, packet.source,
 					packet.getData());
