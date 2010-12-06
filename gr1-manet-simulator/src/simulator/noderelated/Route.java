@@ -119,7 +119,6 @@ public class Route {
 	 * valid route to the destination expires or is marked as invalid
 	 * 
 	 * @param r
-	 * @return
 	 */
 	public static boolean isBad(Route r) {
 		return r == null || r.getHop_count() == Route.INFINITE || r.isInvalid()

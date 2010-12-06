@@ -145,7 +145,6 @@ public class Myform extends JFrame {
 	 * Graphical Node is returned.
 	 * 
 	 * @param node
-	 * @return
 	 */
 	public GraphicalNode getGnodebyNode(Node node) {
 		for (GraphicalNode graphicalNode : graphicalNodes) {
