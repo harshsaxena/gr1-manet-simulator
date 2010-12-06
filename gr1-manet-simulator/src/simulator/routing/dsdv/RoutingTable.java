@@ -15,6 +15,8 @@
 package simulator.routing.dsdv;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import simulator.Node;
@@ -38,7 +40,7 @@ public class RoutingTable {
 		if (entries.get(dest) != null)
 			return entries.get(dest);
 		else {
-			System.err.println("Error in RoutingTable: node not found.");
+			System.err.println("Error in routing table: node not found.");
 			return null;
 		}
 	}
@@ -54,4 +56,21 @@ public class RoutingTable {
 		}
 	}
 
+	/*
+	 * Generates the path from owner to dest (not including owner).
+	 * Preconditions: Bellman-Ford has been run on the routing table.
+	 */
+	public List<Node> generatePath(Node dest) {
+		List<Node> path = new LinkedList<Node>();
+		Node next = dest;
+		while (next != null && next != owner) {
+			if (getEntry(next).getPredecessor() == owner) {
+				path.add(0, next);
+				break;
+			}
+			path.add(0, next);
+			next = getEntry(next).getPredecessor();
+		}
+		return path;
+	}
 }

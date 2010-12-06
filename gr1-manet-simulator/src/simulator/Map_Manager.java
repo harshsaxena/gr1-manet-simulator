@@ -15,6 +15,7 @@
 package simulator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -92,7 +93,7 @@ public class Map_Manager {
 		return distance;
 	}
 
-	private void sendSingleHop(Packet packetToSend, Node cur, Node next) {
+	private boolean sendSingleHop(Packet packetToSend, Node cur, Node next) {
 		if (getDistance(cur, next) <= cur.getPower()) {
 			// send packet after distance-based delay
 			TimerTask task = new TaskSpeedSimulator(packetToSend, cur, next);
@@ -115,9 +116,13 @@ public class Map_Manager {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		} else
-			System.err
-					.println("Error in sendSingleHop(): Destination out of range");
+
+			return true;
+		}
+
+		System.err.println("Error in single hop send: "
+				+ "Destination out of range");
+		return false;
 	}
 
 	// broadcast packet
@@ -152,40 +157,59 @@ public class Map_Manager {
 			}
 
 		} else if (mode == Protocol.DSDV) {
-			// TODO advertise tables instead of running bellman-ford multiple
-			// times
-			updateAllDSDV();
+			// updateAllDSDV();
+			//
+			// RoutingTable src_rt = src.getDSDVTable();
+			// Node cur = src;
+			// Node next = src_rt.getEntry(dest).getNextHop();
+			// while (next != null && cur != next) {
+			// // send packet from cur to next
+			// sendSingleHop(packetToSend, cur, next);
+			// if (next == dest)
+			// return true;
+			// RoutingTable next_rt = next.getDSDVTable();
+			// cur = next;
+			// next = next_rt.getEntry(dest).getNextHop();
+			// }
 
-			RoutingTable src_rt = src.getDSDVTable();
+			// update routing table
+			updateDSDV(src);
+			// get path from src to dest
+			List<Node> route = src.getDSDVTable().generatePath(dest);
+			if (route.size() < 1) {
+				System.err.println("Error in packet send: "
+						+ "No route to specified destination.");
+				return false;
+			}
+			Iterator<Node> iter = route.iterator();
 			Node cur = src;
-			Node next = src_rt.getEntry(dest).getNextHop();
-			while (next != null && cur != next) {
+			Node next;
+			while (iter.hasNext()) {
+				next = iter.next();
 				// send packet from cur to next
-				sendSingleHop(packetToSend, cur, next);
+				if (!sendSingleHop(packetToSend, cur, next))
+					return false;
 				if (next == dest)
 					return true;
-				RoutingTable next_rt = next.getDSDVTable();
 				cur = next;
-				next = next_rt.getEntry(dest).getNextHop();
 			}
 		}
-
 		return false;
 	}
 
 	/* Update all routing tables */
-	public void updateAllDSDV() {
-		List<Edge> edges = generateEdges();
-		for (Node src : nodeList) {
-			updateDSDV(edges, src);
-		}
-	}
+	// public void updateAllDSDV() {
+	// List<Edge> edges = generateEdges();
+	// for (Node src : nodeList) {
+	// updateDSDV(edges, src);
+	// }
+	// }
 
 	/* Update routing table for src_node */
 	// must be synchronized because sendPacket is multithreaded and
 	// ConcurrentModificationException could occur otherwise
-	public synchronized void updateDSDV(List<Edge> edges, Node src) {
-		bellmanFord(edges, src);
+	public synchronized void updateDSDV(Node src) {
+		bellmanFord(generateEdges(), src);
 		for (Node dest : nodeList) {
 			if (dest != src)
 				src.getDSDVTable().generateNextHop(dest);
