@@ -28,7 +28,7 @@ public class AddNodeTransferHandler extends TransferHandler {
 
 	// Transfers node data to the form or node properties
     protected Transferable createTransferable(JComponent component) {
-    	
+
         NodeButton source = (NodeButton)component;
         GraphicalNode nodeTransferable = new GraphicalNode(source.getIcon(),source.myForm,false);
         source.myForm.putGNode(nodeTransferable);
