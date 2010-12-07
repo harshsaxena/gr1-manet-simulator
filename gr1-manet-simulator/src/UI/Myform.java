@@ -64,9 +64,8 @@ public class Myform extends JFrame {
 	public JPanel content;
 	public JPanel outlogPanel;
 	public JToolBar toolBar;
-	public JButton delGNodeBtn = new JButton(new ImageIcon("images/delete.png"));
-	public NodeButton addNodeBtn = new NodeButton(new ImageIcon(
-			"images/SendingNode0.png"));
+	public JButton delGNodeBtn = new JButton(new ImageIcon("images/DeleteNode.png"));
+	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/AddNode.png"));
 	public MyMap myMap;
 	public PowerShower powerShower;
 
