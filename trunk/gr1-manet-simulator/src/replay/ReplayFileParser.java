@@ -19,6 +19,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
+import UI.myobjects.NodeButton;
+
 import logger.FileLogger;
 
 public class ReplayFileParser {
@@ -27,11 +32,76 @@ public class ReplayFileParser {
 		File logFile = new File(FileLogger.logFile);
 		Scanner scanner = new Scanner(new FileReader(logFile));
 		
+		String nodeName = "";
+		String ip = "";
+		String nodeXCoord = "";
+		String nodeYCoord = "";
+		String power;
+		
 		try {
 			while(scanner.hasNextLine()){
 				String next = scanner.nextLine();
-				if(!next.contains("End_Node_Properties")){
-					processLine(scanner.nextLine());
+				if(next.contains("ACTION=AddNode_START")){
+					while(scanner.hasNextLine()){
+						String next2 = scanner.nextLine();
+						if(!next2.contains("ACTION=AddNode_STOP")){
+							
+							if(next2.contains("NodeName")){
+								Scanner scanAddLine = new Scanner(next2);
+								while(scanAddLine.hasNext()){
+									scanAddLine.useDelimiter("=");
+									if (!scanAddLine.next().equals("NodeName")) {
+										nodeName = scanAddLine.next();
+									}
+								}
+							}
+
+							if(next2.contains("NodeIP")){
+								Scanner scanAddLine = new Scanner(next2);
+								while(scanAddLine.hasNext()){
+									scanAddLine.useDelimiter("=");
+									if (!scanAddLine.next().equals("NodeIP")) {
+										ip = scanAddLine.next();
+									}
+								}
+							}
+						
+							if(next2.contains("NodeXCoord")){
+								Scanner scanAddLine = new Scanner(next2);
+								while(scanAddLine.hasNext()){
+									scanAddLine.useDelimiter("=");
+									if (!scanAddLine.next().equals("NodeXCoord")) {
+										nodeXCoord = scanAddLine.next();
+									}
+								}
+							}
+						
+							if(next2.contains("NodeYCoord")){
+								Scanner scanAddLine = new Scanner(next2);
+								while(scanAddLine.hasNext()){
+									scanAddLine.useDelimiter("=");
+									if (!scanAddLine.next().equals("NodeYCoord")) {
+										nodeYCoord = scanAddLine.next();
+									}
+								}
+							}
+							
+							if(next2.contains("Power")){
+								Scanner scanAddLine = new Scanner(next2);
+								while(scanAddLine.hasNext()){
+									scanAddLine.useDelimiter("=");
+									if (!scanAddLine.next().equals("Power")) {
+										power = scanAddLine.next();
+									}
+								}
+							}
+						}else
+						{
+							processAddNode();
+						}
+						
+						
+					}
 				}
 			}
 		} finally
@@ -40,13 +110,9 @@ public class ReplayFileParser {
 		}
 	}
 
-	private static void processLine(String nextLine) {
-		Scanner scanner = new Scanner(nextLine);
-		scanner.useDelimiter("=");
-		if(scanner.hasNext()){
-			String test = scanner.next();
-			System.out.println(test);
-		}
+	private static void processAddNode() {
+		NodeButton nodeButton = new NodeButton(new ImageIcon("images/SendingNode0.png"));
+		
 	}
 
 }
