@@ -69,23 +69,11 @@ public class MapActions extends DropTarget {
 				panel.invalidate();
 				node.myForm.refreshPowerShower();
 
-				if (actionType.equals(ACTION_ADD)) {
-					FileLogger.write("\tNodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tNodeIP=" + node.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tPower=" + node.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tDropEvent_DropAction=" + dropEvent.getDropAction(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tDropEvent_LocX=" + dropEvent.getLocation().x, FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tDropEvent_LocY=" + dropEvent.getLocation().y, FileLogger.MSG_TYPE_REPLAY);
-				}else{
-					FileLogger.write("\tNodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tDropEvent_DropAction=" + dropEvent.getDropAction(), FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tDropEvent_LocX=" + dropEvent.getLocation().x, FileLogger.MSG_TYPE_REPLAY);
-					FileLogger.write("\tDropEvent_LocY=" + dropEvent.getLocation().y, FileLogger.MSG_TYPE_REPLAY);
-				}
+				FileLogger.write("\tNodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\tNodeIP=" + node.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\tPower=" + node.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
 				
 				dropEvent.dropComplete(true);
 				FileLogger.write("ACTION=" + actionType + "_END", FileLogger.MSG_TYPE_REPLAY);
