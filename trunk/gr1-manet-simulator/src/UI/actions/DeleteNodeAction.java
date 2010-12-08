@@ -33,8 +33,8 @@ public class DeleteNodeAction implements ActionListener {
         if (myForm.getSelectedGNode()!=null){
         	
             FileLogger.write("ACTION=DeleteNode_START", FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeName=" + myForm.getSelectedGNode().getName(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeIP=" + myForm.getSelectedGNode().getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tDeleteNode_NodeName=" + myForm.getSelectedGNode().getName(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tDeleteNode_NodeIP=" + myForm.getSelectedGNode().getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
             FileLogger.write("ACTION=DeleteNode_END", FileLogger.MSG_TYPE_REPLAY);
         	
             myForm.getMyMap().remove(myForm.getSelectedGNode());

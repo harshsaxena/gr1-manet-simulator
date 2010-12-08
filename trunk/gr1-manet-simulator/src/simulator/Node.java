@@ -66,15 +66,15 @@ public class Node implements Serializable {
 
 	private Set<BroadCastField> broadCastTable = new HashSet<BroadCastField>();
 	private Object discoveryiswaiting = null;
+	private RoutingTable dsdvTable = new RoutingTable(this);
 	private IPAddress IP;
+	private Map_Manager mapManager = Map_Manager.get_instance();
 	private Coordinates node_coordinates = new Coordinates();
 	private int power = 0;
 	private Map<Node, Route> Rout_Arr = new HashMap<Node, Route>();
 	private RREPPacketWrapper rrepPacketWrapper;
 	public int RREQ_ID = 0;
 	public int SEQ_NO = 0;
-	private RoutingTable dsdvTable = new RoutingTable(this);
-	private Map_Manager mapManager = Map_Manager.get_instance();
 
 	public Node(IPAddress IP) {
 		this.IP = IP;
@@ -89,29 +89,6 @@ public class Node implements Serializable {
 	// Map_Manager.get_instance().addNode(node);
 	// return node;
 	// }
-
-	/**
-	 * Default node constructor which initializes this object other constructors
-	 * should call this method this is for when node receives RREQPacket can
-	 * understand that have a route to itself.
-	 */
-	public void init() {
-		Route r = new Route(this, this, '1', '0', new HashSet<Node>());
-		r.setLifeTime(LOOPBACK_EXPIRETIME);
-		Rout_Arr.put(this, r);
-
-		new Timer(this + " expiry timer", true).schedule(
-				new Route_Expiry(this), Node.ROUTE_EXPIRE_INTERVAL,
-				Node.ROUTE_EXPIRE_INTERVAL);
-
-		new Timer(this + " broadcast table expiry timer", true).schedule(
-				new BroadCastTable_Expiry(this), 0,
-				Node.PATH_DISCOVERY_INTERVAL);
-
-		new Timer(this + " delete timer", true).schedule(
-				new Route_Delete(this), Node.ROUTE_DELETE_INTERVAL,
-				Node.ROUTE_DELETE_INTERVAL);
-	}
 
 	/**
 	 * Adds a route in the table and runs until the expiration time.
@@ -358,6 +335,10 @@ public class Node implements Serializable {
 		return discoveryiswaiting;
 	}
 
+	public RoutingTable getDSDVTable() {
+		return dsdvTable;
+	}
+
 	public int getHelloInterval() {
 		return HELLO_INTERVAL;
 	}
@@ -448,6 +429,29 @@ public class Node implements Serializable {
 
 	public void increaseseq_no() {
 		this.SEQ_NO++;
+	}
+
+	/**
+	 * Default node constructor which initializes this object other constructors
+	 * should call this method this is for when node receives RREQPacket can
+	 * understand that have a route to itself.
+	 */
+	public void init() {
+		Route r = new Route(this, this, '1', '0', new HashSet<Node>());
+		r.setLifeTime(LOOPBACK_EXPIRETIME);
+		Rout_Arr.put(this, r);
+
+		new Timer(this + " expiry timer", true).schedule(
+				new Route_Expiry(this), Node.ROUTE_EXPIRE_INTERVAL,
+				Node.ROUTE_EXPIRE_INTERVAL);
+
+		new Timer(this + " broadcast table expiry timer", true).schedule(
+				new BroadCastTable_Expiry(this), 0,
+				Node.PATH_DISCOVERY_INTERVAL);
+
+		new Timer(this + " delete timer", true).schedule(
+				new Route_Delete(this), Node.ROUTE_DELETE_INTERVAL,
+				Node.ROUTE_DELETE_INTERVAL);
 	}
 
 	/**
@@ -642,10 +646,6 @@ public class Node implements Serializable {
 
 	public String toString() {
 		return IP.toString();
-	}
-
-	public RoutingTable getDSDVTable() {
-		return dsdvTable;
 	}
 
 }

@@ -71,8 +71,10 @@ public class MapActions extends DropTarget {
 
 				FileLogger.write("\t" + actionType + "_NodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
 				FileLogger.write("\t" + actionType + "_NodeIP=" + node.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
-				FileLogger.write("\t" + actionType + "_NodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
-				FileLogger.write("\t" + actionType + "_NodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
+				//FileLogger.write("\t" + actionType + "_NodeXCoord=" + Integer.toString(node.getNode().getNode_coordinates().getX_coordinate()), FileLogger.MSG_TYPE_REPLAY);
+				//FileLogger.write("\t" + actionType + "_NodeYCoord=" + Integer.toString(node.getNode().getNode_coordinates().getY_coordinate()), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\t" + actionType + "_NodeXCoord=" + Integer.toString(node.getX()), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\t" + actionType + "_NodeYCoord=" + Integer.toString(node.getY()), FileLogger.MSG_TYPE_REPLAY);
 				FileLogger.write("\t" + actionType + "_Power=" + node.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
 				
 				dropEvent.dropComplete(true);

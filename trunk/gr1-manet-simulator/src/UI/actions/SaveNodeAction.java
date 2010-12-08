@@ -46,7 +46,7 @@ public class SaveNodeAction implements ActionListener {
             gNode.setNodeIP(np.ipText.getText());
             Coordinates coords = new Coordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
             gNode.getNode().setNode_coordinates(coords);
-            //gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
+            gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
             gNode.setColor(np.colorBtn.getBackground());
             gNode.setNodePower(Integer.parseInt(np.powerText.getText()));
             
@@ -57,12 +57,12 @@ public class SaveNodeAction implements ActionListener {
             myForm.refreshPowerShower();
             
             FileLogger.write("ACTION=UpdateNodeProps_START", FileLogger.MSG_TYPE_REPLAY);
-            FileLogger.write("\tNodeName=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeIP=" + gNode.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeXCoord=" + gNode.getX(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeYCoord=" + gNode.getY(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeColor=" + gNode.getColor().toString(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodePower=" + gNode.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
+            FileLogger.write("\tNodeName=" + np.nameText.getText().trim().toLowerCase(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeIP=" + np.ipText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeXCoord=" + np.xCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeYCoord=" + np.yCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodeColor=" + np.colorBtn.getBackground().toString(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tNodePower=" + np.powerText.getText(), FileLogger.MSG_TYPE_REPLAY);
             FileLogger.write("ACTION=UpdateNodeProps_END", FileLogger.MSG_TYPE_REPLAY);
 
         }else{

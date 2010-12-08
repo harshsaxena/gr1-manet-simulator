@@ -38,26 +38,16 @@ import UI.NodeProperties;
  */
 public class GraphicalNode extends NodeButton implements Transferable {
 
-	public final IntegerWrapper currentIconNumber = new IntegerWrapper();
-
-	private static final long serialVersionUID = 1L;
-	private static final String mimeType = DataFlavor.javaJVMLocalObjectMimeType
-			+ ";class=UI.myobjects.GraphicalNode";
-	private static String curName = "`"; // 'a' - 1 = '`'
-	private static IPAddress curIP = new IPAddress("192.168.10.1");
-
 	public static final int ANIMATION_PERIOD = 500;
+
+	private static IPAddress curIP = new IPAddress("192.168.10.1");
+	private static String curName = "`"; // 'a' - 1 = '`'
 	public static DataFlavor dataFlavor;
 	public static int DEFAULT_POWER = 1000;
 
-	private Node node;
-	private String name;
-	private Color color;
-
-	public String toString() {
-		return this.getName();
-	}
-
+	public static final String mimeType = DataFlavor.javaJVMLocalObjectMimeType
+			+ ";class=UI.myobjects.GraphicalNode";
+	private static final long serialVersionUID = 1L;
 	/** Returns the next lexicographic name. **/
 	private static String getNextName() {
 		// TODO extend to longer names
@@ -74,21 +64,11 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		return name;
 	}
 
-	/**
-	 * it overrides default setBounds method of {@link JComponent} class to make
-	 * a communication between x,y properties of graphical node and actual node
-	 * 
-	 * @param x
-	 * @param y
-	 * @param width
-	 * @param height
-	 */
-	public void setBounds(int x, int y, int width, int height) {
-		super.setBounds(x, y, width, height);
-		this.node.setNode_coordinates(new Coordinates(x * myForm.getXScale(), y
-				* myForm.getYScale()));
-		FileLogger.write("Map Panel setting bound.", FileLogger.MSG_TYPE_INFO);
-	}
+	private Color color;
+	public final IntegerWrapper currentIconNumber = new IntegerWrapper();
+	private String name;
+
+	private Node node;
 
 	public GraphicalNode(Icon icon) {
 		super(icon);
@@ -120,51 +100,6 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		this.name = getNextName();
 	}
 
-	/**
-	 * sets this components x and y corresponding to x and y of actual node
-	 * 
-	 * @param x
-	 *            x dimension of actual node
-	 * @param y
-	 *            y dimension of actual node
-	 */
-	public void setScaledCoordinates(int x, int y) {
-		Dimension size = getSize();
-		super.setBounds(x / myForm.getXScale(), y / myForm.getYScale(),
-				size.width, size.height);
-		this.node.setNode_coordinates(new Coordinates(x, y));
-	}
-
-	public void setNodePower(int power) {
-		this.node.setPower(power);
-	}
-
-	public void setNodeIP(String IP) {
-		this.node.setIP(new IPAddress(IP));
-	}
-
-	public Node getNode() {
-		return node;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-		this.setToolTipText(name);
-	}
-
-	public Color getColor() {
-		return color;
-	}
-
-	public void setColor(Color color) {
-		this.setBackground(color);
-		this.color = color;
-	}
-
 	public void fillNodePanel() {
 		NodeProperties np = myForm.getNodePropertiesPanel();
 		np.nameText.setText(this.name);
@@ -180,16 +115,53 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		np.colorBtn.setBackground(this.color);
 	}
 
-	public void setSelectGNode() {
-		myForm.setSelectedGNode(this);
+	/**
+	 * Update the node properties section with new node values.
+	 * @param gNode
+	 */
+	public void fillNodePanel(GraphicalNode gNode) {
+		NodeProperties np = myForm.getNodePropertiesPanel();
+		np.nameText.setText(gNode.getName());
+		np.ipText.setText(gNode.getNode().getIP().toString());
+		
+		// np.xCordText.setText(Integer.toString(node.getNode_coordinates().getX_coordinate()));
+		// np.yCordText.setText(Integer.toString(node.getNode_coordinates().getY_coordinate()));
+		
+		Coordinates coords = gNode.getNode().getNode_coordinates();
+		np.xCordText.setText(Integer.toString(coords.getX_coordinate()));
+		np.yCordText.setText(Integer.toString(coords.getY_coordinate()));
+		
+		np.powerText.setText(Integer.toString(gNode.getNode().getPower()));
+		np.colorBtn.setBackground(gNode.getColor());
 	}
 
-	public void sending(int type) {
-		java.util.Timer atimer = new java.util.Timer("Animating " + this.name,
-				true);
-		atimer.schedule(new IconAnimator(this.myForm, this, atimer,
-				"Animating " + this.name, type), 0,
-				GraphicalNode.ANIMATION_PERIOD);
+	public Color getColor() {
+		return color;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public Node getNode() {
+		return node;
+	}
+
+	public Object getTransferData(DataFlavor flavor)
+			throws UnsupportedFlavorException, IOException {
+		if (!isDataFlavorSupported(flavor)) {
+			throw new UnsupportedFlavorException(flavor);
+		}
+		return this;
+
+	}
+
+	public DataFlavor[] getTransferDataFlavors() {
+		return new DataFlavor[] { dataFlavor };
+	}
+
+	public boolean isDataFlavorSupported(DataFlavor flavor) {
+		return dataFlavor.equals(flavor);
 	}
 
 	/**
@@ -204,39 +176,86 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		myForm.setSelectedGNode(this);
 	}
 
-	public DataFlavor[] getTransferDataFlavors() {
-		return new DataFlavor[] { dataFlavor };
+	public void sending(int type) {
+		java.util.Timer atimer = new java.util.Timer("Animating " + this.name,
+				true);
+		atimer.schedule(new IconAnimator(this.myForm, this, atimer,
+				"Animating " + this.name, type), 0,
+				GraphicalNode.ANIMATION_PERIOD);
 	}
 
-	public boolean isDataFlavorSupported(DataFlavor flavor) {
-		return dataFlavor.equals(flavor);
+	/**
+	 * it overrides default setBounds method of {@link JComponent} class to make
+	 * a communication between x,y properties of graphical node and actual node
+	 * 
+	 * @param x
+	 * @param y
+	 * @param width
+	 * @param height
+	 */
+	public void setBounds(int x, int y, int width, int height) {
+		super.setBounds(x, y, width, height);
+		this.node.setNode_coordinates(new Coordinates(x * myForm.getXScale(), y
+				* myForm.getYScale()));
+		FileLogger.write("Map Panel setting bound.", FileLogger.MSG_TYPE_INFO);
+	}
+	
+	public void setColor(Color color) {
+		this.setBackground(color);
+		this.color = color;
 	}
 
-	public Object getTransferData(DataFlavor flavor)
-			throws UnsupportedFlavorException, IOException {
-		if (!isDataFlavorSupported(flavor)) {
-			throw new UnsupportedFlavorException(flavor);
-		}
-		return this;
+	public void setName(String name) {
+		this.name = name;
+		this.setToolTipText(name);
+	}
 
+	public void setNodeIP(String IP) {
+		this.node.setIP(new IPAddress(IP));
+	}
+
+	public void setNodePower(int power) {
+		this.node.setPower(power);
+	}
+
+	/**
+	 * sets this components x and y corresponding to x and y of actual node
+	 * 
+	 * @param x
+	 *            x dimension of actual node
+	 * @param y
+	 *            y dimension of actual node
+	 */
+	public void setScaledCoordinates(int x, int y) {
+		Dimension size = getSize();
+		this.node.setNode_coordinates(new Coordinates(x, y));
+		super.setBounds(x / myForm.getXScale(), y / myForm.getYScale(),size.width, size.height);
+	}
+
+	public void setSelectGNode() {
+		myForm.setSelectedGNode(this);
+	}
+
+	public String toString() {
+		return this.getName();
 	}
 }
 
 class IntegerWrapper {
-	int value;
 	boolean shouldStop;
 	int type = 0;
+	int value;
 
 	public int getType() {
 		return type;
 	}
 
-	public void setType(int type) {
-		this.type = type;
-	}
-
 	public int getValue() {
 		return value;
+	}
+
+	public void increaseValue() {
+		this.value++;
 	}
 
 	public boolean isShouldStop() {
@@ -247,12 +266,12 @@ class IntegerWrapper {
 		this.shouldStop = shouldStop;
 	}
 
-	public void setValue(int value) {
-		this.value = value;
+	public void setType(int type) {
+		this.type = type;
 	}
 
-	public void increaseValue() {
-		this.value++;
+	public void setValue(int value) {
+		this.value = value;
 	}
 
 	public String toString() {
