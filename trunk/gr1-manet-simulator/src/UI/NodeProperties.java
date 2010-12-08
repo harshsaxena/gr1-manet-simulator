@@ -107,7 +107,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 			wirelessTowerImg = ImageIO.read(new File(
 					"images/wirelessTowerTitle.png"));
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 
 		// Main Box
@@ -151,7 +151,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// Name
 		nameLabel = new JLabel("Name: ");
 		nameText = new JTextField(8);
-		//nameText.addActionListener(saveAction);
 
 		Box nameLabelAndTextBox = Box.createHorizontalBox();
 		nameLabelAndTextBox.add(nameLabel);
@@ -163,7 +162,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// IP
 		ipLabel = new JLabel("IP: ");
 		ipText = new JTextField(8);
-		//ipText.addActionListener(saveAction);
 
 		Box ipLabelAndTextBox = Box.createHorizontalBox();
 		ipLabelAndTextBox.add(ipLabel);
@@ -175,11 +173,9 @@ public class NodeProperties extends JPanel implements ActionListener {
 		// X Y Coordinates
 		xCordLabel = new JLabel("X: ");
 		xCordText = new JTextField(1);
-		//xCordText.addKeyListener(myForm.numKeyListener);
 
 		yCordLabel = new JLabel(" Y: ");
 		yCordText = new JTextField(1);
-		//yCordText.addKeyListener(myForm.numKeyListener);
 
 		Box xyCordsLabelAndTextBox = Box.createHorizontalBox();
 		xyCordsLabelAndTextBox.add(xCordLabel);
@@ -194,12 +190,10 @@ public class NodeProperties extends JPanel implements ActionListener {
 		powerLabel = new JLabel("Power: ");
 		powerText = new JTextField(3);
 		powerText.addKeyListener(myForm.numKeyListener);
-		//powerText.addActionListener(saveAction);
 
 		colorLabel = new JLabel("Color: ");
 		colorBtn = new JButton();
 		colorBtn.setMaximumSize(new Dimension(25, 25));
-		//colorBtn.addActionListener(this);
 
 		Box pwrColorLabelAndTextBox = Box.createHorizontalBox();
 		pwrColorLabelAndTextBox.add(powerLabel);
@@ -234,7 +228,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		sendFromLabel = new JLabel("Send from: ");
 		sendFromText = new JTextField(10);
 		sendFromText.setToolTipText("Enter node name");
-		//sendFromText.addActionListener(sendAction);
 
 		Box sendFromLabelAndTextBox = Box.createHorizontalBox();
 		sendFromLabelAndTextBox.add(sendFromLabel);
@@ -246,7 +239,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		sendToLabel = new JLabel("Send to: ");
 		sendToText = new JTextField(10);
 		sendToText.setToolTipText("Enter node name or node names");
-		//sendToText.addActionListener(sendAction);
 		
 		Box sendToLabelAndTextBox = Box.createHorizontalBox();
 		sendToLabelAndTextBox.add(sendToLabel);
@@ -257,7 +249,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		
 		msgLabel = new JLabel("Message: ");
 		msgText = new JTextField(10);
-		//msgText.addActionListener(sendAction);
 
 		Box msgLabelAndTextBox = Box.createHorizontalBox();
 		msgLabelAndTextBox.add(msgLabel);
@@ -269,7 +260,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		protocolLabel = new JLabel("Protocol: ");
 		protocolComboBox = new JComboBox(protocolStrings); 
 		protocolComboBox.setSelectedIndex(0); 
-		//protocolComboBox.addActionListener(sendAction);
 		
 		Box protocolLabelAndTextBox = Box.createHorizontalBox();
 		protocolLabelAndTextBox.add(protocolLabel);
@@ -339,8 +329,8 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.nameText.setText(gNode.getName());
 		this.nameText.setEnabled(true);
 		this.ipText.setText(node.getIP().toString());
-		this.xCordText.setText(Float.toString(gNode.getAlignmentX()));
-		this.yCordText.setText(Float.toString(gNode.getAlignmentY()));
+		this.xCordText.setText(Float.toString(gNode.getX()));
+		this.yCordText.setText(Float.toString(gNode.getX()));
 		this.powerText.setText(Integer.toString(node.getPower()));
 		this.colorBtn.setBackground(gNode.getBackground());
 	}
