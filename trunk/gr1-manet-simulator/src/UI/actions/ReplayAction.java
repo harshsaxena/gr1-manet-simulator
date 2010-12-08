@@ -42,7 +42,7 @@ public class ReplayAction implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		FileLogger.write("ACTION=Replay_START", FileLogger.MSG_TYPE_REPLAY);
+		//FileLogger.write("ACTION=Replay_START", FileLogger.MSG_TYPE_REPLAY);
 		
 		// Clear nodes for replay
 		clearNodesFromMap();
@@ -55,7 +55,7 @@ public class ReplayAction implements ActionListener {
 			e1.printStackTrace();
 		}
 		
-		FileLogger.write("ACTION=Replay_END", FileLogger.MSG_TYPE_REPLAY);
+		//FileLogger.write("ACTION=Replay_END", FileLogger.MSG_TYPE_REPLAY);
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class ReplayAction implements ActionListener {
 						myForm.getGNodeGhost().setVisible(false);
 						copied1stNode = true;
 					}
-					FileLogger.write("\tClearNode=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
+					//FileLogger.write("\tClearNode=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
 					myForm.getMyMap().remove(gNode);
 					myForm.getGraphicalNodes().remove(gNode);
 					myForm.getNodePropertiesPanel().clearNodeProperties();
