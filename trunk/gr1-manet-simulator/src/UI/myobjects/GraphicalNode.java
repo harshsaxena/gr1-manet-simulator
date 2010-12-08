@@ -169,10 +169,13 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		NodeProperties np = myForm.getNodePropertiesPanel();
 		np.nameText.setText(this.name);
 		np.ipText.setText(node.getIP().toString());
-		np.xCordText.setText(Integer.toString(node.getNode_coordinates()
-				.getX_coordinate()));
-		np.yCordText.setText(Integer.toString(node.getNode_coordinates()
-				.getY_coordinate()));
+		
+		// np.xCordText.setText(Integer.toString(node.getNode_coordinates().getX_coordinate()));
+		// np.yCordText.setText(Integer.toString(node.getNode_coordinates().getY_coordinate()));
+		
+		np.xCordText.setText(Integer.toString(this.getX()));
+		np.yCordText.setText(Integer.toString(this.getY()));
+		
 		np.powerText.setText(Integer.toString(node.getPower()));
 		np.colorBtn.setBackground(this.color);
 	}
