@@ -49,7 +49,8 @@ public class ReplayAction implements ActionListener {
 		
 		// Parse log for node properties
 		try {
-			ReplayFileParser.readLineByLine();
+			ReplayFileParser replayFileParser = new ReplayFileParser(myForm);
+			replayFileParser.readLineByLine();
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
@@ -61,10 +62,16 @@ public class ReplayAction implements ActionListener {
 	 * Clears nodes from the map.
 	 */
 	private void clearNodesFromMap() {
+		Boolean copied1stNode = false;
 		for(Component comp: myForm.getMyMap().getComponents()){
 			if(myForm.getGraphicalNodes().size() > 0){
 				if (comp.getClass().isInstance(myForm.getGraphicalNodes().get(0))) {
 					GraphicalNode gNode = (GraphicalNode) comp;
+					if(copied1stNode == false){
+						myForm.setGNodeGhost(gNode);
+						myForm.getGNodeGhost().setVisible(false);
+						copied1stNode = true;
+					}
 					FileLogger.write("\tClearNode=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
 					myForm.getMyMap().remove(gNode);
 					myForm.getGraphicalNodes().remove(gNode);

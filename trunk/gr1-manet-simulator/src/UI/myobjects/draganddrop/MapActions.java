@@ -75,10 +75,16 @@ public class MapActions extends DropTarget {
 					FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
 					FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
 					FileLogger.write("\tPower=" + node.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tDropEvent_DropAction=" + dropEvent.getDropAction(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tDropEvent_LocX=" + dropEvent.getLocation().x, FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tDropEvent_LocY=" + dropEvent.getLocation().y, FileLogger.MSG_TYPE_REPLAY);
 				}else{
 					FileLogger.write("\tNodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
 					FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
 					FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tDropEvent_DropAction=" + dropEvent.getDropAction(), FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tDropEvent_LocX=" + dropEvent.getLocation().x, FileLogger.MSG_TYPE_REPLAY);
+					FileLogger.write("\tDropEvent_LocY=" + dropEvent.getLocation().y, FileLogger.MSG_TYPE_REPLAY);
 				}
 				
 				dropEvent.dropComplete(true);

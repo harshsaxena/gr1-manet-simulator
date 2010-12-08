@@ -53,6 +53,7 @@ public class Myform extends JFrame {
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
 	private GraphicalNode selectedGNode;
+	private GraphicalNode gNodeGhost;
 	private NodeProperties nodePropertiesPanel;
 	private OutputLogProperties outputLogProperties;
 
@@ -113,7 +114,7 @@ public class Myform extends JFrame {
 		frame.powerShower = new PowerShower(frame);
 		frame.delGNodeBtn.setToolTipText("Remove selected node");
 		frame.delGNodeBtn.addActionListener(new DeleteNodeAction(frame));
-		// TODO figure out proper bounds
+
 		frame.powerShower.setBounds(0, 0, 9999, 9999);
 		frame.myMap.add(frame.powerShower, JLayeredPane.PALETTE_LAYER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -240,12 +241,11 @@ public class Myform extends JFrame {
 		return outputLogProperties;
 	}
 
-	// public void send(Node src, int type) {
-	// GraphicalNode gNode = getGnodebyNode(src);
-	// if (gNode != null) {
-	// gNode.sending(type);
-	// }
-	// // FileLogger.write("Map Manager sending broadcast packet from " + src
-	// // + " to " + dest, FileLogger.MSG_TYPE_INFO);
-	// }
+	public void setGNodeGhost(GraphicalNode node) {
+		this.gNodeGhost = node;
+	}
+
+	public GraphicalNode getGNodeGhost() {
+		return gNodeGhost;
+	}
 }
