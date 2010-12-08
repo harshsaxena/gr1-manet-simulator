@@ -29,7 +29,7 @@ import simulator.noderelated.IPAddress;
 import UI.Myform;
 import UI.myobjects.GraphicalNode;
 
-public class ReplayFileParser {
+public class ReplayFileParser implements Runnable {
 
 	private String nodeName;
 	private IPAddress ip;
@@ -38,11 +38,21 @@ public class ReplayFileParser {
 	private int power;
 	private Myform myForm;
 
+	Thread t;
+
 	public void readLineByLine() throws FileNotFoundException {
+
+		t = new Thread(this);
+		t.start();
+	}
+	
+	@Override
+	public void run() {
 		File logFile = new File(FileLogger.logFile);
-		Scanner scanner = new Scanner(new FileReader(logFile));
+		Scanner scanner = null;
 
 		try {
+			scanner = new Scanner(new FileReader(logFile));
 			while (scanner.hasNextLine()) {
 				String nextLine = scanner.nextLine();
 
@@ -74,19 +84,31 @@ public class ReplayFileParser {
 					}
 
 					if (nextLine.contains("MoveNode_END")) {
-						// reMoveNode();
+						reMoveNode();
 					}
 
 				} else if (true) {
 					// Stub
 				}
 			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		} finally {
 			scanner.close();
 		}
 	}
 
 	private void reMoveNode() {
+		
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch( InterruptedException e )
+		{
+				e.printStackTrace();
+		}
+		
 		try {
 			GraphicalNode moveGNode = myForm.getGNode(nodeName);
 			// TODO: Fix null error, can't find node
@@ -105,8 +127,15 @@ public class ReplayFileParser {
 	}
 
 	private void reAddNode() {
-
-		// TODO: Add thread to slow processing down
+		
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch( InterruptedException e )
+		{
+				e.printStackTrace();
+		}
 
 		GraphicalNode addGNode = new GraphicalNode(myForm.addNodeBtn.getIcon(),
 				myForm, false);
