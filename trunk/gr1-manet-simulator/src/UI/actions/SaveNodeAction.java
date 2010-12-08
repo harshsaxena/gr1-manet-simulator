@@ -18,6 +18,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
+import simulator.noderelated.Coordinates;
+
 import logger.FileLogger;
 import UI.Myform;
 import UI.NodeProperties;
@@ -42,7 +44,9 @@ public class SaveNodeAction implements ActionListener {
             NodeProperties np = myForm.getNodePropertiesPanel();
             gNode.setName(np.nameText.getText().trim().toLowerCase());
             gNode.setNodeIP(np.ipText.getText());
-            gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
+            Coordinates coords = new Coordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
+            gNode.getNode().setNode_coordinates(coords);
+            //gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
             gNode.setColor(np.colorBtn.getBackground());
             gNode.setNodePower(Integer.parseInt(np.powerText.getText()));
             
