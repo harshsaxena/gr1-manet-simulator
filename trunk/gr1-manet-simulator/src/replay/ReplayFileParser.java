@@ -14,7 +14,6 @@
 
 package replay;
 
-import java.awt.Component;
 import java.awt.Dimension;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,12 +31,111 @@ import UI.myobjects.GraphicalNode;
 
 public class ReplayFileParser {
 
-	private String nodeName = "";
-	private String ip = "";
-	private String nodeXCoord = "";
-	private String nodeYCoord = "";
-	private String power = "";
+	private String nodeName;
+	private IPAddress ip;
+	private int nodeXCoord;
+	private int nodeYCoord;
+	private int power;
 	private Myform myForm;
+
+	public void readLineByLine() throws FileNotFoundException {
+		File logFile = new File(FileLogger.logFile);
+		Scanner scanner = new Scanner(new FileReader(logFile));
+
+		try {
+			while (scanner.hasNextLine()) {
+				String nextLine = scanner.nextLine();
+
+				if (nextLine.contains("AddNode")
+						|| nextLine.contains("MoveNode")) {
+
+					Scanner addScanner = new Scanner(nextLine);
+					addScanner.useDelimiter("=");
+					String nextInnerLine = addScanner.next();
+
+					if (nextInnerLine.contains("NodeName")) {
+						nodeName = addScanner.next();
+					}
+					if (nextInnerLine.contains("NodeIP")) {
+						ip = new IPAddress(addScanner.next());
+					}
+					if (nextInnerLine.contains("NodeXCoord")) {
+						nodeXCoord = Integer.parseInt(addScanner.next());
+					}
+					if (nextInnerLine.contains("NodeYCoord")) {
+						nodeYCoord = Integer.parseInt(addScanner.next());
+					}
+					if (nextInnerLine.contains("Power")) {
+						power = Integer.parseInt(addScanner.next());
+					}
+
+					if (nextLine.contains("AddNode_END")) {
+						reAddNode();
+					}
+
+					if (nextLine.contains("MoveNode_END")) {
+						// reMoveNode();
+					}
+
+				} else if (true) {
+					// Stub
+				}
+			}
+		} finally {
+			scanner.close();
+		}
+	}
+
+	private void reMoveNode() {
+		try {
+			GraphicalNode moveGNode = myForm.getGNode(nodeName);
+			// TODO: Fix null error, can't find node
+			moveGNode.setName(nodeName);
+			moveGNode.getNode().setIP(ip);
+			moveGNode.setLocation(nodeXCoord, nodeYCoord);
+			Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
+			moveGNode.getNode().setNode_coordinates(coords);
+			moveGNode.getNode().setPower(power);
+			myForm.setSelectedGNode(moveGNode);
+		} catch (Exception e) {
+			// TODO: handle exception
+			String test = "";
+		}
+
+	}
+
+	private void reAddNode() {
+
+		// TODO: Add thread to slow processing down
+
+		GraphicalNode addGNode = new GraphicalNode(myForm.addNodeBtn.getIcon(),
+				myForm, false);
+		addGNode.setName(nodeName);
+		addGNode.getNode().setIP(ip);
+		addGNode.setLocation(nodeXCoord, nodeYCoord);
+		Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
+		addGNode.getNode().setNode_coordinates(coords);
+		addGNode.getNode().setPower(power);
+
+		myForm.getGraphicalNodes().add(addGNode);
+		Map_Manager.get_instance().getNode_list().add(addGNode.getNode());
+
+		JLayeredPane panel = (JLayeredPane) myForm.getMyMap();
+		Dimension size = addGNode.getPreferredSize();
+
+		if (!addGNode.isShouldRemoved()) {
+			panel.add(addGNode);
+		}
+
+		addGNode.setSelectGNode();
+		addGNode.setBounds(addGNode.getX(), addGNode.getY(), size.width,
+				size.height);
+		addGNode.fillNodePanel();
+
+		panel.invalidate();
+		addGNode.myForm.refreshPowerShower();
+
+	}
 
 	public ReplayFileParser(Myform myform) {
 		this.myForm = myform;
@@ -51,38 +149,6 @@ public class ReplayFileParser {
 		this.nodeName = nodeName;
 	}
 
-	public String getIp() {
-		return ip;
-	}
-
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
-
-	public String getNodeXCoord() {
-		return nodeXCoord;
-	}
-
-	public void setNodeXCoord(String nodeXCoord) {
-		this.nodeXCoord = nodeXCoord;
-	}
-
-	public String getNodeYCoord() {
-		return nodeYCoord;
-	}
-
-	public void setNodeYCoord(String nodeYCoord) {
-		this.nodeYCoord = nodeYCoord;
-	}
-
-	public String getPower() {
-		return power;
-	}
-
-	public void setPower(String power) {
-		this.power = power;
-	}
-
 	public Myform getMyForm() {
 		return myForm;
 	}
@@ -91,191 +157,35 @@ public class ReplayFileParser {
 		this.myForm = myForm;
 	}
 
-	public void readLineByLine() throws FileNotFoundException {
-		File logFile = new File(FileLogger.logFile);
-		Scanner scanner = new Scanner(new FileReader(logFile));
-
-		try {
-			while (scanner.hasNextLine()) {
-				String next = scanner.nextLine();
-				if (next.contains("ACTION=AddNode_START")) {
-					//while (scanner.hasNextLine()) {
-						String next2 = scanner.nextLine();
-
-						if (next2.contains("NodeName")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeName")) {
-									nodeName = scanAddLine.next();
-								}
-							}
-						}
-
-						if (next2.contains("NodeIP")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeIP")) {
-									ip = scanAddLine.next();
-								}
-							}
-						}
-
-						if (next2.contains("NodeXCoord")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeXCoord")) {
-									nodeXCoord = scanAddLine.next();
-								}
-							}
-						}
-
-						if (next2.contains("NodeYCoord")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeYCoord")) {
-									nodeYCoord = scanAddLine.next();
-								}
-							}
-						}
-
-						if (next2.contains("Power")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("Power")) {
-									power = scanAddLine.next();
-								}
-							}
-						}
-
-						if (next2.equals("ACTION=AddNode_END")) {
-							reAddNode();
-						}
-					//}
-
-				}
-				
-				if (next.contains("ACTION=MoveNode_START")) {
-					while (scanner.hasNextLine()) {
-						String next2 = scanner.nextLine();
-						
-						if (next2.contains("NodeName")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeName")) {
-									nodeName = scanAddLine.next();
-								}
-							}
-						}
-
-						if (next2.contains("NodeIP")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeIP")) {
-									ip = scanAddLine.next();
-								}
-							}
-						}
-						
-						if (next2.contains("NodeXCoord")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeXCoord")) {
-									nodeXCoord = scanAddLine.next();
-								}
-							}
-						}
-
-						if (next2.contains("NodeYCoord")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("NodeYCoord")) {
-									nodeYCoord = scanAddLine.next();
-								}
-							}
-						}
-						
-						if (next2.contains("Power")) {
-							Scanner scanAddLine = new Scanner(next2);
-							while (scanAddLine.hasNext()) {
-								scanAddLine.useDelimiter("=");
-								if (!scanAddLine.next().equals("Power")) {
-									power = scanAddLine.next();
-								}
-							}
-						}
-						
-						if (next2.equals("ACTION=MoveNode_END")) {
-							reMoveNode();
-						}
-					}
-				}
-			}
-		} finally {
-			scanner.close();
-		}
+	public IPAddress getIp() {
+		return ip;
 	}
 
-	private void reMoveNode() {
-		try {
-			GraphicalNode moveGNode = myForm.getGNode(nodeName);
-			// TODO: Fix null error, can't find node
-			moveGNode.setName(nodeName);
-			IPAddress ipAddress = new IPAddress(ip);
-			moveGNode.getNode().setIP(ipAddress);
-			moveGNode.setLocation(Integer.parseInt(nodeXCoord), Integer.parseInt(nodeYCoord));
-			Coordinates coords = new Coordinates(Integer.parseInt(nodeXCoord),Integer.parseInt(nodeYCoord));
-			moveGNode.getNode().setNode_coordinates(coords);
-			moveGNode.getNode().setPower(Integer.parseInt(power));
-			myForm.setSelectedGNode(moveGNode);
-		} catch (Exception e) {
-			// TODO: handle exception
-			String test = "";
-		}
-		
+	public void setIp(IPAddress ip) {
+		this.ip = ip;
 	}
 
-	private void reAddNode() {
-
-		GraphicalNode reAddGNode = new GraphicalNode(myForm.addNodeBtn.getIcon(), myForm, false);
-		reAddGNode.setName(nodeName);
-		IPAddress ipAddress = new IPAddress(ip);
-		reAddGNode.getNode().setIP(ipAddress);
-		reAddGNode.setLocation(Integer.parseInt(nodeXCoord), Integer.parseInt(nodeYCoord));
-		Coordinates coords = new Coordinates(Integer.parseInt(nodeXCoord),Integer.parseInt(nodeYCoord));
-		reAddGNode.getNode().setNode_coordinates(coords);
-		reAddGNode.getNode().setPower(Integer.parseInt(power));
-
-		myForm.getGraphicalNodes().add(reAddGNode);
-		Map_Manager.get_instance().getNode_list().add(reAddGNode.getNode());
-
-		JLayeredPane panel = (JLayeredPane) myForm.getMyMap();
-
-		Dimension size = reAddGNode.getPreferredSize();
-
-		if (!reAddGNode.isShouldRemoved()) {
-			try {
-				panel.add(reAddGNode);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-
-		reAddGNode.setSelectGNode();
-		reAddGNode.setBounds(reAddGNode.getX(), reAddGNode.getY(), size.width, size.height);
-		reAddGNode.fillNodePanel();
-
-		panel.invalidate();
-		reAddGNode.myForm.refreshPowerShower();
-
+	public int getNodeXCoord() {
+		return nodeXCoord;
 	}
 
+	public void setNodeXCoord(int nodeXCoord) {
+		this.nodeXCoord = nodeXCoord;
+	}
+
+	public int getNodeYCoord() {
+		return nodeYCoord;
+	}
+
+	public void setNodeYCoord(int nodeYCoord) {
+		this.nodeYCoord = nodeYCoord;
+	}
+
+	public int getPower() {
+		return power;
+	}
+
+	public void setPower(int power) {
+		this.power = power;
+	}
 }
