@@ -69,11 +69,11 @@ public class MapActions extends DropTarget {
 				panel.invalidate();
 				node.myForm.refreshPowerShower();
 
-				FileLogger.write("\tNodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
-				FileLogger.write("\tNodeIP=" + node.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
-				FileLogger.write("\tNodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
-				FileLogger.write("\tNodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
-				FileLogger.write("\tPower=" + node.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\t" + actionType + "_NodeName=" + node.getName(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\t" + actionType + "_NodeIP=" + node.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\t" + actionType + "_NodeXCoord=" + node.getX(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\t" + actionType + "_NodeYCoord=" + node.getY(), FileLogger.MSG_TYPE_REPLAY);
+				FileLogger.write("\t" + actionType + "_Power=" + node.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
 				
 				dropEvent.dropComplete(true);
 				FileLogger.write("ACTION=" + actionType + "_END", FileLogger.MSG_TYPE_REPLAY);
