@@ -15,11 +15,14 @@
 package replay;
 
 import java.awt.Dimension;
+import java.awt.dnd.DropTarget;
+import java.awt.dnd.DropTargetContext;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
+import javax.swing.JComponent;
 import javax.swing.JLayeredPane;
 
 import logger.FileLogger;
@@ -27,7 +30,10 @@ import simulator.Map_Manager;
 import simulator.noderelated.Coordinates;
 import simulator.noderelated.IPAddress;
 import UI.Myform;
+import UI.NodeProperties;
 import UI.myobjects.GraphicalNode;
+import UI.myobjects.NodeButton;
+import UI.myobjects.draganddrop.MoveNodeTransferHandler;
 
 public class ReplayFileParser implements Runnable {
 
@@ -57,7 +63,8 @@ public class ReplayFileParser implements Runnable {
 				String nextLine = scanner.nextLine();
 
 				if (nextLine.contains("AddNode")
-						|| nextLine.contains("MoveNode")) {
+						|| nextLine.contains("MoveNode")
+						|| (nextLine.contains("UpdateNodeProps"))) {
 
 					Scanner addScanner = new Scanner(nextLine);
 					addScanner.useDelimiter("=");
@@ -86,9 +93,26 @@ public class ReplayFileParser implements Runnable {
 					if (nextLine.contains("MoveNode_END")) {
 						reMoveNode();
 					}
+					
+					if (nextLine.contains("UpdateNodeProps_END")) {
+						reUpdateNode();
+					}
 
-				} else if (true) {
-					// Stub
+				} else if (nextLine.contains("DeleteNode")) {
+					Scanner addScanner = new Scanner(nextLine);
+					addScanner.useDelimiter("=");
+					String nextInnerLine = addScanner.next();
+					
+					if (nextInnerLine.contains("NodeName")) {
+						nodeName = addScanner.next();
+					}
+					if (nextInnerLine.contains("NodeIP")) {
+						ip = new IPAddress(addScanner.next());
+					}
+					
+					if (nextLine.contains("DeleteNode_END")) {
+						reDeleteNode();
+					}
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -96,6 +120,57 @@ public class ReplayFileParser implements Runnable {
 		} finally {
 			scanner.close();
 		}
+	}
+
+	private void reDeleteNode() {
+		
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch( InterruptedException e )
+		{
+			e.printStackTrace();
+		}
+		
+		GraphicalNode removeGNode = myForm.getGNode(nodeName);
+        myForm.getMyMap().remove(removeGNode);
+        myForm.getGraphicalNodes().remove(removeGNode);
+        Map_Manager.get_instance().getNode_list().remove(removeGNode.getNode());
+        //myForm.setSelectedGNode(null);
+		
+	}
+	
+	private void reUpdateNode() {
+		
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch( InterruptedException e )
+		{
+			e.printStackTrace();
+		}
+		
+		GraphicalNode updateGNode = myForm.getGNode(nodeName);
+		updateGNode.setName(nodeName);
+		updateGNode.getNode().setIP(ip);
+		//updateGNode.setLocation(nodeXCoord, nodeYCoord);
+		//Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
+		//updateGNode.getNode().setNode_coordinates(coords);
+		updateGNode.setScaledCoordinates(nodeXCoord, nodeYCoord);
+		updateGNode.getNode().setPower(power);
+		//updateGNode.fillNodePanel(updateGNode);
+		
+		myForm.setSelectedGNode(updateGNode);
+		myForm.refreshPowerShower();
+		
+		NodeProperties np = updateGNode.myForm.getNodePropertiesPanel();
+		np.nameText.setText(nodeName);
+		np.ipText.setText(ip.toString());
+		np.xCordText.setText(Integer.toString(nodeXCoord));
+		np.yCordText.setText(Integer.toString(nodeYCoord));
+		np.powerText.setText(Integer.toString(power));
 	}
 
 	private void reMoveNode() {
@@ -106,24 +181,18 @@ public class ReplayFileParser implements Runnable {
 		}
 		catch( InterruptedException e )
 		{
-				e.printStackTrace();
+			e.printStackTrace();
 		}
 		
-		try {
-			GraphicalNode moveGNode = myForm.getGNode(nodeName);
-			// TODO: Fix null error, can't find node
-			moveGNode.setName(nodeName);
-			moveGNode.getNode().setIP(ip);
-			moveGNode.setLocation(nodeXCoord, nodeYCoord);
-			Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
-			moveGNode.getNode().setNode_coordinates(coords);
-			moveGNode.getNode().setPower(power);
-			myForm.setSelectedGNode(moveGNode);
-		} catch (Exception e) {
-			// TODO: handle exception
-			String test = "";
-		}
-
+		GraphicalNode moveGNode = myForm.getGNode(nodeName);
+		moveGNode.setLocation(nodeXCoord, nodeYCoord);
+		//Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
+		//moveGNode.getNode().setNode_coordinates(coords);
+		moveGNode.setScaledCoordinates(nodeXCoord, nodeYCoord);
+		moveGNode.setTransferHandler(new MoveNodeTransferHandler());
+		myForm.setSelectedGNode(moveGNode);
+		myForm.refreshPowerShower();
+		moveGNode.fillNodePanel(moveGNode);
 	}
 
 	private void reAddNode() {
@@ -134,22 +203,29 @@ public class ReplayFileParser implements Runnable {
 		}
 		catch( InterruptedException e )
 		{
-				e.printStackTrace();
+			e.printStackTrace();
 		}
 
-		GraphicalNode addGNode = new GraphicalNode(myForm.addNodeBtn.getIcon(),
-				myForm, false);
+		JComponent component = myForm.addNodeBtn;
+		NodeButton source = (NodeButton)component;
+		GraphicalNode addGNode = new GraphicalNode(source.getIcon(), myForm, false);
 		addGNode.setName(nodeName);
 		addGNode.getNode().setIP(ip);
 		addGNode.setLocation(nodeXCoord, nodeYCoord);
 		Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
 		addGNode.getNode().setNode_coordinates(coords);
 		addGNode.getNode().setPower(power);
+		
+        myForm.putGNode(addGNode);
+        addGNode.setTransferHandler(new MoveNodeTransferHandler());
 
-		myForm.getGraphicalNodes().add(addGNode);
-		Map_Manager.get_instance().getNode_list().add(addGNode.getNode());
+        myForm.getGraphicalNodes().add(addGNode);
+		
+		DropTarget dropTarget = addGNode.getDropTarget();
+		DropTargetContext dtc = dropTarget.getDropTargetContext();
+		dtc.dropComplete(true);
 
-		JLayeredPane panel = (JLayeredPane) myForm.getMyMap();
+		JLayeredPane panel = (JLayeredPane) source.myForm.getMyMap();
 		Dimension size = addGNode.getPreferredSize();
 
 		if (!addGNode.isShouldRemoved()) {
@@ -157,8 +233,7 @@ public class ReplayFileParser implements Runnable {
 		}
 
 		addGNode.setSelectGNode();
-		addGNode.setBounds(addGNode.getX(), addGNode.getY(), size.width,
-				size.height);
+		addGNode.setBounds(addGNode.getX(), addGNode.getY(), size.width, size.height);
 		addGNode.fillNodePanel();
 
 		panel.invalidate();
