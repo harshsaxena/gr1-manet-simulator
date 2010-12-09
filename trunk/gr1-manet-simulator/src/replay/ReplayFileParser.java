@@ -137,7 +137,9 @@ public class ReplayFileParser implements Runnable {
         myForm.getMyMap().remove(removeGNode);
         myForm.getGraphicalNodes().remove(removeGNode);
         Map_Manager.get_instance().getNode_list().remove(removeGNode.getNode());
-        //myForm.setSelectedGNode(null);
+        myForm.setSelectedGNode(null);
+		NodeProperties np = removeGNode.myForm.getNodePropertiesPanel();
+		np.clearNodeProperties();
 		
 	}
 	
