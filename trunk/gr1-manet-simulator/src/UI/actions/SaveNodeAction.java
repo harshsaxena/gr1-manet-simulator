@@ -57,12 +57,12 @@ public class SaveNodeAction implements ActionListener {
             myForm.refreshPowerShower();
             
             FileLogger.write("ACTION=UpdateNodeProps_START", FileLogger.MSG_TYPE_REPLAY);
-            FileLogger.write("\tNodeName=" + np.nameText.getText().trim().toLowerCase(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeIP=" + np.ipText.getText(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeXCoord=" + np.xCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeYCoord=" + np.yCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodeColor=" + np.colorBtn.getBackground().toString(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tNodePower=" + np.powerText.getText(), FileLogger.MSG_TYPE_REPLAY);
+            FileLogger.write("\tUpdateNodeProps_NodeName=" + np.nameText.getText().trim().toLowerCase(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodeIP=" + np.ipText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodeXCoord=" + np.xCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodeYCoord=" + np.yCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodeColor=" + np.colorBtn.getBackground().toString(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodePower=" + np.powerText.getText(), FileLogger.MSG_TYPE_REPLAY);
             FileLogger.write("ACTION=UpdateNodeProps_END", FileLogger.MSG_TYPE_REPLAY);
 
         }else{
