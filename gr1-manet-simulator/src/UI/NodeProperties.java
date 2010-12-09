@@ -322,7 +322,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.xCordText.setText("");
 		this.yCordText.setText("");
 		this.powerText.setText("");
-		this.colorBtn.setBackground(this.getBackground());
+		//this.colorBtn.setBackground(this.getBackground());
 	}
 	
 	public void resetNodeProperties(Node node, GraphicalNode gNode) {
