@@ -122,7 +122,7 @@ public class Myform extends JFrame {
 		frame.powerShower = new PowerShower(frame);
 		frame.delGNodeBtn.setToolTipText("Delete selected node");
 		frame.delGNodeBtn.addActionListener(new DeleteNodeAction(frame));
-		frame.sendBtn.setToolTipText("Send messages");
+		frame.sendBtn.setToolTipText("Send message");
 		frame.sendBtn.addActionListener(new SendMsgAction(frame));
 		frame.replayBtn.setToolTipText("Replay simulation");
 		frame.replayBtn.addActionListener(new ReplayAction(frame));
