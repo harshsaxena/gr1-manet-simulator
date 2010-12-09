@@ -41,6 +41,8 @@ public class ReplayFileParser implements Runnable {
 	private IPAddress ip;
 	private int nodeXCoord;
 	private int nodeYCoord;
+	private int nodeXLoc;
+	private int nodeYLoc;
 	private int power;
 	private Myform myForm;
 
@@ -51,7 +53,7 @@ public class ReplayFileParser implements Runnable {
 		t = new Thread(this);
 		t.start();
 	}
-	
+
 	@Override
 	public void run() {
 		File logFile = new File(FileLogger.logFile);
@@ -82,6 +84,12 @@ public class ReplayFileParser implements Runnable {
 					if (nextInnerLine.contains("NodeYCoord")) {
 						nodeYCoord = Integer.parseInt(addScanner.next());
 					}
+					if (nextInnerLine.contains("NodeXLoc")) {
+						nodeXLoc = Integer.parseInt(addScanner.next());
+					}
+					if (nextInnerLine.contains("NodeYLoc")) {
+						nodeYLoc = Integer.parseInt(addScanner.next());
+					}
 					if (nextInnerLine.contains("Power")) {
 						power = Integer.parseInt(addScanner.next());
 					}
@@ -93,7 +101,7 @@ public class ReplayFileParser implements Runnable {
 					if (nextLine.contains("MoveNode_END")) {
 						reMoveNode();
 					}
-					
+
 					if (nextLine.contains("UpdateNodeProps_END")) {
 						reUpdateNode();
 					}
@@ -102,14 +110,14 @@ public class ReplayFileParser implements Runnable {
 					Scanner addScanner = new Scanner(nextLine);
 					addScanner.useDelimiter("=");
 					String nextInnerLine = addScanner.next();
-					
+
 					if (nextInnerLine.contains("NodeName")) {
 						nodeName = addScanner.next();
 					}
 					if (nextInnerLine.contains("NodeIP")) {
 						ip = new IPAddress(addScanner.next());
 					}
-					
+
 					if (nextLine.contains("DeleteNode_END")) {
 						reDeleteNode();
 					}
@@ -123,74 +131,63 @@ public class ReplayFileParser implements Runnable {
 	}
 
 	private void reDeleteNode() {
-		
-		try
-		{
+
+		try {
 			Thread.sleep(1000);
-		}
-		catch( InterruptedException e )
-		{
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 		GraphicalNode removeGNode = myForm.getGNode(nodeName);
-        myForm.getMyMap().remove(removeGNode);
-        myForm.getGraphicalNodes().remove(removeGNode);
-        Map_Manager.get_instance().getNode_list().remove(removeGNode.getNode());
-        myForm.setSelectedGNode(null);
+		myForm.getMyMap().remove(removeGNode);
+		myForm.getGraphicalNodes().remove(removeGNode);
+		Map_Manager.get_instance().getNode_list().remove(removeGNode.getNode());
+		myForm.setSelectedGNode(null);
 		NodeProperties np = removeGNode.myForm.getNodePropertiesPanel();
 		np.clearNodeProperties();
-		
+
 	}
-	
+
 	private void reUpdateNode() {
-		
-		try
-		{
+
+		try {
 			Thread.sleep(1000);
-		}
-		catch( InterruptedException e )
-		{
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 		GraphicalNode updateGNode = myForm.getGNode(nodeName);
 		updateGNode.setName(nodeName);
 		updateGNode.getNode().setIP(ip);
-		//updateGNode.setLocation(nodeXCoord, nodeYCoord);
-		//Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
-		//updateGNode.getNode().setNode_coordinates(coords);
-		updateGNode.setScaledCoordinates(nodeXCoord, nodeYCoord);
+		//updateGNode.setLocation(nodeXLoc, nodeYLoc);
+		Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
+		updateGNode.getNode().setNode_coordinates(coords);
 		updateGNode.getNode().setPower(power);
 		//updateGNode.fillNodePanel(updateGNode);
-		
-		myForm.setSelectedGNode(updateGNode);
-		myForm.refreshPowerShower();
-		
+
 		NodeProperties np = updateGNode.myForm.getNodePropertiesPanel();
 		np.nameText.setText(nodeName);
 		np.ipText.setText(ip.toString());
 		np.xCordText.setText(Integer.toString(nodeXCoord));
 		np.yCordText.setText(Integer.toString(nodeYCoord));
 		np.powerText.setText(Integer.toString(power));
+		
+		myForm.setSelectedGNode(updateGNode);
+		myForm.refreshPowerShower();
 	}
 
 	private void reMoveNode() {
-		
-		try
-		{
+
+		try {
 			Thread.sleep(1000);
-		}
-		catch( InterruptedException e )
-		{
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 		GraphicalNode moveGNode = myForm.getGNode(nodeName);
-		moveGNode.setLocation(nodeXCoord, nodeYCoord);
-		//Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
-		//moveGNode.getNode().setNode_coordinates(coords);
-		moveGNode.setScaledCoordinates(nodeXCoord, nodeYCoord);
+		moveGNode.setLocation(nodeXLoc, nodeYLoc);
+		Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
+		moveGNode.getNode().setNode_coordinates(coords);
 		moveGNode.setTransferHandler(new MoveNodeTransferHandler());
 		myForm.setSelectedGNode(moveGNode);
 		myForm.refreshPowerShower();
@@ -198,31 +195,28 @@ public class ReplayFileParser implements Runnable {
 	}
 
 	private void reAddNode() {
-		
-		try
-		{
+
+		try {
 			Thread.sleep(1000);
-		}
-		catch( InterruptedException e )
-		{
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
 		JComponent component = myForm.addNodeBtn;
-		NodeButton source = (NodeButton)component;
+		NodeButton source = (NodeButton) component;
 		GraphicalNode addGNode = new GraphicalNode(source.getIcon(), myForm, false);
 		addGNode.setName(nodeName);
 		addGNode.getNode().setIP(ip);
-		addGNode.setLocation(nodeXCoord, nodeYCoord);
+		addGNode.setLocation(nodeXLoc, nodeYLoc);
 		Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
 		addGNode.getNode().setNode_coordinates(coords);
 		addGNode.getNode().setPower(power);
-		
-        myForm.putGNode(addGNode);
-        addGNode.setTransferHandler(new MoveNodeTransferHandler());
 
-        myForm.getGraphicalNodes().add(addGNode);
-		
+		myForm.putGNode(addGNode);
+		addGNode.setTransferHandler(new MoveNodeTransferHandler());
+
+		myForm.getGraphicalNodes().add(addGNode);
+
 		DropTarget dropTarget = addGNode.getDropTarget();
 		DropTargetContext dtc = dropTarget.getDropTargetContext();
 		dtc.dropComplete(true);
@@ -235,7 +229,7 @@ public class ReplayFileParser implements Runnable {
 		}
 
 		addGNode.setSelectGNode();
-		addGNode.setBounds(addGNode.getX(), addGNode.getY(), size.width, size.height);
+		addGNode.setBounds(nodeXLoc, nodeYLoc, size.width, size.height);
 		addGNode.fillNodePanel();
 
 		panel.invalidate();
@@ -293,5 +287,21 @@ public class ReplayFileParser implements Runnable {
 
 	public void setPower(int power) {
 		this.power = power;
+	}
+
+	public void setNodeXLoc(int nodeXLoc) {
+		this.nodeXLoc = nodeXLoc;
+	}
+
+	public int getNodeXLoc() {
+		return nodeXLoc;
+	}
+
+	public void setNodeYLoc(int nodeYLoc) {
+		this.nodeYLoc = nodeYLoc;
+	}
+
+	public int getNodeYLoc() {
+		return nodeYLoc;
 	}
 }
