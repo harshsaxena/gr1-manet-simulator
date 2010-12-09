@@ -24,9 +24,6 @@ import java.io.FileNotFoundException;
 
 import replay.ReplayFileParser;
 import simulator.Map_Manager;
-
-import logger.FileLogger;
-
 import UI.Myform;
 import UI.myobjects.GraphicalNode;
 

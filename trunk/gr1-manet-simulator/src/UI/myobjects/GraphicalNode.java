@@ -105,11 +105,11 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		np.nameText.setText(this.name);
 		np.ipText.setText(node.getIP().toString());
 		
-		// np.xCordText.setText(Integer.toString(node.getNode_coordinates().getX_coordinate()));
-		// np.yCordText.setText(Integer.toString(node.getNode_coordinates().getY_coordinate()));
+		np.xCordText.setText(Integer.toString(node.getNode_coordinates().getX_coordinate()));
+		np.yCordText.setText(Integer.toString(node.getNode_coordinates().getY_coordinate()));
 		
-		np.xCordText.setText(Integer.toString(this.getX()));
-		np.yCordText.setText(Integer.toString(this.getY()));
+		//np.xCordText.setText(Integer.toString(this.getX()));
+		//np.yCordText.setText(Integer.toString(this.getY()));
 		
 		np.powerText.setText(Integer.toString(node.getPower()));
 		np.colorBtn.setBackground(this.color);
@@ -120,16 +120,16 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	 * @param gNode
 	 */
 	public void fillNodePanel(GraphicalNode gNode) {
-		NodeProperties np = myForm.getNodePropertiesPanel();
+		NodeProperties np = gNode.myForm.getNodePropertiesPanel();
 		np.nameText.setText(gNode.getName());
 		np.ipText.setText(gNode.getNode().getIP().toString());
 		
-		// np.xCordText.setText(Integer.toString(node.getNode_coordinates().getX_coordinate()));
-		// np.yCordText.setText(Integer.toString(node.getNode_coordinates().getY_coordinate()));
+		np.xCordText.setText(Integer.toString(gNode.getNode().getNode_coordinates().getX_coordinate()));
+		np.yCordText.setText(Integer.toString(gNode.getNode().getNode_coordinates().getY_coordinate()));
 		
-		Coordinates coords = gNode.getNode().getNode_coordinates();
-		np.xCordText.setText(Integer.toString(coords.getX_coordinate()));
-		np.yCordText.setText(Integer.toString(coords.getY_coordinate()));
+		//Coordinates coords = gNode.getNode().getNode_coordinates();
+		//np.xCordText.setText(Integer.toString(coords.getX_coordinate()));
+		//np.yCordText.setText(Integer.toString(coords.getY_coordinate()));
 		
 		np.powerText.setText(Integer.toString(gNode.getNode().getPower()));
 		np.colorBtn.setBackground(gNode.getColor());
