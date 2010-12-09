@@ -21,6 +21,7 @@ import javax.swing.JOptionPane;
 import logger.FileLogger;
 import simulator.Map_Manager;
 import UI.Myform;
+import UI.NodeProperties;
 
 public class DeleteNodeAction implements ActionListener {
     Myform myForm;
@@ -41,6 +42,9 @@ public class DeleteNodeAction implements ActionListener {
             myForm.getGraphicalNodes().remove(myForm.getSelectedGNode());
             Map_Manager.get_instance().getNode_list().remove(myForm.getSelectedGNode().getNode());
             myForm.setSelectedGNode(null);
+            
+    		NodeProperties np = myForm.getNodePropertiesPanel();
+    		np.clearNodeProperties();
             
         }else{
             JOptionPane.showMessageDialog(myForm,"Please Select a Node");
