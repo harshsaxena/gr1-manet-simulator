@@ -67,8 +67,8 @@ public class Myform extends JFrame {
 	public JPanel content;
 	public JPanel outlogPanel;
 	public JToolBar toolBar;
-	public JButton replayBtn = new JButton(new ImageIcon("images/Replay2.png"));
-	public JButton sendBtn = new JButton(new ImageIcon("images/Send2.png"));
+	public JButton replayBtn = new JButton(new ImageIcon("images/Replay.png"));
+	public JButton sendBtn = new JButton(new ImageIcon("images/Send.png"));
 	public JButton delGNodeBtn = new JButton(new ImageIcon("images/DeleteNode.png"));
 	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/AddNode.png"));
 	public MyMap myMap;
