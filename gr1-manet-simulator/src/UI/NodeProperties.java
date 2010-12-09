@@ -334,15 +334,5 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.powerText.setText(Integer.toString(node.getPower()));
 		this.colorBtn.setBackground(gNode.getBackground());
 	}
-
-	public void resetNodeProperties() {
-		this.nameText.setText("");
-		this.nameText.setEnabled(true);
-		this.ipText.setText("");
-		this.xCordText.setText("");
-		this.yCordText.setText("");
-		this.powerText.setText("");
-		this.colorBtn.setBackground(this.getBackground());
-	}
 	
 }
