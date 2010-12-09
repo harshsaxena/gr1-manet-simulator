@@ -23,8 +23,6 @@ import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 
 import logger.FileLogger;
-
-import replay.ReplayLogger;
 import simulator.Data;
 import simulator.Map_Manager;
 import simulator.Protocol;
@@ -41,53 +39,73 @@ public class SendMsgAction implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		FileLogger.write("ACTION=SendMsgs_START", FileLogger.MSG_TYPE_REPLAY);
-
+		
 		// get From node
-		GraphicalNode fromGNode = myForm.getGNode(myForm
-				.getNodePropertiesPanel().sendFromText.getText().trim()
-				.toLowerCase());
-		String procotolSelection = myForm.getNodePropertiesPanel().protocolComboBox
-				.getSelectedItem().toString();
+		GraphicalNode fromGNode = myForm.getGNode(myForm.getNodePropertiesPanel().sendFromText.getText().trim().toLowerCase());
+		
+		// get To nodes
+		List<GraphicalNode> destList = new ArrayList<GraphicalNode>();
+		StringTokenizer tok = new StringTokenizer(myForm.getNodePropertiesPanel().sendToText.getText().trim().toLowerCase(), " ,");
+		while (tok.hasMoreTokens()) {
+			GraphicalNode g = myForm.getGNode(tok.nextToken());
+			if (g != null){
+				destList.add(g);
+			}
+		}
+		
+		// get message
+		String message = myForm.getNodePropertiesPanel().msgText.getText();
+		
+		// get protocol
+		String procotolSelection = myForm.getNodePropertiesPanel().protocolComboBox.getSelectedItem().toString();
 		NodeProperties np = new NodeProperties();
 		if (procotolSelection.equals(np.getKEY_DSDV())) {
 			Map_Manager.get_instance().setMode(Protocol.DSDV);
 		} else {
 			Map_Manager.get_instance().setMode(Protocol.AODV);
 		}
+		
+		Boolean errorFound = validateEntries(fromGNode, destList, message);
 
-		ReplayLogger.logSendNodeMsg(fromGNode, 0, fromGNode.getName());
-
-		// get To nodes
-		List<GraphicalNode> destList = new ArrayList<GraphicalNode>();
-		StringTokenizer tok = new StringTokenizer(myForm
-				.getNodePropertiesPanel().sendToText.getText().trim()
-				.toLowerCase(), " ,");
-		while (tok.hasMoreTokens()) {
-			GraphicalNode g = myForm.getGNode(tok.nextToken());
-			if (g != null)
-				ReplayLogger.logSendNodeMsg(g, 1, g.getName());
-			destList.add(g);
-		}
-
-		FileLogger.write("\tMsg="
-				+ myForm.getNodePropertiesPanel().msgText.getText(),
-				FileLogger.MSG_TYPE_REPLAY);
-		FileLogger.write("\tProtocol=" + procotolSelection,
-				FileLogger.MSG_TYPE_REPLAY);
-
-		// send to each destination
-		for (GraphicalNode dest : destList) {
-			if (fromGNode != null && dest != null) {
-				new SendDataThread(fromGNode.getNode(), dest.getNode(),
-						new Data(myForm.getNodePropertiesPanel().msgText
-								.getText()));
-			} else {
-				JOptionPane.showMessageDialog(myForm,
-						"Destination node not found!");
+		if (errorFound == false) {
+			// send to each destination
+			for (GraphicalNode dest : destList) {
+				new SendDataThread(fromGNode.getNode(), dest.getNode(), new Data(message));
 			}
+			
+			// Log replay information
+			FileLogger.write("ACTION=SendMsgs_START", FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tSendMsgs_SendFrom_Name=" + fromGNode.getName(), FileLogger.MSG_TYPE_REPLAY);
+			for(GraphicalNode gNode : destList){
+				FileLogger.write("\tSendMsgs_SendTo_Name=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
+			}
+			FileLogger.write("\tSendMsgs_Msg="+ myForm.getNodePropertiesPanel().msgText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tSendMsgs_Protocol=" + procotolSelection, FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("ACTION=SendMsgs_END", FileLogger.MSG_TYPE_REPLAY);
 		}
-
-		FileLogger.write("ACTION=SendMsgs_END", FileLogger.MSG_TYPE_REPLAY);
 	}
+
+	private Boolean validateEntries(GraphicalNode fromGNode,
+			List<GraphicalNode> destList, String message) {
+
+		Boolean errorFound = false;
+		
+		if(fromGNode == null || fromGNode.getName().equals("")){
+			JOptionPane.showMessageDialog(myForm, "Enter a 'Send from' node name", "Send Error", JOptionPane.ERROR_MESSAGE);
+			errorFound = true;
+		}
+		
+		if (destList == null || destList.size() == 0) {
+			JOptionPane.showMessageDialog(myForm, "Enter one or more valid 'Send to' node names, ex: b c", "Send Error", JOptionPane.ERROR_MESSAGE);
+			errorFound = true;
+		}
+		
+		if(message.equals("")){
+			JOptionPane.showMessageDialog(myForm, "Enter a 'Message'", "Send Error", JOptionPane.ERROR_MESSAGE);
+			errorFound = true;
+		}
+		
+		return errorFound;
+	}
+
 }
