@@ -37,6 +37,8 @@ import simulator.Node;
 import UI.actions.DeleteNodeAction;
 import UI.actions.NumberKeyListener;
 import UI.actions.PanelAction;
+import UI.actions.ReplayAction;
+import UI.actions.SendMsgAction;
 import UI.myobjects.GraphicalNode;
 import UI.myobjects.NodeButton;
 import UI.myobjects.PowerShower;
@@ -65,6 +67,8 @@ public class Myform extends JFrame {
 	public JPanel content;
 	public JPanel outlogPanel;
 	public JToolBar toolBar;
+	public JButton replayBtn = new JButton(new ImageIcon("images/Replay2.png"));
+	public JButton sendBtn = new JButton(new ImageIcon("images/Send2.png"));
 	public JButton delGNodeBtn = new JButton(new ImageIcon("images/DeleteNode.png"));
 	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/AddNode.png"));
 	public MyMap myMap;
@@ -86,6 +90,10 @@ public class Myform extends JFrame {
 		toolBar.add(Box.createHorizontalStrut(10));
 		toolBar.add(delGNodeBtn);
 		toolBar.add(Box.createHorizontalStrut(10));
+		toolBar.add(sendBtn);
+		toolBar.add(Box.createHorizontalStrut(10));
+		toolBar.add(replayBtn);
+		toolBar.add(Box.createHorizontalStrut(10));
 		content.add(toolBar, BorderLayout.PAGE_START);
 
 		outputLogProperties = new OutputLogProperties();
@@ -101,7 +109,7 @@ public class Myform extends JFrame {
 	public static void main(String[] args) {
 		Myform frame = new Myform("MANET Simulator");
 		frame.addNodeBtn.myForm = frame;
-		frame.addNodeBtn.setToolTipText("Click and drag to add a new node");
+		frame.addNodeBtn.setToolTipText("Drag and drop to add node");
 		frame.setNodePropertiesPanel(new NodeProperties(frame));
 
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
@@ -112,8 +120,12 @@ public class Myform extends JFrame {
 		frame.content.add(splitPane, BorderLayout.CENTER);
 		frame.myMap.addMouseListener(new PanelAction(frame));
 		frame.powerShower = new PowerShower(frame);
-		frame.delGNodeBtn.setToolTipText("Remove selected node");
+		frame.delGNodeBtn.setToolTipText("Delete selected node");
 		frame.delGNodeBtn.addActionListener(new DeleteNodeAction(frame));
+		frame.sendBtn.setToolTipText("Send messages");
+		frame.sendBtn.addActionListener(new SendMsgAction(frame));
+		frame.replayBtn.setToolTipText("Replay simulation");
+		frame.replayBtn.addActionListener(new ReplayAction(frame));
 
 		frame.powerShower.setBounds(0, 0, 9999, 9999);
 		frame.myMap.add(frame.powerShower, JLayeredPane.PALETTE_LAYER);
