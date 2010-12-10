@@ -56,7 +56,6 @@ public class Myform extends JFrame {
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
 	private GraphicalNode selectedGNode;
-	//private GraphicalNode gNodeGhost;
 	private NodeProperties nodePropertiesPanel;
 	private OutputLogProperties outputLogProperties;
 
@@ -258,12 +257,4 @@ public class Myform extends JFrame {
 	public OutputLogProperties getOutputLogProperties() {
 		return outputLogProperties;
 	}
-
-	/*public void setGNodeGhost(GraphicalNode node) {
-		this.gNodeGhost = node;
-	}
-
-	public GraphicalNode getGNodeGhost() {
-		return gNodeGhost;
-	}*/
 }
