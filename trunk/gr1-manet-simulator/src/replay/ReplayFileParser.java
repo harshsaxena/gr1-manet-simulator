@@ -20,17 +20,22 @@ import java.awt.dnd.DropTargetContext;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JComponent;
 import javax.swing.JLayeredPane;
 
 import logger.FileLogger;
+import simulator.Data;
 import simulator.Map_Manager;
+import simulator.Protocol;
 import simulator.noderelated.Coordinates;
 import simulator.noderelated.IPAddress;
 import UI.Myform;
 import UI.NodeProperties;
+import UI.actions.threads.SendDataThread;
 import UI.myobjects.GraphicalNode;
 import UI.myobjects.NodeButton;
 import UI.myobjects.draganddrop.MoveNodeTransferHandler;
@@ -44,6 +49,10 @@ public class ReplayFileParser implements Runnable {
 	private int nodeXLoc;
 	private int nodeYLoc;
 	private int power;
+	private String sendFromName;
+	private List<String> sendToNames = new ArrayList<String>();
+	private String message;
+	private String protocol;
 	private Myform myForm;
 
 	Thread t;
@@ -121,6 +130,33 @@ public class ReplayFileParser implements Runnable {
 					if (nextLine.contains("DeleteNode_END")) {
 						reDeleteNode();
 					}
+					
+				} else if (nextLine.contains("SendMsgs")) {
+					
+					Scanner addScanner = new Scanner(nextLine);
+					addScanner.useDelimiter("=");
+					String nextInnerLine = addScanner.next();
+					
+					if (nextInnerLine.contains("SendMsgs_SendFrom_Name")) {
+						sendFromName = addScanner.next();
+					}
+					
+					if (nextInnerLine.contains("SendMsgs_SendTo_Name")) {
+						String sendToName = addScanner.next();
+						sendToNames.add(sendToName);
+					}
+					
+					if (nextInnerLine.contains("SendMsgs_Msg")) {
+						message = addScanner.next();
+					}
+					
+					if (nextInnerLine.contains("SendMsgs_Protocol")) {
+						protocol = addScanner.next();
+					}
+					
+					if (nextLine.contains("SendMsgs_END")) {
+						reSendMsg();
+					}
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -128,6 +164,27 @@ public class ReplayFileParser implements Runnable {
 		} finally {
 			scanner.close();
 		}
+	}
+
+	private void reSendMsg() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		if (protocol.equals(Protocol.DSDV.toString())) {
+			Map_Manager.get_instance().setMode(Protocol.DSDV);
+		} else {
+			Map_Manager.get_instance().setMode(Protocol.AODV);
+		}
+		
+		for(String sendToName : sendToNames){
+			GraphicalNode dest = myForm.getGNode(sendToName);
+			GraphicalNode fromGNode = myForm.getGNode(sendFromName);
+			new SendDataThread(fromGNode.getNode(), dest.getNode(), new Data(message));
+		}
+		
 	}
 
 	private void reDeleteNode() {
@@ -305,5 +362,37 @@ public class ReplayFileParser implements Runnable {
 
 	public int getNodeYLoc() {
 		return nodeYLoc;
+	}
+
+	public void setSendFromName(String sendFromName) {
+		this.sendFromName = sendFromName;
+	}
+
+	public String getSendFromName() {
+		return sendFromName;
+	}
+
+	public void setSendToNames(List<String> sendToNames) {
+		this.sendToNames = sendToNames;
+	}
+
+	public List<String> getSendToNames() {
+		return sendToNames;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setProtocol(String protocol) {
+		this.protocol = protocol;
+	}
+
+	public String getProtocol() {
+		return protocol;
 	}
 }
