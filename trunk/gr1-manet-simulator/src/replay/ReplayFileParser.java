@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JComponent;
+import javax.swing.JFileChooser;
 import javax.swing.JLayeredPane;
 
 import logger.FileLogger;
@@ -65,7 +66,16 @@ public class ReplayFileParser implements Runnable {
 
 	@Override
 	public void run() {
-		File logFile = new File(FileLogger.logFile);
+		File logFile;
+		// open file chooser dialog to allow user to select log file
+		JFileChooser fc = new JFileChooser();
+		fc.setCurrentDirectory(new File(FileLogger.logDirPath));
+		int returnVal = fc.showOpenDialog(myForm);
+		if (returnVal == JFileChooser.APPROVE_OPTION)
+			logFile = fc.getSelectedFile();
+		else
+			logFile = new File(FileLogger.logFile);
+
 		Scanner scanner = null;
 
 		try {
@@ -130,30 +140,30 @@ public class ReplayFileParser implements Runnable {
 					if (nextLine.contains("DeleteNode_END")) {
 						reDeleteNode();
 					}
-					
+
 				} else if (nextLine.contains("SendMsgs")) {
-					
+
 					Scanner addScanner = new Scanner(nextLine);
 					addScanner.useDelimiter("=");
 					String nextInnerLine = addScanner.next();
-					
+
 					if (nextInnerLine.contains("SendMsgs_SendFrom_Name")) {
 						sendFromName = addScanner.next();
 					}
-					
+
 					if (nextInnerLine.contains("SendMsgs_SendTo_Name")) {
 						String sendToName = addScanner.next();
 						sendToNames.add(sendToName);
 					}
-					
+
 					if (nextInnerLine.contains("SendMsgs_Msg")) {
 						message = addScanner.next();
 					}
-					
+
 					if (nextInnerLine.contains("SendMsgs_Protocol")) {
 						protocol = addScanner.next();
 					}
-					
+
 					if (nextLine.contains("SendMsgs_END")) {
 						reSendMsg();
 					}
@@ -172,19 +182,20 @@ public class ReplayFileParser implements Runnable {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 		if (protocol.equals(Protocol.DSDV.toString())) {
 			Map_Manager.get_instance().setMode(Protocol.DSDV);
 		} else {
 			Map_Manager.get_instance().setMode(Protocol.AODV);
 		}
-		
-		for(String sendToName : sendToNames){
+
+		for (String sendToName : sendToNames) {
 			GraphicalNode dest = myForm.getGNode(sendToName);
 			GraphicalNode fromGNode = myForm.getGNode(sendFromName);
-			new SendDataThread(fromGNode.getNode(), dest.getNode(), new Data(message));
+			new SendDataThread(fromGNode.getNode(), dest.getNode(), new Data(
+					message));
 		}
-		
+
 	}
 
 	private void reDeleteNode() {
@@ -222,7 +233,7 @@ public class ReplayFileParser implements Runnable {
 		updateGNode.getNode().setNode_coordinates(coords);
 		updateGNode.setScaledCoordinates(nodeXCoord, nodeYCoord);
 		updateGNode.getNode().setPower(power);
-		//updateGNode.fillNodePanel(updateGNode);
+		// updateGNode.fillNodePanel(updateGNode);
 
 		NodeProperties np = updateGNode.myForm.getNodePropertiesPanel();
 		np.nameText.setText(nodeName);
@@ -230,8 +241,7 @@ public class ReplayFileParser implements Runnable {
 		np.xCordText.setText(Integer.toString(nodeXCoord));
 		np.yCordText.setText(Integer.toString(nodeYCoord));
 		np.powerText.setText(Integer.toString(power));
-		
-		
+
 		myForm.refreshPowerShower();
 	}
 
@@ -263,7 +273,8 @@ public class ReplayFileParser implements Runnable {
 
 		JComponent component = myForm.addNodeBtn;
 		NodeButton source = (NodeButton) component;
-		GraphicalNode addGNode = new GraphicalNode(source.getIcon(), myForm, false);
+		GraphicalNode addGNode = new GraphicalNode(source.getIcon(), myForm,
+				false);
 		addGNode.setName(nodeName);
 		addGNode.getNode().setIP(ip);
 		addGNode.setLocation(nodeXLoc, nodeYLoc);
