@@ -60,7 +60,6 @@ public class ReplayFileParser implements Runnable {
 	Thread t;
 
 	public void readLineByLine() throws FileNotFoundException {
-
 		t = new Thread(this);
 		t.start();
 	}
@@ -76,6 +75,9 @@ public class ReplayFileParser implements Runnable {
 			logFile = fc.getSelectedFile();
 		else
 			logFile = new File(FileLogger.logFile);
+
+		// clear the map
+		myForm.clearNodesFromMap();
 
 		Scanner scanner = null;
 
@@ -154,7 +156,7 @@ public class ReplayFileParser implements Runnable {
 					if (nextLine.contains("DeleteAllNodes_END")) {
 						reDeleteAllNodes();
 					}
-					
+
 				} else if (nextLine.contains("SendMsgs")) {
 
 					Scanner addScanner = new Scanner(nextLine);
@@ -197,11 +199,12 @@ public class ReplayFileParser implements Runnable {
 			e.printStackTrace();
 		}
 
-		for(int i = nodesToDelete.size()-1; i >=0; i--){
+		for (int i = nodesToDelete.size() - 1; i >= 0; i--) {
 			String nodeName = nodesToDelete.get(i);
 			GraphicalNode gNode = myForm.getGNode(nodeName);
 			myForm.getMyMap().remove(gNode);
 			myForm.getGraphicalNodes().remove(gNode);
+			Map_Manager.get_instance().getNode_list().remove(gNode.getNode());
 		}
 		myForm.getNodePropertiesPanel().clearNodeProperties();
 		myForm.setSelectedGNode(null);
