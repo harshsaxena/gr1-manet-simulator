@@ -45,7 +45,6 @@ public class DeleteAllNodesAction implements ActionListener {
 			GraphicalNode gNode = gNodeList.get(i);
 			
 			FileLogger.write("\tDeleteAllNodes_NodeName=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tDeleteAllNodes_NodeIP=" + gNode.getNode().getIP(), FileLogger.MSG_TYPE_REPLAY);
 			
 			myForm.getMyMap().remove(gNode);
 			myForm.getGraphicalNodes().remove(gNode);
