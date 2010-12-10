@@ -15,12 +15,14 @@
 package UI;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -36,6 +38,7 @@ import simulator.Map_Manager;
 import simulator.Node;
 import UI.actions.DeleteAllNodesAction;
 import UI.actions.DeleteNodeAction;
+import UI.actions.HelpAction;
 import UI.actions.NumberKeyListener;
 import UI.actions.PanelAction;
 import UI.actions.ReplayAction;
@@ -67,6 +70,7 @@ public class Myform extends JFrame {
 	public JPanel content;
 	public JPanel outlogPanel;
 	public JToolBar toolBar;
+	public JButton helpBtn = new JButton(new ImageIcon("images/Help.png"));
 	public JButton replayBtn = new JButton(new ImageIcon("images/Replay.png"));
 	public JButton sendBtn = new JButton(new ImageIcon("images/Send.png"));
 	public JButton delGNodeBtn = new JButton(new ImageIcon(
@@ -89,17 +93,27 @@ public class Myform extends JFrame {
 		this.getContentPane().add(content);
 
 		toolBar = new JToolBar();
-		toolBar.add(Box.createHorizontalStrut(10));
-		toolBar.add(addNodeBtn);
-		toolBar.add(Box.createHorizontalStrut(10));
-		toolBar.add(delGNodeBtn);
-		toolBar.add(Box.createHorizontalStrut(10));
-		toolBar.add(delAllGNodesBtn);
-		toolBar.add(Box.createHorizontalStrut(10));
-		toolBar.add(sendBtn);
-		toolBar.add(Box.createHorizontalStrut(10));
-		toolBar.add(replayBtn);
-		toolBar.add(Box.createHorizontalStrut(10));
+		JPanel leftToolBarPanel = new JPanel();
+		leftToolBarPanel.setLayout(new BoxLayout(leftToolBarPanel, BoxLayout.LINE_AXIS));
+		leftToolBarPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 0));
+		leftToolBarPanel.add(addNodeBtn);
+		leftToolBarPanel.add(delGNodeBtn);
+		leftToolBarPanel.add(delAllGNodesBtn);
+		leftToolBarPanel.add(sendBtn);
+		leftToolBarPanel.add(replayBtn);
+		leftToolBarPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		toolBar.add(leftToolBarPanel);
+		
+		toolBar.addSeparator();
+		
+		JPanel rightToolBarPanel = new JPanel();
+		rightToolBarPanel.setLayout(new BoxLayout(rightToolBarPanel, BoxLayout.LINE_AXIS));
+		rightToolBarPanel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 5));
+		rightToolBarPanel.add(Box.createHorizontalGlue());
+		rightToolBarPanel.add(helpBtn);
+		rightToolBarPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+		toolBar.add(rightToolBarPanel);
+
 		content.add(toolBar, BorderLayout.PAGE_START);
 
 		outputLogProperties = new OutputLogProperties();
@@ -138,6 +152,8 @@ public class Myform extends JFrame {
 		myForm.sendBtn.setEnabled(false);
 		myForm.replayBtn.setToolTipText("Replay simulation");
 		myForm.replayBtn.addActionListener(new ReplayAction(myForm));
+		myForm.helpBtn.setToolTipText("Help");
+		myForm.helpBtn.addActionListener(new HelpAction());
 
 		myForm.powerShower.setBounds(0, 0, 9999, 9999);
 		myForm.myMap.add(myForm.powerShower, JLayeredPane.PALETTE_LAYER);

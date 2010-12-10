@@ -14,9 +14,7 @@
 
 package UI;
 
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -25,9 +23,9 @@ import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -41,11 +39,10 @@ import UI.actions.SendMsgAction;
 import UI.myobjects.GraphicalNode;
 
 @SuppressWarnings("serial")
-public class NodeProperties extends JPanel implements ActionListener {
+public class NodeProperties extends JPanel{
 
 	private Myform myForm;
 
-	public JButton colorBtn;
 	public JButton saveBtn;
 	public JButton clearBtn;
 	public JButton sendBtn;
@@ -70,16 +67,13 @@ public class NodeProperties extends JPanel implements ActionListener {
 	public JLabel ipLabel;
 	public JLabel xCordLabel;
 	public JLabel yCordLabel;
+	public JLabel picLabel;
 	public JLabel powerLabel;
-	public JLabel colorLabel;
 	public JLabel msgLabel;
 	public JLabel protocolLabel;
 	public JLabel sendToLabel;
 	public JLabel sendFromLabel;
-	public JLabel receivedDataLbl; // move edit
-	public JLabel statusLbl; // move edit
 	public JLabel searchNodeLabel;
-
 	public JTextField nameText;
 	public JTextField ipText;
 	public JTextField xCordText;
@@ -89,9 +83,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 	public JTextField sendToText;
 	public JTextField sendFromText;
 	public JTextField searchNodeText;
-
-	public JLabel picLabel;
-
 	public List<GraphicalNode> graphicalNodeList;
 	public String[] availableNodes = new String[100];
 	
@@ -109,19 +100,29 @@ public class NodeProperties extends JPanel implements ActionListener {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		// Main Box
-		Box mainVerticalBox = Box.createVerticalBox();
-		mainVerticalBox.add(Box.createGlue());
-		this.add(mainVerticalBox);
-
+		
 		// Action Listener
 		ActionListener saveAction = new SaveNodeAction(this.myForm);
 		ActionListener sendAction = new SendMsgAction(this.myForm);
 		ActionListener searchAction = new SearchNodeAction(this.myForm);
 		ActionListener replayAction = new ReplayAction(this.myForm);
 
-		/* Find a Node Panel */
+		// Main Box
+		Box mainVerticalBox = Box.createVerticalBox();
+		mainVerticalBox.add(Box.createGlue());
+		this.add(mainVerticalBox);
+		
+		/* Image Panel */
+		JPanel imagePanel = new JPanel();
+		imagePanel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+		mainVerticalBox.add(imagePanel);
+
+		Box imageBox = Box.createVerticalBox();
+		imagePanel.add(imageBox);
+		picLabel = new JLabel(new ImageIcon(wirelessTowerImg));
+		imageBox.add(picLabel);
+
+		/* Search Panel */
 		JPanel findNodePanel = new JPanel();
 		mainVerticalBox.add(findNodePanel);
 		findNodePanel.setBorder(BorderFactory.createCompoundBorder(
@@ -137,8 +138,10 @@ public class NodeProperties extends JPanel implements ActionListener {
 		searchLabelAndTextBox.add(searchNodeLabel);
 		searchLabelAndTextBox.add(searchNodeText);
 		findNodePanel.add(searchLabelAndTextBox);
+		
+		mainVerticalBox.add(Box.createVerticalStrut(8));
 
-		/* Node Data Panel */
+		/* Properties Panel */
 		JPanel nodeDataPanel = new JPanel();
 		mainVerticalBox.add(nodeDataPanel);
 		nodeDataPanel.setBorder(BorderFactory.createCompoundBorder(
@@ -150,7 +153,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		// Name
 		nameLabel = new JLabel("Name: ");
-		nameText = new JTextField(8);
+		nameText = new JTextField(10);
 
 		Box nameLabelAndTextBox = Box.createHorizontalBox();
 		nameLabelAndTextBox.add(nameLabel);
@@ -161,7 +164,7 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		// IP
 		ipLabel = new JLabel("IP: ");
-		ipText = new JTextField(8);
+		ipText = new JTextField(10);
 
 		Box ipLabelAndTextBox = Box.createHorizontalBox();
 		ipLabelAndTextBox.add(ipLabel);
@@ -172,10 +175,10 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		// X Y Coordinates
 		xCordLabel = new JLabel("X: ");
-		xCordText = new JTextField(1);
+		xCordText = new JTextField(2);
 
 		yCordLabel = new JLabel(" Y: ");
-		yCordText = new JTextField(1);
+		yCordText = new JTextField(2);
 
 		Box xyCordsLabelAndTextBox = Box.createHorizontalBox();
 		xyCordsLabelAndTextBox.add(xCordLabel);
@@ -188,18 +191,12 @@ public class NodeProperties extends JPanel implements ActionListener {
 
 		// Power & Color
 		powerLabel = new JLabel("Power: ");
-		powerText = new JTextField(3);
+		powerText = new JTextField(10);
 		powerText.addKeyListener(myForm.numKeyListener);
-
-		colorLabel = new JLabel("Color: ");
-		colorBtn = new JButton();
-		colorBtn.setMaximumSize(new Dimension(25, 25));
 
 		Box pwrColorLabelAndTextBox = Box.createHorizontalBox();
 		pwrColorLabelAndTextBox.add(powerLabel);
 		pwrColorLabelAndTextBox.add(powerText);
-		pwrColorLabelAndTextBox.add(colorLabel);
-		pwrColorLabelAndTextBox.add(colorBtn);
 		nodeDataBox.add(pwrColorLabelAndTextBox);
 
 		nodeDataBox.add(Box.createVerticalStrut(5));
@@ -209,11 +206,14 @@ public class NodeProperties extends JPanel implements ActionListener {
 		saveBtn.setToolTipText("Save node properties");
 		saveBtn.addActionListener(saveAction);
 		
-		Box saveButtonBox = Box.createHorizontalBox();
-		saveButtonBox.add(saveBtn);
-		nodeDataBox.add(saveButtonBox);
+		JPanel saveButtonPane = new JPanel();
+		saveButtonPane.setLayout(new BoxLayout(saveButtonPane, BoxLayout.LINE_AXIS));
+		saveButtonPane.setBorder(BorderFactory.createEmptyBorder(5, 0, 0, 0));
+		saveButtonPane.add(Box.createHorizontalGlue());
+		saveButtonPane.add(saveBtn);
+		nodeDataBox.add(saveButtonPane);
 
-		nodeDataBox.add(Box.createVerticalStrut(5));
+		mainVerticalBox.add(Box.createVerticalStrut(8));
 
 		/* Messaging Panel */
 		JPanel messagingPanel = new JPanel();
@@ -274,7 +274,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		sendBtn = new JButton("Send");
 		sendBtn.setToolTipText("Send message");
 		sendBtn.addActionListener(sendAction);
-		msgBtnBox.add(sendBtn);
 		
 		msgBtnBox.add(Box.createHorizontalStrut(5));
 		
@@ -282,16 +281,16 @@ public class NodeProperties extends JPanel implements ActionListener {
 		replayBtn.setToolTipText("Replay last broadcast");
 		replayBtn.addActionListener(replayAction);
 		
-		msgBtnBox.add(replayBtn);
+		JPanel msgButtonPane = new JPanel();
+		msgButtonPane.setLayout(new BoxLayout(msgButtonPane, BoxLayout.LINE_AXIS));
+		msgButtonPane.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
+		msgButtonPane.add(Box.createHorizontalGlue());
+		msgButtonPane.add(sendBtn);
+		msgButtonPane.add(Box.createRigidArea(new Dimension(10, 0)));
+		msgButtonPane.add(replayBtn);		
+		msgBtnBox.add(msgButtonPane);
 
-		/* Image Panel */
-		JPanel imagePanel = new JPanel();
-		mainVerticalBox.add(imagePanel);
 
-		Box imageBox = Box.createVerticalBox();
-		imagePanel.add(imageBox);
-		picLabel = new JLabel(new ImageIcon(wirelessTowerImg));
-		imageBox.add(picLabel);
 
 	}
 
@@ -306,14 +305,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		return KEY_DSDV;
 	}
 
-	public void actionPerformed(ActionEvent e) {
-		Color newColor = JColorChooser.showDialog(NodeProperties.this,
-				"Choose Background Color", colorBtn.getBackground());
-		if (newColor != null) {
-			colorBtn.setBackground(newColor);
-		}
-	}
-
 	public void clearNodeProperties() {
 		this.nameText.setText("");
 		this.ipText.setText("");
@@ -322,7 +313,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.xCordText.setText("");
 		this.yCordText.setText("");
 		this.powerText.setText("");
-		//this.colorBtn.setBackground(this.getBackground());
 	}
 	
 	public void resetNodeProperties(Node node, GraphicalNode gNode) {
@@ -332,7 +322,6 @@ public class NodeProperties extends JPanel implements ActionListener {
 		this.xCordText.setText(Float.toString(gNode.getX()));
 		this.yCordText.setText(Float.toString(gNode.getX()));
 		this.powerText.setText(Integer.toString(node.getPower()));
-		this.colorBtn.setBackground(gNode.getBackground());
 	}
 	
 }
