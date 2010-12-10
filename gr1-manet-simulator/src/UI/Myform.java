@@ -65,7 +65,7 @@ public class Myform extends JFrame {
 	public final int mapHeight = 551;
 	public final int mapWidth = 600;
 	public final NumberKeyListener numKeyListener = new NumberKeyListener();
-
+	
 	public JButton generateBtn;
 	public JPanel content;
 	public JPanel outlogPanel;

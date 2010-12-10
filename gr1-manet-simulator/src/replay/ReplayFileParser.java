@@ -66,6 +66,9 @@ public class ReplayFileParser implements Runnable {
 
 	@Override
 	public void run() {
+		// disable buttons that shouldn't be accessible during replay
+		disableButtons();
+
 		File logFile;
 		// open file chooser dialog to allow user to select log file
 		JFileChooser fc = new JFileChooser();
@@ -74,7 +77,8 @@ public class ReplayFileParser implements Runnable {
 		if (returnVal == JFileChooser.APPROVE_OPTION)
 			logFile = fc.getSelectedFile();
 		else
-			logFile = new File(FileLogger.logFile);
+			// logFile = new File(FileLogger.logFile);
+			return;
 
 		// clear the map
 		myForm.clearNodesFromMap();
@@ -189,7 +193,25 @@ public class ReplayFileParser implements Runnable {
 			e.printStackTrace();
 		} finally {
 			scanner.close();
+			// reenable buttons
+			enableButtons();
 		}
+	}
+
+	/** Enables buttons that shouldn't be accessible during a replay. **/
+	private void enableButtons() {
+		myForm.replayBtn.setEnabled(true);
+		myForm.delGNodeBtn.setEnabled(true);
+		myForm.delAllGNodesBtn.setEnabled(true);
+		myForm.getNodePropertiesPanel().replayBtn.setEnabled(true);
+	}
+
+	/** Disables buttons that shouldn't be accessible during a replay. **/
+	private void disableButtons() {
+		myForm.replayBtn.setEnabled(false);
+		myForm.delGNodeBtn.setEnabled(false);
+		myForm.delAllGNodesBtn.setEnabled(false);
+		myForm.getNodePropertiesPanel().replayBtn.setEnabled(false);
 	}
 
 	private void reDeleteAllNodes() {
