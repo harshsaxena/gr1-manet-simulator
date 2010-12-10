@@ -20,13 +20,9 @@ package UI.actions;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
-import java.util.List;
 
 import replay.ReplayFileParser;
-import simulator.Map_Manager;
-import simulator.Node;
 import UI.Myform;
-import UI.myobjects.GraphicalNode;
 
 /**
  * @author mroberts
@@ -42,8 +38,9 @@ public class ReplayAction implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// FileLogger.write("ACTION=Replay_START", FileLogger.MSG_TYPE_REPLAY);
 
+		// NOTE ReplayFileParser will call clearNodesFromMap
 		// Clear nodes for replay
-		clearNodesFromMap();
+		// clearNodesFromMap();
 
 		// Parse log for node properties
 		try {
@@ -56,28 +53,29 @@ public class ReplayAction implements ActionListener {
 		// FileLogger.write("ACTION=Replay_END", FileLogger.MSG_TYPE_REPLAY);
 	}
 
-	/**
-	 * Clears nodes from the map.
-	 */
-	private void clearNodesFromMap() {
-		// List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
-		// for (int i = gNodeList.size() - 1; i >= 0; i--) {
-		// GraphicalNode gNode = gNodeList.get(i);
-		// myForm.getMyMap().remove(gNode);
-		// myForm.getGraphicalNodes().remove(gNode);
-		// }
-
-		List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
-		List<Node> nodeList = Map_Manager.get_instance().getNode_list();
-		for (GraphicalNode node : gNodeList) {
-			myForm.getMyMap().remove(node);
-		}
-		gNodeList.clear();
-		nodeList.clear();
-
-		myForm.getNodePropertiesPanel().clearNodeProperties();
-		myForm.setSelectedGNode(null);
-	}
+	// NOTE this function has moved to UI.Myform
+	// /**
+	// * Clears nodes from the map.
+	// */
+	// public void clearNodesFromMap() {
+	// // List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
+	// // for (int i = gNodeList.size() - 1; i >= 0; i--) {
+	// // GraphicalNode gNode = gNodeList.get(i);
+	// // myForm.getMyMap().remove(gNode);
+	// // myForm.getGraphicalNodes().remove(gNode);
+	// // }
+	//
+	// List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
+	// List<Node> nodeList = Map_Manager.get_instance().getNode_list();
+	// for (GraphicalNode node : gNodeList) {
+	// myForm.getMyMap().remove(node);
+	// }
+	// gNodeList.clear();
+	// nodeList.clear();
+	//
+	// myForm.getNodePropertiesPanel().clearNodeProperties();
+	// myForm.setSelectedGNode(null);
+	// }
 
 	public void setMyForm(Myform myForm) {
 		this.myForm = myForm;

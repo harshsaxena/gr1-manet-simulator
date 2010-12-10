@@ -69,9 +69,12 @@ public class Myform extends JFrame {
 	public JToolBar toolBar;
 	public JButton replayBtn = new JButton(new ImageIcon("images/Replay.png"));
 	public JButton sendBtn = new JButton(new ImageIcon("images/Send.png"));
-	public JButton delGNodeBtn = new JButton(new ImageIcon("images/DeleteNode.png"));
-	public JButton delAllGNodesBtn = new JButton(new ImageIcon("images/DeleteAllNode.png"));
-	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/AddNode.png"));
+	public JButton delGNodeBtn = new JButton(new ImageIcon(
+			"images/DeleteNode.png"));
+	public JButton delAllGNodesBtn = new JButton(new ImageIcon(
+			"images/DeleteAllNode.png"));
+	public NodeButton addNodeBtn = new NodeButton(new ImageIcon(
+			"images/AddNode.png"));
 	public MyMap myMap;
 	public PowerShower powerShower;
 
@@ -127,7 +130,8 @@ public class Myform extends JFrame {
 		myForm.delGNodeBtn.addActionListener(new DeleteNodeAction(myForm));
 		myForm.delGNodeBtn.setEnabled(false);
 		myForm.delAllGNodesBtn.setToolTipText("Delete all nodes");
-		myForm.delAllGNodesBtn.addActionListener(new DeleteAllNodesAction(myForm));
+		myForm.delAllGNodesBtn.addActionListener(new DeleteAllNodesAction(
+				myForm));
 		myForm.delAllGNodesBtn.setEnabled(false);
 		myForm.sendBtn.setToolTipText("Send message");
 		myForm.sendBtn.addActionListener(new SendMsgAction(myForm));
@@ -259,5 +263,28 @@ public class Myform extends JFrame {
 
 	public OutputLogProperties getOutputLogProperties() {
 		return outputLogProperties;
+	}
+
+	/**
+	 * Clears nodes from the map.
+	 */
+	public void clearNodesFromMap() {
+		// List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
+		// for (int i = gNodeList.size() - 1; i >= 0; i--) {
+		// GraphicalNode gNode = gNodeList.get(i);
+		// myForm.getMyMap().remove(gNode);
+		// myForm.getGraphicalNodes().remove(gNode);
+		// }
+
+		List<GraphicalNode> gNodeList = getGraphicalNodes();
+		List<Node> nodeList = Map_Manager.get_instance().getNode_list();
+		for (GraphicalNode node : gNodeList) {
+			getMyMap().remove(node);
+		}
+		gNodeList.clear();
+		nodeList.clear();
+
+		getNodePropertiesPanel().clearNodeProperties();
+		setSelectedGNode(null);
 	}
 }
