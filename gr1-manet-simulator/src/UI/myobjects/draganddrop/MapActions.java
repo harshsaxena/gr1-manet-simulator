@@ -78,6 +78,13 @@ public class MapActions extends DropTarget {
 				FileLogger.write("\t" + actionType + "_Power=" + node.getNode().getPower(), FileLogger.MSG_TYPE_REPLAY);
 				
 				dropEvent.dropComplete(true);
+				
+				node.myForm.delGNodeBtn.setEnabled(true);
+				if (node.myForm.getGraphicalNodes().size() > 1) {
+					node.myForm.sendBtn.setEnabled(true);
+					node.myForm.delAllGNodesBtn.setEnabled(true);
+				}
+				
 				FileLogger.write("ACTION=" + actionType + "_END", FileLogger.MSG_TYPE_REPLAY);
 				
 			} catch (UnsupportedFlavorException ufe) {

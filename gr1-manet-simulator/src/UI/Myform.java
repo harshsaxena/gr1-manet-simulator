@@ -110,35 +110,38 @@ public class Myform extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Myform frame = new Myform("MANET Simulator");
-		frame.addNodeBtn.myForm = frame;
-		frame.addNodeBtn.setToolTipText("Drag and drop to add node");
-		frame.setNodePropertiesPanel(new NodeProperties(frame));
+		Myform myForm = new Myform("MANET Simulator");
+		myForm.addNodeBtn.myForm = myForm;
+		myForm.addNodeBtn.setToolTipText("Drag and drop to add node");
+		myForm.setNodePropertiesPanel(new NodeProperties(myForm));
 
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
-				frame.myMap, frame.getNodePropertiesPanel());
+				myForm.myMap, myForm.getNodePropertiesPanel());
 		splitPane.setOneTouchExpandable(true);
 		splitPane.setDividerLocation(575);
 
-		frame.content.add(splitPane, BorderLayout.CENTER);
-		frame.myMap.addMouseListener(new PanelAction(frame));
-		frame.powerShower = new PowerShower(frame);
-		frame.delGNodeBtn.setToolTipText("Delete selected node");
-		frame.delGNodeBtn.addActionListener(new DeleteNodeAction(frame));
-		frame.delAllGNodesBtn.setToolTipText("Delete all nodes");
-		frame.delAllGNodesBtn.addActionListener(new DeleteAllNodesAction(frame));
-		frame.sendBtn.setToolTipText("Send message");
-		frame.sendBtn.addActionListener(new SendMsgAction(frame));
-		frame.replayBtn.setToolTipText("Replay simulation");
-		frame.replayBtn.addActionListener(new ReplayAction(frame));
+		myForm.content.add(splitPane, BorderLayout.CENTER);
+		myForm.myMap.addMouseListener(new PanelAction(myForm));
+		myForm.powerShower = new PowerShower(myForm);
+		myForm.delGNodeBtn.setToolTipText("Delete selected node");
+		myForm.delGNodeBtn.addActionListener(new DeleteNodeAction(myForm));
+		myForm.delGNodeBtn.setEnabled(false);
+		myForm.delAllGNodesBtn.setToolTipText("Delete all nodes");
+		myForm.delAllGNodesBtn.addActionListener(new DeleteAllNodesAction(myForm));
+		myForm.delAllGNodesBtn.setEnabled(false);
+		myForm.sendBtn.setToolTipText("Send message");
+		myForm.sendBtn.addActionListener(new SendMsgAction(myForm));
+		myForm.sendBtn.setEnabled(false);
+		myForm.replayBtn.setToolTipText("Replay simulation");
+		myForm.replayBtn.addActionListener(new ReplayAction(myForm));
 
-		frame.powerShower.setBounds(0, 0, 9999, 9999);
-		frame.myMap.add(frame.powerShower, JLayeredPane.PALETTE_LAYER);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.pack();
-		frame.setVisible(true);
+		myForm.powerShower.setBounds(0, 0, 9999, 9999);
+		myForm.myMap.add(myForm.powerShower, JLayeredPane.PALETTE_LAYER);
+		myForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myForm.pack();
+		myForm.setVisible(true);
 
-		OutputLogger.init(frame);
+		OutputLogger.init(myForm);
 	}
 
 	/**
