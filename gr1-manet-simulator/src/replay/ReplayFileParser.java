@@ -257,7 +257,7 @@ public class ReplayFileParser implements Runnable {
 		moveGNode.setLocation(nodeXLoc, nodeYLoc);
 		Coordinates coords = new Coordinates(nodeXCoord, nodeYCoord);
 		moveGNode.getNode().setNode_coordinates(coords);
-		moveGNode.setTransferHandler(new MoveNodeTransferHandler());
+		// moveGNode.setTransferHandler(new MoveNodeTransferHandler());
 		myForm.setSelectedGNode(moveGNode);
 		myForm.refreshPowerShower();
 		moveGNode.fillNodePanel(moveGNode);

@@ -27,20 +27,22 @@ import UI.myobjects.NodeButton;
 public class AddNodeTransferHandler extends TransferHandler {
 
 	// Transfers node data to the form or node properties
-    protected Transferable createTransferable(JComponent component) {
+	protected Transferable createTransferable(JComponent component) {
 
-        NodeButton source = (NodeButton)component;
-        GraphicalNode nodeTransferable = new GraphicalNode(source.getIcon(),source.myForm,false);
-        source.myForm.putGNode(nodeTransferable);
-        nodeTransferable.setTransferHandler(new MoveNodeTransferHandler());
-        
-        FileLogger.write("Node button create transferable", FileLogger.MSG_TYPE_DEBUG);
-        
-        return nodeTransferable;
-    }
+		NodeButton source = (NodeButton) component;
+		GraphicalNode nodeTransferable = new GraphicalNode(source.getIcon(),
+				source.myForm, false);
+		source.myForm.putGNode(nodeTransferable);
+		nodeTransferable.setTransferHandler(new MoveNodeTransferHandler());
 
-    public int getSourceActions(JComponent component) {
-        return COPY_OR_MOVE;
-    }
+		FileLogger.write("Node button create transferable",
+				FileLogger.MSG_TYPE_DEBUG);
+
+		return nodeTransferable;
+	}
+
+	public int getSourceActions(JComponent component) {
+		return COPY_OR_MOVE;
+	}
 
 }
