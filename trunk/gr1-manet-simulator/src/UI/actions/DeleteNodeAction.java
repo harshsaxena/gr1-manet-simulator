@@ -45,7 +45,16 @@ public class DeleteNodeAction implements ActionListener {
             
     		NodeProperties np = myForm.getNodePropertiesPanel();
     		np.clearNodeProperties();
-            
+    		
+    		if (myForm.getGraphicalNodes().size() == 0) {
+				myForm.delGNodeBtn.setEnabled(false);
+			}
+    		
+    		if (myForm.getGraphicalNodes().size() < 2) {
+    			myForm.sendBtn.setEnabled(false);
+    			myForm.delAllGNodesBtn.setEnabled(false);
+    		}
+    		
         }else{
             JOptionPane.showMessageDialog(myForm,"Please Select a Node");
         }

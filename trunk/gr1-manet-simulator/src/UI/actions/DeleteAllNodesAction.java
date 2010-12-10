@@ -52,6 +52,10 @@ public class DeleteAllNodesAction implements ActionListener {
 		myForm.getNodePropertiesPanel().clearNodeProperties();
 		myForm.setSelectedGNode(null);
 		
+		myForm.delGNodeBtn.setEnabled(false);
+		myForm.sendBtn.setEnabled(false);
+		myForm.delAllGNodesBtn.setEnabled(false);
+		
         FileLogger.write("ACTION=DeleteAllNodes_END", FileLogger.MSG_TYPE_REPLAY);
 	}
 }
