@@ -52,6 +52,7 @@ public class ReplayFileParser implements Runnable {
 	private int power;
 	private String sendFromName;
 	private List<String> sendToNames = new ArrayList<String>();
+	private List<String> nodesToDelete = new ArrayList<String>();
 	private String message;
 	private String protocol;
 	private Myform myForm;
@@ -141,6 +142,19 @@ public class ReplayFileParser implements Runnable {
 						reDeleteNode();
 					}
 
+				} else if (nextLine.contains("DeleteAllNodes")) {
+					Scanner addScanner = new Scanner(nextLine);
+					addScanner.useDelimiter("=");
+					String nextInnerLine = addScanner.next();
+
+					if (nextInnerLine.contains("DeleteAllNodes_NodeName")) {
+						nodesToDelete.add(addScanner.next());
+					}
+
+					if (nextLine.contains("DeleteAllNodes_END")) {
+						reDeleteAllNodes();
+					}
+					
 				} else if (nextLine.contains("SendMsgs")) {
 
 					Scanner addScanner = new Scanner(nextLine);
@@ -176,6 +190,23 @@ public class ReplayFileParser implements Runnable {
 		}
 	}
 
+	private void reDeleteAllNodes() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		for(int i = nodesToDelete.size()-1; i >=0; i--){
+			String nodeName = nodesToDelete.get(i);
+			GraphicalNode gNode = myForm.getGNode(nodeName);
+			myForm.getMyMap().remove(gNode);
+			myForm.getGraphicalNodes().remove(gNode);
+		}
+		myForm.getNodePropertiesPanel().clearNodeProperties();
+		myForm.setSelectedGNode(null);
+	}
+
 	private void reSendMsg() {
 		try {
 			Thread.sleep(1000);
@@ -195,7 +226,6 @@ public class ReplayFileParser implements Runnable {
 			new SendDataThread(fromGNode.getNode(), dest.getNode(), new Data(
 					message));
 		}
-
 	}
 
 	private void reDeleteNode() {
@@ -405,5 +435,13 @@ public class ReplayFileParser implements Runnable {
 
 	public String getProtocol() {
 		return protocol;
+	}
+
+	public void setNodesToDelete(List<String> nodesToDelete) {
+		this.nodesToDelete = nodesToDelete;
+	}
+
+	public List<String> getNodesToDelete() {
+		return nodesToDelete;
 	}
 }
