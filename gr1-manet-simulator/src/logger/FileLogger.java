@@ -33,7 +33,7 @@ public class FileLogger {
 			"yyyy.MM.dd_hh.mm.ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
-	private final static String logDirPath = "./logs/";
+	public final static String logDirPath = "./logs/";
 	public static String logFile;
 	public final static String MSG_TYPE_DEBUG = "DEBUG";
 	public final static String MSG_TYPE_ERROR = "ERROR";
