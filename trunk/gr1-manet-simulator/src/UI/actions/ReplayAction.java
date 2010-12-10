@@ -17,14 +17,12 @@
  */
 package UI.actions;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.util.List;
 
 import replay.ReplayFileParser;
-import simulator.Map_Manager;
 import UI.Myform;
 import UI.myobjects.GraphicalNode;
 
