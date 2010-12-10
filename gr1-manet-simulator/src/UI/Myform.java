@@ -34,6 +34,7 @@ import javax.swing.JToolBar;
 import logger.OutputLogger;
 import simulator.Map_Manager;
 import simulator.Node;
+import UI.actions.DeleteAllNodesAction;
 import UI.actions.DeleteNodeAction;
 import UI.actions.NumberKeyListener;
 import UI.actions.PanelAction;
@@ -55,7 +56,7 @@ public class Myform extends JFrame {
 	private int xScale = 3000 / 550; // default setting from mapForm
 	private int yScale = 3000 / 550; // default setting from mapForm
 	private GraphicalNode selectedGNode;
-	private GraphicalNode gNodeGhost;
+	//private GraphicalNode gNodeGhost;
 	private NodeProperties nodePropertiesPanel;
 	private OutputLogProperties outputLogProperties;
 
@@ -70,6 +71,7 @@ public class Myform extends JFrame {
 	public JButton replayBtn = new JButton(new ImageIcon("images/Replay.png"));
 	public JButton sendBtn = new JButton(new ImageIcon("images/Send.png"));
 	public JButton delGNodeBtn = new JButton(new ImageIcon("images/DeleteNode.png"));
+	public JButton delAllGNodesBtn = new JButton(new ImageIcon("images/DeleteAllNode.png"));
 	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/AddNode.png"));
 	public MyMap myMap;
 	public PowerShower powerShower;
@@ -89,6 +91,8 @@ public class Myform extends JFrame {
 		toolBar.add(addNodeBtn);
 		toolBar.add(Box.createHorizontalStrut(10));
 		toolBar.add(delGNodeBtn);
+		toolBar.add(Box.createHorizontalStrut(10));
+		toolBar.add(delAllGNodesBtn);
 		toolBar.add(Box.createHorizontalStrut(10));
 		toolBar.add(sendBtn);
 		toolBar.add(Box.createHorizontalStrut(10));
@@ -122,6 +126,8 @@ public class Myform extends JFrame {
 		frame.powerShower = new PowerShower(frame);
 		frame.delGNodeBtn.setToolTipText("Delete selected node");
 		frame.delGNodeBtn.addActionListener(new DeleteNodeAction(frame));
+		frame.delAllGNodesBtn.setToolTipText("Delete all nodes");
+		frame.delAllGNodesBtn.addActionListener(new DeleteAllNodesAction(frame));
 		frame.sendBtn.setToolTipText("Send message");
 		frame.sendBtn.addActionListener(new SendMsgAction(frame));
 		frame.replayBtn.setToolTipText("Replay simulation");
@@ -253,11 +259,11 @@ public class Myform extends JFrame {
 		return outputLogProperties;
 	}
 
-	public void setGNodeGhost(GraphicalNode node) {
+	/*public void setGNodeGhost(GraphicalNode node) {
 		this.gNodeGhost = node;
 	}
 
 	public GraphicalNode getGNodeGhost() {
 		return gNodeGhost;
-	}
+	}*/
 }
