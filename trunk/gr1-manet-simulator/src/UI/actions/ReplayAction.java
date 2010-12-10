@@ -72,8 +72,8 @@ public class ReplayAction implements ActionListener {
 		for (GraphicalNode node : gNodeList) {
 			myForm.getMyMap().remove(node);
 		}
-		gNodeList.removeAll(gNodeList);
-		nodeList.removeAll(nodeList);
+		gNodeList.clear();
+		nodeList.clear();
 
 		myForm.getNodePropertiesPanel().clearNodeProperties();
 		myForm.setSelectedGNode(null);
