@@ -47,7 +47,6 @@ public class SaveNodeAction implements ActionListener {
             Coordinates coords = new Coordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
             gNode.getNode().setNode_coordinates(coords);
             gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
-            gNode.setColor(np.colorBtn.getBackground());
             gNode.setNodePower(Integer.parseInt(np.powerText.getText()));
             
             if (np.nameText.getText().trim().length()>0){
@@ -61,7 +60,6 @@ public class SaveNodeAction implements ActionListener {
 			FileLogger.write("\tUpdateNodeProps_NodeIP=" + np.ipText.getText(), FileLogger.MSG_TYPE_REPLAY);
 			FileLogger.write("\tUpdateNodeProps_NodeXCoord=" + np.xCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
 			FileLogger.write("\tUpdateNodeProps_NodeYCoord=" + np.yCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tUpdateNodeProps_NodeColor=" + np.colorBtn.getBackground().toString(), FileLogger.MSG_TYPE_REPLAY);
 			FileLogger.write("\tUpdateNodeProps_NodePower=" + np.powerText.getText(), FileLogger.MSG_TYPE_REPLAY);
             FileLogger.write("ACTION=UpdateNodeProps_END", FileLogger.MSG_TYPE_REPLAY);
 
