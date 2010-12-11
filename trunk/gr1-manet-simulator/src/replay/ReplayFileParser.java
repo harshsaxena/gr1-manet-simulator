@@ -149,13 +149,13 @@ public class ReplayFileParser implements Runnable {
 					}
 
 				} else if (nextLine.contains("DeleteAllNodes")) {
-					Scanner addScanner = new Scanner(nextLine);
-					addScanner.useDelimiter("=");
-					String nextInnerLine = addScanner.next();
+					// Scanner addScanner = new Scanner(nextLine);
+					// addScanner.useDelimiter("=");
+					// String nextInnerLine = addScanner.next();
 
-					if (nextInnerLine.contains("DeleteAllNodes_NodeName")) {
-						nodesToDelete.add(addScanner.next());
-					}
+					// if (nextInnerLine.contains("DeleteAllNodes_NodeName")) {
+					// nodesToDelete.add(addScanner.next());
+					// }
 
 					if (nextLine.contains("DeleteAllNodes_END")) {
 						reDeleteAllNodes();
@@ -221,15 +221,17 @@ public class ReplayFileParser implements Runnable {
 			e.printStackTrace();
 		}
 
-		for (int i = nodesToDelete.size() - 1; i >= 0; i--) {
-			String nodeName = nodesToDelete.get(i);
-			GraphicalNode gNode = myForm.getGNode(nodeName);
-			myForm.getMyMap().remove(gNode);
-			myForm.getGraphicalNodes().remove(gNode);
-			Map_Manager.get_instance().getNode_list().remove(gNode.getNode());
-		}
-		myForm.getNodePropertiesPanel().clearNodeProperties();
-		myForm.setSelectedGNode(null);
+		// for (int i = nodesToDelete.size() - 1; i >= 0; i--) {
+		// String nodeName = nodesToDelete.get(i);
+		// GraphicalNode gNode = myForm.getGNode(nodeName);
+		// myForm.getMyMap().remove(gNode);
+		// myForm.getGraphicalNodes().remove(gNode);
+		// Map_Manager.get_instance().getNode_list().remove(gNode.getNode());
+		// }
+		// myForm.getNodePropertiesPanel().clearNodeProperties();
+		// myForm.setSelectedGNode(null);
+
+		myForm.clearNodesFromMap();
 	}
 
 	private void reSendMsg() {

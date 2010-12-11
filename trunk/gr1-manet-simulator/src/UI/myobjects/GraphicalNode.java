@@ -41,27 +41,35 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	public static final int ANIMATION_PERIOD = 500;
 
 	private static IPAddress curIP = new IPAddress("192.168.10.1");
-	private static String curName = "`"; // 'a' - 1 = '`'
+	private static String curName = "";
 	public static DataFlavor dataFlavor;
 	public static int DEFAULT_POWER = 1000;
 
 	public static final String mimeType = DataFlavor.javaJVMLocalObjectMimeType
 			+ ";class=UI.myobjects.GraphicalNode";
 	private static final long serialVersionUID = 1L;
-	/** Returns the next lexicographic name. **/
-	private static String getNextName() {
-		// TODO extend to longer names
-		// assume curName is length 1
-		char s = curName.charAt(0);
-		StringBuffer prefix = new StringBuffer("");
-		String name = curName;
-		name = prefix.toString() + ++s;
-		if (s > 'z') {
-			prefix.append("a");
-			s = 'a';
+
+	/** Returns the next node name. **/
+	public static String getNextName() {
+		if (curName.length() < 1)
+			// '`' + 1 = 'a'
+			curName = "`";
+		String prefix = "";
+		char[] arr = curName.toCharArray();
+		int i = arr.length - 1;
+
+		++arr[i];
+		while (i >= 0 && arr[i] > 'z') {
+			arr[i] = 'a';
+			if (i - 1 >= 0)
+				++arr[i - 1];
+			else
+				prefix = "a";
+			--i;
 		}
-		curName = name;
-		return name;
+
+		curName = prefix + new String(arr);
+		return curName;
 	}
 
 	private Color color;
@@ -104,21 +112,26 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		NodeProperties np = myForm.getNodePropertiesPanel();
 		np.nameText.setText(this.name);
 		np.ipText.setText(node.getIP().toString());
-		np.xCordText.setText(Integer.toString(node.getNode_coordinates().getX_coordinate()));
-		np.yCordText.setText(Integer.toString(node.getNode_coordinates().getY_coordinate()));
+		np.xCordText.setText(Integer.toString(node.getNode_coordinates()
+				.getX_coordinate()));
+		np.yCordText.setText(Integer.toString(node.getNode_coordinates()
+				.getY_coordinate()));
 		np.powerText.setText(Integer.toString(node.getPower()));
 	}
 
 	/**
 	 * Update the node properties section with new node values.
+	 * 
 	 * @param gNode
 	 */
 	public void fillNodePanel(GraphicalNode gNode) {
 		NodeProperties np = gNode.myForm.getNodePropertiesPanel();
 		np.nameText.setText(gNode.getName());
 		np.ipText.setText(gNode.getNode().getIP().toString());
-		np.xCordText.setText(Integer.toString(gNode.getNode().getNode_coordinates().getX_coordinate()));
-		np.yCordText.setText(Integer.toString(gNode.getNode().getNode_coordinates().getY_coordinate()));
+		np.xCordText.setText(Integer.toString(gNode.getNode()
+				.getNode_coordinates().getX_coordinate()));
+		np.yCordText.setText(Integer.toString(gNode.getNode()
+				.getNode_coordinates().getY_coordinate()));
 		np.powerText.setText(Integer.toString(gNode.getNode().getPower()));
 	}
 
@@ -186,7 +199,7 @@ public class GraphicalNode extends NodeButton implements Transferable {
 				* myForm.getYScale()));
 		FileLogger.write("Map Panel setting bound.", FileLogger.MSG_TYPE_INFO);
 	}
-	
+
 	public void setColor(Color color) {
 		this.setBackground(color);
 		this.color = color;
@@ -216,7 +229,8 @@ public class GraphicalNode extends NodeButton implements Transferable {
 	public void setScaledCoordinates(int x, int y) {
 		Dimension size = getSize();
 		this.node.setNode_coordinates(new Coordinates(x, y));
-		super.setBounds(x / myForm.getXScale(), y / myForm.getYScale(),size.width, size.height);
+		super.setBounds(x / myForm.getXScale(), y / myForm.getYScale(),
+				size.width, size.height);
 	}
 
 	public void setSelectGNode() {

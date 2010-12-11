@@ -65,7 +65,7 @@ public class Myform extends JFrame {
 	public final int mapHeight = 551;
 	public final int mapWidth = 600;
 	public final NumberKeyListener numKeyListener = new NumberKeyListener();
-	
+
 	public JButton generateBtn;
 	public JPanel content;
 	public JPanel outlogPanel;
@@ -94,7 +94,8 @@ public class Myform extends JFrame {
 
 		toolBar = new JToolBar();
 		JPanel leftToolBarPanel = new JPanel();
-		leftToolBarPanel.setLayout(new BoxLayout(leftToolBarPanel, BoxLayout.LINE_AXIS));
+		leftToolBarPanel.setLayout(new BoxLayout(leftToolBarPanel,
+				BoxLayout.LINE_AXIS));
 		leftToolBarPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 0));
 		leftToolBarPanel.add(addNodeBtn);
 		leftToolBarPanel.add(delGNodeBtn);
@@ -103,12 +104,14 @@ public class Myform extends JFrame {
 		leftToolBarPanel.add(replayBtn);
 		leftToolBarPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 		toolBar.add(leftToolBarPanel);
-		
+
 		toolBar.addSeparator();
-		
+
 		JPanel rightToolBarPanel = new JPanel();
-		rightToolBarPanel.setLayout(new BoxLayout(rightToolBarPanel, BoxLayout.LINE_AXIS));
-		rightToolBarPanel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 5));
+		rightToolBarPanel.setLayout(new BoxLayout(rightToolBarPanel,
+				BoxLayout.LINE_AXIS));
+		rightToolBarPanel
+				.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 5));
 		rightToolBarPanel.add(Box.createHorizontalGlue());
 		rightToolBarPanel.add(helpBtn);
 		rightToolBarPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
@@ -285,13 +288,6 @@ public class Myform extends JFrame {
 	 * Clears nodes from the map.
 	 */
 	public void clearNodesFromMap() {
-		// List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
-		// for (int i = gNodeList.size() - 1; i >= 0; i--) {
-		// GraphicalNode gNode = gNodeList.get(i);
-		// myForm.getMyMap().remove(gNode);
-		// myForm.getGraphicalNodes().remove(gNode);
-		// }
-
 		List<GraphicalNode> gNodeList = getGraphicalNodes();
 		List<Node> nodeList = Map_Manager.get_instance().getNode_list();
 		for (GraphicalNode node : gNodeList) {

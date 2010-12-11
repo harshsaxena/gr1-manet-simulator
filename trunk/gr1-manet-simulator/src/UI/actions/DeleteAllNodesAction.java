@@ -21,6 +21,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+import simulator.Map_Manager;
+
 import logger.FileLogger;
 import UI.Myform;
 import UI.myobjects.GraphicalNode;
@@ -38,24 +40,33 @@ public class DeleteAllNodesAction implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		FileLogger.write("ACTION=DeleteAllNodes_START", FileLogger.MSG_TYPE_REPLAY);
-		
-		List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
-		for(int i = gNodeList.size()-1; i >=0; i--){
-			GraphicalNode gNode = gNodeList.get(i);
-			
-			FileLogger.write("\tDeleteAllNodes_NodeName=" + gNode.getName(), FileLogger.MSG_TYPE_REPLAY);
-			
-			myForm.getMyMap().remove(gNode);
-			myForm.getGraphicalNodes().remove(gNode);
-		}
-		myForm.getNodePropertiesPanel().clearNodeProperties();
-		myForm.setSelectedGNode(null);
-		
+		FileLogger.write("ACTION=DeleteAllNodes_START",
+				FileLogger.MSG_TYPE_REPLAY);
+
+		// List<GraphicalNode> gNodeList = myForm.getGraphicalNodes();
+		// for (int i = gNodeList.size() - 1; i >= 0; i--) {
+		// GraphicalNode gNode = gNodeList.get(i);
+		//
+		// FileLogger.write("\tDeleteAllNodes_NodeName=" + gNode.getName(),
+		// FileLogger.MSG_TYPE_REPLAY);
+		//
+		// myForm.getMyMap().remove(gNode);
+		// // NOTE clear the list after the loop instead
+		// // myForm.getGraphicalNodes().remove(gNode);
+		// Map_Manager.get_instance().getNode_list().remove(gNode.getNode());
+		// }
+		// gNodeList.clear();
+
+		// myForm.getNodePropertiesPanel().clearNodeProperties();
+		// myForm.setSelectedGNode(null);
+
+		myForm.clearNodesFromMap();
+
 		myForm.delGNodeBtn.setEnabled(false);
 		myForm.sendBtn.setEnabled(false);
 		myForm.delAllGNodesBtn.setEnabled(false);
-		
-        FileLogger.write("ACTION=DeleteAllNodes_END", FileLogger.MSG_TYPE_REPLAY);
+
+		FileLogger.write("ACTION=DeleteAllNodes_END",
+				FileLogger.MSG_TYPE_REPLAY);
 	}
 }
