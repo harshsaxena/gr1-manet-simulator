@@ -14,6 +14,7 @@
 
 package test;
 
+import UI.myobjects.GraphicalNode;
 import logger.FileLogger;
 import logger.OutputLogger;
 import simulator.Data;
@@ -31,6 +32,9 @@ public class AODV_Test {
 			{ 15, 45, 30 }, { 15, 75, 30 }, { 45, 75, 30 } };
 
 	public static void randomnode_create() {
+		// for (int i = 0; i < 1000; ++i)
+		// System.err.println(GraphicalNode.getNextName());
+
 		IPAddress ipBase = new IPAddress("192.168.10.1");
 		for (int i = 0; i < NODE_NUMBER; i++) {
 			Node new_node = new Node(IPAddress.createNext(ipBase));
