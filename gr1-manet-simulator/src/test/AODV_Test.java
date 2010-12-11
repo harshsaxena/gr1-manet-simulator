@@ -14,7 +14,6 @@
 
 package test;
 
-import UI.myobjects.GraphicalNode;
 import logger.FileLogger;
 import logger.OutputLogger;
 import simulator.Data;

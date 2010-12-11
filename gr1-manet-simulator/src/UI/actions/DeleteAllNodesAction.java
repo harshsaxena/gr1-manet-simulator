@@ -19,13 +19,9 @@ package UI.actions;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
-
-import simulator.Map_Manager;
 
 import logger.FileLogger;
 import UI.Myform;
-import UI.myobjects.GraphicalNode;
 
 /**
  * @author MSRoberts1
