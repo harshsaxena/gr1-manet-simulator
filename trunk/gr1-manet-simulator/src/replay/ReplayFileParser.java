@@ -290,14 +290,15 @@ public class ReplayFileParser implements Runnable {
 		updateGNode.getNode().setNode_coordinates(coords);
 		updateGNode.setScaledCoordinates(nodeXCoord, nodeYCoord);
 		updateGNode.getNode().setPower(power);
-		// updateGNode.fillNodePanel(updateGNode);
+		//updateGNode.fillNodePanel(updateGNode);
 
 		NodeProperties np = updateGNode.myForm.getNodePropertiesPanel();
 		np.nameText.setText(nodeName);
 		np.ipText.setText(ip.toString());
 		np.xCordText.setText(Integer.toString(nodeXCoord));
 		np.yCordText.setText(Integer.toString(nodeYCoord));
-		np.powerText.setText(Integer.toString(power));
+		//np.powerText.setText(Integer.toString(power));
+		np.pwrSpinner.setValue(power);
 
 		myForm.refreshPowerShower();
 	}
@@ -330,8 +331,7 @@ public class ReplayFileParser implements Runnable {
 
 		JComponent component = myForm.addNodeBtn;
 		NodeButton source = (NodeButton) component;
-		GraphicalNode addGNode = new GraphicalNode(source.getIcon(), myForm,
-				false);
+		GraphicalNode addGNode = new GraphicalNode(source.getIcon(), myForm, false);
 		addGNode.setName(nodeName);
 		addGNode.getNode().setIP(ip);
 		addGNode.setLocation(nodeXLoc, nodeYLoc);
