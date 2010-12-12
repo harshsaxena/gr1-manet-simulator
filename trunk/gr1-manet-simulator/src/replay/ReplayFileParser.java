@@ -361,6 +361,11 @@ public class ReplayFileParser implements Runnable {
 
 		panel.invalidate();
 		addGNode.myForm.refreshPowerShower();
+		addGNode.myForm.getNodePropertiesPanel().setSearchPropertiesEnabled(true);
+		addGNode.myForm.getNodePropertiesPanel().setPropertiesEnabled(true);
+		if(myForm.getGraphicalNodes().size() > 1){
+			addGNode.myForm.getNodePropertiesPanel().setMsgPropertiesEnabled(true);
+		}
 
 	}
 
