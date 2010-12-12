@@ -44,10 +44,11 @@ public class SaveNodeAction implements ActionListener {
             NodeProperties np = myForm.getNodePropertiesPanel();
             gNode.setName(np.nameText.getText().trim().toLowerCase());
             gNode.setNodeIP(np.ipText.getText());
-            Coordinates coords = new Coordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
+            Coordinates coords = new Coordinates((Integer)np.getxCoordSpinner().getValue(), (Integer)np.getyCoordSpinner().getValue());
             gNode.getNode().setNode_coordinates(coords);
-            gNode.setScaledCoordinates(Integer.parseInt(np.xCordText.getText()), Integer.parseInt(np.yCordText.getText()));
-            gNode.setNodePower(Integer.parseInt(np.powerText.getText()));
+            gNode.setScaledCoordinates((Integer)np.getxCoordSpinner().getValue(), (Integer)np.getyCoordSpinner().getValue());
+            //gNode.setNodePower(Integer.parseInt(np.powerText.getText()));
+            gNode.setNodePower((Integer)np.getPwrSpinner().getValue());
             
             if (np.nameText.getText().trim().length()>0){
                 np.nameText.setEnabled(false);
@@ -58,9 +59,9 @@ public class SaveNodeAction implements ActionListener {
             FileLogger.write("ACTION=UpdateNodeProps_START", FileLogger.MSG_TYPE_REPLAY);
             FileLogger.write("\tUpdateNodeProps_NodeName=" + np.nameText.getText().trim().toLowerCase(), FileLogger.MSG_TYPE_REPLAY);
 			FileLogger.write("\tUpdateNodeProps_NodeIP=" + np.ipText.getText(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tUpdateNodeProps_NodeXCoord=" + np.xCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tUpdateNodeProps_NodeYCoord=" + np.yCordText.getText(), FileLogger.MSG_TYPE_REPLAY);
-			FileLogger.write("\tUpdateNodeProps_NodePower=" + np.powerText.getText(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodeXCoord=" + np.getxCoordSpinner().getValue().toString(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodeYCoord=" + np.getyCoordSpinner().getValue().toString(), FileLogger.MSG_TYPE_REPLAY);
+			FileLogger.write("\tUpdateNodeProps_NodePower=" + np.getPwrSpinner().getValue().toString(), FileLogger.MSG_TYPE_REPLAY);
             FileLogger.write("ACTION=UpdateNodeProps_END", FileLogger.MSG_TYPE_REPLAY);
 
         }else{
