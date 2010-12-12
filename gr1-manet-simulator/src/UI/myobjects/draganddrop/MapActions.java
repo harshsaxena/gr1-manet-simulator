@@ -83,8 +83,10 @@ public class MapActions extends DropTarget {
 				if (node.myForm.getGraphicalNodes().size() > 1) {
 					node.myForm.sendBtn.setEnabled(true);
 					node.myForm.delAllGNodesBtn.setEnabled(true);
+					node.myForm.getNodePropertiesPanel().setMsgPropertiesEnabled(true);
 				}
 				node.myForm.getNodePropertiesPanel().setPropertiesEnabled(true);
+				node.myForm.getNodePropertiesPanel().setSearchPropertiesEnabled(true);
 				
 				FileLogger.write("ACTION=" + actionType + "_END", FileLogger.MSG_TYPE_REPLAY);
 				
