@@ -41,7 +41,7 @@ public class NodeButton extends JButton implements MouseMotionListener, MouseLis
 		super(icon);
 		this.addMouseListener(this);
 		this.addMouseMotionListener(this);
-		this.setPreferredSize(new Dimension(32, 32));
+		this.setPreferredSize(new Dimension(40, 30));
 		this.setTransferHandler(new AddNodeTransferHandler());
 	}
 
