@@ -100,12 +100,10 @@ public class NodeProperties extends JPanel{
 
 		// Main Box
 		Box mainVerticalBox = Box.createVerticalBox();
-		mainVerticalBox.add(Box.createGlue());
 		this.add(mainVerticalBox);
 		
 		/* Image Panel */
 		JPanel imagePanel = new JPanel();
-		imagePanel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
 		mainVerticalBox.add(imagePanel);
 
 		Box imageBox = Box.createVerticalBox();
@@ -118,7 +116,7 @@ public class NodeProperties extends JPanel{
 		mainVerticalBox.add(searchNodePanel);
 		searchNodePanel.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder("Search"), BorderFactory
-						.createEmptyBorder(0, 0, 0, 0)));
+						.createEmptyBorder(0, 0, 8, 8)));
 		
 		GridLayout searchGrid = new GridLayout(1, 2);
 		searchNodePanel.setLayout(searchGrid);
@@ -136,7 +134,7 @@ public class NodeProperties extends JPanel{
 		Box propsBox = Box.createVerticalBox();
 		propsBox.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder("Properties"),
-				BorderFactory.createEmptyBorder(0, 0, 0, 0)));
+				BorderFactory.createEmptyBorder(0, 0, 8, 8)));
 		
 		JPanel propertiesPanel = new JPanel();
 		
@@ -169,7 +167,7 @@ public class NodeProperties extends JPanel{
 		saveButtonPanel.add(Box.createHorizontalGlue());
 		saveButtonPanel.add(saveBtn);
 		
-		propsBox.add(Box.createVerticalStrut(5));
+		propsBox.add(Box.createVerticalStrut(8));
 		propsBox.add(saveButtonPanel);
 		mainVerticalBox.add(propsBox);
 
@@ -177,7 +175,7 @@ public class NodeProperties extends JPanel{
 		Box messagingBox = Box.createVerticalBox();
 		messagingBox.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder("Messaging"),
-				BorderFactory.createEmptyBorder(0, 0, 0, 0)));
+				BorderFactory.createEmptyBorder(0, 0, 8, 8)));
 		
 		JPanel messagingPanel = new JPanel();
 
@@ -227,7 +225,7 @@ public class NodeProperties extends JPanel{
 		msgButtonPanel.add(Box.createRigidArea(new Dimension(10, 0)));
 		msgButtonPanel.add(replayBtn);		
 		
-		messagingBox.add(Box.createVerticalStrut(5));
+		messagingBox.add(Box.createVerticalStrut(8));
 		messagingBox.add(msgButtonPanel);
 		mainVerticalBox.add(messagingBox);
 	}
