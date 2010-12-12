@@ -205,6 +205,7 @@ public class NodeProperties extends JPanel{
 		
 		protocolComboBox = new JComboBox(protocolStrings); 
 		protocolComboBox.setSelectedIndex(0); 
+		protocolComboBox.setToolTipText("Select a messaging protocol");
 		
 		protocolPanel.add(protocolLabel);
 		protocolPanel.add(protocolComboBox);
@@ -219,7 +220,7 @@ public class NodeProperties extends JPanel{
 		sendBtn.setToolTipText("Send message");
 		sendBtn.addActionListener(sendAction);
 		
-		replayBtn.setToolTipText("Replay last broadcast");
+		replayBtn.setToolTipText("Replay a simulation");
 		replayBtn.addActionListener(replayAction);
 		
 		msgButtonPanel.add(sendBtn);
