@@ -16,13 +16,32 @@ package UI.actions;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+
+import UI.Myform;
 
 public class HelpAction implements ActionListener {
+	public final static String docDirPath = "./doc/";
+	public final static String helpDoc = "testhelp.pdf";
+	private Myform myForm;
+	
+	public HelpAction(Myform myForm) {
+		this.setMyForm(myForm);
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
 		
+		File helpFile = new File(docDirPath + helpDoc);
+		
+	}
+
+	public void setMyForm(Myform myForm) {
+		this.myForm = myForm;
+	}
+
+	public Myform getMyForm() {
+		return myForm;
 	}
 
 }
