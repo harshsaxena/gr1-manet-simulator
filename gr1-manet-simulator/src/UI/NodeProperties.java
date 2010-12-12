@@ -15,6 +15,7 @@
 package UI;
 
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -73,7 +74,7 @@ public class NodeProperties extends JPanel{
 	public JLabel protocolLabel;
 	public JLabel sendToLabel;
 	public JLabel sendFromLabel;
-	public JLabel searchNodeLabel;
+	public JLabel searchNodeLabel = new JLabel("   Search: ");
 	public JTextField nameText;
 	public JTextField ipText;
 	public JTextField xCordText;
@@ -82,7 +83,7 @@ public class NodeProperties extends JPanel{
 	public JTextField msgText;
 	public JTextField sendToText;
 	public JTextField sendFromText;
-	public JTextField searchNodeText;
+	public JTextField searchNodeText = new JTextField(6);
 	public List<GraphicalNode> graphicalNodeList;
 	public String[] availableNodes = new String[100];
 	
@@ -123,22 +124,22 @@ public class NodeProperties extends JPanel{
 		imageBox.add(picLabel);
 
 		/* Search Panel */
-		JPanel findNodePanel = new JPanel();
-		mainVerticalBox.add(findNodePanel);
-		findNodePanel.setBorder(BorderFactory.createCompoundBorder(
-				BorderFactory.createTitledBorder("Find a Node"), BorderFactory
+		JPanel searchNodePanel = new JPanel();
+		mainVerticalBox.add(searchNodePanel);
+		searchNodePanel.setBorder(BorderFactory.createCompoundBorder(
+				BorderFactory.createTitledBorder("Search"), BorderFactory
 						.createEmptyBorder(0, 0, 0, 0)));
+		
+		GridLayout searchGrid = new GridLayout(1, 2);
+		searchNodePanel.setLayout(searchGrid);
 
-		searchNodeLabel = new JLabel("Search: ");
-		searchNodeText = new JTextField(10);
 		searchNodeText.setToolTipText("Enter a node name to search");
 		searchNodeText.addActionListener(searchAction);
 
-		Box searchLabelAndTextBox = Box.createHorizontalBox();
-		searchLabelAndTextBox.add(searchNodeLabel);
-		searchLabelAndTextBox.add(searchNodeText);
-		findNodePanel.add(searchLabelAndTextBox);
+		searchNodePanel.add(searchNodeLabel);
+		searchNodePanel.add(searchNodeText);
 		
+		mainVerticalBox.add(searchNodePanel);
 		mainVerticalBox.add(Box.createVerticalStrut(8));
 
 		/* Properties Panel */
