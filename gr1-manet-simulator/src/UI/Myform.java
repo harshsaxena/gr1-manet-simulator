@@ -163,7 +163,7 @@ public class Myform extends JFrame {
 		myForm.replayBtn.setToolTipText("Replay simulation");
 		myForm.replayBtn.addActionListener(new ReplayAction(myForm));
 		myForm.helpBtn.setToolTipText("Help");
-		myForm.helpBtn.addActionListener(new HelpAction());
+		myForm.helpBtn.addActionListener(new HelpAction(myForm));
 
 		myForm.powerShower.setBounds(0, 0, 9999, 9999);
 		myForm.myMap.add(myForm.powerShower, JLayeredPane.PALETTE_LAYER);
