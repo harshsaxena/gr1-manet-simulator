@@ -45,9 +45,8 @@ public class NodeProperties extends JPanel{
 	private Myform myForm;
 
 	public JButton saveBtn = new JButton("Save");
-	public JButton clearBtn;
-	public JButton sendBtn;
-	public JButton replayBtn;
+	public JButton sendBtn = new JButton("Send");
+	public JButton replayBtn = new JButton("Replay");
 
 	public JComboBox modeComboBox;
 	public JComboBox protocolComboBox;
@@ -61,19 +60,19 @@ public class NodeProperties extends JPanel{
 	public JLabel yCordLabel = new JLabel("   Y Coordinate: ");
 	public JLabel picLabel;
 	public JLabel powerLabel = new JLabel("   Power: ");
-	public JLabel msgLabel;
-	public JLabel protocolLabel;
-	public JLabel sendToLabel;
-	public JLabel sendFromLabel;
+	public JLabel msgLabel = new JLabel("   Message: ");
+	public JLabel protocolLabel = new JLabel("   Protocol: ");
+	public JLabel sendToLabel = new JLabel("   Send To: ");
+	public JLabel sendFromLabel = new JLabel("   Send From: ");
 	public JLabel searchNodeLabel = new JLabel("   Search: ");
 	public JTextField nameText = new JTextField(6);
 	public JTextField ipText = new JTextField(6);
 	public JTextField xCordText = new JTextField(2);
 	public JTextField yCordText = new JTextField(2);
 	public JTextField powerText = new JTextField(6);
-	public JTextField msgText;
-	public JTextField sendToText;
-	public JTextField sendFromText;
+	public JTextField msgText = new JTextField(6);
+	public JTextField sendToText = new JTextField(6);
+	public JTextField sendFromText = new JTextField(6);
 	public JTextField searchNodeText = new JTextField(6);
 	public List<GraphicalNode> graphicalNodeList;
 	public String[] availableNodes = new String[100];
@@ -174,85 +173,63 @@ public class NodeProperties extends JPanel{
 		propsBox.add(saveButtonPanel);
 		mainVerticalBox.add(propsBox);
 
-		mainVerticalBox.add(Box.createVerticalStrut(8));
-
 		/* Messaging Panel */
-		JPanel messagingPanel = new JPanel();
-		mainVerticalBox.add(messagingPanel);
-		messagingPanel.setBorder(BorderFactory.createCompoundBorder(
-				BorderFactory.createTitledBorder("Messaging"), BorderFactory
-						.createEmptyBorder(0, 0, 0, 0)));
-
 		Box messagingBox = Box.createVerticalBox();
-		messagingPanel.add(messagingBox);
+		messagingBox.setBorder(BorderFactory.createCompoundBorder(
+				BorderFactory.createTitledBorder("Messaging"),
+				BorderFactory.createEmptyBorder(0, 0, 0, 0)));
+		
+		JPanel messagingPanel = new JPanel();
 
-		sendFromLabel = new JLabel("Send from: ");
-		sendFromText = new JTextField(10);
-		sendFromText.setToolTipText("Enter node name");
+		GridLayout messagingGrid = new GridLayout(3, 2);
+		messagingGrid.setVgap(5);
+		messagingPanel.setLayout(messagingGrid);
 
-		Box sendFromLabelAndTextBox = Box.createHorizontalBox();
-		sendFromLabelAndTextBox.add(sendFromLabel);
-		sendFromLabelAndTextBox.add(sendFromText);
-		messagingBox.add(sendFromLabelAndTextBox);
+		messagingPanel.add(sendFromLabel);
+		messagingPanel.add(sendFromText);
+		messagingPanel.add(sendToLabel);
+		messagingPanel.add(sendToText);
+		messagingPanel.add(msgLabel);
+		messagingPanel.add(msgText);
 
-		messagingBox.add(Box.createVerticalStrut(5));
-
-		sendToLabel = new JLabel("Send to: ");
-		sendToText = new JTextField(10);
 		sendToText.setToolTipText("Enter node name or node names");
+		sendFromText.setToolTipText("Enter node name");
 		
-		Box sendToLabelAndTextBox = Box.createHorizontalBox();
-		sendToLabelAndTextBox.add(sendToLabel);
-		sendToLabelAndTextBox.add(sendToText);
-		messagingBox.add(sendToLabelAndTextBox);
-
 		messagingBox.add(Box.createVerticalStrut(5));
-		
-		msgLabel = new JLabel("Message: ");
-		msgText = new JTextField(10);
+		messagingBox.add(messagingPanel);
 
-		Box msgLabelAndTextBox = Box.createHorizontalBox();
-		msgLabelAndTextBox.add(msgLabel);
-		msgLabelAndTextBox.add(msgText);
-		messagingBox.add(msgLabelAndTextBox);
+		JPanel protocolPanel = new JPanel();
 
-		messagingBox.add(Box.createVerticalStrut(5));
+		GridLayout protocolGrid = new GridLayout(1, 2);
+		protocolGrid.setVgap(5);
+		protocolPanel.setLayout(protocolGrid);
 		
-		protocolLabel = new JLabel("Protocol: ");
 		protocolComboBox = new JComboBox(protocolStrings); 
 		protocolComboBox.setSelectedIndex(0); 
 		
-		Box protocolLabelAndTextBox = Box.createHorizontalBox();
-		protocolLabelAndTextBox.add(protocolLabel);
-		protocolLabelAndTextBox.add(protocolComboBox);
-		messagingBox.add(protocolLabelAndTextBox);
+		protocolPanel.add(protocolLabel);
+		protocolPanel.add(protocolComboBox);
 		
 		messagingBox.add(Box.createVerticalStrut(5));
+		messagingBox.add(protocolPanel);
 		
-		Box msgBtnBox = Box.createHorizontalBox();
-		messagingBox.add(msgBtnBox);
+		JPanel msgButtonPanel = new JPanel();
+		msgButtonPanel.setLayout(new BoxLayout(msgButtonPanel, BoxLayout.LINE_AXIS));
+		msgButtonPanel.add(Box.createHorizontalGlue());
 		
-		sendBtn = new JButton("Send");
 		sendBtn.setToolTipText("Send message");
 		sendBtn.addActionListener(sendAction);
 		
-		msgBtnBox.add(Box.createHorizontalStrut(5));
-		
-		replayBtn = new JButton("Replay");
 		replayBtn.setToolTipText("Replay last broadcast");
 		replayBtn.addActionListener(replayAction);
 		
-		JPanel msgButtonPane = new JPanel();
-		msgButtonPane.setLayout(new BoxLayout(msgButtonPane, BoxLayout.LINE_AXIS));
-		msgButtonPane.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
-		msgButtonPane.add(Box.createHorizontalGlue());
-		msgButtonPane.add(sendBtn);
-		msgButtonPane.add(Box.createRigidArea(new Dimension(10, 0)));
-		msgButtonPane.add(replayBtn);		
-		msgBtnBox.add(msgButtonPane);
-
-
-
+		msgButtonPanel.add(sendBtn);
+		msgButtonPanel.add(Box.createRigidArea(new Dimension(10, 0)));
+		msgButtonPanel.add(replayBtn);		
+		
+		messagingBox.add(Box.createVerticalStrut(5));
+		messagingBox.add(msgButtonPanel);
+		mainVerticalBox.add(messagingBox);
 	}
 
 	public NodeProperties() {
