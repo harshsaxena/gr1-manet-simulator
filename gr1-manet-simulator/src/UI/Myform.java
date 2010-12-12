@@ -73,12 +73,9 @@ public class Myform extends JFrame {
 	public JButton helpBtn = new JButton(new ImageIcon("images/Help.png"));
 	public JButton replayBtn = new JButton(new ImageIcon("images/Replay.png"));
 	public JButton sendBtn = new JButton(new ImageIcon("images/Send.png"));
-	public JButton delGNodeBtn = new JButton(new ImageIcon(
-			"images/DeleteNode.png"));
-	public JButton delAllGNodesBtn = new JButton(new ImageIcon(
-			"images/DeleteAllNode.png"));
-	public NodeButton addNodeBtn = new NodeButton(new ImageIcon(
-			"images/AddNode.png"));
+	public JButton delGNodeBtn = new JButton(new ImageIcon("images/DeleteNode.png"));
+	public JButton delAllGNodesBtn = new JButton(new ImageIcon("images/DeleteAllNode.png"));
+	public NodeButton addNodeBtn = new NodeButton(new ImageIcon("images/AddNode.png"));
 	public MyMap myMap;
 	public PowerShower powerShower;
 
@@ -86,7 +83,13 @@ public class Myform extends JFrame {
 		super(title);
 		content = new JPanel(new BorderLayout());
 		content.setOpaque(true);
-
+		
+		delGNodeBtn.setPreferredSize(new Dimension(40, 25));
+		delAllGNodesBtn.setPreferredSize(new Dimension(40, 25));
+		sendBtn.setPreferredSize(new Dimension(40, 25));
+		replayBtn.setPreferredSize(new Dimension(40, 25));
+		helpBtn.setPreferredSize(new Dimension(40, 25));
+		
 		myMap = new MyMap();
 		myMap.setPreferredSize(new Dimension(this.mapWidth, this.mapHeight));
 		myMap.setBorder(BorderFactory.createEtchedBorder());
@@ -134,6 +137,7 @@ public class Myform extends JFrame {
 		myForm.addNodeBtn.myForm = myForm;
 		myForm.addNodeBtn.setToolTipText("Drag and drop to add node");
 		myForm.setNodePropertiesPanel(new NodeProperties(myForm));
+		myForm.getNodePropertiesPanel().setPropertiesEnabled(false);
 
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
 				myForm.myMap, myForm.getNodePropertiesPanel());
