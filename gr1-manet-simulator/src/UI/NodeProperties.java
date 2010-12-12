@@ -30,7 +30,10 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 
 import simulator.Node;
 import UI.actions.ReplayAction;
@@ -58,13 +61,18 @@ public class NodeProperties extends JPanel{
 	public JLabel ipLabel = new JLabel("   IP Address: ");
 	public JLabel xCordLabel = new JLabel("   X Coordinate: ");
 	public JLabel yCordLabel = new JLabel("   Y Coordinate: ");
-	public JLabel picLabel;
+	public JLabel picLabel; 
 	public JLabel powerLabel = new JLabel("   Power: ");
 	public JLabel msgLabel = new JLabel("   Message: ");
 	public JLabel protocolLabel = new JLabel("   Protocol: ");
 	public JLabel sendToLabel = new JLabel("   Send To: ");
 	public JLabel sendFromLabel = new JLabel("   Send From: ");
 	public JLabel searchNodeLabel = new JLabel("   Search: ");
+	
+	public JSpinner xCoordSpinner;
+	public JSpinner yCoordSpinner;
+	public JSpinner pwrSpinner;
+	
 	public JTextField nameText = new JTextField(6);
 	public JTextField ipText = new JTextField(6);
 	public JTextField xCordText = new JTextField(2);
@@ -79,6 +87,21 @@ public class NodeProperties extends JPanel{
 	
 	public final String KEY_AODV = "AODV";
 	public final String KEY_DSDV = "DSDV";
+	
+	public static final int PWR_INIT = 0;
+	public static final int PWR_MIN = 0;
+	public static final int PWR_MAX = 1500;
+	public static final int PWR_INCR = 100;
+	
+	public static final int X_COORD_INIT = 0;
+	public static final int X_COORD_MIN = 0;
+	public static final int X_COORD_MAX = 3900;
+	public static final int X_COORD_INCR = 100;
+	
+	public static final int Y_COORD_INIT = 0;
+	public static final int Y_COORD_MIN = 0;
+	public static final int Y_COORD_MAX = 2500;
+	public static final int Y_COORD_INCR = 100;
 
 	public NodeProperties(Myform myForm) {
 		this.myForm = myForm;
@@ -135,6 +158,14 @@ public class NodeProperties extends JPanel{
 		propsBox.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder("Properties"),
 				BorderFactory.createEmptyBorder(0, 0, 8, 8)));
+
+		SpinnerModel pwrSpinnerModel = new SpinnerNumberModel(PWR_INIT, PWR_MIN, PWR_MAX, PWR_INCR);
+		SpinnerModel xCoordSpinnerModel = new SpinnerNumberModel(X_COORD_INIT, X_COORD_MIN, X_COORD_MAX, X_COORD_INCR);
+		SpinnerModel yCoordSpinnerModel = new SpinnerNumberModel(Y_COORD_INIT, Y_COORD_MIN, Y_COORD_MAX, Y_COORD_INCR);
+		
+		pwrSpinner = new JSpinner(pwrSpinnerModel);
+		xCoordSpinner = new JSpinner(xCoordSpinnerModel);
+		yCoordSpinner = new JSpinner(yCoordSpinnerModel);
 		
 		JPanel propertiesPanel = new JPanel();
 		
@@ -147,16 +178,16 @@ public class NodeProperties extends JPanel{
 		propertiesPanel.add(ipLabel);
 		propertiesPanel.add(ipText);
 		propertiesPanel.add(xCordLabel);
-		propertiesPanel.add(xCordText);
+		propertiesPanel.add(xCoordSpinner);
 		propertiesPanel.add(yCordLabel);
-		propertiesPanel.add(yCordText);
+		propertiesPanel.add(yCoordSpinner);
 		propertiesPanel.add(powerLabel);
-		propertiesPanel.add(powerText);
+		propertiesPanel.add(pwrSpinner);
 
 		powerText.addKeyListener(myForm.numKeyListener);
 
-		propsBox.add(Box.createVerticalStrut(5));
 		propsBox.add(propertiesPanel);
+		propsBox.add(Box.createVerticalStrut(5));
 		
 		JPanel saveButtonPanel = new JPanel();
 		
@@ -246,20 +277,44 @@ public class NodeProperties extends JPanel{
 	public void clearNodeProperties() {
 		this.nameText.setText("");
 		this.ipText.setText("");
-		this.nameText.setText("");
-		this.nameText.setEnabled(true);
-		this.xCordText.setText("");
-		this.yCordText.setText("");
-		this.powerText.setText("");
+		//this.xCordText.setText("");
+		//this.yCordText.setText("");
+		//this.powerText.setText("");
+		this.xCoordSpinner.setValue(0);
+		this.yCoordSpinner.setValue(0);
+		this.pwrSpinner.setValue(0);
+	}
+	
+	public void setPropertiesEnabled(boolean enable){
+		
+		if(enable == false){
+			this.nameText.setEnabled(false);
+			this.ipText.setEnabled(false);
+			this.xCoordSpinner.setEnabled(false);
+			this.yCoordSpinner.setEnabled(false);
+			this.pwrSpinner.setEnabled(false);
+			this.saveBtn.setEnabled(false);
+		}else{
+			this.nameText.setEnabled(true);
+			this.ipText.setEnabled(true);
+			this.xCoordSpinner.setEnabled(true);
+			this.yCoordSpinner.setEnabled(true);
+			this.pwrSpinner.setEnabled(true);
+			this.saveBtn.setEnabled(true);
+		}
+		
 	}
 	
 	public void resetNodeProperties(Node node, GraphicalNode gNode) {
 		this.nameText.setText(gNode.getName());
 		this.nameText.setEnabled(true);
 		this.ipText.setText(node.getIP().toString());
-		this.xCordText.setText(Float.toString(gNode.getX()));
-		this.yCordText.setText(Float.toString(gNode.getX()));
-		this.powerText.setText(Integer.toString(node.getPower()));
+		//this.xCordText.setText(Float.toString(gNode.getX()));
+		//this.yCordText.setText(Float.toString(gNode.getX()));
+		//this.powerText.setText(Integer.toString(node.getPower()));
+		this.xCoordSpinner.setValue(Float.toString(gNode.getX()));
+		this.yCoordSpinner.setValue(Float.toString(gNode.getY()));
+		this.pwrSpinner.setValue(node.getPower());
 	}
 	
 	public JComboBox getSendToComboBox() {
@@ -268,6 +323,30 @@ public class NodeProperties extends JPanel{
 
 	public void setSendToComboBox(JComboBox sendToComboBox) {
 		this.sendToComboBox = sendToComboBox;
+	}
+
+	public JSpinner getPwrSpinner() {
+		return pwrSpinner;
+	}
+
+	public void setPwrSpinner(JSpinner pwrSpinner) {
+		this.pwrSpinner = pwrSpinner;
+	}
+
+	public JSpinner getxCoordSpinner() {
+		return xCoordSpinner;
+	}
+
+	public void setxCoordSpinner(JSpinner xCoordSpinner) {
+		this.xCoordSpinner = xCoordSpinner;
+	}
+
+	public JSpinner getyCoordSpinner() {
+		return yCoordSpinner;
+	}
+
+	public void setyCoordSpinner(JSpinner yCoordSpinner) {
+		this.yCoordSpinner = yCoordSpinner;
 	}
 	
 }
