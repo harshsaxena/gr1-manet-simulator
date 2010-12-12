@@ -24,30 +24,66 @@ public class OutputLogger {
 
 	private static OutputLogger outputLogger;
 
-	private StringBuffer msgsReceived = new StringBuffer();
-	private StringBuffer broadcastInfo = new StringBuffer();
-
-	public Myform myform;
-	public boolean test = false;
-
-	private OutputLogger(Myform myform) {
-		this.myform = myform;
+	public static OutputLogger get_instance() {
+		return outputLogger;
 	}
-
-	public OutputLogger(boolean test) {
-		this.test = test;
+	public static void init() {
+		outputLogger = new OutputLogger(true);
 	}
 
 	public static void init(Myform myForm) {
 		outputLogger = new OutputLogger(myForm);
 	}
+	private StringBuffer broadcastInfo = new StringBuffer();
 
-	public static void init() {
-		outputLogger = new OutputLogger(true);
+	private StringBuffer msgsReceived = new StringBuffer();
+
+	public Myform myform;
+
+	public boolean test = false;
+
+	public OutputLogger(boolean test) {
+		this.test = test;
 	}
 
-	public static OutputLogger get_instance() {
-		return outputLogger;
+	private OutputLogger(Myform myform) {
+		this.myform = myform;
+	}
+
+	private void addInfoToOutputLogs() {
+		OutputLogProperties outputLogObj = myform.getOutputLogProperties();
+		outputLogObj.statusText.setText(getBroadcastInfo());
+		outputLogObj.receivedDataText.setText(getMsgsReceived());
+	}
+
+	public String getBroadcastInfo() {
+		return broadcastInfo.toString();
+	}
+
+	public String getMsgsReceived() {
+		return msgsReceived.toString();
+	}
+
+	public void resetBroadcastInfo() {
+		this.broadcastInfo.delete(0, this.broadcastInfo.length());
+	}
+
+	public void resetMsgsReceived() {
+		this.msgsReceived.delete(0, this.msgsReceived.length());
+	}
+
+	public void setBroadcastInfo(String info) {
+		this.broadcastInfo.insert(0, info + "\n");
+		addInfoToOutputLogs();
+	}
+	
+	public void setMsgsReceived(String msgs) {
+		this.msgsReceived.insert(0, msgs + "\n");
+		addInfoToOutputLogs();
+	}
+
+	public void showBroadcastInfo(String msg){
+		setBroadcastInfo(msg);
 	}
 
 	/**
@@ -61,9 +97,8 @@ public class OutputLogger {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(node);
 			if (gNode != null) {
-				setBroadcastInfo("Node '" + gNode.getName() + "' " + status);
-				FileLogger.write("Node '" + gNode.getName() + "' is " + status,
-						FileLogger.MSG_TYPE_INFO);
+				setBroadcastInfo("Node (" + gNode.getName() + ") " + status);
+				FileLogger.write("Node (" + gNode.getName() + ") is " + status, FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}
@@ -80,11 +115,8 @@ public class OutputLogger {
 		if (!this.test) {
 			GraphicalNode gNode = myform.getGnodebyNode(receiver);
 			if (gNode != null) {
-				setMsgsReceived("Node '" + gNode.getName() + "'" + " received "
-						+ data.getContent());
-				FileLogger.write("Node '" + gNode.getName() + "'"
-						+ " received " + data.getContent(),
-						FileLogger.MSG_TYPE_INFO);
+				setMsgsReceived("Node (" + gNode.getName() + ") " + " received '" + data.getContent() + "'");
+				FileLogger.write("Node (" + gNode.getName() + ") " + " received '" + data.getContent() + "'", FileLogger.MSG_TYPE_INFO);
 			}
 		}
 	}
@@ -96,37 +128,5 @@ public class OutputLogger {
 				gNode.sending(type);
 			}
 		}
-	}
-
-	public void resetMsgsReceived() {
-		this.msgsReceived.delete(0, this.msgsReceived.length());
-	}
-
-	public void resetBroadcastInfo() {
-		this.broadcastInfo.delete(0, this.broadcastInfo.length());
-	}
-
-	private void addInfoToOutputLogs() {
-		OutputLogProperties outputLogObj = myform.getOutputLogProperties();
-		outputLogObj.statusText.setText(getBroadcastInfo());
-		outputLogObj.receivedDataText.setText(getMsgsReceived());
-	}
-
-	public String getMsgsReceived() {
-		return msgsReceived.toString();
-	}
-
-	public void setMsgsReceived(String msgs) {
-		this.msgsReceived.insert(0, msgs + "\n");
-		addInfoToOutputLogs();
-	}
-
-	public String getBroadcastInfo() {
-		return broadcastInfo.toString();
-	}
-
-	public void setBroadcastInfo(String info) {
-		this.broadcastInfo.insert(0, info + "\n");
-		addInfoToOutputLogs();
 	}
 }
