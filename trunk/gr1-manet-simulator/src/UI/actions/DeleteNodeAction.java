@@ -48,11 +48,15 @@ public class DeleteNodeAction implements ActionListener {
     		
     		if (myForm.getGraphicalNodes().size() == 0) {
 				myForm.delGNodeBtn.setEnabled(false);
+				myForm.getNodePropertiesPanel().setSearchPropertiesEnabled(false);
+				myForm.getNodePropertiesPanel().setPropertiesEnabled(false);
+				myForm.getNodePropertiesPanel().setMsgPropertiesEnabled(false);
 			}
     		
     		if (myForm.getGraphicalNodes().size() < 2) {
     			myForm.sendBtn.setEnabled(false);
     			myForm.delAllGNodesBtn.setEnabled(false);
+    			myForm.getNodePropertiesPanel().setMsgPropertiesEnabled(false);
     		}
     		
         }else{
