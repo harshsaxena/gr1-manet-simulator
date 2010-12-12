@@ -44,7 +44,7 @@ public class NodeProperties extends JPanel{
 
 	private Myform myForm;
 
-	public JButton saveBtn;
+	public JButton saveBtn = new JButton("Save");
 	public JButton clearBtn;
 	public JButton sendBtn;
 	public JButton replayBtn;
@@ -53,33 +53,24 @@ public class NodeProperties extends JPanel{
 	public JComboBox protocolComboBox;
 	public JComboBox sendToComboBox;
 
-	public BufferedImage wirelessTowerImg = new BufferedImage(200, 92,
-			BufferedImage.TYPE_INT_RGB);
+	public BufferedImage wirelessTowerImg = new BufferedImage(200, 92, BufferedImage.TYPE_INT_RGB);
 
-	public JComboBox getSendToComboBox() {
-		return sendToComboBox;
-	}
-
-	public void setSendToComboBox(JComboBox sendToComboBox) {
-		this.sendToComboBox = sendToComboBox;
-	}
-
-	public JLabel nameLabel;
-	public JLabel ipLabel;
-	public JLabel xCordLabel;
-	public JLabel yCordLabel;
+	public JLabel nameLabel = new JLabel("   Name: ");
+	public JLabel ipLabel = new JLabel("   IP Address: ");
+	public JLabel xCordLabel = new JLabel("   X Coordinate: ");
+	public JLabel yCordLabel = new JLabel("   Y Coordinate: ");
 	public JLabel picLabel;
-	public JLabel powerLabel;
+	public JLabel powerLabel = new JLabel("   Power: ");
 	public JLabel msgLabel;
 	public JLabel protocolLabel;
 	public JLabel sendToLabel;
 	public JLabel sendFromLabel;
 	public JLabel searchNodeLabel = new JLabel("   Search: ");
-	public JTextField nameText;
-	public JTextField ipText;
-	public JTextField xCordText;
-	public JTextField yCordText;
-	public JTextField powerText;
+	public JTextField nameText = new JTextField(6);
+	public JTextField ipText = new JTextField(6);
+	public JTextField xCordText = new JTextField(2);
+	public JTextField yCordText = new JTextField(2);
+	public JTextField powerText = new JTextField(6);
 	public JTextField msgText;
 	public JTextField sendToText;
 	public JTextField sendFromText;
@@ -143,76 +134,45 @@ public class NodeProperties extends JPanel{
 		mainVerticalBox.add(Box.createVerticalStrut(8));
 
 		/* Properties Panel */
-		JPanel nodeDataPanel = new JPanel();
-		mainVerticalBox.add(nodeDataPanel);
-		nodeDataPanel.setBorder(BorderFactory.createCompoundBorder(
-				BorderFactory.createTitledBorder("Node Properties"),
+		Box propsBox = Box.createVerticalBox();
+		propsBox.setBorder(BorderFactory.createCompoundBorder(
+				BorderFactory.createTitledBorder("Properties"),
 				BorderFactory.createEmptyBorder(0, 0, 0, 0)));
+		
+		JPanel propertiesPanel = new JPanel();
+		
+		GridLayout propsGrid = new GridLayout(5, 2);
+		propsGrid.setVgap(5);
+		propertiesPanel.setLayout(propsGrid);
 
-		Box nodeDataBox = Box.createVerticalBox();
-		nodeDataPanel.add(nodeDataBox);
+		propertiesPanel.add(nameLabel);
+		propertiesPanel.add(nameText);
+		propertiesPanel.add(ipLabel);
+		propertiesPanel.add(ipText);
+		propertiesPanel.add(xCordLabel);
+		propertiesPanel.add(xCordText);
+		propertiesPanel.add(yCordLabel);
+		propertiesPanel.add(yCordText);
+		propertiesPanel.add(powerLabel);
+		propertiesPanel.add(powerText);
 
-		// Name
-		nameLabel = new JLabel("Name: ");
-		nameText = new JTextField(10);
-
-		Box nameLabelAndTextBox = Box.createHorizontalBox();
-		nameLabelAndTextBox.add(nameLabel);
-		nameLabelAndTextBox.add(nameText);
-		nodeDataBox.add(nameLabelAndTextBox);
-
-		nodeDataBox.add(Box.createVerticalStrut(5));
-
-		// IP
-		ipLabel = new JLabel("IP: ");
-		ipText = new JTextField(10);
-
-		Box ipLabelAndTextBox = Box.createHorizontalBox();
-		ipLabelAndTextBox.add(ipLabel);
-		ipLabelAndTextBox.add(ipText);
-		nodeDataBox.add(ipLabelAndTextBox);
-
-		nodeDataBox.add(Box.createVerticalStrut(5));
-
-		// X Y Coordinates
-		xCordLabel = new JLabel("X: ");
-		xCordText = new JTextField(2);
-
-		yCordLabel = new JLabel(" Y: ");
-		yCordText = new JTextField(2);
-
-		Box xyCordsLabelAndTextBox = Box.createHorizontalBox();
-		xyCordsLabelAndTextBox.add(xCordLabel);
-		xyCordsLabelAndTextBox.add(xCordText);
-		xyCordsLabelAndTextBox.add(yCordLabel);
-		xyCordsLabelAndTextBox.add(yCordText);
-		nodeDataBox.add(xyCordsLabelAndTextBox);
-
-		nodeDataBox.add(Box.createVerticalStrut(5));
-
-		// Power & Color
-		powerLabel = new JLabel("Power: ");
-		powerText = new JTextField(10);
 		powerText.addKeyListener(myForm.numKeyListener);
 
-		Box pwrColorLabelAndTextBox = Box.createHorizontalBox();
-		pwrColorLabelAndTextBox.add(powerLabel);
-		pwrColorLabelAndTextBox.add(powerText);
-		nodeDataBox.add(pwrColorLabelAndTextBox);
-
-		nodeDataBox.add(Box.createVerticalStrut(5));
-
-		// Buttons
-		saveBtn = new JButton("Save");
+		propsBox.add(Box.createVerticalStrut(5));
+		propsBox.add(propertiesPanel);
+		
+		JPanel saveButtonPanel = new JPanel();
+		
 		saveBtn.setToolTipText("Save node properties");
 		saveBtn.addActionListener(saveAction);
 		
-		JPanel saveButtonPane = new JPanel();
-		saveButtonPane.setLayout(new BoxLayout(saveButtonPane, BoxLayout.LINE_AXIS));
-		saveButtonPane.setBorder(BorderFactory.createEmptyBorder(5, 0, 0, 0));
-		saveButtonPane.add(Box.createHorizontalGlue());
-		saveButtonPane.add(saveBtn);
-		nodeDataBox.add(saveButtonPane);
+		saveButtonPanel.setLayout(new BoxLayout(saveButtonPanel, BoxLayout.LINE_AXIS));
+		saveButtonPanel.add(Box.createHorizontalGlue());
+		saveButtonPanel.add(saveBtn);
+		
+		propsBox.add(Box.createVerticalStrut(5));
+		propsBox.add(saveButtonPanel);
+		mainVerticalBox.add(propsBox);
 
 		mainVerticalBox.add(Box.createVerticalStrut(8));
 
@@ -323,6 +283,14 @@ public class NodeProperties extends JPanel{
 		this.xCordText.setText(Float.toString(gNode.getX()));
 		this.yCordText.setText(Float.toString(gNode.getX()));
 		this.powerText.setText(Integer.toString(node.getPower()));
+	}
+	
+	public JComboBox getSendToComboBox() {
+		return sendToComboBox;
+	}
+
+	public void setSendToComboBox(JComboBox sendToComboBox) {
+		this.sendToComboBox = sendToComboBox;
 	}
 	
 }
