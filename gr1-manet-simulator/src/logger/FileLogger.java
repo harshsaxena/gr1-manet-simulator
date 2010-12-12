@@ -29,8 +29,7 @@ import utility.PropertyManager;
  */
 public class FileLogger {
 
-	private final static DateFormat df = new SimpleDateFormat(
-			"yyyy.MM.dd_hh.mm.ss");
+	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
 	public final static String logDirPath = "./logs/";
@@ -76,6 +75,7 @@ public class FileLogger {
 					&& loggerType.equals(msgeType)) {
 				aWriter.write(msg + System.getProperty("line.separator"));
 				System.out.println(msgeType + ": " + msg);
+				//OutputLogger.get_instance().showBroadcastInfo(msg);
 			}
 
 			aWriter.flush();
