@@ -192,6 +192,7 @@ public class NodeProperties extends JPanel{
 
 		sendToText.setToolTipText("Enter node name or node names");
 		sendFromText.setToolTipText("Enter node name");
+		msgText.setToolTipText("Enter message to broadcast");
 		
 		messagingBox.add(Box.createVerticalStrut(5));
 		messagingBox.add(messagingPanel);
