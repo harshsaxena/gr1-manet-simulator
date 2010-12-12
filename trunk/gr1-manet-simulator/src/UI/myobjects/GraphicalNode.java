@@ -112,11 +112,12 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		NodeProperties np = myForm.getNodePropertiesPanel();
 		np.nameText.setText(this.name);
 		np.ipText.setText(node.getIP().toString());
-		np.xCordText.setText(Integer.toString(node.getNode_coordinates()
-				.getX_coordinate()));
-		np.yCordText.setText(Integer.toString(node.getNode_coordinates()
-				.getY_coordinate()));
-		np.powerText.setText(Integer.toString(node.getPower()));
+		//np.xCordText.setText(Integer.toString(node.getNode_coordinates().getX_coordinate()));
+		//np.yCordText.setText(Integer.toString(node.getNode_coordinates().getY_coordinate()));
+		//np.powerText.setText(Integer.toString(node.getPower()));
+		np.xCoordSpinner.setValue((Integer)node.getNode_coordinates().getX_coordinate());
+		np.yCoordSpinner.setValue((Integer)node.getNode_coordinates().getY_coordinate());
+		np.pwrSpinner.setValue((Integer)node.getPower());
 	}
 
 	/**
@@ -128,11 +129,12 @@ public class GraphicalNode extends NodeButton implements Transferable {
 		NodeProperties np = gNode.myForm.getNodePropertiesPanel();
 		np.nameText.setText(gNode.getName());
 		np.ipText.setText(gNode.getNode().getIP().toString());
-		np.xCordText.setText(Integer.toString(gNode.getNode()
-				.getNode_coordinates().getX_coordinate()));
-		np.yCordText.setText(Integer.toString(gNode.getNode()
-				.getNode_coordinates().getY_coordinate()));
-		np.powerText.setText(Integer.toString(gNode.getNode().getPower()));
+		//np.xCordText.setText(Integer.toString(gNode.getNode().getNode_coordinates().getX_coordinate()));
+		//np.yCordText.setText(Integer.toString(gNode.getNode().getNode_coordinates().getY_coordinate()));
+		//np.powerText.setText(Integer.toString(gNode.getNode().getPower()));
+		np.xCoordSpinner.setValue((Integer)gNode.getNode().getNode_coordinates().getX_coordinate());
+		np.yCoordSpinner.setValue((Integer)gNode.getNode().getNode_coordinates().getY_coordinate());
+		np.pwrSpinner.setValue((Integer)node.getPower());
 	}
 
 	public Color getColor() {
