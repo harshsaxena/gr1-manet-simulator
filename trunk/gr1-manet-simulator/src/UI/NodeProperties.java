@@ -55,7 +55,7 @@ public class NodeProperties extends JPanel{
 	public JComboBox protocolComboBox;
 	public JComboBox sendToComboBox;
 
-	public BufferedImage wirelessTowerImg = new BufferedImage(200, 92, BufferedImage.TYPE_INT_RGB);
+	public BufferedImage wirelessTowerImg = new BufferedImage(175, 78, BufferedImage.TYPE_INT_RGB);
 
 	public JLabel nameLabel = new JLabel("   Name: ");
 	public JLabel ipLabel = new JLabel("   IP Address: ");
@@ -151,7 +151,6 @@ public class NodeProperties extends JPanel{
 		searchNodePanel.add(searchNodeText);
 		
 		mainVerticalBox.add(searchNodePanel);
-		mainVerticalBox.add(Box.createVerticalStrut(8));
 
 		/* Properties Panel */
 		Box propsBox = Box.createVerticalBox();
@@ -295,7 +294,7 @@ public class NodeProperties extends JPanel{
 			this.pwrSpinner.setEnabled(false);
 			this.saveBtn.setEnabled(false);
 		}else{
-			this.nameText.setEnabled(true);
+			//this.nameText.setEnabled(true);
 			this.ipText.setEnabled(true);
 			this.xCoordSpinner.setEnabled(true);
 			this.yCoordSpinner.setEnabled(true);
@@ -303,6 +302,32 @@ public class NodeProperties extends JPanel{
 			this.saveBtn.setEnabled(true);
 		}
 		
+	}
+	
+	public void setMsgPropertiesEnabled(boolean enable){
+		if(enable == false){
+			this.sendFromText.setEnabled(false);
+			this.sendToText.setEnabled(false);
+			this.msgText.setEnabled(false);
+			this.sendBtn.setEnabled(false);
+			//this.replayBtn.setEnabled(false);
+			this.protocolComboBox.setEnabled(false);
+		}else{
+			this.sendFromText.setEnabled(true);
+			this.sendToText.setEnabled(true);
+			this.msgText.setEnabled(true);
+			this.sendBtn.setEnabled(true);
+			//this.replayBtn.setEnabled(true);
+			this.protocolComboBox.setEnabled(true);
+		}
+	}
+	
+	public void setSearchPropertiesEnabled(boolean enable){
+		if(enable == false){
+			this.searchNodeText.setEnabled(false);
+		}else{
+			this.searchNodeText.setEnabled(true);
+		}
 	}
 	
 	public void resetNodeProperties(Node node, GraphicalNode gNode) {

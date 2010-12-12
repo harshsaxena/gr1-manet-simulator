@@ -69,4 +69,20 @@ public class OutputLogProperties extends JPanel implements ActionListener {
 		// TODO: Add action for clearing the output logs
 	}
 
+	public JTextArea getReceivedDataText() {
+		return receivedDataText;
+	}
+
+	public void setReceivedDataText(JTextArea receivedDataText) {
+		this.receivedDataText = receivedDataText;
+	}
+
+	public JTextArea getStatusText() {
+		return statusText;
+	}
+
+	public void setStatusText(JTextArea statusText) {
+		this.statusText = statusText;
+	}
+
 }

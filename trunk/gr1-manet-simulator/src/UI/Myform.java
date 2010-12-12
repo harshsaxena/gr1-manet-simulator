@@ -137,7 +137,10 @@ public class Myform extends JFrame {
 		myForm.addNodeBtn.myForm = myForm;
 		myForm.addNodeBtn.setToolTipText("Drag and drop to add node");
 		myForm.setNodePropertiesPanel(new NodeProperties(myForm));
+		
 		myForm.getNodePropertiesPanel().setPropertiesEnabled(false);
+		myForm.getNodePropertiesPanel().setMsgPropertiesEnabled(false);
+		myForm.getNodePropertiesPanel().setSearchPropertiesEnabled(false);
 
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
 				myForm.myMap, myForm.getNodePropertiesPanel());
@@ -302,5 +305,9 @@ public class Myform extends JFrame {
 
 		getNodePropertiesPanel().clearNodeProperties();
 		setSelectedGNode(null);
+		
+		getNodePropertiesPanel().setSearchPropertiesEnabled(false);
+		getNodePropertiesPanel().setPropertiesEnabled(false);
+		getNodePropertiesPanel().setMsgPropertiesEnabled(false);
 	}
 }
