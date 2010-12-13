@@ -188,6 +188,12 @@ public class NodeProperties extends JPanel{
 		propertiesPanel.add(yCoordSpinner);
 		propertiesPanel.add(powerLabel);
 		propertiesPanel.add(pwrSpinner);
+		
+		nameText.setToolTipText("Node's name, auto-generated");
+		ipText.setToolTipText("Node's IP Address");
+		xCoordSpinner.setToolTipText("Node's X Coordinate on the map");
+		yCoordSpinner.setToolTipText("Node's Y Coordinate on the map");
+		pwrSpinner.setToolTipText("Node's bandwidth power");
 
 		powerText.addKeyListener(myForm.numKeyListener);
 
