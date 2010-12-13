@@ -51,9 +51,7 @@ public class NodeProperties extends JPanel{
 	public JButton sendBtn = new JButton("Send");
 	public JButton replayBtn = new JButton("Replay");
 
-	public JComboBox modeComboBox;
 	public JComboBox protocolComboBox;
-	public JComboBox sendToComboBox;
 
 	public BufferedImage wirelessTowerImg = new BufferedImage(175, 78, BufferedImage.TYPE_INT_RGB);
 
@@ -70,6 +68,14 @@ public class NodeProperties extends JPanel{
 	public JLabel searchNodeLabel = new JLabel("   Search: ");
 	
 	public JSpinner xCoordSpinner;
+	public JComboBox getProtocolComboBox() {
+		return protocolComboBox;
+	}
+
+	public void setProtocolComboBox(JComboBox protocolComboBox) {
+		this.protocolComboBox = protocolComboBox;
+	}
+
 	public JSpinner yCoordSpinner;
 	public JSpinner pwrSpinner;
 	
@@ -284,6 +290,15 @@ public class NodeProperties extends JPanel{
 		this.pwrSpinner.setValue(0);
 	}
 	
+	public void clearMsgProperties() {
+		this.sendFromText.setText("");
+		this.sendToText.setText("");
+		this.msgText.setText("");
+		//this.sendBtn.setEnabled(false);
+		//this.replayBtn.setEnabled(false);
+		this.protocolComboBox.setSelectedIndex(0);
+	}
+	
 	public void setPropertiesEnabled(boolean enable){
 		
 		if(enable == false){
@@ -341,13 +356,29 @@ public class NodeProperties extends JPanel{
 		this.yCoordSpinner.setValue(Float.toString(gNode.getY()));
 		this.pwrSpinner.setValue(node.getPower());
 	}
-	
-	public JComboBox getSendToComboBox() {
-		return sendToComboBox;
+
+	public JTextField getMsgText() {
+		return msgText;
 	}
 
-	public void setSendToComboBox(JComboBox sendToComboBox) {
-		this.sendToComboBox = sendToComboBox;
+	public void setMsgText(JTextField msgText) {
+		this.msgText = msgText;
+	}
+
+	public JTextField getSendToText() {
+		return sendToText;
+	}
+
+	public void setSendToText(JTextField sendToText) {
+		this.sendToText = sendToText;
+	}
+
+	public JTextField getSendFromText() {
+		return sendFromText;
+	}
+
+	public void setSendFromText(JTextField sendFromText) {
+		this.sendFromText = sendFromText;
 	}
 
 	public JSpinner getPwrSpinner() {
