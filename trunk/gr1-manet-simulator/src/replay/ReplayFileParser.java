@@ -331,9 +331,6 @@ public class ReplayFileParser implements Runnable {
 
 	@Override
 	public void run() {
-		// disable buttons that shouldn't be accessible during replay
-		disableButtons();
-
 		File logFile;
 		// open file chooser dialog to allow user to select log file
 		JFileChooser fc = new JFileChooser();
