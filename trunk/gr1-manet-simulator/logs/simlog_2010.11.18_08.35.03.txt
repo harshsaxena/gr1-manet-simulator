@@ -1,0 +1,3775 @@
+DEBUG 2010.11.18_08.35.03: Node button pressed.
+DEBUG 2010.11.18_08.35.03: Node button drag and drop initiated
+DEBUG 2010.11.18_08.35.03: Node button create transferable
+INFO 2010.11.18_08.35.04: Map Panel importing data.
+INFO 2010.11.18_08.35.04: Map Panel setting bound.
+DEBUG 2010.11.18_08.35.04: Map Panel after invalidate.
+DEBUG 2010.11.18_08.35.05: Node button pressed.
+DEBUG 2010.11.18_08.35.05: Node button drag and drop initiated
+DEBUG 2010.11.18_08.35.05: Node button create transferable
+INFO 2010.11.18_08.35.06: Map Panel importing data.
+INFO 2010.11.18_08.35.06: Map Panel setting bound.
+DEBUG 2010.11.18_08.35.06: Map Panel after invalidate.
+DEBUG 2010.11.18_08.35.08: Node button pressed.
+DEBUG 2010.11.18_08.35.08: Node button drag and drop initiated
+DEBUG 2010.11.18_08.35.08: Node button create transferable
+INFO 2010.11.18_08.35.09: Map Panel importing data.
+INFO 2010.11.18_08.35.09: Map Panel setting bound.
+DEBUG 2010.11.18_08.35.09: Map Panel after invalidate.
+DEBUG 2010.11.18_08.35.13: Node button pressed.
+INFO 2010.11.18_08.35.20: Node192.168.10.1: Sending data to 192.168.10.3
+INFO 2010.11.18_08.35.20: Node 192.168.10.1: discovery initiated to 192.168.10.3
+INFO 2010.11.18_08.35.20: Node 192.168.10.1: Searching for 192.168.10.3
+INFO 2010.11.18_08.35.20: Node a is Searching for 192.168.10.3
+
+INFO 2010.11.18_08.35.20: 192.168.10.3 not found!
+INFO 2010.11.18_08.35.20: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.35.20: Node192.168.10.1: Sending Broadcast Packet
+INFO 2010.11.18_08.35.20: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+
+INFO 2010.11.18_08.35.20: Animating a 1|false
+INFO 2010.11.18_08.35.20: [445, 300], [445, 300], 0.0,1000
+INFO 2010.11.18_08.35.20: [445, 300], [1330, 875], 1055.3909228338096,1000
+INFO 2010.11.18_08.35.20: [445, 300], [1955, 1720], 2072.800038595137,1000
+INFO 2010.11.18_08.35.20: Animating a 2|false
+INFO 2010.11.18_08.35.21: Node 192.168.10.1 : 192.168.10.1 Route 0 Expires!
+INFO 2010.11.18_08.35.21: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+
+INFO 2010.11.18_08.35.21: Animating a 3|false
+INFO 2010.11.18_08.35.21: Animating a 0|true
+DEBUG 2010.11.18_08.35.28: Node button pressed.
+INFO 2010.11.18_08.35.41: Node 192.168.10.1: discovery number 0 for 192.168.10.3 : failed
+INFO 2010.11.18_08.35.41: Node192.168.10.1: Sending Broadcast Packet
+INFO 2010.11.18_08.35.41: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+
+INFO 2010.11.18_08.35.41: [445, 300], [445, 300], 0.0,1000
+INFO 2010.11.18_08.35.41: [445, 300], [1330, 875], 1055.3909228338096,1000
+INFO 2010.11.18_08.35.41: [445, 300], [1955, 1720], 2072.800038595137,1000
+INFO 2010.11.18_08.35.41: Animating a 1|false
+INFO 2010.11.18_08.35.41: Animating a 2|false
+INFO 2010.11.18_08.35.42: Animating a 3|false
+INFO 2010.11.18_08.35.42: Node 192.168.10.1 : 192.168.10.1 Route 1 Expires!
+INFO 2010.11.18_08.35.42: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+
+INFO 2010.11.18_08.35.42: Animating a 0|true
+DEBUG 2010.11.18_08.35.58: Node button pressed.
+DEBUG 2010.11.18_08.36.02: Node button pressed.
+DEBUG 2010.11.18_08.36.03: Node button pressed.
+DEBUG 2010.11.18_08.36.04: Node button pressed.
+DEBUG 2010.11.18_08.36.05: Node button drag and drop initiated
+DEBUG 2010.11.18_08.36.05: Node button create transferable
+INFO 2010.11.18_08.36.05: Map Panel importing data.
+INFO 2010.11.18_08.36.05: Map Panel setting bound.
+DEBUG 2010.11.18_08.36.05: Map Panel after invalidate.
+DEBUG 2010.11.18_08.36.06: Node button pressed.
+DEBUG 2010.11.18_08.36.06: Node button drag and drop initiated
+DEBUG 2010.11.18_08.36.06: Node button create transferable
+INFO 2010.11.18_08.36.07: Map Panel importing data.
+INFO 2010.11.18_08.36.07: Map Panel setting bound.
+DEBUG 2010.11.18_08.36.07: Map Panel after invalidate.
+DEBUG 2010.11.18_08.36.08: Node button pressed.
+DEBUG 2010.11.18_08.36.09: Node button pressed.
+DEBUG 2010.11.18_08.36.09: Node button drag and drop initiated
+DEBUG 2010.11.18_08.36.09: Node button create transferable
+INFO 2010.11.18_08.36.10: Map Panel importing data.
+INFO 2010.11.18_08.36.10: Map Panel setting bound.
+DEBUG 2010.11.18_08.36.10: Map Panel after invalidate.
+DEBUG 2010.11.18_08.36.11: Node button pressed.
+DEBUG 2010.11.18_08.36.11: Node button drag and drop initiated
+DEBUG 2010.11.18_08.36.11: Node button create transferable
+INFO 2010.11.18_08.36.11: Map Panel importing data.
+INFO 2010.11.18_08.36.11: Map Panel setting bound.
+DEBUG 2010.11.18_08.36.11: Map Panel after invalidate.
+INFO 2010.11.18_08.36.14: Node192.168.10.1: Sending data to 192.168.10.3
+INFO 2010.11.18_08.36.14: Node 192.168.10.1: discovery initiated to 192.168.10.3
+INFO 2010.11.18_08.36.14: Node 192.168.10.1: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.14: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.14: 192.168.10.3 not found!
+INFO 2010.11.18_08.36.14: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.36.14: Node192.168.10.1: Sending Broadcast Packet
+INFO 2010.11.18_08.36.14: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+
+INFO 2010.11.18_08.36.14: [900, 760], [900, 760], 0.0,1000
+INFO 2010.11.18_08.36.14: Animating a 1|false
+INFO 2010.11.18_08.36.14: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.14: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.14: [900, 760], [1790, 1460], 1132.2985472038724,1000
+INFO 2010.11.18_08.36.15: Animating a 2|false
+INFO 2010.11.18_08.36.15: Node 192.168.10.1 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.15: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.15: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.15: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.15: Message received from 192.168.10.2
+INFO 2010.11.18_08.36.15: Node 192.168.10.2: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.15: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.15: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.15: 192.168.10.3 not found!
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.36.15: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO 2010.11.18_08.36.15: Node192.168.10.2: Sending Broadcast Packet
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+
+INFO 2010.11.18_08.36.15: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.15: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.15: Animating b 1|false
+INFO 2010.11.18_08.36.15: [1330, 875], [1330, 875], 0.0,1000
+INFO 2010.11.18_08.36.15: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.15: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.15: Animating a 3|false
+INFO 2010.11.18_08.36.15: Animating b 2|false
+INFO 2010.11.18_08.36.15: Node 192.168.10.2 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.15: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.16: Animating a 0|true
+INFO 2010.11.18_08.36.16: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO 2010.11.18_08.36.16: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.16: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.16: Message received from 192.168.10.1
+INFO 2010.11.18_08.36.16: Node 192.168.10.1: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.16: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.1: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.16: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.16: 192.168.10.3 not found!
+INFO 2010.11.18_08.36.16: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.36.16: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO 2010.11.18_08.36.16: Node192.168.10.1: Sending Broadcast Packet
+INFO 2010.11.18_08.36.16: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+
+INFO 2010.11.18_08.36.16: [900, 760], [900, 760], 0.0,1000
+INFO 2010.11.18_08.36.16: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.16: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.16: [900, 760], [1790, 1460], 1132.2985472038724,1000
+INFO 2010.11.18_08.36.16: Animating a 1|false
+INFO 2010.11.18_08.36.16: Animating b 3|false
+INFO 2010.11.18_08.36.16: Animating a 2|false
+INFO 2010.11.18_08.36.16: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO 2010.11.18_08.36.16: Node c is RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.3: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.16: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.16: Message received from 192.168.10.3
+INFO 2010.11.18_08.36.16: Node 192.168.10.3: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.16: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.16: 192.168.10.1 not found!
+INFO 2010.11.18_08.36.16: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.3: new route to 192.168.10.1 through 192.168.10.2 added
+INFO 2010.11.18_08.36.16: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.3: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.16: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.16: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO 2010.11.18_08.36.16: Sending message to 192.168.10.2
+INFO 2010.11.18_08.36.16: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+
+INFO 2010.11.18_08.36.16: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.16: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.16: Animating c 1|false
+INFO 2010.11.18_08.36.16: Animating b 0|true
+INFO 2010.11.18_08.36.16: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO 2010.11.18_08.36.16: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.16: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.16: Message received from 192.168.10.2
+INFO 2010.11.18_08.36.16: Node 192.168.10.2: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.16: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.16: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.16: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.16: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.16: 192.168.10.3 not found!
+INFO 2010.11.18_08.36.16: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.36.16: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO 2010.11.18_08.36.16: Node192.168.10.2: Sending Broadcast Packet
+INFO 2010.11.18_08.36.16: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+
+INFO 2010.11.18_08.36.16: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.16: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.16: [1330, 875], [1330, 875], 0.0,1000
+INFO 2010.11.18_08.36.16: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.16: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.16: Animating b 1|false
+INFO 2010.11.18_08.36.17: Animating a 3|false
+INFO 2010.11.18_08.36.17: Animating c 2|false
+INFO 2010.11.18_08.36.17: Animating b 2|false
+INFO 2010.11.18_08.36.17: Node 192.168.10.1 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.17: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.17: Animating a 0|true
+INFO 2010.11.18_08.36.17: Animating c 3|false
+INFO 2010.11.18_08.36.17: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO 2010.11.18_08.36.17: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.17: Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.17: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.17: Message received from 192.168.10.1
+INFO 2010.11.18_08.36.17: Node 192.168.10.1: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.17: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.17: Node 192.168.10.1: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.17: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.17: 192.168.10.3 not found!
+INFO 2010.11.18_08.36.17: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.36.17: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO 2010.11.18_08.36.17: Node192.168.10.1: Sending Broadcast Packet
+INFO 2010.11.18_08.36.17: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+
+INFO 2010.11.18_08.36.17: [900, 760], [900, 760], 0.0,1000
+INFO 2010.11.18_08.36.17: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.17: Animating a 1|false
+INFO 2010.11.18_08.36.17: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.17: [900, 760], [1790, 1460], 1132.2985472038724,1000
+INFO 2010.11.18_08.36.17: Node 192.168.10.3 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.17: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.17: Animating b 3|false
+INFO 2010.11.18_08.36.18: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: Searching for 192.168.10.3
+0.1 through 192.168.10.3
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.18: 192.168.10.3 not found!
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: new route to 192.168.10.3 through 192.168.10.3 added
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.18: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO 2010.11.18_08.36.18: Node: 192.168.10.2 :-1,0,false,false
+INFO 2010.11.18_08.36.18: Node: 192.168.10.2 :one if is true
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.18: Node192.168.10.2: Passing RREPPacket from 192.168.10.3 which handded from 192.168.10.3 to 192.168.10.1
+INFO 2010.11.18_08.36.18: Sending message to 192.168.10.1
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+
+INFO 2010.11.18_08.36.18: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.18: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.18: Animating b 0|true
+INFO 2010.11.18_08.36.18: Animating c 0|true
+INFO 2010.11.18_08.36.18: Animating a 2|false
+INFO 2010.11.18_08.36.18: Node 192.168.10.2 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.18: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO 2010.11.18_08.36.18: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.3: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.18: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.18: Message received from 192.168.10.3
+INFO 2010.11.18_08.36.18: Node 192.168.10.3: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.18: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.3: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.18: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.18: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO 2010.11.18_08.36.18: Sending message to 192.168.10.2
+INFO 2010.11.18_08.36.18: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+
+INFO 2010.11.18_08.36.18: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.18: Animating c 1|false
+INFO 2010.11.18_08.36.18: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.18: Animating b 1|false
+INFO 2010.11.18_08.36.18: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.18: Message received from 192.168.10.2
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.18: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO 2010.11.18_08.36.18: Node192.168.10.2: Sending Broadcast Packet
+INFO 2010.11.18_08.36.18: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+
+INFO 2010.11.18_08.36.18: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.18: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.18: Animating b 2|false
+INFO 2010.11.18_08.36.18: [1330, 875], [1330, 875], 0.0,1000
+INFO 2010.11.18_08.36.18: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.18: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.18: Animating a 3|false
+INFO 2010.11.18_08.36.18: Node 192.168.10.1 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.18: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.18: Animating c 2|false
+INFO 2010.11.18_08.36.18: Animating b 3|false
+INFO 2010.11.18_08.36.18: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO 2010.11.18_08.36.18: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+
+INFO 2010.11.18_08.36.18: Node 192.168.10.1: RREP received from 192.168.10.1 through 192.168.10.2
+INFO 2010.11.18_08.36.18: Node 192.168.10.1: Searching for 192.168.10.2
+INFO 2010.11.18_08.36.18: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.1: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.19: 192.168.10.3 not found!
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+
+INFO 2010.11.18_08.36.19: Node: 192.168.10.1 forwardRoute is null
+INFO 2010.11.18_08.36.19: Node 192.168.10.1: new route to 192.168.10.3 through 192.168.10.2 added
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.1 : received RREPPacket from 192.168.10.1 which handded from 192.168.10.2: It's the destination!,I was waiting for it
+INFO 2010.11.18_08.36.19: Node 192.168.10.1: first discovery for 192.168.10.3 : successful
+INFO 2010.11.18_08.36.19: Sending message to 192.168.10.2
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+
+INFO 2010.11.18_08.36.19: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.19: Animating a 0|true
+INFO 2010.11.18_08.36.19: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.19: Node 192.168.10.3 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.19: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.19: Animating b 0|true
+INFO 2010.11.18_08.36.19: Animating a 1|false
+INFO 2010.11.18_08.36.19: Animating c 3|false
+INFO 2010.11.18_08.36.19: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.19: Message received from 192.168.10.1
+INFO 2010.11.18_08.36.19: Node 192.168.10.1: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.1: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.19: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO 2010.11.18_08.36.19: Node192.168.10.1: Sending Broadcast Packet
+INFO 2010.11.18_08.36.19: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+
+INFO 2010.11.18_08.36.19: [900, 760], [900, 760], 0.0,1000
+INFO 2010.11.18_08.36.19: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.19: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.19: [900, 760], [1790, 1460], 1132.2985472038724,1000
+INFO 2010.11.18_08.36.19: Animating a 2|false
+INFO 2010.11.18_08.36.19: Animating b 1|false
+INFO 2010.11.18_08.36.19: Node 192.168.10.2 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.19: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO 2010.11.18_08.36.19: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.19: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO 2010.11.18_08.36.19: Node: 192.168.10.2 :0,0,false,false
+INFO 2010.11.18_08.36.19: Animating a 3|false
+INFO 2010.11.18_08.36.19: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.2 : Data received from 192.168.10.1 through 192.168.10.1
+INFO 2010.11.18_08.36.19: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.19: Node 192.168.10.2: passing DataPacket from 192.168.10.1 which handded from 192.168.10.1 to 192.168.10.3
+INFO 2010.11.18_08.36.19: Node 192.168.10.2: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.19: Sending message to 192.168.10.3
+INFO 2010.11.18_08.36.19: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+
+INFO 2010.11.18_08.36.19: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.19: Animating b 2|false
+INFO 2010.11.18_08.36.19: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.19: Animating c 0|true
+INFO 2010.11.18_08.36.19: Animating a 0|true
+INFO 2010.11.18_08.36.19: Animating b 3|false
+INFO 2010.11.18_08.36.20: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO 2010.11.18_08.36.20: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.20: Node 192.168.10.3: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.20: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.20: Message received from 192.168.10.3
+INFO 2010.11.18_08.36.20: Node 192.168.10.3: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.20: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.20: Node 192.168.10.3: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.20: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.20: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO 2010.11.18_08.36.20: Sending message to 192.168.10.2
+INFO 2010.11.18_08.36.20: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+
+INFO 2010.11.18_08.36.20: Node 192.168.10.1 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.20: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.20: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.20: Animating c 1|false
+INFO 2010.11.18_08.36.20: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.20: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO 2010.11.18_08.36.20: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.20: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.20: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.20: Message received from 192.168.10.2
+INFO 2010.11.18_08.36.20: Node 192.168.10.2: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.20: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.20: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.20: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.20: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.20: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.20: Node192.168.10.2:received RREQPacket from 192.168.10.1 which handed from 192.168.10.1: but it is not the destination
+INFO 2010.11.18_08.36.20: Node192.168.10.2: Sending Broadcast Packet
+INFO 2010.11.18_08.36.20: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+
+INFO 2010.11.18_08.36.20: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.20: Animating b 0|true
+INFO 2010.11.18_08.36.20: [1330, 875], [900, 760], 445.1123453691214,1000
+INFO 2010.11.18_08.36.20: [1330, 875], [1330, 875], 0.0,1000
+INFO 2010.11.18_08.36.20: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.20: [1330, 875], [1790, 1460], 744.194195086202,1000
+INFO 2010.11.18_08.36.20: Animating a 1|false
+INFO 2010.11.18_08.36.20: Animating b 1|false
+DEBUG 2010.11.18_08.36.20: Node button pressed.
+INFO 2010.11.18_08.36.20: Animating b 2|false
+INFO 2010.11.18_08.36.20: Animating c 2|false
+INFO 2010.11.18_08.36.20: Animating a 2|false
+INFO 2010.11.18_08.36.20: Animating b 3|false
+INFO 2010.11.18_08.36.20: Animating b 0|true
+INFO 2010.11.18_08.36.21: Animating c 3|false
+INFO 2010.11.18_08.36.21: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.1
+INFO 2010.11.18_08.36.21: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.1: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.21: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.21: Message received from 192.168.10.1
+INFO 2010.11.18_08.36.21: Node 192.168.10.1: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.21: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.1: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.21: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.21: Node192.168.10.1:received RREQPacket from 192.168.10.1 which handed from 192.168.10.2: but it is not the destination
+INFO 2010.11.18_08.36.21: Node192.168.10.1: Sending Broadcast Packet
+INFO 2010.11.18_08.36.21: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+
+INFO 2010.11.18_08.36.21: [900, 760], [900, 760], 0.0,1000
+INFO 2010.11.18_08.36.21: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.21: Animating a 3|false
+INFO 2010.11.18_08.36.21: [900, 760], [1330, 875], 445.1123453691214,1000
+INFO 2010.11.18_08.36.21: [900, 760], [1790, 1460], 1132.2985472038724,1000
+INFO 2010.11.18_08.36.21: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO 2010.11.18_08.36.21: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.3 : Data received from 192.168.10.1 through 192.168.10.2
+INFO 2010.11.18_08.36.21: Node 192.168.10.3 : received DataPacket from 192.168.10.1 which handded from 192.168.10.2 : I'm the destination
+INFO 2010.11.18_08.36.21: 192.168.10.3 received ';LKJ'
+INFO 2010.11.18_08.36.21: Animating a 0|true
+INFO 2010.11.18_08.36.21: Animating b 1|false
+INFO 2010.11.18_08.36.21: Node 192.168.10.3 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.21: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.21: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO 2010.11.18_08.36.21: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO 2010.11.18_08.36.21: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.21: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.21: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.21: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO 2010.11.18_08.36.21: Node: 192.168.10.2 :0,0,false,false
+INFO 2010.11.18_08.36.21: Animating c 0|true
+INFO 2010.11.18_08.36.21: Animating a 1|false
+INFO 2010.11.18_08.36.21: Map Manager sending broadcast packet from 192.168.10.2 to 192.168.10.3
+INFO 2010.11.18_08.36.21: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.3: new route to 192.168.10.2 through 192.168.10.2 added
+INFO 2010.11.18_08.36.21: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+
+INFO 2010.11.18_08.36.21: Message received from 192.168.10.3
+INFO 2010.11.18_08.36.21: Node 192.168.10.3: Searching for 192.168.10.1
+INFO 2010.11.18_08.36.21: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.3: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.21: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.21: Node192.168.10.3:received RREQPacket from 192.168.10.1 which handded from 192.168.10.2: it is destination; generating RREPPacket
+INFO 2010.11.18_08.36.21: Sending message to 192.168.10.2
+INFO 2010.11.18_08.36.21: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+
+INFO 2010.11.18_08.36.21: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.21: [1790, 1460], [1330, 875], 744.194195086202,1000
+INFO 2010.11.18_08.36.21: Animating c 1|false
+INFO 2010.11.18_08.36.21: Animating b 2|false
+INFO 2010.11.18_08.36.21: Map Manager sending broadcast packet from 192.168.10.1 to 192.168.10.2
+INFO 2010.11.18_08.36.21: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.2: new route to 192.168.10.1 through 192.168.10.1 added
+INFO 2010.11.18_08.36.21: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+
+INFO 2010.11.18_08.36.21: Node 192.168.10.2 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.21: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.22: Animating a 2|false
+INFO 2010.11.18_08.36.22: Animating c 2|false
+INFO 2010.11.18_08.36.22: Animating b 3|false
+INFO 2010.11.18_08.36.22: Node 192.168.10.1 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.22: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.22: Animating a 3|false
+INFO 2010.11.18_08.36.22: Node 192.168.10.3 : 192.168.10.1 Route 2 Expires!
+INFO 2010.11.18_08.36.22: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+
+INFO 2010.11.18_08.36.22: Animating c 3|false
+INFO 2010.11.18_08.36.22: Animating b 0|true
+INFO 2010.11.18_08.36.23: Animating a 0|true
+INFO 2010.11.18_08.36.23: Map Manager sending broadcast packet from 192.168.10.3 to 192.168.10.2
+INFO 2010.11.18_08.36.23: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+
+INFO 2010.11.18_08.36.23: Node 192.168.10.2: RREP received from 192.168.10.1 through 192.168.10.3
+INFO 2010.11.18_08.36.23: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.23: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.23: Node 192.168.10.2: Searching for 192.168.10.3
+INFO 2010.11.18_08.36.23: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+
+INFO 2010.11.18_08.36.23: Node: 192.168.10.2 forwardRoute is Route to 192.168.10.3 through 192.168.10.3
+INFO 2010.11.18_08.36.23: Node: 192.168.10.2 :0,0,false,false
+INFO 2010.11.18_08.36.23: Animating c 0|true
+INFO 2010.11.18_08.36.23: Node 192.168.10.1: discovery number 1 for 192.168.10.3 : failed
+INFO 2010.11.18_08.36.23: Node 192.168.10.1: discovery for 192.168.10.3 : failed
+INFO 2010.11.18_08.36.23: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+Failed to send data to 192.168.10.3
+
+INFO 2010.11.18_08.36.53: Node 192.168.10.2: Route to 192.168.10.3 through 192.168.10.3 expires!
+INFO 2010.11.18_08.36.53: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.3
+
+DEBUG 2010.11.18_08.36.59: Node button pressed.
+DEBUG 2010.11.18_08.37.06: Node button pressed.
+DEBUG 2010.11.18_08.37.10: Node button pressed.
+INFO 2010.11.18_08.37.27: Node 192.168.10.1: Route to 192.168.10.3 through 192.168.10.2 expires!
+INFO 2010.11.18_08.37.27: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+Failed to send data to 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.2
+
+INFO 2010.11.18_08.37.27: Node 192.168.10.1: Route to 192.168.10.2 through 192.168.10.2 expires!
+INFO 2010.11.18_08.37.27: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+Failed to send data to 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.2
+Route expired: Route to 192.168.10.2 through 192.168.10.2
+
+INFO 2010.11.18_08.37.29: Node 192.168.10.2: Route to 192.168.10.1 through 192.168.10.1 expires!
+INFO 2010.11.18_08.37.29: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.3
+Route expired: Route to 192.168.10.1 through 192.168.10.1
+
+INFO 2010.11.18_08.37.32: Node 192.168.10.3: Route to 192.168.10.2 through 192.168.10.2 expires!
+INFO 2010.11.18_08.37.32: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+Route expired: Route to 192.168.10.2 through 192.168.10.2
+
+INFO 2010.11.18_08.37.32: Node 192.168.10.3: Route to 192.168.10.1 through 192.168.10.2 expires!
+INFO 2010.11.18_08.37.32: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+Route expired: Route to 192.168.10.2 through 192.168.10.2
+Route expired: Route to 192.168.10.1 through 192.168.10.2
+
+INFO 2010.11.18_08.44.03: Node 192.168.10.1 : Route to 192.168.10.3 through 192.168.10.2 Deleted!
+INFO 2010.11.18_08.44.03: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+Failed to send data to 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.2
+Route expired: Route to 192.168.10.2 through 192.168.10.2
+Delete: Route to 192.168.10.3 through 192.168.10.2
+
+INFO 2010.11.18_08.44.03: Node 192.168.10.1 : Route to 192.168.10.2 through 192.168.10.2 Deleted!
+INFO 2010.11.18_08.44.03: Node a is Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 0
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.2
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Sending message to 192.168.10.2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+Failed to send data to 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.2
+Route expired: Route to 192.168.10.2 through 192.168.10.2
+Delete: Route to 192.168.10.3 through 192.168.10.2
+Delete: Route to 192.168.10.2 through 192.168.10.2
+
+INFO 2010.11.18_08.44.05: Node 192.168.10.2 : Route to 192.168.10.3 through 192.168.10.3 Deleted!
+INFO 2010.11.18_08.44.05: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.3
+Route expired: Route to 192.168.10.1 through 192.168.10.1
+Delete: Route to 192.168.10.3 through 192.168.10.3
+
+INFO 2010.11.18_08.44.05: Node 192.168.10.2 : Route to 192.168.10.1 through 192.168.10.1 Deleted!
+INFO 2010.11.18_08.44.05: Node b is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+192.168.10.3 not found!
+Attempting new route to 192.168.10.3
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+DataPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.1
+Sending message to 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.1
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Broadcasting message...
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.1
+Broadcast expired: 192.168.10.1 Route 2
+RREPPacket message number = 0 Received
+Searching for 192.168.10.3
+Searching for 192.168.10.3
+Route expired: Route to 192.168.10.3 through 192.168.10.3
+Route expired: Route to 192.168.10.1 through 192.168.10.1
+Delete: Route to 192.168.10.3 through 192.168.10.3
+Delete: Route to 192.168.10.1 through 192.168.10.1
+
+INFO 2010.11.18_08.44.08: Node 192.168.10.3 : Route to 192.168.10.2 through 192.168.10.2 Deleted!
+INFO 2010.11.18_08.44.08: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+Route expired: Route to 192.168.10.2 through 192.168.10.2
+Route expired: Route to 192.168.10.1 through 192.168.10.2
+Delete: Route to 192.168.10.2 through 192.168.10.2
+
+INFO 2010.11.18_08.44.08: Node 192.168.10.3 : Route to 192.168.10.1 through 192.168.10.2 Deleted!
+INFO 2010.11.18_08.44.08: Node c is RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+192.168.10.1 not found!
+Attempting new route to 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+DataPacket message number = 0 Received
+Broadcast expired: 192.168.10.1 Route 2
+RREQ X message number = 0 Received
+Attempting new route to 192.168.10.2
+Searching for 192.168.10.1
+Searching for 192.168.10.3
+Sending message to 192.168.10.2
+Broadcast expired: 192.168.10.1 Route 2
+Route expired: Route to 192.168.10.2 through 192.168.10.2
+Route expired: Route to 192.168.10.1 through 192.168.10.2
+Delete: Route to 192.168.10.2 through 192.168.10.2
+Delete: Route to 192.168.10.1 through 192.168.10.2
+
