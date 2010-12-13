@@ -66,9 +66,6 @@ public class ReplayFileParser implements Runnable {
 
 	@Override
 	public void run() {
-		// disable buttons that shouldn't be accessible during replay
-		disableButtons();
-
 		File logFile;
 		// open file chooser dialog to allow user to select log file
 		JFileChooser fc = new JFileChooser();
@@ -80,6 +77,9 @@ public class ReplayFileParser implements Runnable {
 			// logFile = new File(FileLogger.logFile);
 			return;
 
+		// disable buttons that shouldn't be accessible during replay
+		disableButtons();
+		
 		// clear the map
 		myForm.clearNodesFromMap();
 
