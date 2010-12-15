@@ -23,7 +23,7 @@ import java.io.IOException;
 import UI.Myform;
 
 public class HelpAction implements ActionListener {
-	public final static String helpDoc = "MANET_Simulator_UserGuide.pdf";
+	public final static String helpDoc = "doc/MANET_Simulator_UserGuide.pdf";
 	private Myform myForm;
 
 	public HelpAction(Myform myForm) {
