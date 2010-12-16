@@ -1,12 +1,8 @@
 Current status of the source code:
 - complete
  
-How to compile it:
+To compile and run (requires ant) type:
 
-javac -classpath lib/log4j-1.2.11.jar \
-	src/edu/jhu/cs/ai/woojames/decisiontrees/*.java \
-	src/edu/jhu/cs/ai/woojames/decisiontrees/heuristics/*.java \
-	-d bin
+ant
 
-java -classpath bin:lib/log4j-1.2.11.jar \
-	UI.Myform $*
+Or simply run the JAR or the MSI file in Installers/.
