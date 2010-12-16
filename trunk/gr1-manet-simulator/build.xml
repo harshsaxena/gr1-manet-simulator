@@ -52,6 +52,9 @@
 					    optimize="true">
 			<classpath refid="compile.classpath"/>
 		</javac>
+    	<copy todir="${build}">
+    		<fileset dir="${src}" includes="*.properties" />
+		</copy>
 
     </target>
 
