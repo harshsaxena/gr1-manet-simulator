@@ -17,7 +17,6 @@
  */
 package utility;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -33,11 +32,13 @@ public class PropertyManager {
 		Properties props = new Properties();
 
 		try {
-			props.load(new FileInputStream("./config.properties"));
+			props.load(ClassLoader.getSystemResourceAsStream("config.properties"));
 			if (props.getProperty(prop) != null) {
 				propertyVal = props.getProperty(prop);
 			}
 
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -49,7 +50,7 @@ public class PropertyManager {
 		Properties props = new Properties();
 
 		try {
-			props.load(new FileInputStream("./config.properties"));
+			props.load(ClassLoader.getSystemResourceAsStream("config.properties"));
 			if (props.getProperty("logger_type") != null) {
 				propertyVal = props.getProperty("logger_type");
 			}
