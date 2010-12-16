@@ -1,83 +1,54 @@
-<project name="AODVSimulator" default="dist" basedir=".">
-    <description>
-        AODV Simulator ant file
-    </description>
-    <!-- set global properties for this build -->
-    <property name="src" location="src"/>
-    <property name="build" location="build"/>
-    <property name="dist" location="dist"/>
-    <property name="lib" location="lib"/>
-    <!-- ==================== Compilation Classpath =========================== -->
+<project name="MANETSimulator" basedir="." default="main">
 
-        <!--
-          Rather than relying on the CLASSPATH environment variable, we constructs the compile
-          classpath to include the jar files, as well as the other components.
-        -->
+    <property name="src.dir"     value="src"/>
 
-    <path id="compile.classpath">
+    <property name="build.dir"   value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir"     value="${build.dir}/jar"/>
 
-        <pathelement path="${basedir}"/>
-        <fileset dir="lib">
-            <include name="*.jar" />
-        </fileset>
+    <property name="main-class"  value="UI.Myform"/>
+
+
+    <property name="lib.dir"     value="lib"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
     </path>
 
-    <path id="build.classpath">
-        <fileset dir="${basedir}/">
-            <include name="lib/*.jar"/>
-        </fileset>
-    </path>
 
-    <pathconvert property="aodv.manifest.classpath" pathsep=" ">
-        <path refid="build.classpath"/>
-        <mapper>
-            <chainedmapper>
-                <flattenmapper/>
-                <globmapper from="*.jar" to="lib/*.jar"/>
-            </chainedmapper>
-        </mapper>
-    </pathconvert>
-
-
-    <target name="init" depends="clean">
-        <!-- Create the build directory structure used by compile -->
-        <mkdir dir="${build}"/>
+    <target name="clean">
+        <delete dir="${build.dir}"/>
     </target>
 
-    <target name="compile" depends="init">
-        <javac srcdir="${src}"
-			destdir="${build}"
-					    debug="true"
-					    deprecation="false"
-					    optimize="true">
-			<classpath refid="compile.classpath"/>
-		</javac>
-    	<copy todir="${build}">
-    		<fileset dir="${src}" includes="*.properties" />
-		</copy>
-
-    </target>
-
-
-    <target name="dist" depends="compile"
-            description="generate the distribution">
-        <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
-        <mkdir dir="${dist}"/>
-        <copy todir="${dist}">
-            <fileset dir="${basedir}" includes="images/**/*.*" />            
-            <fileset dir="${basedir}" includes="lib/*.*" />
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath"/>
+        <copy todir="${classes.dir}">
+            <fileset dir="${src.dir}" excludes="**/*.java"/>
         </copy>
-        <jar jarfile="${dist}/aodvsimulator.jar" basedir="${build}">
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
             <manifest>
-                <attribute name="Main-Class" value="UI.Myform"/>
-                <attribute name="Class-Path" value="${aodv.manifest.classpath}"/>
+                <attribute name="Main-Class" value="${main-class}"/>
             </manifest>
         </jar>
     </target>
 
-    <target name="clean" description="clean up">
-        <delete dir="${dist}"/>
-        <delete dir="${build}"/>
+    <target name="run" depends="jar">
+        <java fork="true" classname="${main-class}">
+            <classpath>
+                <path refid="classpath"/>
+                <path location="${jar.dir}/${ant.project.name}.jar"/>
+            </classpath>
+        </java>
     </target>
+
+
+    <target name="clean-build" depends="clean,jar"/>
+
+    <target name="main" depends="clean,run"/>
 
 </project>
