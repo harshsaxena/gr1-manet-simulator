@@ -1,8 +1,17 @@
 Current status of the source code:
 - complete
  
-To compile and run (requires ant) type:
 
-ant
+Installation and Execution:
 
-Or simply run the JAR or the MSI file in Installers/.
+To install/run the program, simply run the JAR or the MSI file in Installers/.
+
+Alternatively, to compile and run using ant, type:
+
+	ant
+
+Subsequent executions can be invoked by:
+
+	java -jar build/jar/MANETSimulator.jar
+
+from the top-level directory.
