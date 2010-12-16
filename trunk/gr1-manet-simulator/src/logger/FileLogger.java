@@ -14,6 +14,7 @@
 
 package logger;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -32,7 +33,8 @@ public class FileLogger {
 	private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd_hh.mm.ss");
 	private final static String ext = ".txt";
 	private final static String fileName = "simlog_";
-	public final static String logDirPath = "./logs/";
+	private final static String logDirName = "manet_logs";
+	public static String logDirPath;
 	public static String logFile;
 	public final static String MSG_TYPE_DEBUG = "DEBUG";
 	public final static String MSG_TYPE_ERROR = "ERROR";
@@ -89,9 +91,24 @@ public class FileLogger {
 		if (createLoggerFile == true) {
 			Date currDate = new Date();
 			createLoggerFile = false;
-			String currDateString = FileLogger.df.format(currDate);
-			logFile = logDirPath + fileName + currDateString + ext;
+			String currDateString = FileLogger.df.format(currDate); 
+			
+			logDirPath = getDirPath();
+			logFile = logDirPath + File.separator + fileName + currDateString + ext;			
 		}
+	}
+
+	private static String getDirPath() {
+		
+		String userHomePath = System.getProperty("user.home");
+		String userHomeLogsPath = userHomePath + File.separator + logDirName;
+		File manetLogDir = new File(userHomeLogsPath);
+		
+		if(!manetLogDir.isDirectory()){
+			manetLogDir.mkdir();
+		}
+		
+		return userHomeLogsPath;
 	}
 
 	/**
