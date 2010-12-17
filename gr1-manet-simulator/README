@@ -1,2 +1,16 @@
-- current status of the source code 
-- how to compile it
+Current status of the source code: complete.
+ 
+
+Installation and Execution:
+
+To install/run the program, simply run the JAR or the MSI file in Installers/.
+
+Alternatively, to compile and run using ant, type:
+
+	ant
+
+Subsequent executions can be invoked by:
+
+	java -jar build/jar/MANETSimulator.jar
+
+from the top-level directory.
