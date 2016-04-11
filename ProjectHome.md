@@ -1,0 +1,1 @@
+A mobile ad hoc network simulator that enables users to set up a simulated mobile ad hoc network environment, exercise specific protocols using different scenarios, and present the results.
